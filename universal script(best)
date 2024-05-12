@@ -1,11 +1,11 @@
--- Gui made by someone
--- Version: 3.5
+-- Made by fer modz
 
 -- Instances:
 
 local UI = Instance.new("ScreenGui")
 local UI_2 = Instance.new("Frame")
 local BackGround = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
 local Container = Instance.new("Frame")
 local UIGridLayout = Instance.new("UIGridLayout")
 local Padding = Instance.new("UIPadding")
@@ -13,6 +13,11 @@ local INFINITE = Instance.new("TextButton")
 local NOCLIP = Instance.new("TextButton")
 local Fly = Instance.new("TextButton")
 local RESET = Instance.new("TextButton")
+local KillAll = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local KillPlayer = Instance.new("TextButton")
+local KillTextbox = Instance.new("TextBox")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 local UnderLine = Instance.new("Frame")
 local Toggle = Instance.new("TextButton")
 local Window = Instance.new("TextLabel")
@@ -22,7 +27,6 @@ local Window = Instance.new("TextLabel")
 UI.Name = "UI"
 UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-UI.IgnoreGuiInset = true
 
 UI_2.Name = "UI"
 UI_2.Parent = UI
@@ -36,15 +40,17 @@ BackGround.Parent = UI_2
 BackGround.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 BackGround.BorderSizePixel = 0
 BackGround.Position = UDim2.new(0, 0, 1, 0)
-BackGround.Size = UDim2.new(0, 190, 0, 191)
+BackGround.Size = UDim2.new(0, 190, 0, 295)
 BackGround.ZIndex = 4
+
+UICorner.Parent = BackGround
 
 Container.Name = "Container"
 Container.Parent = UI_2
 Container.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Container.BorderSizePixel = 0
-Container.Position = UDim2.new(0, 0, 1.00000024, 0)
-Container.Size = UDim2.new(0, 190, 0, 191)
+Container.Position = UDim2.new(0, 0, 1, 0)
+Container.Size = UDim2.new(0, 190, 0, 295)
 Container.ZIndex = 5
 
 UIGridLayout.Parent = Container
@@ -104,6 +110,49 @@ RESET.Text = "RE (reset)"
 RESET.TextColor3 = Color3.fromRGB(255, 0, 0)
 RESET.TextSize = 24.000
 
+KillAll.Name = "KillAll"
+KillAll.Parent = Container
+KillAll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KillAll.BackgroundTransparency = 1.000
+KillAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillAll.BorderSizePixel = 0
+KillAll.Size = UDim2.new(0, 200, 0, 50)
+KillAll.Font = Enum.Font.SourceSans
+KillAll.Text = "Kill all"
+KillAll.TextColor3 = Color3.fromRGB(255, 0, 0)
+KillAll.TextSize = 24.000
+
+UICorner_2.Parent = Container
+
+KillPlayer.Name = "KillPlayer"
+KillPlayer.Parent = Container
+KillPlayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KillPlayer.BackgroundTransparency = 1.000
+KillPlayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillPlayer.BorderSizePixel = 0
+KillPlayer.Size = UDim2.new(0, 200, 0, 50)
+KillPlayer.Font = Enum.Font.SourceSans
+KillPlayer.Text = "Kill player"
+KillPlayer.TextColor3 = Color3.fromRGB(255, 0, 0)
+KillPlayer.TextSize = 24.000
+
+KillTextbox.Name = "KillTextbox"
+KillTextbox.Parent = KillPlayer
+KillTextbox.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+KillTextbox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillTextbox.BorderSizePixel = 0
+KillTextbox.Position = UDim2.new(0.783333361, 0, 0.075000003, 0)
+KillTextbox.Size = UDim2.new(0, 73, 0, 37)
+KillTextbox.Font = Enum.Font.SourceSans
+KillTextbox.Text = "player name here"
+KillTextbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KillTextbox.TextScaled = true
+KillTextbox.TextSize = 24.000
+KillTextbox.TextWrapped = true
+
+UITextSizeConstraint.Parent = KillTextbox
+UITextSizeConstraint.MaxTextSize = 24
+
 UnderLine.Name = "UnderLine"
 UnderLine.Parent = UI_2
 UnderLine.BackgroundColor3 = Color3.fromRGB(255, 25, 25)
@@ -137,7 +186,7 @@ Window.TextSize = 17.000
 
 -- Scripts:
 
-local function KVIOH_fake_script() -- INFINITE.LocalScript 
+local function QXQVVZ_fake_script() -- INFINITE.LocalScript 
 	local script = Instance.new('LocalScript', INFINITE)
 
 	local InfiniteJumpEnabled = true
@@ -149,8 +198,8 @@ local function KVIOH_fake_script() -- INFINITE.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(KVIOH_fake_script)()
-local function GDGEDHT_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(QXQVVZ_fake_script)()
+local function KTULUTV_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local script = Instance.new('LocalScript', NOCLIP)
@@ -179,6 +228,12 @@ local function GDGEDHT_fake_script() -- NOCLIP.LocalScript
 					if v:IsA("Part") then
 						v.CanCollide = false
 					end
+					if v:IsA("BasePart") then
+						v.CanCollide = false
+					end
+					if v:IsA("Tool") then
+						v.CanCollide = false
+					end
 				end
 			end	
 			if isnoclipping == false then
@@ -186,14 +241,19 @@ local function GDGEDHT_fake_script() -- NOCLIP.LocalScript
 					if v:IsA("Part") then
 						v.CanCollide = true
 					end
-	
+					if v:IsA("BasePart") then
+						v.CanCollide = true
+					end
+					if v:IsA("Tool") then
+						v.CanCollide = true
+					end
 				end
 			end
 		end
 	end)
 end
-coroutine.wrap(GDGEDHT_fake_script)()
-local function GVISHKM_fake_script() -- Fly.LocalScript 
+coroutine.wrap(KTULUTV_fake_script)()
+local function TRULWZ_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -346,7 +406,7 @@ local function GVISHKM_fake_script() -- Fly.LocalScript
 	
 		game:GetService("StarterGui"):SetCore("SendNotification", { 
 			Title = "FLY GUI";
-			Text = "by Liver zMods";
+			Text = "by Fer zMods";
 			Icon = "rbxthumb://type=Asset&id=11935868660&w=150&h=150"})
 		Duration = 15;
 	
@@ -357,7 +417,7 @@ local function GVISHKM_fake_script() -- Fly.LocalScript
 		Duration = 10;
 	
 		game:GetService("StarterGui"):SetCore("SendNotification", { 
-			Title = "By Liver zMods";
+			Title = "By Fer zMods";
 			Text = "created by Brasileiro!";
 			Icon = "rbxthumb://type=Asset&id=11935866652&w=150&h=150"})
 		Duration = 30;
@@ -696,19 +756,139 @@ local function GVISHKM_fake_script() -- Fly.LocalScript
 	
 	end)
 end
-coroutine.wrap(GVISHKM_fake_script)()
-local function PMOAR_fake_script() -- RESET.LocalScript 
+coroutine.wrap(TRULWZ_fake_script)()
+local function QNTNDYS_fake_script() -- RESET.LocalScript 
 	local script = Instance.new('LocalScript', RESET)
 
 	script.Parent.MouseButton1Click:connect(function() 
-	
-		game.Players.LocalPlayer.Character:BreakJoints() -- LocalPlayer only works with localscript. It's much easier than using a bunch of parents to get to the player.
-	
+		game.Players.LocalPlayer.Character:BreakJoints()
 	end)
 	
 end
-coroutine.wrap(PMOAR_fake_script)()
-local function UKIE_fake_script() -- Toggle.LocalScript 
+coroutine.wrap(QNTNDYS_fake_script)()
+local function MAOLVE_fake_script() -- KillAll.Script 
+	local script = Instance.new('Script', KillAll)
+
+	script.Parent.MouseButton1Click:Connect(function(ss)
+		local player = game.Players
+		if player then
+			for _, v in next, player:GetChildren(player) do
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(MAOLVE_fake_script)()
+local function OUVHKK_fake_script() -- KillPlayer.Script 
+	local script = Instance.new('Script', KillPlayer)
+
+	script.Parent.MouseButton1Click:Connect(function(ss)
+		local player = game.Players
+		if player then
+			for _, v in next, player:GetChildren(player.Name) do
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(OUVHKK_fake_script)()
+local function BEDQX_fake_script() -- Toggle.LocalScript 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local back = script.Parent.Parent.BackGround
@@ -729,8 +909,8 @@ local function UKIE_fake_script() -- Toggle.LocalScript
 				con.Visible = false
 			end
 		else
-			back:TweenSize(UDim2.new(0, 190,0, 191), "Out", "Sine", 0.5)
-			con:TweenSize(UDim2.new(0, 190,0, 191), "Out", "Sine", 0.5)
+			back:TweenSize(UDim2.new(0, 190,0, 295), "Out", "Sine", 0.5)
+			con:TweenSize(UDim2.new(0, 190,0, 295), "Out", "Sine", 0.5)
 			wait(0.2) do
 				con.Visible = true
 			end
@@ -738,8 +918,8 @@ local function UKIE_fake_script() -- Toggle.LocalScript
 	
 	end)
 end
-coroutine.wrap(UKIE_fake_script)()
-local function FVZW_fake_script() -- UI_2.LocalScript 
+coroutine.wrap(BEDQX_fake_script)()
+local function KZETJII_fake_script() -- UI_2.LocalScript 
 	local script = Instance.new('LocalScript', UI_2)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -782,4 +962,4 @@ local function FVZW_fake_script() -- UI_2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FVZW_fake_script)()
+coroutine.wrap(KZETJII_fake_script)()
