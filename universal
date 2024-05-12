@@ -1,4 +1,4 @@
--- Made by Fer Modz
+-- Made by Fer modz
 
 -- Instances:
 
@@ -10,10 +10,13 @@ local Container2 = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local Padding = Instance.new("UIPadding")
 local UIGridLayout = Instance.new("UIGridLayout")
-local ToolGiver = Instance.new("TextButton")
+local print = Instance.new("TextButton")
 local TextBox = Instance.new("TextBox")
 local TextLabel = Instance.new("TextLabel")
 local UICorner_3 = Instance.new("UICorner")
+local ToPlayer = Instance.new("TextButton")
+local TextBox_2 = Instance.new("TextBox")
+local Executor = Instance.new("TextButton")
 local Container = Instance.new("Frame")
 local UIGridLayout_2 = Instance.new("UIGridLayout")
 local Padding_2 = Instance.new("UIPadding")
@@ -21,14 +24,40 @@ local INFINITE = Instance.new("TextButton")
 local NOCLIP = Instance.new("TextButton")
 local Fly = Instance.new("TextButton")
 local RESET = Instance.new("TextButton")
-local KillAll = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
-local KillPlayer = Instance.new("TextButton")
-local KillTextbox = Instance.new("TextBox")
-local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local Kill = Instance.new("TextButton")
 local UnderLine = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
 local Toggle = Instance.new("TextButton")
 local Window = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
+local Header = Instance.new("Frame")
+local Body = Instance.new("Frame")
+local Name = Instance.new("TextBox")
+local Kill_2 = Instance.new("TextButton")
+local FEKill = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
+local Minimize = Instance.new("TextButton")
+local Holder = Instance.new("TextButton")
+local ChildContainer = Instance.new("ScrollingFrame")
+local UIPadding = Instance.new("UIPadding")
+local UIListLayout = Instance.new("UIListLayout")
+local Iris_InputText = Instance.new("Frame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local InputField = Instance.new("TextBox")
+local UIPadding_2 = Instance.new("UIPadding")
+local UISizeConstraint = Instance.new("UISizeConstraint")
+local Buttons = Instance.new("Frame")
+local Iris_Button = Instance.new("TextButton")
+local UIPadding_3 = Instance.new("UIPadding")
+local Iris_Button_2 = Instance.new("TextButton")
+local UIPadding_4 = Instance.new("UIPadding")
+local TitleBar = Instance.new("Frame")
+local CollapseButton = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Arrow = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local UIPadding_5 = Instance.new("UIPadding")
 
 --Properties:
 
@@ -48,7 +77,7 @@ BackGround.Parent = UI_2
 BackGround.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 BackGround.BorderSizePixel = 0
 BackGround.Position = UDim2.new(0, 0, 1, 0)
-BackGround.Size = UDim2.new(0, 190, 0, 295)
+BackGround.Size = UDim2.new(0, 190, 0, 249)
 BackGround.ZIndex = 4
 
 UICorner.Parent = BackGround
@@ -58,8 +87,8 @@ Container2.Parent = BackGround
 Container2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 Container2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Container2.BorderSizePixel = 0
-Container2.Position = UDim2.new(1.01578951, 0, 0.0157802776, 0)
-Container2.Size = UDim2.new(0, 182, 0, 52)
+Container2.Position = UDim2.new(1.01578951, 0, -0.0123321656, 0)
+Container2.Size = UDim2.new(0, 182, 0, 245)
 
 UICorner_2.Parent = Container2
 
@@ -72,20 +101,20 @@ UIGridLayout.Parent = Container2
 UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout.CellSize = UDim2.new(0, 180, 0, 40)
 
-ToolGiver.Name = "ToolGiver"
-ToolGiver.Parent = Container2
-ToolGiver.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ToolGiver.BackgroundTransparency = 1.000
-ToolGiver.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ToolGiver.BorderSizePixel = 0
-ToolGiver.Position = UDim2.new(1.38418078, 0, -8.05714321, 0)
-ToolGiver.Size = UDim2.new(0, 151, 0, 40)
-ToolGiver.Font = Enum.Font.SourceSans
-ToolGiver.Text = "print("
-ToolGiver.TextColor3 = Color3.fromRGB(30, 30, 30)
-ToolGiver.TextSize = 24.000
+print.Name = "print"
+print.Parent = Container2
+print.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+print.BackgroundTransparency = 1.000
+print.BorderColor3 = Color3.fromRGB(0, 0, 0)
+print.BorderSizePixel = 0
+print.Position = UDim2.new(1.38418078, 0, -8.05714321, 0)
+print.Size = UDim2.new(0, 151, 0, 40)
+print.Font = Enum.Font.SourceSans
+print.Text = "print("
+print.TextColor3 = Color3.fromRGB(30, 30, 30)
+print.TextSize = 24.000
 
-TextBox.Parent = ToolGiver
+TextBox.Parent = print
 TextBox.BackgroundColor3 = Color3.fromRGB(83, 0, 0)
 TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.BorderSizePixel = 0
@@ -96,7 +125,7 @@ TextBox.Text = "hi"
 TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextSize = 24.000
 
-TextLabel.Parent = ToolGiver
+TextLabel.Parent = print
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
@@ -109,12 +138,50 @@ TextLabel.TextSize = 24.000
 
 UICorner_3.Parent = TextLabel
 
+ToPlayer.Name = "ToPlayer"
+ToPlayer.Parent = Container2
+ToPlayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ToPlayer.BackgroundTransparency = 1.000
+ToPlayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ToPlayer.BorderSizePixel = 0
+ToPlayer.Position = UDim2.new(1.38418078, 0, -8.05714321, 0)
+ToPlayer.Size = UDim2.new(0, 151, 0, 40)
+ToPlayer.Font = Enum.Font.SourceSans
+ToPlayer.Text = "to"
+ToPlayer.TextColor3 = Color3.fromRGB(30, 30, 30)
+ToPlayer.TextSize = 24.000
+
+TextBox_2.Parent = ToPlayer
+TextBox_2.BackgroundColor3 = Color3.fromRGB(83, 0, 0)
+TextBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.BorderSizePixel = 0
+TextBox_2.Position = UDim2.new(0.633333325, 0, 0.174999997, 0)
+TextBox_2.Size = UDim2.new(0, 150, 0, 28)
+TextBox_2.Font = Enum.Font.SourceSans
+TextBox_2.PlaceholderText = "put player name"
+TextBox_2.Text = ""
+TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.TextSize = 24.000
+
+Executor.Name = "Executor"
+Executor.Parent = Container2
+Executor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Executor.BackgroundTransparency = 1.000
+Executor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Executor.BorderSizePixel = 0
+Executor.Position = UDim2.new(1.38418078, 0, -8.05714321, 0)
+Executor.Size = UDim2.new(0, 151, 0, 40)
+Executor.Font = Enum.Font.SourceSans
+Executor.Text = "Executor"
+Executor.TextColor3 = Color3.fromRGB(30, 30, 30)
+Executor.TextSize = 24.000
+
 Container.Name = "Container"
 Container.Parent = UI_2
 Container.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Container.BorderSizePixel = 0
 Container.Position = UDim2.new(0, 0, 1, 0)
-Container.Size = UDim2.new(0, 190, 0, 295)
+Container.Size = UDim2.new(0, 190, 0, 249)
 Container.ZIndex = 5
 
 UIGridLayout_2.Parent = Container
@@ -174,58 +241,29 @@ RESET.Text = "RE (reset)"
 RESET.TextColor3 = Color3.fromRGB(255, 0, 0)
 RESET.TextSize = 24.000
 
-KillAll.Name = "KillAll"
-KillAll.Parent = Container
-KillAll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-KillAll.BackgroundTransparency = 1.000
-KillAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KillAll.BorderSizePixel = 0
-KillAll.Size = UDim2.new(0, 200, 0, 50)
-KillAll.Font = Enum.Font.SourceSans
-KillAll.Text = "Kill all"
-KillAll.TextColor3 = Color3.fromRGB(255, 0, 0)
-KillAll.TextSize = 24.000
-
 UICorner_4.Parent = Container
 
-KillPlayer.Name = "KillPlayer"
-KillPlayer.Parent = Container
-KillPlayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-KillPlayer.BackgroundTransparency = 1.000
-KillPlayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KillPlayer.BorderSizePixel = 0
-KillPlayer.Size = UDim2.new(0, 200, 0, 50)
-KillPlayer.ZIndex = 2
-KillPlayer.Font = Enum.Font.SourceSans
-KillPlayer.Text = "Kill player"
-KillPlayer.TextColor3 = Color3.fromRGB(255, 0, 0)
-KillPlayer.TextSize = 24.000
-
-KillTextbox.Name = "KillTextbox"
-KillTextbox.Parent = KillPlayer
-KillTextbox.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
-KillTextbox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KillTextbox.BorderSizePixel = 0
-KillTextbox.Position = UDim2.new(0.783333361, 0, 0.075000003, 0)
-KillTextbox.Size = UDim2.new(0, 73, 0, 37)
-KillTextbox.ZIndex = 5
-KillTextbox.Font = Enum.Font.SourceSans
-KillTextbox.Text = "player name here"
-KillTextbox.TextColor3 = Color3.fromRGB(255, 255, 255)
-KillTextbox.TextScaled = true
-KillTextbox.TextSize = 24.000
-KillTextbox.TextWrapped = true
-
-UITextSizeConstraint.Parent = KillTextbox
-UITextSizeConstraint.MaxTextSize = 24
+Kill.Name = "Kill"
+Kill.Parent = Container
+Kill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Kill.BackgroundTransparency = 1.000
+Kill.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Kill.BorderSizePixel = 0
+Kill.Size = UDim2.new(0, 200, 0, 50)
+Kill.Font = Enum.Font.SourceSans
+Kill.Text = "Kill GUI"
+Kill.TextColor3 = Color3.fromRGB(255, 0, 0)
+Kill.TextSize = 24.000
 
 UnderLine.Name = "UnderLine"
 UnderLine.Parent = UI_2
 UnderLine.BackgroundColor3 = Color3.fromRGB(255, 25, 25)
 UnderLine.BorderSizePixel = 0
-UnderLine.Position = UDim2.new(0, 0, 1, -1)
-UnderLine.Size = UDim2.new(1, 0, 0, 1)
+UnderLine.Position = UDim2.new(0, 0, 0.963887036, -1)
+UnderLine.Size = UDim2.new(1, 0, 0.167089462, 1)
 UnderLine.ZIndex = 4
+
+UICorner_5.Parent = UnderLine
 
 Toggle.Name = "Toggle"
 Toggle.Parent = UI_2
@@ -250,17 +288,300 @@ Window.Text = "UNIVERSAL"
 Window.TextColor3 = Color3.fromRGB(255, 0, 4)
 Window.TextSize = 17.000
 
+UICorner_6.Parent = UI_2
+
+Header.Name = "Header"
+Header.Parent = UI
+Header.Active = true
+Header.BackgroundColor3 = Color3.fromRGB(255, 45, 45)
+Header.BorderColor3 = Color3.fromRGB(255, 45, 45)
+Header.BorderSizePixel = 0
+Header.Draggable = true
+Header.Position = UDim2.new(0.331454366, 0, 0.246315822, 0)
+Header.Size = UDim2.new(0, 191, 0, 20)
+Header.Visible = false
+
+Body.Name = "Body"
+Body.Parent = Header
+Body.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+Body.BorderSizePixel = 0
+Body.Position = UDim2.new(-0.000720118987, 0, 0.998849511, 0)
+Body.Size = UDim2.new(0, 191, 0, 70)
+
+Name.Name = "Name"
+Name.Parent = Body
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BorderColor3 = Color3.fromRGB(61, 11, 11)
+Name.BorderSizePixel = 3
+Name.Position = UDim2.new(0.125654474, 0, 0.099999994, 0)
+Name.Size = UDim2.new(0, 134, 0, 26)
+Name.Font = Enum.Font.SourceSans
+Name.Text = ""
+Name.TextColor3 = Color3.fromRGB(0, 0, 0)
+Name.TextSize = 14.000
+
+Kill_2.Name = "Kill"
+Kill_2.Parent = Body
+Kill_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Kill_2.Position = UDim2.new(0.272251308, 0, 0.568443537, 0)
+Kill_2.Size = UDim2.new(0, 73, 0, 24)
+Kill_2.Style = Enum.ButtonStyle.RobloxRoundButton
+Kill_2.Font = Enum.Font.Arcade
+Kill_2.Text = "KILL"
+Kill_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Kill_2.TextSize = 14.000
+
+FEKill.Name = "FEKill"
+FEKill.Parent = Header
+FEKill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FEKill.BackgroundTransparency = 1.000
+FEKill.BorderSizePixel = 0
+FEKill.Position = UDim2.new(0.031413611, 0, 0, 0)
+FEKill.Size = UDim2.new(0, 46, 0, 16)
+FEKill.Font = Enum.Font.Arcade
+FEKill.Text = "FE KILL"
+FEKill.TextColor3 = Color3.fromRGB(0, 0, 0)
+FEKill.TextSize = 14.000
+FEKill.TextXAlignment = Enum.TextXAlignment.Left
+FEKill.TextYAlignment = Enum.TextYAlignment.Top
+
+Exit.Name = "Exit"
+Exit.Parent = Header
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.Position = UDim2.new(0.879580975, 0, 0, 0)
+Exit.Size = UDim2.new(0, 23, 0, 20)
+Exit.Style = Enum.ButtonStyle.RobloxRoundButton
+Exit.Font = Enum.Font.Arcade
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Exit.TextSize = 14.000
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Header
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.Position = UDim2.new(0.759162128, 0, -0.0500000007, 0)
+Minimize.Size = UDim2.new(0, 23, 0, 20)
+Minimize.Style = Enum.ButtonStyle.RobloxRoundButton
+Minimize.Font = Enum.Font.Arcade
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.TextSize = 14.000
+
+Holder.Name = "Holder"
+Holder.Parent = UI
+Holder.BackgroundTransparency = 1.000
+Holder.BorderSizePixel = 0
+Holder.LayoutOrder = 65
+Holder.Position = UDim2.new(0, 150, 0, 250)
+Holder.Selectable = false
+Holder.Size = UDim2.new(0, 330, 0, 78)
+Holder.Visible = false
+Holder.ZIndex = 65
+Holder.AutoButtonColor = false
+Holder.Text = ""
+
+ChildContainer.Name = "ChildContainer"
+ChildContainer.Parent = Holder
+ChildContainer.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ChildContainer.BackgroundTransparency = 0.072
+ChildContainer.BorderSizePixel = 0
+ChildContainer.LayoutOrder = 67
+ChildContainer.Position = UDim2.new(0, 0, 0, 19)
+ChildContainer.Size = UDim2.new(1, 0, 1, -19)
+ChildContainer.ZIndex = 67
+ChildContainer.CanvasSize = UDim2.new(0, 0, 1, -19)
+ChildContainer.ScrollBarThickness = 0
+ChildContainer.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+
+UIPadding.Parent = ChildContainer
+UIPadding.PaddingBottom = UDim.new(0, 8)
+UIPadding.PaddingLeft = UDim.new(0, 8)
+UIPadding.PaddingRight = UDim.new(0, 8)
+UIPadding.PaddingTop = UDim.new(0, 8)
+
+UIListLayout.Parent = ChildContainer
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 4)
+
+Iris_InputText.Name = "Iris_InputText"
+Iris_InputText.Parent = ChildContainer
+Iris_InputText.BackgroundTransparency = 1.000
+Iris_InputText.BorderSizePixel = 0
+Iris_InputText.LayoutOrder = 192
+Iris_InputText.Size = UDim2.new(1, 0, 0.141000003, 0)
+Iris_InputText.ZIndex = 192
+
+UIListLayout_2.Parent = Iris_InputText
+UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 4)
+
+InputField.Name = "InputField"
+InputField.Parent = Iris_InputText
+InputField.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
+InputField.BackgroundTransparency = 0.460
+InputField.BorderColor3 = Color3.fromRGB(110, 110, 125)
+InputField.BorderSizePixel = 0
+InputField.ClipsDescendants = true
+InputField.LayoutOrder = 193
+InputField.Size = UDim2.new(1, 0, -0.421052635, 0)
+InputField.ZIndex = 193
+InputField.ClearTextOnFocus = false
+InputField.Font = Enum.Font.Code
+InputField.PlaceholderColor3 = Color3.fromRGB(128, 128, 128)
+InputField.PlaceholderText = ">"
+InputField.Text = ""
+InputField.TextColor3 = Color3.fromRGB(255, 255, 255)
+InputField.TextSize = 13.000
+InputField.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding_2.Parent = InputField
+UIPadding_2.PaddingBottom = UDim.new(0, 3)
+UIPadding_2.PaddingLeft = UDim.new(0, 4)
+UIPadding_2.PaddingRight = UDim.new(0, 4)
+UIPadding_2.PaddingTop = UDim.new(0, 3)
+
+UISizeConstraint.Parent = InputField
+UISizeConstraint.MinSize = Vector2.new(1, 0)
+
+Buttons.Name = "Buttons"
+Buttons.Parent = ChildContainer
+Buttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Buttons.BackgroundTransparency = 1.000
+Buttons.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Buttons.BorderSizePixel = 0
+Buttons.LayoutOrder = 193
+Buttons.Size = UDim2.new(0, 117, 0, 20)
+
+Iris_Button.Name = "Iris_Button"
+Iris_Button.Parent = Buttons
+Iris_Button.BackgroundColor3 = Color3.fromRGB(66, 150, 250)
+Iris_Button.BackgroundTransparency = 0.600
+Iris_Button.BorderColor3 = Color3.fromRGB(110, 110, 125)
+Iris_Button.BorderSizePixel = 0
+Iris_Button.LayoutOrder = 256
+Iris_Button.ZIndex = 256
+Iris_Button.AutoButtonColor = false
+Iris_Button.Font = Enum.Font.Code
+Iris_Button.Text = "Execute"
+Iris_Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+Iris_Button.TextSize = 13.000
+Iris_Button.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding_3.Parent = Iris_Button
+UIPadding_3.PaddingBottom = UDim.new(0, 3)
+UIPadding_3.PaddingLeft = UDim.new(0, 4)
+UIPadding_3.PaddingRight = UDim.new(0, 4)
+UIPadding_3.PaddingTop = UDim.new(0, 3)
+
+Iris_Button_2.Name = "Iris_Button"
+Iris_Button_2.Parent = Buttons
+Iris_Button_2.BackgroundColor3 = Color3.fromRGB(66, 150, 250)
+Iris_Button_2.BackgroundTransparency = 0.600
+Iris_Button_2.BorderColor3 = Color3.fromRGB(110, 110, 125)
+Iris_Button_2.BorderSizePixel = 0
+Iris_Button_2.LayoutOrder = 256
+Iris_Button_2.Position = UDim2.new(0.524999976, 0, 0, 0)
+Iris_Button_2.ZIndex = 256
+Iris_Button_2.AutoButtonColor = false
+Iris_Button_2.Font = Enum.Font.Code
+Iris_Button_2.Text = "Clear"
+Iris_Button_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Iris_Button_2.TextSize = 13.000
+Iris_Button_2.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding_4.Parent = Iris_Button_2
+UIPadding_4.PaddingBottom = UDim.new(0, 3)
+UIPadding_4.PaddingLeft = UDim.new(0, 4)
+UIPadding_4.PaddingRight = UDim.new(0, 4)
+UIPadding_4.PaddingTop = UDim.new(0, 3)
+
+TitleBar.Name = "TitleBar"
+TitleBar.Parent = Holder
+TitleBar.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
+TitleBar.BorderSizePixel = 0
+TitleBar.ClipsDescendants = true
+TitleBar.LayoutOrder = 65
+TitleBar.Size = UDim2.new(1, 0, 0, 0)
+TitleBar.ZIndex = 65
+
+CollapseButton.Name = "CollapseButton"
+CollapseButton.Parent = TitleBar
+CollapseButton.AnchorPoint = Vector2.new(0, 0.5)
+CollapseButton.BackgroundTransparency = 1.000
+CollapseButton.BorderSizePixel = 0
+CollapseButton.Position = UDim2.new(0.895497441, 5, 0.56769371, 0)
+CollapseButton.Size = UDim2.new(0, 21, 0, 17)
+CollapseButton.ZIndex = 68
+CollapseButton.AutoButtonColor = false
+CollapseButton.Text = ""
+
+UICorner_7.CornerRadius = UDim.new(1, 0)
+UICorner_7.Parent = CollapseButton
+
+Arrow.Name = "Arrow"
+Arrow.Parent = CollapseButton
+Arrow.AnchorPoint = Vector2.new(0.5, 0.5)
+Arrow.BackgroundTransparency = 1.000
+Arrow.BorderSizePixel = 0
+Arrow.Position = UDim2.new(0.238095239, 5, 0.5, 0)
+Arrow.Size = UDim2.new(0, 11, 0, 19)
+Arrow.ZIndex = 69
+Arrow.Image = "rbxasset://textures/DeveloperFramework/button_arrow_down.png"
+
+Title.Name = "Title"
+Title.Parent = TitleBar
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.ZIndex = 67
+Title.Font = Enum.Font.Code
+Title.Text = "Executor"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 13.000
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding_5.Parent = Title
+UIPadding_5.PaddingBottom = UDim.new(0, 3)
+UIPadding_5.PaddingLeft = UDim.new(0, 25)
+UIPadding_5.PaddingRight = UDim.new(0, 4)
+UIPadding_5.PaddingTop = UDim.new(0, 3)
+
 -- Scripts:
 
-local function DWLZCRK_fake_script() -- ToolGiver.LocalScript 
-	local script = Instance.new('LocalScript', ToolGiver)
+local function ZIISORA_fake_script() -- print.LocalScript 
+	local script = Instance.new('LocalScript', print)
 
 	script.Parent.MouseButton1Click:Connect(function() 
 		print(script.Parent.TextBox.Text)
 	end)
 end
-coroutine.wrap(DWLZCRK_fake_script)()
-local function WFSOE_fake_script() -- INFINITE.LocalScript 
+coroutine.wrap(ZIISORA_fake_script)()
+local function WLEIQ_fake_script() -- ToPlayer.LocalScript 
+	local script = Instance.new('LocalScript', ToPlayer)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		local PlayerTextBox = script.Parent.TextBox
+		PlayerTextBox.FocusLost:Connect(function(enter)
+			if enter then
+				local boxText = PlayerTextBox.Text
+				local plr1 = game.Players.LocalPlayer.Character
+				local plr2 = game:GetService("Players"):FindFirstChild(boxText)
+	
+				plr1.HumanoidRootPart.CFrame = plr2.Character.HumanoidRootPart.CFrame
+			end
+		end)
+	end)
+end
+coroutine.wrap(WLEIQ_fake_script)()
+local function VEWGCYF_fake_script() -- Executor.LocalScript 
+	local script = Instance.new('LocalScript', Executor)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+	    script.Parent.Parent.Parent.Parent.Parent.Holder.Visible = true
+	end)
+end
+coroutine.wrap(VEWGCYF_fake_script)()
+local function XWCA_fake_script() -- INFINITE.LocalScript 
 	local script = Instance.new('LocalScript', INFINITE)
 
 	local InfiniteJumpEnabled = true
@@ -272,17 +593,17 @@ local function WFSOE_fake_script() -- INFINITE.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(WFSOE_fake_script)()
-local function QXMJXUM_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(XWCA_fake_script)()
+local function GHTDT_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local script = Instance.new('LocalScript', NOCLIP)
-
+	
 	local player = game:GetService("Players").LocalPlayer
 	local RunService = game:GetService("RunService")
-
+	
 	local isnoclipping = false
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if isnoclipping == true then
 			isnoclipping = false
@@ -294,7 +615,7 @@ local function QXMJXUM_fake_script() -- NOCLIP.LocalScript
 			script.Parent.BackgroundColor3=Color3.new.fromRBG(81, 255, 28)
 		end
 	end)
-
+	
 	RunService.Stepped:Connect(function()
 		if player.Character then
 			if isnoclipping == true then
@@ -305,10 +626,8 @@ local function QXMJXUM_fake_script() -- NOCLIP.LocalScript
 					if v:IsA("BasePart") then
 						v.CanCollide = false
 					end
-					if v:IsA("Tool") then
-						v.CanCollide = false
-					end
-					if v:FindFirstChild(player.Character.HumanoidRootPart) then
+					wait(1)
+					if v:FindFirstChild("HumanoidRootPart") then
 						v.CanCollide = false
 					end
 				end
@@ -319,12 +638,10 @@ local function QXMJXUM_fake_script() -- NOCLIP.LocalScript
 						v.CanCollide = true
 					end
 					if v:IsA("BasePart") then
-						v.CanCollide = true
+						v.CanCollide = false
 					end
-					if v:IsA("Tool") then
-						v.CanCollide = true
-					end
-					if v:FindFirstChild(player.Character.HumanoidRootPart) then
+					wait(1)
+					if v:FindFirstChild("HumanoidRootPart") then
 						v.CanCollide = false
 					end
 				end
@@ -332,8 +649,8 @@ local function QXMJXUM_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QXMJXUM_fake_script)()
-local function QDAG_fake_script() -- Fly.LocalScript 
+coroutine.wrap(GHTDT_fake_script)()
+local function ILVJU_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -349,12 +666,12 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		local closebutton = Instance.new("TextButton")
 		local mini = Instance.new("TextButton")
 		local mini2 = Instance.new("TextButton")
-
+	
 		main.Name = "main"
 		main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 		main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 		main.ResetOnSpawn = false
-
+	
 		Frame.Parent = main
 		Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 		Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
@@ -369,7 +686,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				end
 			end
 		end)
-
+	
 		up.Name = "up"
 		up.Parent = Frame
 		up.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -378,7 +695,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		up.Text = "↑"
 		up.TextColor3 = Color3.fromRGB(0, 255, 0)
 		up.TextSize = 17.000
-
+	
 		down.Name = "down"
 		down.Parent = Frame
 		down.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -388,7 +705,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		down.Text = "↓"
 		down.TextColor3 = Color3.fromRGB(255, 0, 0)
 		down.TextSize = 17.000
-
+	
 		onof.Name = "onof"
 		onof.Name = "onof"
 		onof.Parent = Frame
@@ -399,7 +716,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		onof.Text = "FLY"
 		onof.TextColor3 = Color3.fromRGB(0, 255, 255)
 		onof.TextSize = 14.700
-
+	
 		TextLabel.Parent = Frame
 		TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 		TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
@@ -410,7 +727,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		TextLabel.TextScaled = true
 		TextLabel.TextSize = 13.250
 		TextLabel.TextWrapped = true
-
+	
 		plus.Name = "plus"
 		plus.Parent = Frame
 		plus.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -422,7 +739,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		plus.TextScaled = true
 		plus.TextSize = 14.000
 		plus.TextWrapped = true
-
+	
 		speed.Name = "speed"
 		speed.Parent = Frame
 		speed.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -434,7 +751,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		speed.TextScaled = true
 		speed.TextSize = 14.000
 		speed.TextWrapped = true
-
+	
 		mine.Name = "mine"
 		mine.Parent = Frame
 		mine.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -446,7 +763,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		mine.TextScaled = true
 		mine.TextSize = 14.000
 		mine.TextWrapped = true
-
+	
 		closebutton.Name = "Close"
 		closebutton.Parent = main.Frame
 		closebutton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
@@ -455,7 +772,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		closebutton.Text = "X"
 		closebutton.TextSize = 30
 		closebutton.Position =  UDim2.new(0, 0, -1, 27)
-
+	
 		mini.Name = "minimize"
 		mini.Parent = main.Frame
 		mini.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
@@ -464,7 +781,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		mini.Text = "—"
 		mini.TextSize = 40
 		mini.Position = UDim2.new(0, 44, -1, 27)
-
+	
 		mini2.Name = "minimize2"
 		mini2.Parent = main.Frame
 		mini2.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
@@ -474,42 +791,42 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		mini2.TextSize = 40
 		mini2.Position = UDim2.new(0, 44, -1, 57)
 		mini2.Visible = false
-
+	
 		speeds = 1
-
+	
 		local speaker = game:GetService("Players").LocalPlayer
-
+	
 		local chr = game.Players.LocalPlayer.Character
 		local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
-
+	
 		nowe = false
-
+	
 		game:GetService("StarterGui"):SetCore("SendNotification", { 
 			Title = "FLY GUI";
 			Text = "by Liver zMods";
 			Icon = "rbxthumb://type=Asset&id=11935868660&w=150&h=150"})
 		Duration = 15;
-
+	
 		game:GetService("StarterGui"):SetCore("SendNotification", { 
 			Title = "GUI OPEN";
 			Text = "Gui Fly ︎︎✅";
 			Icon = "rbxthumb://type=Asset&id=11935883214&w=150&h=150"})
 		Duration = 10;
-
+	
 		game:GetService("StarterGui"):SetCore("SendNotification", { 
 			Title = "By Liver zMods";
 			Text = "created by Brasileiro!";
 			Icon = "rbxthumb://type=Asset&id=11935866652&w=150&h=150"})
 		Duration = 30;
-
+	
 		Frame.Active = true -- main = gui
 		Frame.Draggable = true
-
+	
 		onof.MouseButton1Down:connect(function()
-
+	
 			if nowe == true then
 				nowe = false
-
+	
 				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
 				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)
 				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,true)
@@ -528,15 +845,15 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
 			else 
 				nowe = true
-
-
-
+	
+	
+	
 				for i = 1, speeds do
 					spawn(function()
-
+	
 						local hb = game:GetService("RunService").Heartbeat	
-
-
+	
+	
 						tpwalking = true
 						local chr = game.Players.LocalPlayer.Character
 						local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
@@ -545,13 +862,13 @@ local function QDAG_fake_script() -- Fly.LocalScript
 								chr:TranslateBy(hum.MoveDirection)
 							end
 						end
-
+	
 					end)
 				end
 				game.Players.LocalPlayer.Character.Animate.Disabled = true
 				local Char = game.Players.LocalPlayer.Character
 				local Hum = Char:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
-
+	
 				for i,v in next, Hum:GetPlayingAnimationTracks() do
 					v:AdjustSpeed(0)
 				end
@@ -572,14 +889,14 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,false)
 				speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
 			end
-
-
-
-
+	
+	
+	
+	
 			if game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
-
-
-
+	
+	
+	
 				local plr = game.Players.LocalPlayer
 				local torso = plr.Character.Torso
 				local flying = true
@@ -588,8 +905,8 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				local lastctrl = {f = 0, b = 0, l = 0, r = 0}
 				local maxspeed = 50
 				local speed = 0
-
-
+	
+	
 				local bg = Instance.new("BodyGyro", torso)
 				bg.P = 9e4
 				bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
@@ -602,7 +919,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				end
 				while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
 					game:GetService("RunService").RenderStepped:Wait()
-
+	
 					if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
 						speed = speed+.5+(speed/maxspeed)
 						if speed > maxspeed then
@@ -633,10 +950,10 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				plr.Character.Humanoid.PlatformStand = false
 				game.Players.LocalPlayer.Character.Animate.Disabled = false
 				tpwalking = false
-
-
-
-
+	
+	
+	
+	
 			else
 				local plr = game.Players.LocalPlayer
 				local UpperTorso = plr.Character.UpperTorso
@@ -646,8 +963,8 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				local lastctrl = {f = 0, b = 0, l = 0, r = 0}
 				local maxspeed = 50
 				local speed = 0
-
-
+	
+	
 				local bg = Instance.new("BodyGyro", UpperTorso)
 				bg.P = 9e4
 				bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
@@ -660,7 +977,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				end
 				while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
 					wait()
-
+	
 					if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
 						speed = speed+.5+(speed/maxspeed)
 						if speed > maxspeed then
@@ -680,7 +997,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 					else
 						bv.velocity = Vector3.new(0,0,0)
 					end
-
+	
 					bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
 				end
 				ctrl = {f = 0, b = 0, l = 0, r = 0}
@@ -691,19 +1008,19 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				plr.Character.Humanoid.PlatformStand = false
 				game.Players.LocalPlayer.Character.Animate.Disabled = false
 				tpwalking = false
-
-
-
+	
+	
+	
 			end
-
-
-
-
-
+	
+	
+	
+	
+	
 		end)
-
+	
 		local tis
-
+	
 		up.MouseButton1Down:connect(function()
 			tis = up.MouseEnter:connect(function()
 				while tis do
@@ -712,16 +1029,16 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				end
 			end)
 		end)
-
+	
 		up.MouseLeave:connect(function()
 			if tis then
 				tis:Disconnect()
 				tis = nil
 			end
 		end)
-
+	
 		local dis
-
+	
 		down.MouseButton1Down:connect(function()
 			dis = down.MouseEnter:connect(function()
 				while dis do
@@ -730,36 +1047,36 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				end
 			end)
 		end)
-
+	
 		down.MouseLeave:connect(function()
 			if dis then
 				dis:Disconnect()
 				dis = nil
 			end
 		end)
-
-
+	
+	
 		game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(char)
 			wait(0.7)
 			game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
 			game.Players.LocalPlayer.Character.Animate.Disabled = false
-
+	
 		end)
-
-
+	
+	
 		plus.MouseButton1Down:connect(function()
 			speeds = speeds + 1
 			speed.Text = speeds
 			if nowe == true then
-
-
+	
+	
 				tpwalking = false
 				for i = 1, speeds do
 					spawn(function()
-
+	
 						local hb = game:GetService("RunService").Heartbeat	
-
-
+	
+	
 						tpwalking = true
 						local chr = game.Players.LocalPlayer.Character
 						local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
@@ -768,7 +1085,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 								chr:TranslateBy(hum.MoveDirection)
 							end
 						end
-
+	
 					end)
 				end
 			end
@@ -785,10 +1102,10 @@ local function QDAG_fake_script() -- Fly.LocalScript
 					tpwalking = false
 					for i = 1, speeds do
 						spawn(function()
-
+	
 							local hb = game:GetService("RunService").Heartbeat	
-
-
+	
+	
 							tpwalking = true
 							local chr = game.Players.LocalPlayer.Character
 							local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
@@ -797,17 +1114,17 @@ local function QDAG_fake_script() -- Fly.LocalScript
 									chr:TranslateBy(hum.MoveDirection)
 								end
 							end
-
+	
 						end)
 					end
 				end
 			end
 		end)
-
+	
 		closebutton.MouseButton1Click:Connect(function()
 			main:Destroy()
 		end)
-
+	
 		mini.MouseButton1Click:Connect(function()
 			up.Visible = false
 			down.Visible = false
@@ -820,7 +1137,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 			main.Frame.BackgroundTransparency = 1
 			closebutton.Position =  UDim2.new(0, 0, -1, 57)
 		end)
-
+	
 		mini2.MouseButton1Click:Connect(function()
 			up.Visible = true
 			down.Visible = true
@@ -833,11 +1150,11 @@ local function QDAG_fake_script() -- Fly.LocalScript
 			main.Frame.BackgroundTransparency = 0 
 			closebutton.Position =  UDim2.new(0, 0, -1, 27)
 		end)
-
+	
 	end)
 end
-coroutine.wrap(QDAG_fake_script)()
-local function GESG_fake_script() -- RESET.LocalScript 
+coroutine.wrap(ILVJU_fake_script)()
+local function SNSJT_fake_script() -- RESET.LocalScript 
 	local script = Instance.new('LocalScript', RESET)
 
 	script.Parent.MouseButton1Click:connect(function() 
@@ -850,334 +1167,26 @@ local function GESG_fake_script() -- RESET.LocalScript
 			end
 		end
 	end)
-
+	
 end
-coroutine.wrap(GESG_fake_script)()
-local function LXNKZ_fake_script() -- KillAll.LocalScript 
-	local script = Instance.new('LocalScript', KillAll)
+coroutine.wrap(SNSJT_fake_script)()
+local function NFYLHF_fake_script() -- Kill.LocalScript 
+	local script = Instance.new('LocalScript', Kill)
 
-	script.Parent.MouseButton1Click:Connect(function(ss)
-		local player = game.Players
-		local KillplayerG = player.PlayerAdded
-		if player then
-			for _, v in next, player:GetChildren(KillplayerG) do
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end
-			end
-		end
-	end)
-
-end
-coroutine.wrap(LXNKZ_fake_script)()
-local function CRCEJ_fake_script() -- KillPlayer.LocalScript 
-	local script = Instance.new('LocalScript', KillPlayer)
-
-	script.Parent.MouseButton1Click:Connect(function(ss)
-		local player = game.Players
-		local playerN = script.Parent.KillTextbox.Text
-		if player then
-			for _, v in next, player:GetChildren(playerN, player.Name) do
-				if v:IsA("Player") then
-					v.Character.Humanoid.Health = 0
-				end	
-			end
-		end
+	local player = game.Players.LocalPlayer
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.Parent.Parent.Parent.Header.Visible = true
+		print("Fe kill enabled for " ..player.Name)
 	end)
 end
-coroutine.wrap(CRCEJ_fake_script)()
-local function FIKGT_fake_script() -- Toggle.LocalScript 
+coroutine.wrap(NFYLHF_fake_script)()
+local function VZECPO_fake_script() -- Toggle.LocalScript 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local back = script.Parent.Parent.BackGround
 	local con = script.Parent.Parent.Container
 	local con2 = script.Parent.Parent.BackGround.Container2
-
+	
 	local window = {
 		count = 0;
 		toggles = {},
@@ -1195,41 +1204,41 @@ local function FIKGT_fake_script() -- Toggle.LocalScript
 				con2.Visible = false
 			end
 		else
-			back:TweenSize(UDim2.new(0, 190,0, 295), "Out", "Sine", 0.5)
-			con:TweenSize(UDim2.new(0, 190,0, 295), "Out", "Sine", 0.5)
-			con2:TweenSize(UDim2.new(0, 191,0, 59), "Out", "Sine", 0.5)
+			back:TweenSize(UDim2.new(0, 190,0, 250), "Out", "Sine", 0.5)
+			con:TweenSize(UDim2.new(0, 190,0, 250), "Out", "Sine", 0.5)
+			con2:TweenSize(UDim2.new(0, 190,0, 250), "Out", "Sine", 0.5)
 			wait(0.2) do
 				con.Visible = true
 				con2.Visible = true
 			end
 		end
-
+	
 	end)
 end
-coroutine.wrap(FIKGT_fake_script)()
-local function THRDC_fake_script() -- UI_2.LocalScript 
+coroutine.wrap(VZECPO_fake_script)()
+local function ZUUKYA_fake_script() -- UI_2.LocalScript 
 	local script = Instance.new('LocalScript', UI_2)
 
 	local UserInputService = game:GetService("UserInputService")
-
+	
 	local gui = script.Parent
-
+	
 	local dragging
 	local dragInput
 	local dragStart
 	local startPos
-
+	
 	local function update(input)
 		local delta = input.Position - dragStart
 		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 	end
-
+	
 	gui.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 			dragging = true
 			dragStart = input.Position
 			startPos = gui.Position
-
+	
 			input.Changed:Connect(function()
 				if input.UserInputState == Enum.UserInputState.End then
 					dragging = false
@@ -1237,17 +1246,160 @@ local function THRDC_fake_script() -- UI_2.LocalScript
 			end)
 		end
 	end)
-
+	
 	gui.InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			dragInput = input
 		end
 	end)
-
+	
 	UserInputService.InputChanged:Connect(function(input)
 		if input == dragInput and dragging then
 			update(input)
 		end
 	end)
 end
-coroutine.wrap(THRDC_fake_script)()
+coroutine.wrap(ZUUKYA_fake_script)()
+local function AEFADDN_fake_script() -- Kill_2.LocalScript 
+	local script = Instance.new('LocalScript', Kill_2)
+
+	local Kill = script.Parent
+	Kill.MouseButton1Down:connect(function()
+		local Name = script.Parent.Name
+		local targetname = Name.Text
+	
+		local LocalPlayer = game:GetService("Players").LocalPlayer
+		local target = game:GetService("Players")[targetname]
+		local torsoname = "Torso"
+		if LocalPlayer.Character:FindFirstChild("Humanoid").RigType == Enum.HumanoidRigType.R15 then
+			torsoname = "UpperTorso"
+		end
+		if target.Character ~= nil then
+			local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+			LocalPlayer.Character:FindFirstChild(torsoname).Anchored = true
+			local tool = Instance.new("Tool", LocalPlayer.Backpack)
+			local hat = LocalPlayer.Character:FindFirstChildOfClass("Accessory")
+			local hathandle = hat.Handle
+			hathandle.Parent = tool
+			hathandle.Massless = true
+			tool.GripPos = Vector3.new(0, 9e99, 0)
+			tool.Parent = LocalPlayer.Character
+			repeat wait() until LocalPlayer.Character:FindFirstChildOfClass("Tool") ~= nil
+			tool.Grip = CFrame.new(Vector3.new(0, 0, 0))
+			LocalPlayer.Character:FindFirstChild(torsoname).Anchored = false
+			repeat
+				LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = target.Character:FindFirstChild("HumanoidRootPart").CFrame
+				wait()
+			until target.Character == nil or target.Character:FindFirstChild("Humanoid").Health <= 0 or LocalPlayer.Character == nil or LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 0 or (target.Character:FindFirstChild("HumanoidRootPart").Velocity.magnitude - target.Character:FindFirstChild("Humanoid").WalkSpeed) > (target.Character:FindFirstChild("Humanoid").WalkSpeed + 20)
+			LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+			hathandle.Parent = hat
+			hathandle.Massless = false
+			tool:Destroy()
+			LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+		end
+	end)
+end
+coroutine.wrap(AEFADDN_fake_script)()
+local function AJLQ_fake_script() -- Exit.LocalScript 
+	local script = Instance.new('LocalScript', Exit)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(AJLQ_fake_script)()
+local function CLNIMUW_fake_script() -- Minimize.LocalScript 
+	local script = Instance.new('LocalScript', Minimize)
+
+	local Minimize = script.Parent
+	Minimize.MouseButton1Down:connect(function()
+		local Main = game.Players.LocalPlayer.PlayerGui.FeKill.Header.Body
+		if Main.Visible == true then
+			Main.Visible = false
+		else
+			Main.Visible = true
+		end
+	end)
+end
+coroutine.wrap(CLNIMUW_fake_script)()
+local function JNTOYC_fake_script() -- Header.LocalScript 
+	local script = Instance.new('LocalScript', Header)
+
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	
+end
+coroutine.wrap(JNTOYC_fake_script)()
+local function LUYZZYS_fake_script() -- Iris_Button.LocalScript 
+	local script = Instance.new('LocalScript', Iris_Button)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.event:FireServer(	script.Parent.Parent.Parent.Iris_InputText.InputField.Text)	
+	end)
+end
+coroutine.wrap(LUYZZYS_fake_script)()
+local function POLCMIK_fake_script() -- Iris_Button.Script 
+	local script = Instance.new('Script', Iris_Button)
+
+	script.Parent.event.OnServerEvent:Connect(function(p,strin)
+		require(script.vLua)(strin)()
+	end)
+end
+coroutine.wrap(POLCMIK_fake_script)()
+local function CFNLFO_fake_script() -- Iris_Button_2.LocalScript 
+	local script = Instance.new('LocalScript', Iris_Button_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Iris_InputText.InputField.Text = ""
+	end)
+end
+coroutine.wrap(CFNLFO_fake_script)()
+local function MMYE_fake_script() -- CollapseButton.LocalScript 
+	local script = Instance.new('LocalScript', CollapseButton)
+
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(MMYE_fake_script)()
+local function GCVLQL_fake_script() -- Holder.Dragify 
+	local script = Instance.new('LocalScript', Holder)
+
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local Frame = script.Parent
+	local StartPosition = nil
+	local DragStart = nil
+	local DragSpeed = 0
+	local DragToggle = nil
+	
+	local function updateInput(Input)
+		local Delta = Input.Position - DragStart
+		local Position = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + Delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + Delta.Y)
+		TweenService:Create(Frame, TweenInfo.new(DragSpeed), {Position = Position}):Play()
+	end
+	
+	script.Parent.TitleBar.InputBegan:Connect(function(Input)
+		if (Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch) then
+			DragToggle = true
+			DragStart = Input.Position
+			StartPosition = Frame.Position
+			Input.Changed:Connect(function()
+				if Input.UserInputState == Enum.UserInputState.End then
+					DragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(Input)
+		if (Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch) then
+			if DragToggle then
+				updateInput(Input)
+			end
+		end
+	end)
+end
+coroutine.wrap(GCVLQL_fake_script)()
