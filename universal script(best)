@@ -22,6 +22,7 @@ local Window = Instance.new("TextLabel")
 UI.Name = "UI"
 UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+UI.IgnoreGuiInset = true
 
 UI_2.Name = "UI"
 UI_2.Parent = UI
