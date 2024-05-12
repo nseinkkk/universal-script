@@ -277,12 +277,12 @@ local function QXMJXUM_fake_script() -- NOCLIP.LocalScript
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local script = Instance.new('LocalScript', NOCLIP)
-	
+
 	local player = game:GetService("Players").LocalPlayer
 	local RunService = game:GetService("RunService")
-	
+
 	local isnoclipping = false
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if isnoclipping == true then
 			isnoclipping = false
@@ -294,12 +294,21 @@ local function QXMJXUM_fake_script() -- NOCLIP.LocalScript
 			script.Parent.BackgroundColor3=Color3.new.fromRBG(81, 255, 28)
 		end
 	end)
-	
+
 	RunService.Stepped:Connect(function()
 		if player.Character then
 			if isnoclipping == true then
 				for i,v in pairs(player.Character:GetDescendants()) do
 					if v:IsA("Part") then
+						v.CanCollide = false
+					end
+					if v:IsA("BasePart") then
+						v.CanCollide = false
+					end
+					if v:IsA("Tool") then
+						v.CanCollide = false
+					end
+					if v:FindFirstChild(player.Character.HumanoidRootPart) then
 						v.CanCollide = false
 					end
 				end
@@ -309,7 +318,15 @@ local function QXMJXUM_fake_script() -- NOCLIP.LocalScript
 					if v:IsA("Part") then
 						v.CanCollide = true
 					end
-	
+					if v:IsA("BasePart") then
+						v.CanCollide = true
+					end
+					if v:IsA("Tool") then
+						v.CanCollide = true
+					end
+					if v:FindFirstChild(player.Character.HumanoidRootPart) then
+						v.CanCollide = false
+					end
 				end
 			end
 		end
@@ -332,12 +349,12 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		local closebutton = Instance.new("TextButton")
 		local mini = Instance.new("TextButton")
 		local mini2 = Instance.new("TextButton")
-	
+
 		main.Name = "main"
 		main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 		main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 		main.ResetOnSpawn = false
-	
+
 		Frame.Parent = main
 		Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 		Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
@@ -352,7 +369,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				end
 			end
 		end)
-	
+
 		up.Name = "up"
 		up.Parent = Frame
 		up.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -361,7 +378,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		up.Text = "↑"
 		up.TextColor3 = Color3.fromRGB(0, 255, 0)
 		up.TextSize = 17.000
-	
+
 		down.Name = "down"
 		down.Parent = Frame
 		down.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -371,7 +388,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		down.Text = "↓"
 		down.TextColor3 = Color3.fromRGB(255, 0, 0)
 		down.TextSize = 17.000
-	
+
 		onof.Name = "onof"
 		onof.Name = "onof"
 		onof.Parent = Frame
@@ -382,7 +399,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		onof.Text = "FLY"
 		onof.TextColor3 = Color3.fromRGB(0, 255, 255)
 		onof.TextSize = 14.700
-	
+
 		TextLabel.Parent = Frame
 		TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 		TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
@@ -393,7 +410,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		TextLabel.TextScaled = true
 		TextLabel.TextSize = 13.250
 		TextLabel.TextWrapped = true
-	
+
 		plus.Name = "plus"
 		plus.Parent = Frame
 		plus.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -405,7 +422,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		plus.TextScaled = true
 		plus.TextSize = 14.000
 		plus.TextWrapped = true
-	
+
 		speed.Name = "speed"
 		speed.Parent = Frame
 		speed.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -417,7 +434,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		speed.TextScaled = true
 		speed.TextSize = 14.000
 		speed.TextWrapped = true
-	
+
 		mine.Name = "mine"
 		mine.Parent = Frame
 		mine.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -429,7 +446,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		mine.TextScaled = true
 		mine.TextSize = 14.000
 		mine.TextWrapped = true
-	
+
 		closebutton.Name = "Close"
 		closebutton.Parent = main.Frame
 		closebutton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
@@ -438,7 +455,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		closebutton.Text = "X"
 		closebutton.TextSize = 30
 		closebutton.Position =  UDim2.new(0, 0, -1, 27)
-	
+
 		mini.Name = "minimize"
 		mini.Parent = main.Frame
 		mini.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
@@ -447,7 +464,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		mini.Text = "—"
 		mini.TextSize = 40
 		mini.Position = UDim2.new(0, 44, -1, 27)
-	
+
 		mini2.Name = "minimize2"
 		mini2.Parent = main.Frame
 		mini2.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
@@ -457,42 +474,42 @@ local function QDAG_fake_script() -- Fly.LocalScript
 		mini2.TextSize = 40
 		mini2.Position = UDim2.new(0, 44, -1, 57)
 		mini2.Visible = false
-	
+
 		speeds = 1
-	
+
 		local speaker = game:GetService("Players").LocalPlayer
-	
+
 		local chr = game.Players.LocalPlayer.Character
 		local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
-	
+
 		nowe = false
-	
+
 		game:GetService("StarterGui"):SetCore("SendNotification", { 
 			Title = "FLY GUI";
 			Text = "by Liver zMods";
 			Icon = "rbxthumb://type=Asset&id=11935868660&w=150&h=150"})
 		Duration = 15;
-	
+
 		game:GetService("StarterGui"):SetCore("SendNotification", { 
 			Title = "GUI OPEN";
 			Text = "Gui Fly ︎︎✅";
 			Icon = "rbxthumb://type=Asset&id=11935883214&w=150&h=150"})
 		Duration = 10;
-	
+
 		game:GetService("StarterGui"):SetCore("SendNotification", { 
 			Title = "By Liver zMods";
 			Text = "created by Brasileiro!";
 			Icon = "rbxthumb://type=Asset&id=11935866652&w=150&h=150"})
 		Duration = 30;
-	
+
 		Frame.Active = true -- main = gui
 		Frame.Draggable = true
-	
+
 		onof.MouseButton1Down:connect(function()
-	
+
 			if nowe == true then
 				nowe = false
-	
+
 				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
 				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)
 				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,true)
@@ -511,15 +528,15 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
 			else 
 				nowe = true
-	
-	
-	
+
+
+
 				for i = 1, speeds do
 					spawn(function()
-	
+
 						local hb = game:GetService("RunService").Heartbeat	
-	
-	
+
+
 						tpwalking = true
 						local chr = game.Players.LocalPlayer.Character
 						local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
@@ -528,13 +545,13 @@ local function QDAG_fake_script() -- Fly.LocalScript
 								chr:TranslateBy(hum.MoveDirection)
 							end
 						end
-	
+
 					end)
 				end
 				game.Players.LocalPlayer.Character.Animate.Disabled = true
 				local Char = game.Players.LocalPlayer.Character
 				local Hum = Char:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
-	
+
 				for i,v in next, Hum:GetPlayingAnimationTracks() do
 					v:AdjustSpeed(0)
 				end
@@ -555,14 +572,14 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,false)
 				speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
 			end
-	
-	
-	
-	
+
+
+
+
 			if game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
-	
-	
-	
+
+
+
 				local plr = game.Players.LocalPlayer
 				local torso = plr.Character.Torso
 				local flying = true
@@ -571,8 +588,8 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				local lastctrl = {f = 0, b = 0, l = 0, r = 0}
 				local maxspeed = 50
 				local speed = 0
-	
-	
+
+
 				local bg = Instance.new("BodyGyro", torso)
 				bg.P = 9e4
 				bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
@@ -585,7 +602,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				end
 				while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
 					game:GetService("RunService").RenderStepped:Wait()
-	
+
 					if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
 						speed = speed+.5+(speed/maxspeed)
 						if speed > maxspeed then
@@ -616,10 +633,10 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				plr.Character.Humanoid.PlatformStand = false
 				game.Players.LocalPlayer.Character.Animate.Disabled = false
 				tpwalking = false
-	
-	
-	
-	
+
+
+
+
 			else
 				local plr = game.Players.LocalPlayer
 				local UpperTorso = plr.Character.UpperTorso
@@ -629,8 +646,8 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				local lastctrl = {f = 0, b = 0, l = 0, r = 0}
 				local maxspeed = 50
 				local speed = 0
-	
-	
+
+
 				local bg = Instance.new("BodyGyro", UpperTorso)
 				bg.P = 9e4
 				bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
@@ -643,7 +660,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				end
 				while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
 					wait()
-	
+
 					if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
 						speed = speed+.5+(speed/maxspeed)
 						if speed > maxspeed then
@@ -663,7 +680,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 					else
 						bv.velocity = Vector3.new(0,0,0)
 					end
-	
+
 					bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
 				end
 				ctrl = {f = 0, b = 0, l = 0, r = 0}
@@ -674,19 +691,19 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				plr.Character.Humanoid.PlatformStand = false
 				game.Players.LocalPlayer.Character.Animate.Disabled = false
 				tpwalking = false
-	
-	
-	
+
+
+
 			end
-	
-	
-	
-	
-	
+
+
+
+
+
 		end)
-	
+
 		local tis
-	
+
 		up.MouseButton1Down:connect(function()
 			tis = up.MouseEnter:connect(function()
 				while tis do
@@ -695,16 +712,16 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				end
 			end)
 		end)
-	
+
 		up.MouseLeave:connect(function()
 			if tis then
 				tis:Disconnect()
 				tis = nil
 			end
 		end)
-	
+
 		local dis
-	
+
 		down.MouseButton1Down:connect(function()
 			dis = down.MouseEnter:connect(function()
 				while dis do
@@ -713,36 +730,36 @@ local function QDAG_fake_script() -- Fly.LocalScript
 				end
 			end)
 		end)
-	
+
 		down.MouseLeave:connect(function()
 			if dis then
 				dis:Disconnect()
 				dis = nil
 			end
 		end)
-	
-	
+
+
 		game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(char)
 			wait(0.7)
 			game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
 			game.Players.LocalPlayer.Character.Animate.Disabled = false
-	
+
 		end)
-	
-	
+
+
 		plus.MouseButton1Down:connect(function()
 			speeds = speeds + 1
 			speed.Text = speeds
 			if nowe == true then
-	
-	
+
+
 				tpwalking = false
 				for i = 1, speeds do
 					spawn(function()
-	
+
 						local hb = game:GetService("RunService").Heartbeat	
-	
-	
+
+
 						tpwalking = true
 						local chr = game.Players.LocalPlayer.Character
 						local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
@@ -751,7 +768,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 								chr:TranslateBy(hum.MoveDirection)
 							end
 						end
-	
+
 					end)
 				end
 			end
@@ -768,10 +785,10 @@ local function QDAG_fake_script() -- Fly.LocalScript
 					tpwalking = false
 					for i = 1, speeds do
 						spawn(function()
-	
+
 							local hb = game:GetService("RunService").Heartbeat	
-	
-	
+
+
 							tpwalking = true
 							local chr = game.Players.LocalPlayer.Character
 							local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
@@ -780,17 +797,17 @@ local function QDAG_fake_script() -- Fly.LocalScript
 									chr:TranslateBy(hum.MoveDirection)
 								end
 							end
-	
+
 						end)
 					end
 				end
 			end
 		end)
-	
+
 		closebutton.MouseButton1Click:Connect(function()
 			main:Destroy()
 		end)
-	
+
 		mini.MouseButton1Click:Connect(function()
 			up.Visible = false
 			down.Visible = false
@@ -803,7 +820,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 			main.Frame.BackgroundTransparency = 1
 			closebutton.Position =  UDim2.new(0, 0, -1, 57)
 		end)
-	
+
 		mini2.MouseButton1Click:Connect(function()
 			up.Visible = true
 			down.Visible = true
@@ -816,7 +833,7 @@ local function QDAG_fake_script() -- Fly.LocalScript
 			main.Frame.BackgroundTransparency = 0 
 			closebutton.Position =  UDim2.new(0, 0, -1, 27)
 		end)
-	
+
 	end)
 end
 coroutine.wrap(QDAG_fake_script)()
@@ -833,7 +850,7 @@ local function GESG_fake_script() -- RESET.LocalScript
 			end
 		end
 	end)
-	
+
 end
 coroutine.wrap(GESG_fake_script)()
 local function LXNKZ_fake_script() -- KillAll.LocalScript 
@@ -841,8 +858,9 @@ local function LXNKZ_fake_script() -- KillAll.LocalScript
 
 	script.Parent.MouseButton1Click:Connect(function(ss)
 		local player = game.Players
+		local KillplayerG = player.PlayerAdded
 		if player then
-			for _, v in next, player:GetChildren() do
+			for _, v in next, player:GetChildren(KillplayerG) do
 				if v:IsA("Player") then
 					v.Character.Humanoid.Health = 0
 				end	
@@ -1134,7 +1152,7 @@ local function LXNKZ_fake_script() -- KillAll.LocalScript
 			end
 		end
 	end)
-	
+
 end
 coroutine.wrap(LXNKZ_fake_script)()
 local function CRCEJ_fake_script() -- KillPlayer.LocalScript 
@@ -1144,7 +1162,7 @@ local function CRCEJ_fake_script() -- KillPlayer.LocalScript
 		local player = game.Players
 		local playerN = script.Parent.KillTextbox.Text
 		if player then
-			for _, v in next, player:GetChildren(playerN) do
+			for _, v in next, player:GetChildren(playerN, player.Name) do
 				if v:IsA("Player") then
 					v.Character.Humanoid.Health = 0
 				end	
@@ -1159,7 +1177,7 @@ local function FIKGT_fake_script() -- Toggle.LocalScript
 	local back = script.Parent.Parent.BackGround
 	local con = script.Parent.Parent.Container
 	local con2 = script.Parent.Parent.BackGround.Container2
-	
+
 	local window = {
 		count = 0;
 		toggles = {},
@@ -1185,7 +1203,7 @@ local function FIKGT_fake_script() -- Toggle.LocalScript
 				con2.Visible = true
 			end
 		end
-	
+
 	end)
 end
 coroutine.wrap(FIKGT_fake_script)()
@@ -1193,25 +1211,25 @@ local function THRDC_fake_script() -- UI_2.LocalScript
 	local script = Instance.new('LocalScript', UI_2)
 
 	local UserInputService = game:GetService("UserInputService")
-	
+
 	local gui = script.Parent
-	
+
 	local dragging
 	local dragInput
 	local dragStart
 	local startPos
-	
+
 	local function update(input)
 		local delta = input.Position - dragStart
 		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 	end
-	
+
 	gui.InputBegan:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 			dragging = true
 			dragStart = input.Position
 			startPos = gui.Position
-	
+
 			input.Changed:Connect(function()
 				if input.UserInputState == Enum.UserInputState.End then
 					dragging = false
@@ -1219,13 +1237,13 @@ local function THRDC_fake_script() -- UI_2.LocalScript
 			end)
 		end
 	end)
-	
+
 	gui.InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			dragInput = input
 		end
 	end)
-	
+
 	UserInputService.InputChanged:Connect(function(input)
 		if input == dragInput and dragging then
 			update(input)
