@@ -20,7 +20,7 @@ local Window = Instance.new("TextLabel")
 --Properties:
 
 UI.Name = "UI"
-UI.Parent = game.StarterGui
+UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 UI_2.Name = "UI"
