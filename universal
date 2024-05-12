@@ -1,5 +1,4 @@
--- Gui to Lua
--- Version: 3.2
+-- Made by Fer Modz
 
 -- Instances:
 
@@ -7,15 +6,23 @@ local UI = Instance.new("ScreenGui")
 local UI_2 = Instance.new("Frame")
 local BackGround = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local Container = Instance.new("Frame")
-local UIGridLayout = Instance.new("UIGridLayout")
+local Container2 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
 local Padding = Instance.new("UIPadding")
+local UIGridLayout = Instance.new("UIGridLayout")
+local ToolGiver = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local Container = Instance.new("Frame")
+local UIGridLayout_2 = Instance.new("UIGridLayout")
+local Padding_2 = Instance.new("UIPadding")
 local INFINITE = Instance.new("TextButton")
 local NOCLIP = Instance.new("TextButton")
 local Fly = Instance.new("TextButton")
 local RESET = Instance.new("TextButton")
 local KillAll = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local KillPlayer = Instance.new("TextButton")
 local KillTextbox = Instance.new("TextBox")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
@@ -46,6 +53,62 @@ BackGround.ZIndex = 4
 
 UICorner.Parent = BackGround
 
+Container2.Name = "Container2"
+Container2.Parent = BackGround
+Container2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Container2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Container2.BorderSizePixel = 0
+Container2.Position = UDim2.new(1.01578951, 0, 0.0157802776, 0)
+Container2.Size = UDim2.new(0, 182, 0, 52)
+
+UICorner_2.Parent = Container2
+
+Padding.Name = "Padding"
+Padding.Parent = Container2
+Padding.PaddingLeft = UDim.new(0, 5)
+Padding.PaddingTop = UDim.new(0, 5)
+
+UIGridLayout.Parent = Container2
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 180, 0, 40)
+
+ToolGiver.Name = "ToolGiver"
+ToolGiver.Parent = Container2
+ToolGiver.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ToolGiver.BackgroundTransparency = 1.000
+ToolGiver.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ToolGiver.BorderSizePixel = 0
+ToolGiver.Position = UDim2.new(1.38418078, 0, -8.05714321, 0)
+ToolGiver.Size = UDim2.new(0, 151, 0, 40)
+ToolGiver.Font = Enum.Font.SourceSans
+ToolGiver.Text = "print("
+ToolGiver.TextColor3 = Color3.fromRGB(30, 30, 30)
+ToolGiver.TextSize = 24.000
+
+TextBox.Parent = ToolGiver
+TextBox.BackgroundColor3 = Color3.fromRGB(83, 0, 0)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.633333325, 0, 0.174999997, 0)
+TextBox.Size = UDim2.new(0, 150, 0, 28)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = "hi"
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 24.000
+
+TextLabel.Parent = ToolGiver
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(1.46111107, 0, -0.0500000007, 0)
+TextLabel.Size = UDim2.new(0, 15, 0, 46)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = ")"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 24.000
+
+UICorner_3.Parent = TextLabel
+
 Container.Name = "Container"
 Container.Parent = UI_2
 Container.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -54,14 +117,14 @@ Container.Position = UDim2.new(0, 0, 1, 0)
 Container.Size = UDim2.new(0, 190, 0, 295)
 Container.ZIndex = 5
 
-UIGridLayout.Parent = Container
-UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout.CellSize = UDim2.new(0, 180, 0, 40)
+UIGridLayout_2.Parent = Container
+UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_2.CellSize = UDim2.new(0, 180, 0, 40)
 
-Padding.Name = "Padding"
-Padding.Parent = Container
-Padding.PaddingLeft = UDim.new(0, 5)
-Padding.PaddingTop = UDim.new(0, 5)
+Padding_2.Name = "Padding"
+Padding_2.Parent = Container
+Padding_2.PaddingLeft = UDim.new(0, 5)
+Padding_2.PaddingTop = UDim.new(0, 5)
 
 INFINITE.Name = "INFINITE"
 INFINITE.Parent = Container
@@ -123,7 +186,7 @@ KillAll.Text = "Kill all"
 KillAll.TextColor3 = Color3.fromRGB(255, 0, 0)
 KillAll.TextSize = 24.000
 
-UICorner_2.Parent = Container
+UICorner_4.Parent = Container
 
 KillPlayer.Name = "KillPlayer"
 KillPlayer.Parent = Container
@@ -132,6 +195,7 @@ KillPlayer.BackgroundTransparency = 1.000
 KillPlayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
 KillPlayer.BorderSizePixel = 0
 KillPlayer.Size = UDim2.new(0, 200, 0, 50)
+KillPlayer.ZIndex = 2
 KillPlayer.Font = Enum.Font.SourceSans
 KillPlayer.Text = "Kill player"
 KillPlayer.TextColor3 = Color3.fromRGB(255, 0, 0)
@@ -144,6 +208,7 @@ KillTextbox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 KillTextbox.BorderSizePixel = 0
 KillTextbox.Position = UDim2.new(0.783333361, 0, 0.075000003, 0)
 KillTextbox.Size = UDim2.new(0, 73, 0, 37)
+KillTextbox.ZIndex = 5
 KillTextbox.Font = Enum.Font.SourceSans
 KillTextbox.Text = "player name here"
 KillTextbox.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -187,7 +252,15 @@ Window.TextSize = 17.000
 
 -- Scripts:
 
-local function TFBEVBA_fake_script() -- INFINITE.LocalScript 
+local function DWLZCRK_fake_script() -- ToolGiver.LocalScript 
+	local script = Instance.new('LocalScript', ToolGiver)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		print(script.Parent.TextBox.Text)
+	end)
+end
+coroutine.wrap(DWLZCRK_fake_script)()
+local function WFSOE_fake_script() -- INFINITE.LocalScript 
 	local script = Instance.new('LocalScript', INFINITE)
 
 	local InfiniteJumpEnabled = true
@@ -199,8 +272,8 @@ local function TFBEVBA_fake_script() -- INFINITE.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(TFBEVBA_fake_script)()
-local function YQEA_fake_script() -- NOCLIP.LocalScript 
+coroutine.wrap(WFSOE_fake_script)()
+local function QXMJXUM_fake_script() -- NOCLIP.LocalScript 
 	local script = Instance.new('LocalScript', NOCLIP)
 
 	local script = Instance.new('LocalScript', NOCLIP)
@@ -242,8 +315,8 @@ local function YQEA_fake_script() -- NOCLIP.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YQEA_fake_script)()
-local function MLJN_fake_script() -- Fly.LocalScript 
+coroutine.wrap(QXMJXUM_fake_script)()
+local function QDAG_fake_script() -- Fly.LocalScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -746,8 +819,8 @@ local function MLJN_fake_script() -- Fly.LocalScript
 	
 	end)
 end
-coroutine.wrap(MLJN_fake_script)()
-local function FNTKI_fake_script() -- RESET.LocalScript 
+coroutine.wrap(QDAG_fake_script)()
+local function GESG_fake_script() -- RESET.LocalScript 
 	local script = Instance.new('LocalScript', RESET)
 
 	script.Parent.MouseButton1Click:connect(function() 
@@ -762,9 +835,9 @@ local function FNTKI_fake_script() -- RESET.LocalScript
 	end)
 	
 end
-coroutine.wrap(FNTKI_fake_script)()
-local function UNIC_fake_script() -- KillAll.Script 
-	local script = Instance.new('Script', KillAll)
+coroutine.wrap(GESG_fake_script)()
+local function LXNKZ_fake_script() -- KillAll.LocalScript 
+	local script = Instance.new('LocalScript', KillAll)
 
 	script.Parent.MouseButton1Click:Connect(function(ss)
 		local player = game.Players
@@ -773,33 +846,319 @@ local function UNIC_fake_script() -- KillAll.Script
 				if v:IsA("Player") then
 					v.Character.Humanoid.Health = 0
 				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end
 			end
 		end
 	end)
 	
 end
-coroutine.wrap(UNIC_fake_script)()
-local function PDAPGKI_fake_script() -- KillPlayer.Script 
-	local script = Instance.new('Script', KillPlayer)
+coroutine.wrap(LXNKZ_fake_script)()
+local function CRCEJ_fake_script() -- KillPlayer.LocalScript 
+	local script = Instance.new('LocalScript', KillPlayer)
 
 	script.Parent.MouseButton1Click:Connect(function(ss)
 		local player = game.Players
+		local playerN = script.Parent.KillTextbox.Text
 		if player then
-			for _, v in next, player:GetChildren(script.Parent.KillTextbox.Text) do
+			for _, v in next, player:GetChildren(playerN) do
 				if v:IsA("Player") then
 					v.Character.Humanoid.Health = 0
 				end	
 			end
 		end
 	end)
-	
 end
-coroutine.wrap(PDAPGKI_fake_script)()
-local function GYSOLZY_fake_script() -- Toggle.LocalScript 
+coroutine.wrap(CRCEJ_fake_script)()
+local function FIKGT_fake_script() -- Toggle.LocalScript 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local back = script.Parent.Parent.BackGround
 	local con = script.Parent.Parent.Container
+	local con2 = script.Parent.Parent.BackGround.Container2
 	
 	local window = {
 		count = 0;
@@ -812,21 +1171,25 @@ local function GYSOLZY_fake_script() -- Toggle.LocalScript
 		if script.Parent.Text == "+" then
 			back:TweenSize(UDim2.new(0, 190,0, 0), "Out", "Sine", 0.5)
 			con:TweenSize(UDim2.new(0, 190,0, 0), "Out", "Sine", 0.5)
+			con2:TweenSize(UDim2.new(0, 0,0, 0), "Out", "Sine", 0.5)
 			wait(0.1) do
 				con.Visible = false
+				con2.Visible = false
 			end
 		else
 			back:TweenSize(UDim2.new(0, 190,0, 295), "Out", "Sine", 0.5)
 			con:TweenSize(UDim2.new(0, 190,0, 295), "Out", "Sine", 0.5)
+			con2:TweenSize(UDim2.new(0, 191,0, 59), "Out", "Sine", 0.5)
 			wait(0.2) do
 				con.Visible = true
+				con2.Visible = true
 			end
 		end
 	
 	end)
 end
-coroutine.wrap(GYSOLZY_fake_script)()
-local function KUTN_fake_script() -- UI_2.LocalScript 
+coroutine.wrap(FIKGT_fake_script)()
+local function THRDC_fake_script() -- UI_2.LocalScript 
 	local script = Instance.new('LocalScript', UI_2)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -869,4 +1232,4 @@ local function KUTN_fake_script() -- UI_2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KUTN_fake_script)()
+coroutine.wrap(THRDC_fake_script)()
