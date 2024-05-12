@@ -1,521 +1,194 @@
--- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
+-- Gui to Lua
+-- Version: 3.2
 
 -- Instances:
 
-local Converted = {
-	["_UI"] = Instance.new("ScreenGui");
-	["_UI1"] = Instance.new("Frame");
-	["_BackGround"] = Instance.new("Frame");
-	["_UICorner"] = Instance.new("UICorner");
-	["_Container"] = Instance.new("Frame");
-	["_UIGridLayout"] = Instance.new("UIGridLayout");
-	["_Padding"] = Instance.new("UIPadding");
-	["_INFINITE"] = Instance.new("TextButton");
-	["_LocalScript"] = Instance.new("LocalScript");
-	["_NOCLIP"] = Instance.new("TextButton");
-	["_LocalScript1"] = Instance.new("LocalScript");
-	["_Fly"] = Instance.new("TextButton");
-	["_LocalScript2"] = Instance.new("LocalScript");
-	["_RESET"] = Instance.new("TextButton");
-	["_LocalScript3"] = Instance.new("LocalScript");
-	["_Kill all"] = Instance.new("TextButton");
-	["_LocalScript4"] = Instance.new("LocalScript");
-	["_Killer"] = Instance.new("RemoteEvent");
-	["_Script"] = Instance.new("Script");
-	["_UICorner1"] = Instance.new("UICorner");
-	["_Back"] = Instance.new("TextButton");
-	["_LocalScript5"] = Instance.new("LocalScript");
-	["_UnderLine"] = Instance.new("Frame");
-	["_Toggle"] = Instance.new("TextButton");
-	["_LocalScript6"] = Instance.new("LocalScript");
-	["_Window"] = Instance.new("TextLabel");
-	["_LocalScript7"] = Instance.new("LocalScript");
-	["_Holder"] = Instance.new("TextButton");
-	["_ChildContainer"] = Instance.new("ScrollingFrame");
-	["_UIPadding"] = Instance.new("UIPadding");
-	["_UIListLayout"] = Instance.new("UIListLayout");
-	["_Iris_InputText"] = Instance.new("Frame");
-	["_UIListLayout1"] = Instance.new("UIListLayout");
-	["_InputField"] = Instance.new("TextBox");
-	["_UIPadding1"] = Instance.new("UIPadding");
-	["_UISizeConstraint"] = Instance.new("UISizeConstraint");
-	["_Buttons"] = Instance.new("Frame");
-	["_Iris_Button"] = Instance.new("TextButton");
-	["_UIPadding2"] = Instance.new("UIPadding");
-	["_LocalScript8"] = Instance.new("LocalScript");
-	["_event"] = Instance.new("RemoteEvent");
-	["_Script1"] = Instance.new("Script");
-	["_vLua"] = Instance.new("ModuleScript");
-	["_LuaK"] = Instance.new("ModuleScript");
-	["_LuaP"] = Instance.new("ModuleScript");
-	["_LuaU"] = Instance.new("ModuleScript");
-	["_LuaX"] = Instance.new("ModuleScript");
-	["_LuaY"] = Instance.new("ModuleScript");
-	["_LuaZ"] = Instance.new("ModuleScript");
-	["_FiOne"] = Instance.new("ModuleScript");
-	["_VirtualEnv"] = Instance.new("ModuleScript");
-	["_Iris_Button1"] = Instance.new("TextButton");
-	["_UIPadding3"] = Instance.new("UIPadding");
-	["_LocalScript9"] = Instance.new("LocalScript");
-	["_TitleBar"] = Instance.new("Frame");
-	["_CollapseButton"] = Instance.new("TextButton");
-	["_UICorner2"] = Instance.new("UICorner");
-	["_Arrow"] = Instance.new("ImageLabel");
-	["_LocalScript10"] = Instance.new("LocalScript");
-	["_Title"] = Instance.new("TextLabel");
-	["_UIPadding4"] = Instance.new("UIPadding");
-	["_UIStroke"] = Instance.new("UIStroke");
-	["_UIStroke1"] = Instance.new("UIStroke");
-	["_Dragify"] = Instance.new("LocalScript");
-}
+local UI = Instance.new("ScreenGui")
+local UI_2 = Instance.new("Frame")
+local BackGround = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Container = Instance.new("Frame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local Padding = Instance.new("UIPadding")
+local INFINITE = Instance.new("TextButton")
+local NOCLIP = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
+local RESET = Instance.new("TextButton")
+local KillAll = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local KillPlayer = Instance.new("TextButton")
+local KillTextbox = Instance.new("TextBox")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local UnderLine = Instance.new("Frame")
+local Toggle = Instance.new("TextButton")
+local Window = Instance.new("TextLabel")
 
--- Properties:
+--Properties:
 
-Converted["_UI"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Converted["_UI"].Name = "UI"
-Converted["_UI"].Parent = game:GetService("CoreGui")
+UI.Name = "UI"
+UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Converted["_UI1"].BackgroundColor3 = Color3.fromRGB(40.00000141561031, 40.00000141561031, 40.00000141561031)
-Converted["_UI1"].BorderSizePixel = 0
-Converted["_UI1"].Position = UDim2.new(0, 15, 0, 15)
-Converted["_UI1"].Size = UDim2.new(0, 190, 0, 30)
-Converted["_UI1"].Name = "UI"
-Converted["_UI1"].Parent = Converted["_UI"]
+UI_2.Name = "UI"
+UI_2.Parent = UI
+UI_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+UI_2.BorderSizePixel = 0
+UI_2.Position = UDim2.new(0, 15, 0, 15)
+UI_2.Size = UDim2.new(0, 190, 0, 30)
 
-Converted["_BackGround"].BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871)
-Converted["_BackGround"].BorderSizePixel = 0
-Converted["_BackGround"].Position = UDim2.new(0, 0, 1, 0)
-Converted["_BackGround"].Size = UDim2.new(0, 190, 0, 295)
-Converted["_BackGround"].ZIndex = 4
-Converted["_BackGround"].Name = "BackGround"
-Converted["_BackGround"].Parent = Converted["_UI1"]
+BackGround.Name = "BackGround"
+BackGround.Parent = UI_2
+BackGround.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+BackGround.BorderSizePixel = 0
+BackGround.Position = UDim2.new(0, 0, 1, 0)
+BackGround.Size = UDim2.new(0, 190, 0, 295)
+BackGround.ZIndex = 4
 
-Converted["_UICorner"].Parent = Converted["_BackGround"]
+UICorner.Parent = BackGround
 
-Converted["_Container"].BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871)
-Converted["_Container"].BorderSizePixel = 0
-Converted["_Container"].Position = UDim2.new(0, 0, 1, 0)
-Converted["_Container"].Size = UDim2.new(0, 190, 0, 295)
-Converted["_Container"].ZIndex = 5
-Converted["_Container"].Name = "Container"
-Converted["_Container"].Parent = Converted["_UI1"]
+Container.Name = "Container"
+Container.Parent = UI_2
+Container.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(0, 0, 1, 0)
+Container.Size = UDim2.new(0, 190, 0, 295)
+Container.ZIndex = 5
 
-Converted["_UIGridLayout"].CellSize = UDim2.new(0, 180, 0, 40)
-Converted["_UIGridLayout"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIGridLayout"].Parent = Converted["_Container"]
+UIGridLayout.Parent = Container
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 180, 0, 40)
 
-Converted["_Padding"].PaddingLeft = UDim.new(0, 5)
-Converted["_Padding"].PaddingTop = UDim.new(0, 5)
-Converted["_Padding"].Name = "Padding"
-Converted["_Padding"].Parent = Converted["_Container"]
+Padding.Name = "Padding"
+Padding.Parent = Container
+Padding.PaddingLeft = UDim.new(0, 5)
+Padding.PaddingTop = UDim.new(0, 5)
 
-Converted["_INFINITE"].Font = Enum.Font.SourceSans
-Converted["_INFINITE"].Text = "Infinite Jump"
-Converted["_INFINITE"].TextColor3 = Color3.fromRGB(255, 0, 0)
-Converted["_INFINITE"].TextSize = 24
-Converted["_INFINITE"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_INFINITE"].BackgroundTransparency = 1
-Converted["_INFINITE"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_INFINITE"].BorderSizePixel = 0
-Converted["_INFINITE"].Size = UDim2.new(0, 200, 0, 50)
-Converted["_INFINITE"].Name = "INFINITE"
-Converted["_INFINITE"].Parent = Converted["_Container"]
+INFINITE.Name = "INFINITE"
+INFINITE.Parent = Container
+INFINITE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+INFINITE.BackgroundTransparency = 1.000
+INFINITE.BorderColor3 = Color3.fromRGB(0, 0, 0)
+INFINITE.BorderSizePixel = 0
+INFINITE.Size = UDim2.new(0, 200, 0, 50)
+INFINITE.Font = Enum.Font.SourceSans
+INFINITE.Text = "Infinite Jump"
+INFINITE.TextColor3 = Color3.fromRGB(255, 0, 0)
+INFINITE.TextSize = 24.000
 
-Converted["_NOCLIP"].Font = Enum.Font.SourceSans
-Converted["_NOCLIP"].Text = "Noclip"
-Converted["_NOCLIP"].TextColor3 = Color3.fromRGB(255, 0, 0)
-Converted["_NOCLIP"].TextSize = 24
-Converted["_NOCLIP"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_NOCLIP"].BackgroundTransparency = 1
-Converted["_NOCLIP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_NOCLIP"].BorderSizePixel = 0
-Converted["_NOCLIP"].Size = UDim2.new(0, 200, 0, 50)
-Converted["_NOCLIP"].Name = "NOCLIP"
-Converted["_NOCLIP"].Parent = Converted["_Container"]
+NOCLIP.Name = "NOCLIP"
+NOCLIP.Parent = Container
+NOCLIP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NOCLIP.BackgroundTransparency = 1.000
+NOCLIP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NOCLIP.BorderSizePixel = 0
+NOCLIP.Size = UDim2.new(0, 200, 0, 50)
+NOCLIP.Font = Enum.Font.SourceSans
+NOCLIP.Text = "Noclip"
+NOCLIP.TextColor3 = Color3.fromRGB(255, 0, 0)
+NOCLIP.TextSize = 24.000
 
-Converted["_Fly"].Font = Enum.Font.SourceSans
-Converted["_Fly"].Text = "Fly (FE)"
-Converted["_Fly"].TextColor3 = Color3.fromRGB(255, 0, 0)
-Converted["_Fly"].TextSize = 24
-Converted["_Fly"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Fly"].BackgroundTransparency = 1
-Converted["_Fly"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Fly"].BorderSizePixel = 0
-Converted["_Fly"].Size = UDim2.new(0, 200, 0, 50)
-Converted["_Fly"].Name = "Fly"
-Converted["_Fly"].Parent = Converted["_Container"]
+Fly.Name = "Fly"
+Fly.Parent = Container
+Fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fly.BackgroundTransparency = 1.000
+Fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderSizePixel = 0
+Fly.Size = UDim2.new(0, 200, 0, 50)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Fly (FE)"
+Fly.TextColor3 = Color3.fromRGB(255, 0, 0)
+Fly.TextSize = 24.000
 
-Converted["_RESET"].Font = Enum.Font.SourceSans
-Converted["_RESET"].Text = "RE (reset)"
-Converted["_RESET"].TextColor3 = Color3.fromRGB(255, 0, 0)
-Converted["_RESET"].TextSize = 24
-Converted["_RESET"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_RESET"].BackgroundTransparency = 1
-Converted["_RESET"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_RESET"].BorderSizePixel = 0
-Converted["_RESET"].Size = UDim2.new(0, 200, 0, 50)
-Converted["_RESET"].Name = "RESET"
-Converted["_RESET"].Parent = Converted["_Container"]
+RESET.Name = "RESET"
+RESET.Parent = Container
+RESET.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RESET.BackgroundTransparency = 1.000
+RESET.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RESET.BorderSizePixel = 0
+RESET.Size = UDim2.new(0, 200, 0, 50)
+RESET.Font = Enum.Font.SourceSans
+RESET.Text = "RE (reset)"
+RESET.TextColor3 = Color3.fromRGB(255, 0, 0)
+RESET.TextSize = 24.000
 
-Converted["_Kill all"].Font = Enum.Font.SourceSans
-Converted["_Kill all"].Text = "Kill all"
-Converted["_Kill all"].TextColor3 = Color3.fromRGB(255, 0, 0)
-Converted["_Kill all"].TextSize = 24
-Converted["_Kill all"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Kill all"].BackgroundTransparency = 1
-Converted["_Kill all"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Kill all"].BorderSizePixel = 0
-Converted["_Kill all"].Size = UDim2.new(0, 200, 0, 50)
-Converted["_Kill all"].Name = "Kill all"
-Converted["_Kill all"].Parent = Converted["_Container"]
+KillAll.Name = "KillAll"
+KillAll.Parent = Container
+KillAll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KillAll.BackgroundTransparency = 1.000
+KillAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillAll.BorderSizePixel = 0
+KillAll.Size = UDim2.new(0, 200, 0, 50)
+KillAll.Font = Enum.Font.SourceSans
+KillAll.Text = "Kill all"
+KillAll.TextColor3 = Color3.fromRGB(255, 0, 0)
+KillAll.TextSize = 24.000
 
-Converted["_Killer"].Name = "Killer"
-Converted["_Killer"].Parent = Converted["_Kill all"]
+UICorner_2.Parent = Container
 
-Converted["_Script"].Parent = Converted["_Kill all"]
+KillPlayer.Name = "KillPlayer"
+KillPlayer.Parent = Container
+KillPlayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KillPlayer.BackgroundTransparency = 1.000
+KillPlayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillPlayer.BorderSizePixel = 0
+KillPlayer.Size = UDim2.new(0, 200, 0, 50)
+KillPlayer.Font = Enum.Font.SourceSans
+KillPlayer.Text = "Kill player"
+KillPlayer.TextColor3 = Color3.fromRGB(255, 0, 0)
+KillPlayer.TextSize = 24.000
 
-Converted["_UICorner1"].Parent = Converted["_Container"]
+KillTextbox.Name = "KillTextbox"
+KillTextbox.Parent = KillPlayer
+KillTextbox.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+KillTextbox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillTextbox.BorderSizePixel = 0
+KillTextbox.Position = UDim2.new(0.783333361, 0, 0.075000003, 0)
+KillTextbox.Size = UDim2.new(0, 73, 0, 37)
+KillTextbox.Font = Enum.Font.SourceSans
+KillTextbox.Text = "player name here"
+KillTextbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KillTextbox.TextScaled = true
+KillTextbox.TextSize = 24.000
+KillTextbox.TextWrapped = true
 
-Converted["_Back"].Font = Enum.Font.SourceSans
-Converted["_Back"].Text = "BackDoor"
-Converted["_Back"].TextColor3 = Color3.fromRGB(255, 0, 0)
-Converted["_Back"].TextSize = 24
-Converted["_Back"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Back"].BackgroundTransparency = 1
-Converted["_Back"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Back"].BorderSizePixel = 0
-Converted["_Back"].Size = UDim2.new(0, 200, 0, 50)
-Converted["_Back"].Name = "Back"
-Converted["_Back"].Parent = Converted["_Container"]
+UITextSizeConstraint.Parent = KillTextbox
+UITextSizeConstraint.MaxTextSize = 24
 
-Converted["_UnderLine"].BackgroundColor3 = Color3.fromRGB(255, 25.000000409781933, 25.000000409781933)
-Converted["_UnderLine"].BorderSizePixel = 0
-Converted["_UnderLine"].Position = UDim2.new(0, 0, 1, -1)
-Converted["_UnderLine"].Size = UDim2.new(1, 0, 0, 1)
-Converted["_UnderLine"].ZIndex = 4
-Converted["_UnderLine"].Name = "UnderLine"
-Converted["_UnderLine"].Parent = Converted["_UI1"]
+UnderLine.Name = "UnderLine"
+UnderLine.Parent = UI_2
+UnderLine.BackgroundColor3 = Color3.fromRGB(255, 25, 25)
+UnderLine.BorderSizePixel = 0
+UnderLine.Position = UDim2.new(0, 0, 1, -1)
+UnderLine.Size = UDim2.new(1, 0, 0, 1)
+UnderLine.ZIndex = 4
 
-Converted["_Toggle"].Font = Enum.Font.SourceSans
-Converted["_Toggle"].Text = "-"
-Converted["_Toggle"].TextColor3 = Color3.fromRGB(255, 0, 0)
-Converted["_Toggle"].TextSize = 17
-Converted["_Toggle"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Toggle"].BackgroundTransparency = 1
-Converted["_Toggle"].Position = UDim2.new(1, -25, 0, 0)
-Converted["_Toggle"].Size = UDim2.new(0, 25, 1, 0)
-Converted["_Toggle"].ZIndex = 5
-Converted["_Toggle"].Name = "Toggle"
-Converted["_Toggle"].Parent = Converted["_UI1"]
+Toggle.Name = "Toggle"
+Toggle.Parent = UI_2
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.BackgroundTransparency = 1.000
+Toggle.Position = UDim2.new(1, -25, 0, 0)
+Toggle.Size = UDim2.new(0, 25, 1, 0)
+Toggle.ZIndex = 5
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "-"
+Toggle.TextColor3 = Color3.fromRGB(255, 0, 0)
+Toggle.TextSize = 17.000
 
-Converted["_Window"].Font = Enum.Font.SourceSans
-Converted["_Window"].Text = "UNIVERSAL"
-Converted["_Window"].TextColor3 = Color3.fromRGB(255, 0, 4.000000236555934)
-Converted["_Window"].TextSize = 17
-Converted["_Window"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Window"].BackgroundTransparency = 1
-Converted["_Window"].Size = UDim2.new(0.868421078, 0, 1, 0)
-Converted["_Window"].ZIndex = 5
-Converted["_Window"].Name = "Window"
-Converted["_Window"].Parent = Converted["_UI1"]
+Window.Name = "Window"
+Window.Parent = UI_2
+Window.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Window.BackgroundTransparency = 1.000
+Window.Size = UDim2.new(0.868421078, 0, 1, 0)
+Window.ZIndex = 5
+Window.Font = Enum.Font.SourceSans
+Window.Text = "UNIVERSAL"
+Window.TextColor3 = Color3.fromRGB(255, 0, 4)
+Window.TextSize = 17.000
 
-Converted["_Holder"].Text = ""
-Converted["_Holder"].AutoButtonColor = false
-Converted["_Holder"].BackgroundTransparency = 1
-Converted["_Holder"].BorderSizePixel = 0
-Converted["_Holder"].LayoutOrder = 65
-Converted["_Holder"].Position = UDim2.new(0, 234, 0, 192)
-Converted["_Holder"].Selectable = false
-Converted["_Holder"].Size = UDim2.new(0, 341, 0, 78)
-Converted["_Holder"].Visible = false
-Converted["_Holder"].ZIndex = 65
-Converted["_Holder"].SelectionBehaviorDown = Enum.SelectionBehavior.Stop
-Converted["_Holder"].SelectionBehaviorLeft = Enum.SelectionBehavior.Stop
-Converted["_Holder"].SelectionBehaviorRight = Enum.SelectionBehavior.Stop
-Converted["_Holder"].SelectionBehaviorUp = Enum.SelectionBehavior.Stop
-Converted["_Holder"].SelectionGroup = true
-Converted["_Holder"].Name = "Holder"
-Converted["_Holder"].Parent = Converted["_UI"]
+-- Scripts:
 
-Converted["_ChildContainer"].AutomaticCanvasSize = Enum.AutomaticSize.Y
-Converted["_ChildContainer"].CanvasSize = UDim2.new(0, 0, 1, -19)
-Converted["_ChildContainer"].ScrollBarImageColor3 = Color3.fromRGB(128.0000075697899, 128.0000075697899, 128.0000075697899)
-Converted["_ChildContainer"].ScrollBarThickness = 0
-Converted["_ChildContainer"].VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
-Converted["_ChildContainer"].BackgroundColor3 = Color3.fromRGB(15.000000055879354, 15.000000055879354, 15.000000055879354)
-Converted["_ChildContainer"].BackgroundTransparency = 0.07199999690055847
-Converted["_ChildContainer"].BorderSizePixel = 0
-Converted["_ChildContainer"].LayoutOrder = 67
-Converted["_ChildContainer"].Position = UDim2.new(0, 0, 0, 15)
-Converted["_ChildContainer"].Size = UDim2.new(1, 0, 1, -19)
-Converted["_ChildContainer"].ZIndex = 67
-Converted["_ChildContainer"].Name = "ChildContainer"
-Converted["_ChildContainer"].Parent = Converted["_Holder"]
-
-Converted["_UIPadding"].PaddingBottom = UDim.new(0, 8)
-Converted["_UIPadding"].PaddingLeft = UDim.new(0, 8)
-Converted["_UIPadding"].PaddingRight = UDim.new(0, 8)
-Converted["_UIPadding"].PaddingTop = UDim.new(0, 8)
-Converted["_UIPadding"].Parent = Converted["_ChildContainer"]
-
-Converted["_UIListLayout"].Padding = UDim.new(0, 4)
-Converted["_UIListLayout"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout"].Parent = Converted["_ChildContainer"]
-
-Converted["_Iris_InputText"].AutomaticSize = Enum.AutomaticSize.Y
-Converted["_Iris_InputText"].BackgroundTransparency = 1
-Converted["_Iris_InputText"].BorderSizePixel = 0
-Converted["_Iris_InputText"].LayoutOrder = 192
-Converted["_Iris_InputText"].Size = UDim2.new(1, 0, 0.141000003, 0)
-Converted["_Iris_InputText"].ZIndex = 192
-Converted["_Iris_InputText"].Name = "Iris_InputText"
-Converted["_Iris_InputText"].Parent = Converted["_ChildContainer"]
-
-Converted["_UIListLayout1"].Padding = UDim.new(0, 4)
-Converted["_UIListLayout1"].FillDirection = Enum.FillDirection.Horizontal
-Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout1"].Parent = Converted["_Iris_InputText"]
-
-Converted["_InputField"].ClearTextOnFocus = false
-Converted["_InputField"].Font = Enum.Font.Code
-Converted["_InputField"].PlaceholderColor3 = Color3.fromRGB(128.0000075697899, 128.0000075697899, 128.0000075697899)
-Converted["_InputField"].PlaceholderText = ">"
-Converted["_InputField"].Text = ""
-Converted["_InputField"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_InputField"].TextSize = 13
-Converted["_InputField"].TextTruncate = Enum.TextTruncate.AtEnd
-Converted["_InputField"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_InputField"].AutomaticSize = Enum.AutomaticSize.Y
-Converted["_InputField"].BackgroundColor3 = Color3.fromRGB(41.00000135600567, 74.0000031888485, 122.00000032782555)
-Converted["_InputField"].BackgroundTransparency = 0.46000000834465027
-Converted["_InputField"].BorderColor3 = Color3.fromRGB(110.00000104308128, 110.00000104308128, 125.00000014901161)
-Converted["_InputField"].BorderMode = Enum.BorderMode.Inset
-Converted["_InputField"].BorderSizePixel = 0
-Converted["_InputField"].ClipsDescendants = true
-Converted["_InputField"].LayoutOrder = 193
-Converted["_InputField"].Size = UDim2.new(1, 0, -0.421052635, 0)
-Converted["_InputField"].ZIndex = 193
-Converted["_InputField"].AutoLocalize = false
-Converted["_InputField"].Name = "InputField"
-Converted["_InputField"].Parent = Converted["_Iris_InputText"]
-
-Converted["_UIPadding1"].PaddingBottom = UDim.new(0, 3)
-Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 4)
-Converted["_UIPadding1"].PaddingRight = UDim.new(0, 4)
-Converted["_UIPadding1"].PaddingTop = UDim.new(0, 3)
-Converted["_UIPadding1"].Parent = Converted["_InputField"]
-
-Converted["_UISizeConstraint"].MinSize = Vector2.new(1, 0)
-Converted["_UISizeConstraint"].Parent = Converted["_InputField"]
-
-Converted["_Buttons"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Buttons"].BackgroundTransparency = 1
-Converted["_Buttons"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Buttons"].BorderSizePixel = 0
-Converted["_Buttons"].LayoutOrder = 193
-Converted["_Buttons"].Size = UDim2.new(0, 117, 0, 20)
-Converted["_Buttons"].Name = "Buttons"
-Converted["_Buttons"].Parent = Converted["_ChildContainer"]
-
-Converted["_Iris_Button"].Font = Enum.Font.Code
-Converted["_Iris_Button"].Text = "Execute"
-Converted["_Iris_Button"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Iris_Button"].TextSize = 13
-Converted["_Iris_Button"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_Iris_Button"].AutoButtonColor = false
-Converted["_Iris_Button"].AutomaticSize = Enum.AutomaticSize.XY
-Converted["_Iris_Button"].BackgroundColor3 = Color3.fromRGB(66.00000366568565, 150.0000062584877, 250.00000029802322)
-Converted["_Iris_Button"].BackgroundTransparency = 0.6000000238418579
-Converted["_Iris_Button"].BorderColor3 = Color3.fromRGB(110.00000104308128, 110.00000104308128, 125.00000014901161)
-Converted["_Iris_Button"].BorderMode = Enum.BorderMode.Inset
-Converted["_Iris_Button"].BorderSizePixel = 0
-Converted["_Iris_Button"].LayoutOrder = 256
-Converted["_Iris_Button"].ZIndex = 256
-Converted["_Iris_Button"].AutoLocalize = false
-Converted["_Iris_Button"].Name = "Iris_Button"
-Converted["_Iris_Button"].Parent = Converted["_Buttons"]
-
-Converted["_UIPadding2"].PaddingBottom = UDim.new(0, 3)
-Converted["_UIPadding2"].PaddingLeft = UDim.new(0, 4)
-Converted["_UIPadding2"].PaddingRight = UDim.new(0, 4)
-Converted["_UIPadding2"].PaddingTop = UDim.new(0, 3)
-Converted["_UIPadding2"].Parent = Converted["_Iris_Button"]
-
-Converted["_event"].Name = "event"
-Converted["_event"].Parent = Converted["_Iris_Button"]
-
-Converted["_Script1"].Parent = Converted["_Iris_Button"]
-
-Converted["_Iris_Button1"].Font = Enum.Font.Code
-Converted["_Iris_Button1"].Text = "Clear"
-Converted["_Iris_Button1"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Iris_Button1"].TextSize = 13
-Converted["_Iris_Button1"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_Iris_Button1"].AutoButtonColor = false
-Converted["_Iris_Button1"].AutomaticSize = Enum.AutomaticSize.XY
-Converted["_Iris_Button1"].BackgroundColor3 = Color3.fromRGB(66.00000366568565, 150.0000062584877, 250.00000029802322)
-Converted["_Iris_Button1"].BackgroundTransparency = 0.6000000238418579
-Converted["_Iris_Button1"].BorderColor3 = Color3.fromRGB(110.00000104308128, 110.00000104308128, 125.00000014901161)
-Converted["_Iris_Button1"].BorderMode = Enum.BorderMode.Inset
-Converted["_Iris_Button1"].BorderSizePixel = 0
-Converted["_Iris_Button1"].LayoutOrder = 256
-Converted["_Iris_Button1"].Position = UDim2.new(0.524999976, 0, 0, 0)
-Converted["_Iris_Button1"].ZIndex = 256
-Converted["_Iris_Button1"].AutoLocalize = false
-Converted["_Iris_Button1"].Name = "Iris_Button"
-Converted["_Iris_Button1"].Parent = Converted["_Buttons"]
-
-Converted["_UIPadding3"].PaddingBottom = UDim.new(0, 3)
-Converted["_UIPadding3"].PaddingLeft = UDim.new(0, 4)
-Converted["_UIPadding3"].PaddingRight = UDim.new(0, 4)
-Converted["_UIPadding3"].PaddingTop = UDim.new(0, 3)
-Converted["_UIPadding3"].Parent = Converted["_Iris_Button1"]
-
-Converted["_TitleBar"].AutomaticSize = Enum.AutomaticSize.Y
-Converted["_TitleBar"].BackgroundColor3 = Color3.fromRGB(41.00000135600567, 74.0000031888485, 122.00000032782555)
-Converted["_TitleBar"].BorderSizePixel = 0
-Converted["_TitleBar"].ClipsDescendants = true
-Converted["_TitleBar"].LayoutOrder = 65
-Converted["_TitleBar"].Size = UDim2.new(1, 0, 0, 0)
-Converted["_TitleBar"].ZIndex = 65
-Converted["_TitleBar"].Name = "TitleBar"
-Converted["_TitleBar"].Parent = Converted["_Holder"]
-
-Converted["_CollapseButton"].Text = ""
-Converted["_CollapseButton"].AutoButtonColor = false
-Converted["_CollapseButton"].AnchorPoint = Vector2.new(0, 0.5)
-Converted["_CollapseButton"].BackgroundTransparency = 1
-Converted["_CollapseButton"].BorderSizePixel = 0
-Converted["_CollapseButton"].Position = UDim2.new(0, 5, 0.5, 0)
-Converted["_CollapseButton"].Size = UDim2.new(0, 17, 0, 17)
-Converted["_CollapseButton"].ZIndex = 68
-Converted["_CollapseButton"].Name = "CollapseButton"
-Converted["_CollapseButton"].Parent = Converted["_TitleBar"]
-
-Converted["_UICorner2"].CornerRadius = UDim.new(1, 0)
-Converted["_UICorner2"].Parent = Converted["_CollapseButton"]
-
-Converted["_Arrow"].Image = "rbxasset://textures/DeveloperFramework/button_arrow_down.png"
-Converted["_Arrow"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_Arrow"].BackgroundTransparency = 1
-Converted["_Arrow"].BorderSizePixel = 0
-Converted["_Arrow"].Position = UDim2.new(0.5, 0, 0.5, 0)
-Converted["_Arrow"].Size = UDim2.new(0, 11, 0, 11)
-Converted["_Arrow"].ZIndex = 69
-Converted["_Arrow"].Name = "Arrow"
-Converted["_Arrow"].Parent = Converted["_CollapseButton"]
-
-Converted["_Title"].Font = Enum.Font.Code
-Converted["_Title"].Text = "Executor"
-Converted["_Title"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Title"].TextSize = 13
-Converted["_Title"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_Title"].AutomaticSize = Enum.AutomaticSize.XY
-Converted["_Title"].BackgroundTransparency = 1
-Converted["_Title"].BorderSizePixel = 0
-Converted["_Title"].ZIndex = 67
-Converted["_Title"].AutoLocalize = false
-Converted["_Title"].Name = "Title"
-Converted["_Title"].Parent = Converted["_TitleBar"]
-
-Converted["_UIPadding4"].PaddingBottom = UDim.new(0, 3)
-Converted["_UIPadding4"].PaddingLeft = UDim.new(0, 25)
-Converted["_UIPadding4"].PaddingRight = UDim.new(0, 4)
-Converted["_UIPadding4"].PaddingTop = UDim.new(0, 3)
-Converted["_UIPadding4"].Parent = Converted["_Title"]
-
-Converted["_UIStroke"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke"].Color = Color3.fromRGB(160.00000566244125, 160.00000566244125, 175.00000476837158)
-Converted["_UIStroke"].Parent = Converted["_TitleBar"]
-
-Converted["_UIStroke1"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke1"].Color = Color3.fromRGB(160.00000566244125, 160.00000566244125, 175.00000476837158)
-Converted["_UIStroke1"].Parent = Converted["_Holder"]
-
--- Fake Module Scripts:
-
-local fake_module_scripts = {}
-
-do -- Fake Module: StarterGui.UI.Holder.ChildContainer.Buttons.Iris_Button.Script.vLua
-    local script = Instance.new("ModuleScript")
-    script.Name = "vLua"
-    script.Parent = Converted["_Script1"]
-    local function module_script()
-		--[[
-			Credit to einsteinK.
-			Credit to Stravant for LBI.
-		
-			Credit to the creators of all the other modules used in this.
-		
-			Sceleratis was here and decided modify some things.
-		
-			einsteinK was here again to fix a bug in LBI for if-statements
-		--]]
-		
-		local waitDeps = {
-			'FiOne';
-			'LuaK';
-			'LuaP';
-			'LuaU';
-			'LuaX';
-			'LuaY';
-			'LuaZ';
-		}
-		
-		for i,v in pairs(waitDeps) do script:WaitForChild(v) end
-		
-		local luaX = require(script.LuaX)
-		local luaY = require(script.LuaY)
-		local luaZ = require(script.LuaZ)
-		local luaU = require(script.LuaU)
-		local fiOne = require(script.FiOne)
-		local vEnv
-		do
-			local vEnvModule = script:FindFirstChild("VirtualEnv")
-			vEnv = vEnvModule and require(vEnvModule)()
-		end
-		
-		luaX:init()
-		local LuaState = {}
-		
-		return function(str, env)
-			local f,writer,buff,name
-			local env = if env ~= nil then env elseif vEnv ~= nil then vEnv else {}
-			local name = (env and env.script and env.script:GetFullName())
-			local ran,error = pcall(function()
-				local zio = luaZ:init(luaZ:make_getS(str), nil)
-				if not zio then return error() end
-				local func = luaY:parser(LuaState, zio, nil, name or "@input")
-				writer, buff = luaU:make_setS()
-				luaU:dump(LuaState, func, writer, buff)
-				f = fiOne(buff.data, env)
-			end)
-		
-			if ran then
-				return f,buff.data
-			else
-				return nil,error
-			end
-		end
-		
-    end
-    fake_module_scripts[script] = module_script
-end
-
--- Fake Local Scripts:
-
-local function VUSXHB_fake_script() -- Fake Script: StarterGui.UI.UI.Container.INFINITE.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_INFINITE"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+local function TFBEVBA_fake_script() -- INFINITE.LocalScript 
+	local script = Instance.new('LocalScript', INFINITE)
 
 	local InfiniteJumpEnabled = true
 	script.Parent.MouseButton1Click:Connect(function(click)
@@ -526,18 +199,9 @@ local function VUSXHB_fake_script() -- Fake Script: StarterGui.UI.UI.Container.I
 		end)
 	end)
 end
-local function UVLCB_fake_script() -- Fake Script: StarterGui.UI.UI.Container.NOCLIP.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_NOCLIP"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+coroutine.wrap(TFBEVBA_fake_script)()
+local function YQEA_fake_script() -- NOCLIP.LocalScript 
+	local script = Instance.new('LocalScript', NOCLIP)
 
 	local script = Instance.new('LocalScript', NOCLIP)
 	
@@ -578,18 +242,9 @@ local function UVLCB_fake_script() -- Fake Script: StarterGui.UI.UI.Container.NO
 		end
 	end)
 end
-local function MCGS_fake_script() -- Fake Script: StarterGui.UI.UI.Container.Fly.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Fly"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+coroutine.wrap(YQEA_fake_script)()
+local function MLJN_fake_script() -- Fly.LocalScript 
+	local script = Instance.new('LocalScript', Fly)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local main = Instance.new("ScreenGui")
@@ -1091,75 +746,57 @@ local function MCGS_fake_script() -- Fake Script: StarterGui.UI.UI.Container.Fly
 	
 	end)
 end
-local function XAAFSF_fake_script() -- Fake Script: StarterGui.UI.UI.Container.RESET.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_RESET"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+coroutine.wrap(MLJN_fake_script)()
+local function FNTKI_fake_script() -- RESET.LocalScript 
+	local script = Instance.new('LocalScript', RESET)
 
 	script.Parent.MouseButton1Click:connect(function() 
-	
-		game.Players.LocalPlayer.Character:BreakJoints() -- LocalPlayer only works with localscript. It's much easier than using a bunch of parents to get to the player.
-	
+		local player = game.Players.LocalPlayer
+		if player then
+			for _, v in next, player:GetChildren() do
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+			end
+		end
 	end)
 	
 end
-local function CTNJW_fake_script() -- Fake Script: StarterGui.UI.UI.Container.Kill all.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Kill all"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+coroutine.wrap(FNTKI_fake_script)()
+local function UNIC_fake_script() -- KillAll.Script 
+	local script = Instance.new('Script', KillAll)
 
-	script.Parent.MouseButton1Click:Connect(function() 
-		script.Parent.Killer:FireServer()
-		print("killing all")
+	script.Parent.MouseButton1Click:Connect(function(ss)
+		local player = game.Players
+		if player then
+			for _, v in next, player:GetChildren() do
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+			end
+		end
 	end)
+	
 end
-local function IWUP_fake_script() -- Fake Script: StarterGui.UI.UI.Container.Back.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Back"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+coroutine.wrap(UNIC_fake_script)()
+local function PDAPGKI_fake_script() -- KillPlayer.Script 
+	local script = Instance.new('Script', KillPlayer)
 
-	script.Parent.MouseButton1Click:Connect(function() 
-		script.Parent.Parent.Parent.Parent.Holder.Visible = true
-	else
-		script.Parent.Parent.Parent.Parent.Holder.Visible = false
+	script.Parent.MouseButton1Click:Connect(function(ss)
+		local player = game.Players
+		if player then
+			for _, v in next, player:GetChildren(script.Parent.KillTextbox.Text) do
+				if v:IsA("Player") then
+					v.Character.Humanoid.Health = 0
+				end	
+			end
+		end
 	end)
+	
 end
-local function OEEQ_fake_script() -- Fake Script: StarterGui.UI.UI.Toggle.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Toggle"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+coroutine.wrap(PDAPGKI_fake_script)()
+local function GYSOLZY_fake_script() -- Toggle.LocalScript 
+	local script = Instance.new('LocalScript', Toggle)
 
 	local back = script.Parent.Parent.BackGround
 	local con = script.Parent.Parent.Container
@@ -1188,18 +825,9 @@ local function OEEQ_fake_script() -- Fake Script: StarterGui.UI.UI.Toggle.LocalS
 	
 	end)
 end
-local function HMTWNW_fake_script() -- Fake Script: StarterGui.UI.UI.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_UI1"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+coroutine.wrap(GYSOLZY_fake_script)()
+local function KUTN_fake_script() -- UI_2.LocalScript 
+	local script = Instance.new('LocalScript', UI_2)
 
 	local UserInputService = game:GetService("UserInputService")
 	
@@ -1241,126 +869,4 @@ local function HMTWNW_fake_script() -- Fake Script: StarterGui.UI.UI.LocalScript
 		end
 	end)
 end
-local function MMWAJ_fake_script() -- Fake Script: StarterGui.UI.Holder.ChildContainer.Buttons.Iris_Button.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Iris_Button"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.event:FireServer(	script.Parent.Parent.Parent.Iris_InputText.InputField.Text)	
-	end)
-end
-local function EPPSGRQ_fake_script() -- Fake Script: StarterGui.UI.Holder.ChildContainer.Buttons.Iris_Button.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Iris_Button1"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Iris_InputText.InputField.Text = ""
-	end)
-end
-local function ULMAB_fake_script() -- Fake Script: StarterGui.UI.Holder.TitleBar.CollapseButton.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_CollapseButton"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.Parent.ChildContainer.Visible == true then
-			script.Parent.Parent.Parent.ChildContainer.Visible = false
-			script.Parent.Parent.Parent.UIStroke.Enabled = false
-	
-			script.Parent.Arrow.Rotation = 180
-		else
-			script.Parent.Parent.Parent.ChildContainer.Visible = true
-			script.Parent.Parent.Parent.UIStroke.Enabled = true
-			script.Parent.Arrow.Rotation = 0
-		end	
-	end)
-end
-local function PJJRF_fake_script() -- Fake Script: StarterGui.UI.Holder.Dragify
-    local script = Instance.new("LocalScript")
-    script.Name = "Dragify"
-    script.Parent = Converted["_Holder"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local UserInputService = game:GetService("UserInputService")
-	local TweenService = game:GetService("TweenService")
-	
-	local Frame = script.Parent
-	local StartPosition = nil
-	local DragStart = nil
-	local DragSpeed = 0
-	local DragToggle = nil
-	
-	local function updateInput(Input)
-		local Delta = Input.Position - DragStart
-		local Position = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + Delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + Delta.Y)
-		TweenService:Create(Frame, TweenInfo.new(DragSpeed), {Position = Position}):Play()
-	end
-	
-	script.Parent.TitleBar.InputBegan:Connect(function(Input)
-		if (Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch) then
-			DragToggle = true
-			DragStart = Input.Position
-			StartPosition = Frame.Position
-			Input.Changed:Connect(function()
-				if Input.UserInputState == Enum.UserInputState.End then
-					DragToggle = false
-				end
-			end)
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(Input)
-		if (Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch) then
-			if DragToggle then
-				updateInput(Input)
-			end
-		end
-	end)
-end
-
-coroutine.wrap(VUSXHB_fake_script)()
-coroutine.wrap(UVLCB_fake_script)()
-coroutine.wrap(MCGS_fake_script)()
-coroutine.wrap(XAAFSF_fake_script)()
-coroutine.wrap(CTNJW_fake_script)()
-coroutine.wrap(IWUP_fake_script)()
-coroutine.wrap(OEEQ_fake_script)()
-coroutine.wrap(HMTWNW_fake_script)()
-coroutine.wrap(MMWAJ_fake_script)()
-coroutine.wrap(EPPSGRQ_fake_script)()
-coroutine.wrap(ULMAB_fake_script)()
-coroutine.wrap(PJJRF_fake_script)()
+coroutine.wrap(KUTN_fake_script)()
