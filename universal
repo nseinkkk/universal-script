@@ -366,7 +366,6 @@ local function DLUYYKU_fake_script() -- NOCLIP.LocalScript
 					if v:IsA("BasePart") then
 						v.CanCollide = false
 					end
-					wait(1)
 					if v:FindFirstChild("HumanoidRootPart") then
 						v.CanCollide = false
 					end
@@ -380,7 +379,6 @@ local function DLUYYKU_fake_script() -- NOCLIP.LocalScript
 					if v:IsA("BasePart") then
 						v.CanCollide = false
 					end
-					wait(1)
 					if v:FindFirstChild("HumanoidRootPart") then
 						v.CanCollide = false
 					end
