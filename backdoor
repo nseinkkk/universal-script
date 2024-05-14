@@ -1,170 +1,874 @@
--- back door
+-- Made by fer modz
+-- Instances:
 
-local Instances = {
-	BackDoor = Instance.new("ScreenGui"),
-	TextLabel = Instance.new("TextLabel"),
-	UICorner = Instance.new("UICorner"),
-	Frame = Instance.new("Frame"),
-	UICorner_2 = Instance.new("UICorner"),
-	source = Instance.new("TextBox"),
-	UITextSizeConstraint = Instance.new("UITextSizeConstraint"),
-	Execute = Instance.new("TextButton"),
-	UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint"),
-	TextButton = Instance.new("TextButton"),
-	UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint"),
-	Enable_server_sided = Instance.new("TextButton"),
-	UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint"),
-}
+local Backdoor = Instance.new("ScreenGui")
+local Top = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Buttons = Instance.new("Folder")
+local Execute = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Hint = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Kill = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Executing = Instance.new("Folder")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextBox = Instance.new("TextBox")
+local OutPut = Instance.new("Folder")
+local button = Instance.new("TextButton")
+local head = Instance.new("TextLabel")
+local console = Instance.new("ScrollingFrame")
+local output = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
 
-Instances.BackDoor.Name = "BackDoor"
-Instances.BackDoor.Parent = game.StarterGui
+--Properties:
 
-Instances.TextLabel.Name = "TextLabel"
-Instances.TextLabel.Parent = Instances.BackDoor
-Instances.TextLabel.Size = UDim2.new(0, 325, 0, 33)
-Instances.TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Instances.TextLabel.Position = UDim2.new(0.31720826, 0, 0.238866404, 0)
-Instances.TextLabel.BorderSizePixel = 0
-Instances.TextLabel.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
-Instances.TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-Instances.TextLabel.Text = "Backdoor made by someone"
-Instances.TextLabel.TextSize = 14
-Instances.TextLabel.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Backdoor.Name = "Backdoor"
+Backdoor.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Backdoor.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Instances.UICorner.Name = "UICorner"
-Instances.UICorner.Parent = Instances.TextLabel
+Top.Name = "Top"
+Top.Parent = Backdoor
+Top.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Top.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Top.BorderSizePixel = 0
+Top.Position = UDim2.new(0.262552679, 0, 0.269230783, 0)
+Top.Size = UDim2.new(0, 483, 0, 24)
+Top.Font = Enum.Font.SourceSans
+Top.Text = "Backdoor made by Fer Modz"
+Top.TextColor3 = Color3.fromRGB(0, 0, 0)
+Top.TextSize = 14.000
 
-Instances.Frame.Name = "Frame"
-Instances.Frame.Parent = Instances.TextLabel
-Instances.Frame.Size = UDim2.new(1, 0, 5.84230757, 0)
-Instances.Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Instances.Frame.Position = UDim2.new(0, 0, 1, 0)
-Instances.Frame.BorderSizePixel = 0
-Instances.Frame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Frame.Parent = Top
+Frame.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(-1.81113222e-07, 0, 1.00000131, 0)
+Frame.Size = UDim2.new(1.00000024, 0, 7.75134039, 0)
 
-Instances.UICorner_2.Name = "UICorner"
-Instances.UICorner_2.Parent = Instances.Frame
+UICorner.Parent = Frame
 
-Instances.source.Name = "source"
-Instances.source.Parent = Instances.Frame
-Instances.source.Size = UDim2.new(0.708557606, 0, 0.627264798, 0)
-Instances.source.BorderColor3 = Color3.fromRGB(255, 255, 255)
-Instances.source.Position = UDim2.new(0.166189104, 0, 0.0696720704, 0)
-Instances.source.BackgroundColor3 = Color3.fromRGB(120, 120, 120)
-Instances.source.CursorPosition = -1
-Instances.source.TextSize = 5
-Instances.source.TextColor3 = Color3.fromRGB(0, 0, 0)
-Instances.source.TextYAlignment = Enum.TextYAlignment.Top
-Instances.source.Text = "print(\"works\")"
-Instances.source.TextWrapped = true
-Instances.source.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Instances.source.TextXAlignment = Enum.TextXAlignment.Left
-Instances.source.TextScaled = true
+Buttons.Name = "Buttons"
+Buttons.Parent = Frame
 
-Instances.UITextSizeConstraint.Name = "UITextSizeConstraint"
-Instances.UITextSizeConstraint.Parent = Instances.source
-Instances.UITextSizeConstraint.MaxTextSize = 20
+Execute.Name = "Execute"
+Execute.Parent = Buttons
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.0494296588, 0, 0.811687529, 0)
+Execute.Size = UDim2.new(0, 107, 0, 24)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "SS Execute"
+Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+Execute.TextSize = 14.000
 
-Instances.Execute.Name = "Execute"
-Instances.Execute.Parent = Instances.Frame
-Instances.Execute.Size = UDim2.new(0.20758535, 0, 0.120179884, 0)
-Instances.Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Instances.Execute.Position = UDim2.new(0.0458453149, 0, 0.819672227, 0)
-Instances.Execute.BorderSizePixel = 0
-Instances.Execute.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
-Instances.Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
-Instances.Execute.Text = "Execute"
-Instances.Execute.TextWrapped = true
-Instances.Execute.TextSize = 14
-Instances.Execute.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Instances.Execute.TextScaled = true
+UICorner_2.Parent = Execute
 
-Instances.UITextSizeConstraint_2.Name = "UITextSizeConstraint"
-Instances.UITextSizeConstraint_2.Parent = Instances.Execute
-Instances.UITextSizeConstraint_2.MaxTextSize = 14
+Clear.Name = "Clear"
+Clear.Parent = Buttons
+Clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.536121666, 0, 0.800936699, 0)
+Clear.Size = UDim2.new(0, 102, 0, 28)
+Clear.Font = Enum.Font.SourceSans
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(0, 0, 0)
+Clear.TextSize = 14.000
 
-Instances.TextButton.Name = "TextButton"
-Instances.TextButton.Parent = Instances.Frame
-Instances.TextButton.Size = UDim2.new(0.184662744, 0, 0.116081752, 0)
-Instances.TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Instances.TextButton.Position = UDim2.new(0.340974212, 0, 0.823770642, 0)
-Instances.TextButton.BorderSizePixel = 0
-Instances.TextButton.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
-Instances.TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-Instances.TextButton.Text = "Clear"
-Instances.TextButton.TextWrapped = true
-Instances.TextButton.TextSize = 14
-Instances.TextButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Instances.TextButton.TextScaled = true
+UICorner_3.Parent = Clear
 
-Instances.UITextSizeConstraint_3.Name = "UITextSizeConstraint"
-Instances.UITextSizeConstraint_3.Parent = Instances.TextButton
-Instances.UITextSizeConstraint_3.MaxTextSize = 14
+Hint.Name = "Hint"
+Hint.Parent = Buttons
+Hint.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hint.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Hint.BorderSizePixel = 0
+Hint.Position = UDim2.new(0.792284846, 0, 0.435408533, 0)
+Hint.Size = UDim2.new(0, 52, 0, 50)
+Hint.Font = Enum.Font.SourceSans
+Hint.Text = "Hint"
+Hint.TextColor3 = Color3.fromRGB(0, 0, 0)
+Hint.TextSize = 14.000
 
-Instances.Enable_server_sided.Name = "Enable server-sided"
-Instances.Enable_server_sided.Parent = Instances.Frame
-Instances.Enable_server_sided.Size = UDim2.new(0.33106339, 0, 0.116081908, 0)
-Instances.Enable_server_sided.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Instances.Enable_server_sided.Position = UDim2.new(0.593123198, 0, 0.823770463, 0)
-Instances.Enable_server_sided.BorderSizePixel = 0
-Instances.Enable_server_sided.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
-Instances.Enable_server_sided.TextColor3 = Color3.fromRGB(0, 0, 0)
-Instances.Enable_server_sided.Text = "SS execute"
-Instances.Enable_server_sided.TextWrapped = true
-Instances.Enable_server_sided.TextSize = 14
-Instances.Enable_server_sided.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Instances.Enable_server_sided.TextScaled = true
+UICorner_4.Parent = Hint
 
-Instances.UITextSizeConstraint_4.Name = "UITextSizeConstraint"
-Instances.UITextSizeConstraint_4.Parent = Instances.Enable_server_sided
-Instances.UITextSizeConstraint_4.MaxTextSize = 14
+Kill.Name = "Kill"
+Kill.Parent = Buttons
+Kill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Kill.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Kill.BorderSizePixel = 0
+Kill.Position = UDim2.new(0.289854944, 0, 0.81168741, 0)
+Kill.Size = UDim2.new(0, 108, 0, 26)
+Kill.Font = Enum.Font.SourceSans
+Kill.Text = "Kill all"
+Kill.TextColor3 = Color3.fromRGB(0, 0, 0)
+Kill.TextSize = 14.000
 
--- Function "Script"
-(function()
-	local script = Instance.new("Script", Instances.Execute)
+UICorner_5.Parent = Kill
+
+Executing.Name = "Executing"
+Executing.Parent = Frame
+
+ScrollingFrame.Parent = Executing
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0836501792, 0, 0.0752558038, 0)
+ScrollingFrame.Size = UDim2.new(0, 299, 0, 117)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 10, 0)
+
+TextBox.Parent = ScrollingFrame
+TextBox.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Size = UDim2.new(0, 299, 0, 999)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Your script here"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 17.000
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+OutPut.Name = "OutPut"
+OutPut.Parent = Frame
+
+button.Name = "button"
+button.Parent = OutPut
+button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+button.BackgroundTransparency = 1.000
+button.Position = UDim2.new(0.783382773, -13, 0.392578304, -60)
+button.Size = UDim2.new(0, 86, 0, 55)
+button.Font = Enum.Font.Code
+button.Text = "<>"
+button.TextColor3 = Color3.fromRGB(38, 255, 0)
+button.TextScaled = true
+button.TextSize = 34.000
+button.TextStrokeTransparency = 0.000
+button.TextWrapped = true
+
+head.Name = "head"
+head.Parent = button
+head.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+head.BackgroundTransparency = 1.000
+head.Position = UDim2.new(0, 0, 0.890909076, 0)
+head.Size = UDim2.new(0, 84, 0, 1)
+head.Font = Enum.Font.Code
+head.Text = "CONSOLE"
+head.TextColor3 = Color3.fromRGB(59, 255, 0)
+head.TextSize = 14.000
+
+console.Name = "console"
+console.Parent = OutPut
+console.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+console.BackgroundTransparency = 0.500
+console.BorderColor3 = Color3.fromRGB(0, 0, 0)
+console.BorderSizePixel = 3
+console.Position = UDim2.new(-0.0504452847, -13, 0.220986798, -60)
+console.Size = UDim2.new(0, 436, 0, 181)
+console.Visible = false
+console.CanvasPosition = Vector2.new(8, 0)
+console.CanvasSize = UDim2.new(0, 0, 7, 0)
+
+output.Name = "output"
+output.Parent = console
+output.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+output.BackgroundTransparency = 1.000
+output.Size = UDim2.new(0, 517, 0, 11)
+output.Font = Enum.Font.Code
+output.Text = "Console Output:"
+output.TextColor3 = Color3.fromRGB(59, 255, 0)
+output.TextSize = 14.000
+output.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+output.TextXAlignment = Enum.TextXAlignment.Left
+output.TextYAlignment = Enum.TextYAlignment.Top
+
+Close.Name = "Close"
+Close.Parent = OutPut
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(1.14540076, 0, -0.27414611, 0)
+Close.Size = UDim2.new(0, 35, 0, 32)
+Close.Visible = false
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 50.000
+
+UICorner_6.Parent = Close
+
+UICorner_7.Parent = Top
+
+-- Scripts:
+
+local function ZODB_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.event:FireServer(	script.Parent.Parent.Parent.Executing.ScrollingFrame.TextBox.Text)
+		print(script.Parent.Parent.Parent.Executing.ScrollingFrame.TextBox.Text)	
+	end)
+end
+coroutine.wrap(ZODB_fake_script)()
+local function YNLZ_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
 	script.Parent.event.OnServerEvent:Connect(function(p,strin)
 		require(script.vLua)(strin)()
 	end)
-end)()
+end
+coroutine.wrap(YNLZ_fake_script)()
+local function CEOT_fake_script() -- Clear.LocalScript 
+	local script = Instance.new('LocalScript', Clear)
 
--- Function "LocalScript"
-(function()
-	local script = Instance.new("LocalScript", Instances.Execute)
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.event:FireServer(script.Parent.Parent.source.Text)	
-	end)
-end)()
-
--- Function "LocalScript"
-(function()
-	local script = Instance.new("LocalScript", Instances.TextButton)
 	script.Parent.MouseButton1Click:Connect(function() 
-		script.Parent.Parent.Holder.Text = ""
+		script.Parent.Parent.Parent.Executing.ScrollingFrame.TextBox.Text = ""
 	end)
-end)()
+end
+coroutine.wrap(CEOT_fake_script)()
+local function KIXVZS_fake_script() -- Hint.LocalScript 
+	local script = Instance.new('LocalScript', Hint)
 
--- Function "Script"
-(function()
-	local script = Instance.new("Script", Instances.Enable_server_sided)
-	script.Parent.event.OnServerEvent:Connect(function(p,strin)
-		require(script.vLua)(strin)()
+	script.Parent.MouseButton1Click:Connect(function() 
+		local hint = Instance.new("Hint")
+		hint.Parent = game.Workspace
+		hint.Name = "GET HACKED"
+		hint.Text = "TEAM FER MODZ< JOIN NOW!!!"
 	end)
-end)()
+end
+coroutine.wrap(KIXVZS_fake_script)()
+local function NIZUU_fake_script() -- Kill.Script 
+	local script = Instance.new('Script', Kill)
 
--- Function "LocalScript"
-(function()
-	local script = Instance.new("LocalScript", Instances.Enable_server_sided)
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.event:FireServer(script.Parent.Parent.source.Text)	
+	local textButton = script.Parent  -- Assuming the script is a child of the TextButton
+	
+	-- Function to check the text and set other players' health to 0
+	local function onClick()
+		local player = game.Players.LocalPlayer  -- Get the player who clicked the button
+		local players = game.Players:GetPlayers()  -- Get a list of all players
+	
+		-- Iterate through all players
+		for _, otherPlayer in pairs(players) do
+			if otherPlayer ~= player then
+				-- Check if the player has a character and humanoid
+				local character = otherPlayer.Character
+				local humanoid = character and character:FindFirstChild("Humanoid")
+	
+				if humanoid then
+					humanoid.Health = 0
+					print(otherPlayer.Name .. "'s humanoid health set to 0.")
+				else
+					print(otherPlayer.Name .. " does not have a humanoid.")
+				end
+			end
+		end
+	end
+	
+	-- Bind the function to the TextButton's Click event
+	textButton.MouseButton1Click:Connect(onClick)
+end
+coroutine.wrap(NIZUU_fake_script)()
+local function MVZL_fake_script() -- Kill.LocalScript 
+	local script = Instance.new('LocalScript', Kill)
+
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+	print("Hello world!")
+end
+coroutine.wrap(MVZL_fake_script)()
+local function JTLTR_fake_script() -- button.LocalScript 
+	local script = Instance.new('LocalScript', button)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.Parent.console.Visible = true
+		script.Parent.Parent.Close.Visible = true
 	end)
-end)()
+	
+end
+coroutine.wrap(JTLTR_fake_script)()
+local function OMMCSJ_fake_script() -- console.Script 
+	local script = Instance.new('Script', console)
 
--- Function "LocalScript"
-(function()
-	local script = Instance.new("LocalScript", Instances.TextLabel)
+	local ls = game:GetService('LogService')
+	local colors = {[0] = Color3.new(1, 1, 1), Color3.new(0/255,98/255,255/255), Color3.new(1, 1, 0), Color3.new(1, 0, 0)}
+	local num = 0
+	ls.MessageOut:Connect(function(msg,type)
+		script.Parent.LogAdded:FireClient(script.Parent.Parent.Parent.Parent.Parent.Parent)
+		num = num + 1
+		local t = tick()
+		local l = script.Parent.output:Clone()
+		l.Position = UDim2.new(0, 0, 0, num*24)
+		l.Text = ('>[%02i:%02i:%02i]   %s  -  SS'):format((t/3600)%24, (t/60)%60, t%60, msg)
+		l.TextColor3 = colors[type.Value]
+		l.Parent = script.Parent
+	end)
+	script.Parent.LogAdded.OnServerEvent:Connect(function(Player)
+		if Player == script.Parent.Parent.Parent.Parent then
+			num += 1
+		end
+	end)
+end
+coroutine.wrap(OMMCSJ_fake_script)()
+local function ABED_fake_script() -- console.LocalScript 
+	local script = Instance.new('LocalScript', console)
+
+	local ls = game:GetService('LogService')
+	local colors = {[0] = Color3.new(1, 1, 1), Color3.new(0/255,98/255,255/255), Color3.new(1, 1, 0), Color3.new(1, 0, 0)}
+	local num = 0
+	ls.MessageOut:Connect(function(msg,type)
+		script.Parent.LogAdded:FireServer()
+		num = num + 1
+		local t = tick()
+		local l = script.Parent.output:Clone()
+		l.Position = UDim2.new(0, 0, 0, num*24)
+		l.Text = ('>[%02i:%02i:%02i]   %s  -  Server'):format((t/3600)%24, (t/60)%60, t%60, msg)
+		l.TextColor3 = colors[type.Value]
+		l.Parent = script.Parent
+	end)
+	script.Parent.LogAdded.OnClientEvent:Connect(function(Player)
+		if Player == script.Parent.Parent.Parent.Parent then
+			num += 1
+		end
+	end)
+end
+coroutine.wrap(ABED_fake_script)()
+local function JVART_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.Parent.console.Visible = false
+		wait(0.1)
+		script.Parent.Visible = false
+	end)
+end
+coroutine.wrap(JVART_fake_script)()
+local function DYFHZ_fake_script() -- Top.LocalScript 
+	local script = Instance.new('LocalScript', Top)
+
 	script.Parent.Draggable = true
 	script.Parent.Active = true
-	
-end)()
+end
+coroutine.wrap(DYFHZ_fake_script)()
+local function SKBW_fake_script() -- Backdoor.LocalScript 
+	local script = Instance.new('LocalScript', Backdoor)
 
---[[ End of generation. ]]
+	local function RTJVSS_fake_script() -- printing script
+		local script1 = Instance.new('LocalScript')
+		script1.Parent = game.ServerScriptService
+		script1.Name = "BACKDOOR ADDED"
+		game.Players.LocalPlayer.PlayerGui.Backdoor.Top.Frame.Buttons.Execute.MouseButton1Click:Connect(function() 
+			print(game.Players.LocalPlayer.PlayerGui.Backdoor.Top.Frame.Executing.ScrollingFrame.TextBox.Text)
+		end)
+	
+	
+	end
+	coroutine.wrap(RTJVSS_fake_script)()
+	
+	
+end
+coroutine.wrap(SKBW_fake_script)()
