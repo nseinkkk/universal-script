@@ -1,0 +1,200 @@
+-- Made by Fer Modz
+
+-- Instances: 22 | Scripts: 4 | Modules: 0
+local G2L = {};
+
+-- StarterGui.Tools
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Tools]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.Tools.ToolF
+G2L["2"] = Instance.new("Folder", G2L["1"]);
+G2L["2"]["Name"] = [[ToolF]];
+
+-- StarterGui.Tools.ToolF.SubspaceGun
+G2L["3"] = Instance.new("Tool", G2L["2"]);
+-- [ERROR] cannot convert Grip, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["3"]["CanBeDropped"] = false;
+-- [ERROR] cannot convert WorldPivot, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["3"]["TextureId"] = [[rbxassetid://98947071]];
+G2L["3"]["Name"] = [[SubspaceGun]];
+
+-- StarterGui.Tools.ToolF.SubspaceGun.Handle
+G2L["4"] = Instance.new("Part", G2L["3"]);
+G2L["4"]["BottomSurface"] = Enum.SurfaceType.Smooth;
+G2L["4"]["Color"] = Color3.fromRGB(124, 48, 124);
+G2L["4"]["TopSurface"] = Enum.SurfaceType.Smooth;
+G2L["4"]["Size"] = Vector3.new(0.58, 1.34, 2.48);
+-- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["4"]["Rotation"] = Vector3.new(138.78, -10.206, -166.032);
+G2L["4"]["Name"] = [[Handle]];
+-- [ERROR] cannot convert CFrame, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+
+-- StarterGui.Tools.ToolF.SubspaceGun.Handle.Mesh
+G2L["5"] = Instance.new("SpecialMesh", G2L["4"]);
+G2L["5"]["MeshId"] = [[http://www.roblox.com/asset?id=139121396]];
+G2L["5"]["TextureId"] = [[http://www.roblox.com/asset?id=139121368]];
+G2L["5"]["MeshType"] = Enum.MeshType.FileMesh;
+G2L["5"]["Scale"] = Vector3.new(2.5, 2.5, 2.5);
+
+-- StarterGui.Tools.ToolF.SubspaceGun.Handle.Fire
+G2L["6"] = Instance.new("Sound", G2L["4"]);
+G2L["6"]["PlaybackSpeed"] = 3;
+G2L["6"]["Name"] = [[Fire]];
+G2L["6"]["SoundId"] = [[http://www.roblox.com/asset?id=130113322]];
+
+-- StarterGui.Tools.ToolF.SubspaceGun.Handle.Reload
+G2L["7"] = Instance.new("Sound", G2L["4"]);
+G2L["7"]["Name"] = [[Reload]];
+G2L["7"]["SoundId"] = [[http://www.roblox.com/asset?id=130113370]];
+
+-- StarterGui.Tools.ToolF.SubspaceGun.Handle.PointLight
+G2L["8"] = Instance.new("PointLight", G2L["4"]);
+G2L["8"]["Color"] = Color3.fromRGB(0, 255, 255);
+G2L["8"]["Range"] = 6;
+
+-- StarterGui.Tools.ToolF.SubspaceGun.Handle.Decal
+G2L["9"] = Instance.new("Decal", G2L["4"]);
+G2L["9"]["Texture"] = [[http://www.roblox.com/asset/?id=899454068]];
+
+-- StarterGui.Tools.ToolF.SubspaceGun.InputScript
+G2L["a"] = Instance.new("LocalScript", G2L["3"]);
+G2L["a"]["Name"] = [[InputScript]];
+
+-- StarterGui.Tools.ToolF.SubspaceGun.MouseIcon
+G2L["b"] = Instance.new("LocalScript", G2L["3"]);
+G2L["b"]["Name"] = [[MouseIcon]];
+
+-- StarterGui.Tools.ToolF.SubspaceGun.ThumbnailCamera
+G2L["c"] = Instance.new("Camera", G2L["3"]);
+G2L["c"]["FieldOfView"] = 10;
+-- [ERROR] cannot convert CFrame, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+-- [ERROR] cannot convert Focus, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["c"]["DiagonalFieldOfView"] = 1.75409;
+G2L["c"]["MaxAxisFieldOfView"] = 10;
+G2L["c"]["Name"] = [[ThumbnailCamera]];
+
+-- StarterGui.Tools.ToolF.SubspaceGun.Script
+G2L["d"] = Instance.new("Script", G2L["3"]);
+
+
+-- StarterGui.Tools.ToolF.SubspaceGun.Script.HitFade
+G2L["e"] = Instance.new("Sound", G2L["d"]);
+G2L["e"]["Volume"] = 0.4;
+G2L["e"]["Name"] = [[HitFade]];
+G2L["e"]["SoundId"] = [[rbxassetid://11984351]];
+
+-- StarterGui.Tools.ToolF.SubspaceGun.Click
+G2L["f"] = Instance.new("RemoteEvent", G2L["3"]);
+G2L["f"]["Name"] = [[Click]];
+
+-- StarterGui.Tools.Top
+G2L["10"] = Instance.new("TextLabel", G2L["1"]);
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["TextSize"] = 14;
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Size"] = UDim2.new(0, 236, 0, 17);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Text"] = [[Tool giver (FE)]];
+G2L["10"]["Name"] = [[Top]];
+G2L["10"]["Position"] = UDim2.new(0.37295, 0, 0.30972, 0);
+
+-- StarterGui.Tools.Top.Frame
+G2L["11"] = Instance.new("Frame", G2L["10"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(63, 63, 63);
+G2L["11"]["Size"] = UDim2.new(0, 238, 0, 151);
+G2L["11"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Tools.Top.Frame.Tool Giver
+G2L["12"] = Instance.new("TextButton", G2L["11"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0, 62, 0, 23);
+G2L["12"]["Name"] = [[Tool Giver]];
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[This work]];
+G2L["12"]["Position"] = UDim2.new(0.055, 0, 0.06623, 0);
+
+-- StarterGui.Tools.Top.Frame.Tool Giver.LocalScript
+G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+
+
+-- StarterGui.Tools.Top.Frame.Tool Giver.giverevent
+G2L["14"] = Instance.new("RemoteEvent", G2L["12"]);
+G2L["14"]["Name"] = [[giverevent]];
+
+-- StarterGui.Tools.Top.Frame.Tool Giver.Script
+G2L["15"] = Instance.new("Script", G2L["12"]);
+
+
+-- StarterGui.Tools.Top.LocalScript
+G2L["16"] = Instance.new("LocalScript", G2L["10"]);
+
+
+-- StarterGui.Tools.ToolF.SubspaceGun.InputScript
+local function C_a()
+local script = G2L["a"];
+	script.Parent.Equipped:connect(function(mouse)
+		mouse.Button1Down:connect(function()
+			script.Parent.Click:FireServer(mouse.Hit.p)
+		end)
+	end)
+end;
+task.spawn(C_a);
+-- StarterGui.Tools.ToolF.SubspaceGun.MouseIcon
+local function C_b()
+local script = G2L["b"];
+	local MOUSE_ICON = 'rbxasset://textures/GunCursor.png'
+	local RELOADING_ICON = 'rbxasset://textures/GunWaitCursor.png'
+	
+	local Tool = script.Parent
+	
+	local Mouse = nil
+	
+	local function UpdateIcon()
+		if Mouse then
+			Mouse.Icon = Tool.Enabled and MOUSE_ICON or RELOADING_ICON
+		end
+	end
+	
+	local function OnEquipped(mouse)
+		Mouse = mouse
+		UpdateIcon()
+	end
+	
+	local function OnChanged(property)
+		if property == 'Enabled' then
+			UpdateIcon()
+		end
+	end
+	
+	Tool.Equipped:connect(OnEquipped)
+	Tool.Changed:connect(OnChanged)
+	
+end;
+task.spawn(C_b);
+-- StarterGui.Tools.Top.Frame.Tool Giver.LocalScript
+local function C_13()
+local script = G2L["13"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.giverevent:FireServer(script.Parent.Parent.Parent.Parent.ToolF.SubspaceGun)
+	end)
+end;
+task.spawn(C_13);
+-- StarterGui.Tools.Top.LocalScript
+local function C_16()
+local script = G2L["16"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+end;
+task.spawn(C_16);
+
+return G2L["1"], require;
