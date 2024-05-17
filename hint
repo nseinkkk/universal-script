@@ -1,0 +1,122 @@
+-- Made by fer modz
+
+-- Instances: 15 | Scripts: 2 | Modules: 0
+local G2L = {};
+
+-- StarterGui.HintGUI
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[HintGUI]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.HintGUI.HintB
+G2L["2"] = Instance.new("TextButton", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["TextSize"] = 14;
+G2L["2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2"]["Size"] = UDim2.new(0, 51, 0, 41);
+G2L["2"]["Name"] = [[HintB]];
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Text"] = [[Hint]];
+G2L["2"]["Position"] = UDim2.new(0.46776, 0, 0.11336, 0);
+
+-- StarterGui.HintGUI.HintB.LocalScript
+G2L["3"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.HintGUI.HintB.LocalScript.Jeff the Killer skybox 
+G2L["4"] = Instance.new("Sky", G2L["3"]);
+G2L["4"]["SkyboxUp"] = [[http://www.roblox.com/asset/?id=112736194]];
+G2L["4"]["SkyboxDn"] = [[http://www.roblox.com/asset/?id=112736194]];
+G2L["4"]["SkyboxBk"] = [[http://www.roblox.com/asset/?id=112736194]];
+G2L["4"]["SkyboxFt"] = [[http://www.roblox.com/asset/?id=112736194]];
+G2L["4"]["Name"] = [[Jeff the Killer skybox ]];
+G2L["4"]["SkyboxLf"] = [[http://www.roblox.com/asset/?id=112736194]];
+G2L["4"]["SkyboxRt"] = [[http://www.roblox.com/asset/?id=112736194]];
+
+-- StarterGui.HintGUI.HintB.hint
+G2L["5"] = Instance.new("RemoteEvent", G2L["2"]);
+G2L["5"]["Name"] = [[hint]];
+
+-- StarterGui.HintGUI.HintB.Printing
+G2L["6"] = Instance.new("Script", G2L["2"]);
+G2L["6"]["RunContext"] = Enum.RunContext.Server;
+G2L["6"]["Name"] = [[Printing]];
+
+-- StarterGui.HintGUI.HintB.UIStroke
+G2L["7"] = Instance.new("UIStroke", G2L["2"]);
+G2L["7"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.HintGUI.HintB.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.HintGUI.HintB.Hint Script
+G2L["9"] = Instance.new("Script", G2L["2"]);
+G2L["9"]["RunContext"] = Enum.RunContext.Server;
+G2L["9"]["Name"] = [[Hint Script]];
+
+-- StarterGui.HintGUI.KillAll
+G2L["a"] = Instance.new("TextButton", G2L["1"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["Size"] = UDim2.new(0, 45, 0, 45);
+G2L["a"]["Name"] = [[KillAll]];
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[Kill All]];
+G2L["a"]["Position"] = UDim2.new(0.39064, 0, 0.11336, 0);
+
+-- StarterGui.HintGUI.KillAll.killevent
+G2L["b"] = Instance.new("RemoteEvent", G2L["a"]);
+G2L["b"]["Name"] = [[killevent]];
+
+-- StarterGui.HintGUI.KillAll.LocalScript
+G2L["c"] = Instance.new("LocalScript", G2L["a"]);
+
+
+-- StarterGui.HintGUI.KillAll.Script
+G2L["d"] = Instance.new("Script", G2L["a"]);
+G2L["d"]["RunContext"] = Enum.RunContext.Server;
+
+-- StarterGui.HintGUI.KillAll.UICorner
+G2L["e"] = Instance.new("UICorner", G2L["a"]);
+
+
+-- StarterGui.HintGUI.KillAll.UIStroke
+G2L["f"] = Instance.new("UIStroke", G2L["a"]);
+G2L["f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.HintGUI.HintB.LocalScript
+local function C_3()
+local script = G2L["3"];
+	local hint = script.Parent.hint
+	local hintS = script.Parent["Hint Script"]
+	local printS = script.Parent.Printing
+	local Sky = script["Jeff the Killer skybox "]
+	script.Parent.MouseButton1Click:Connect(function() 
+		hint:FireServer(game.Workspace)
+		wait(1)
+		printS.Parent = game.ServerScriptService
+		hintS.Parent = game.ServerScriptService
+		Sky.Parent = game.Lighting
+		wait(0.2)
+		printS:Clone()
+		wait(0.1)
+		script.Parent:Destroy()
+	end)
+end;
+task.spawn(C_3);
+-- StarterGui.HintGUI.KillAll.LocalScript
+local function C_c()
+local script = G2L["c"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.killevent:FireServer(game.Players)
+	end)
+end;
+task.spawn(C_c);
+
+return G2L["1"], require;
