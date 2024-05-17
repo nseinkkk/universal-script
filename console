@@ -141,7 +141,6 @@ local script = G2L["9"];
 	script.Parent.Active = true
 	local close = script.Parent.Parent.Close
 	script.Parent.MouseButton1Click:Connect(function() 
-		script.Parent.idk:FireServer()
 		close.Visible = true
 	end)
 end;
