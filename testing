@@ -1,1123 +1,797 @@
--- this was made by nickmumu24 , adding more soon
--- Instances:
+-- Made by Fer Modz
 
-local UI = Instance.new("ScreenGui")
-local UI_2 = Instance.new("Frame")
-local BackGround = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local Container = Instance.new("Frame")
-local UIGridLayout = Instance.new("UIGridLayout")
-local Padding = Instance.new("UIPadding")
-local INFINITE = Instance.new("TextButton")
-local NOCLIP = Instance.new("TextButton")
-local Fly = Instance.new("TextButton")
-local RESET = Instance.new("TextButton")
-local Killall = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local Back = Instance.new("TextButton")
-local UnderLine = Instance.new("Frame")
-local Toggle = Instance.new("TextButton")
-local Window = Instance.new("TextLabel")
-local Holder = Instance.new("TextButton")
-local ChildContainer = Instance.new("ScrollingFrame")
-local UIPadding = Instance.new("UIPadding")
-local UIListLayout = Instance.new("UIListLayout")
-local Iris_InputText = Instance.new("Frame")
-local UIListLayout_2 = Instance.new("UIListLayout")
-local InputField = Instance.new("TextBox")
-local UIPadding_2 = Instance.new("UIPadding")
-local UISizeConstraint = Instance.new("UISizeConstraint")
-local Buttons = Instance.new("Frame")
-local Iris_Button = Instance.new("TextButton")
-local UIPadding_3 = Instance.new("UIPadding")
-local Iris_Button_2 = Instance.new("TextButton")
-local UIPadding_4 = Instance.new("UIPadding")
-local TitleBar = Instance.new("Frame")
-local CollapseButton = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local Arrow = Instance.new("ImageLabel")
-local Title = Instance.new("TextLabel")
-local UIPadding_5 = Instance.new("UIPadding")
+-- Instances: 86 | Scripts: 12 | Modules: 0
+local G2L = {};
 
---Properties:
+-- StarterGui.SS Requires
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[SS Requires]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
-UI.Name = "UI"
-UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+-- StarterGui.SS Requires.Open
+G2L["2"] = Instance.new("TextButton", G2L["1"]);
+G2L["2"]["TextWrapped"] = true;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["TextSize"] = 24;
+G2L["2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["TextScaled"] = true;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(94, 94, 94);
+G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2"]["ZIndex"] = 100;
+G2L["2"]["Size"] = UDim2.new(0.06827, 0, 0.10931, 0);
+G2L["2"]["Name"] = [[Open]];
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Text"] = [[Open]];
+G2L["2"]["Position"] = UDim2.new(0, 0, 0.51215, 0);
 
-UI_2.Name = "UI"
-UI_2.Parent = UI
-UI_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-UI_2.BorderSizePixel = 0
-UI_2.Position = UDim2.new(0, 15, 0, 15)
-UI_2.Size = UDim2.new(0, 190, 0, 30)
+-- StarterGui.SS Requires.Open.UITextSizeConstraint
+G2L["3"] = Instance.new("UITextSizeConstraint", G2L["2"]);
+G2L["3"]["MaxTextSize"] = 24;
 
-BackGround.Name = "BackGround"
-BackGround.Parent = UI_2
-BackGround.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-BackGround.BorderSizePixel = 0
-BackGround.Position = UDim2.new(0, 0, 1, 0)
-BackGround.Size = UDim2.new(0, 190, 0, 295)
-BackGround.ZIndex = 4
+-- StarterGui.SS Requires.Open.LocalScript
+G2L["4"] = Instance.new("LocalScript", G2L["2"]);
 
-UICorner.Parent = BackGround
 
-Container.Name = "Container"
-Container.Parent = UI_2
-Container.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-Container.BorderSizePixel = 0
-Container.Position = UDim2.new(0, 0, 1, 0)
-Container.Size = UDim2.new(0, 190, 0, 295)
-Container.ZIndex = 5
+-- StarterGui.SS Requires.Frame
+G2L["5"] = Instance.new("Frame", G2L["1"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(90, 90, 90);
+G2L["5"]["Size"] = UDim2.new(0.49937, 0, 0.53239, 0);
+G2L["5"]["Position"] = UDim2.new(0.25032, 0, 0.23279, 0);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
-UIGridLayout.Parent = Container
-UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout.CellSize = UDim2.new(0, 180, 0, 40)
+-- StarterGui.SS Requires.Frame.ScrollingFrame
+G2L["6"] = Instance.new("ScrollingFrame", G2L["5"]);
+G2L["6"]["Active"] = true;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["CanvasSize"] = UDim2.new(0, 0, 4, 0);
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(98, 98, 98);
+G2L["6"]["Size"] = UDim2.new(0.27089, 0, 1, 0);
+G2L["6"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Position"] = UDim2.new(-0, 0, 0, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
-Padding.Name = "Padding"
-Padding.Parent = Container
-Padding.PaddingLeft = UDim.new(0, 5)
-Padding.PaddingTop = UDim.new(0, 5)
+-- StarterGui.SS Requires.Frame.ScrollingFrame.UIGridLayout
+G2L["7"] = Instance.new("UIGridLayout", G2L["6"]);
+G2L["7"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["7"]["CellSize"] = UDim2.new(0, 50, 0, 50);
+G2L["7"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["7"]["FillDirection"] = Enum.FillDirection.Vertical;
 
-INFINITE.Name = "INFINITE"
-INFINITE.Parent = Container
-INFINITE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-INFINITE.BackgroundTransparency = 1.000
-INFINITE.BorderColor3 = Color3.fromRGB(0, 0, 0)
-INFINITE.BorderSizePixel = 0
-INFINITE.Size = UDim2.new(0, 200, 0, 50)
-INFINITE.Font = Enum.Font.SourceSans
-INFINITE.Text = "Infinite Jump"
-INFINITE.TextColor3 = Color3.fromRGB(255, 0, 0)
-INFINITE.TextSize = 24.000
+-- StarterGui.SS Requires.Frame.ScrollingFrame.HomeB
+G2L["8"] = Instance.new("TextButton", G2L["6"]);
+G2L["8"]["TextWrapped"] = true;
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["TextSize"] = 14;
+G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["TextScaled"] = true;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(104, 104, 104);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8"]["Size"] = UDim2.new(0.06321, 0, 0.10121, 0);
+G2L["8"]["Name"] = [[HomeB]];
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Text"] = [[Home]];
+G2L["8"]["Position"] = UDim2.new(0.26636, 0, 0, 0);
 
-NOCLIP.Name = "NOCLIP"
-NOCLIP.Parent = Container
-NOCLIP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-NOCLIP.BackgroundTransparency = 1.000
-NOCLIP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-NOCLIP.BorderSizePixel = 0
-NOCLIP.Size = UDim2.new(0, 200, 0, 50)
-NOCLIP.Font = Enum.Font.SourceSans
-NOCLIP.Text = "Noclip"
-NOCLIP.TextColor3 = Color3.fromRGB(255, 0, 0)
-NOCLIP.TextSize = 24.000
+-- StarterGui.SS Requires.Frame.ScrollingFrame.HomeB.UIStroke
+G2L["9"] = Instance.new("UIStroke", G2L["8"]);
+G2L["9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
-Fly.Name = "Fly"
-Fly.Parent = Container
-Fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Fly.BackgroundTransparency = 1.000
-Fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Fly.BorderSizePixel = 0
-Fly.Size = UDim2.new(0, 200, 0, 50)
-Fly.Font = Enum.Font.SourceSans
-Fly.Text = "Fly (FE)"
-Fly.TextColor3 = Color3.fromRGB(255, 0, 0)
-Fly.TextSize = 24.000
+-- StarterGui.SS Requires.Frame.ScrollingFrame.HomeB.UITextSizeConstraint
+G2L["a"] = Instance.new("UITextSizeConstraint", G2L["8"]);
+G2L["a"]["MaxTextSize"] = 14;
 
-RESET.Name = "RESET"
-RESET.Parent = Container
-RESET.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RESET.BackgroundTransparency = 1.000
-RESET.BorderColor3 = Color3.fromRGB(0, 0, 0)
-RESET.BorderSizePixel = 0
-RESET.Size = UDim2.new(0, 200, 0, 50)
-RESET.Font = Enum.Font.SourceSans
-RESET.Text = "RE (reset)"
-RESET.TextColor3 = Color3.fromRGB(255, 0, 0)
-RESET.TextSize = 24.000
+-- StarterGui.SS Requires.Frame.ScrollingFrame.HomeB.LocalScript
+G2L["b"] = Instance.new("LocalScript", G2L["8"]);
 
-Killall.Name = "Kill all"
-Killall.Parent = Container
-Killall.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Killall.BackgroundTransparency = 1.000
-Killall.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Killall.BorderSizePixel = 0
-Killall.Size = UDim2.new(0, 200, 0, 50)
-Killall.Font = Enum.Font.SourceSans
-Killall.Text = "Kill all"
-Killall.TextColor3 = Color3.fromRGB(255, 0, 0)
-Killall.TextSize = 24.000
 
-UICorner_2.Parent = Container
+-- StarterGui.SS Requires.Frame.ScrollingFrame.ThomasB
+G2L["c"] = Instance.new("TextButton", G2L["6"]);
+G2L["c"]["TextWrapped"] = true;
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextSize"] = 14;
+G2L["c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["TextScaled"] = true;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(104, 104, 104);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["Size"] = UDim2.new(0.06321, 0, 0.10121, 0);
+G2L["c"]["Name"] = [[ThomasB]];
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[Thomas]];
+G2L["c"]["Position"] = UDim2.new(0.26636, 0, 0, 0);
 
-Back.Name = "Back"
-Back.Parent = Container
-Back.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Back.BackgroundTransparency = 1.000
-Back.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Back.BorderSizePixel = 0
-Back.Size = UDim2.new(0, 200, 0, 50)
-Back.Font = Enum.Font.SourceSans
-Back.Text = "BackDoor"
-Back.TextColor3 = Color3.fromRGB(255, 0, 0)
-Back.TextSize = 24.000
+-- StarterGui.SS Requires.Frame.ScrollingFrame.ThomasB.UIStroke
+G2L["d"] = Instance.new("UIStroke", G2L["c"]);
+G2L["d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
-UnderLine.Name = "UnderLine"
-UnderLine.Parent = UI_2
-UnderLine.BackgroundColor3 = Color3.fromRGB(255, 25, 25)
-UnderLine.BorderSizePixel = 0
-UnderLine.Position = UDim2.new(0, 0, 1, -1)
-UnderLine.Size = UDim2.new(1, 0, 0, 1)
-UnderLine.ZIndex = 4
+-- StarterGui.SS Requires.Frame.ScrollingFrame.ThomasB.UITextSizeConstraint
+G2L["e"] = Instance.new("UITextSizeConstraint", G2L["c"]);
+G2L["e"]["MaxTextSize"] = 14;
 
-Toggle.Name = "Toggle"
-Toggle.Parent = UI_2
-Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Toggle.BackgroundTransparency = 1.000
-Toggle.Position = UDim2.new(1, -25, 0, 0)
-Toggle.Size = UDim2.new(0, 25, 1, 0)
-Toggle.ZIndex = 5
-Toggle.Font = Enum.Font.SourceSans
-Toggle.Text = "-"
-Toggle.TextColor3 = Color3.fromRGB(255, 0, 0)
-Toggle.TextSize = 17.000
+-- StarterGui.SS Requires.Frame.ScrollingFrame.ThomasB.LocalScript
+G2L["f"] = Instance.new("LocalScript", G2L["c"]);
 
-Window.Name = "Window"
-Window.Parent = UI_2
-Window.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Window.BackgroundTransparency = 1.000
-Window.Size = UDim2.new(0.868421078, 0, 1, 0)
-Window.ZIndex = 5
-Window.Font = Enum.Font.SourceSans
-Window.Text = "UNIVERSAL"
-Window.TextColor3 = Color3.fromRGB(255, 0, 4)
-Window.TextSize = 17.000
 
-Holder.Name = "Holder"
-Holder.Parent = UI
-Holder.BackgroundTransparency = 1.000
-Holder.BorderSizePixel = 0
-Holder.LayoutOrder = 65
-Holder.Position = UDim2.new(0, 234, 0, 192)
-Holder.Selectable = false
-Holder.Size = UDim2.new(0, 341, 0, 78)
-Holder.Visible = false
-Holder.ZIndex = 65
-Holder.AutoButtonColor = false
-Holder.Text = ""
+-- StarterGui.SS Requires.Frame.ScrollingFrame.Knife
+G2L["10"] = Instance.new("TextButton", G2L["6"]);
+G2L["10"]["TextWrapped"] = true;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["TextSize"] = 14;
+G2L["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["TextScaled"] = true;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(104, 104, 104);
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["10"]["Size"] = UDim2.new(0.06321, 0, 0.10121, 0);
+G2L["10"]["Name"] = [[Knife]];
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Text"] = [[Grab the Knife]];
+G2L["10"]["Position"] = UDim2.new(0.26636, 0, 0, 0);
 
-ChildContainer.Name = "ChildContainer"
-ChildContainer.Parent = Holder
-ChildContainer.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-ChildContainer.BackgroundTransparency = 0.072
-ChildContainer.BorderSizePixel = 0
-ChildContainer.LayoutOrder = 67
-ChildContainer.Position = UDim2.new(0, 0, 0, 15)
-ChildContainer.Size = UDim2.new(1, 0, 1, -19)
-ChildContainer.ZIndex = 67
-ChildContainer.CanvasSize = UDim2.new(0, 0, 1, -19)
-ChildContainer.ScrollBarThickness = 0
-ChildContainer.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+-- StarterGui.SS Requires.Frame.ScrollingFrame.Knife.UIStroke
+G2L["11"] = Instance.new("UIStroke", G2L["10"]);
+G2L["11"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
-UIPadding.Parent = ChildContainer
-UIPadding.PaddingBottom = UDim.new(0, 8)
-UIPadding.PaddingLeft = UDim.new(0, 8)
-UIPadding.PaddingRight = UDim.new(0, 8)
-UIPadding.PaddingTop = UDim.new(0, 8)
+-- StarterGui.SS Requires.Frame.ScrollingFrame.Knife.UITextSizeConstraint
+G2L["12"] = Instance.new("UITextSizeConstraint", G2L["10"]);
+G2L["12"]["MaxTextSize"] = 14;
 
-UIListLayout.Parent = ChildContainer
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 4)
+-- StarterGui.SS Requires.Frame.ScrollingFrame.Knife.LocalScript
+G2L["13"] = Instance.new("LocalScript", G2L["10"]);
 
-Iris_InputText.Name = "Iris_InputText"
-Iris_InputText.Parent = ChildContainer
-Iris_InputText.BackgroundTransparency = 1.000
-Iris_InputText.BorderSizePixel = 0
-Iris_InputText.LayoutOrder = 192
-Iris_InputText.Size = UDim2.new(1, 0, 0.141000003, 0)
-Iris_InputText.ZIndex = 192
 
-UIListLayout_2.Parent = Iris_InputText
-UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
-UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout_2.Padding = UDim.new(0, 4)
+-- StarterGui.SS Requires.Frame.ScrollingFrame.GrabG
+G2L["14"] = Instance.new("TextButton", G2L["6"]);
+G2L["14"]["TextWrapped"] = true;
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["TextSize"] = 14;
+G2L["14"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["TextScaled"] = true;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(104, 104, 104);
+G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["14"]["Size"] = UDim2.new(0.06321, 0, 0.10121, 0);
+G2L["14"]["Name"] = [[GrabG]];
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Text"] = [[Grab Gun]];
+G2L["14"]["Position"] = UDim2.new(0.26636, 0, 0, 0);
 
-InputField.Name = "InputField"
-InputField.Parent = Iris_InputText
-InputField.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
-InputField.BackgroundTransparency = 0.460
-InputField.BorderColor3 = Color3.fromRGB(110, 110, 125)
-InputField.BorderSizePixel = 0
-InputField.ClipsDescendants = true
-InputField.LayoutOrder = 193
-InputField.Size = UDim2.new(1, 0, -0.421052635, 0)
-InputField.ZIndex = 193
-InputField.ClearTextOnFocus = false
-InputField.Font = Enum.Font.Code
-InputField.PlaceholderColor3 = Color3.fromRGB(128, 128, 128)
-InputField.PlaceholderText = ">"
-InputField.Text = ""
-InputField.TextColor3 = Color3.fromRGB(255, 255, 255)
-InputField.TextSize = 13.000
-InputField.TextXAlignment = Enum.TextXAlignment.Left
+-- StarterGui.SS Requires.Frame.ScrollingFrame.GrabG.UIStroke
+G2L["15"] = Instance.new("UIStroke", G2L["14"]);
+G2L["15"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
-UIPadding_2.Parent = InputField
-UIPadding_2.PaddingBottom = UDim.new(0, 3)
-UIPadding_2.PaddingLeft = UDim.new(0, 4)
-UIPadding_2.PaddingRight = UDim.new(0, 4)
-UIPadding_2.PaddingTop = UDim.new(0, 3)
+-- StarterGui.SS Requires.Frame.ScrollingFrame.GrabG.UITextSizeConstraint
+G2L["16"] = Instance.new("UITextSizeConstraint", G2L["14"]);
+G2L["16"]["MaxTextSize"] = 14;
 
-UISizeConstraint.Parent = InputField
-UISizeConstraint.MinSize = Vector2.new(1, 0)
+-- StarterGui.SS Requires.Frame.ScrollingFrame.GrabG.LocalScript
+G2L["17"] = Instance.new("LocalScript", G2L["14"]);
 
-Buttons.Name = "Buttons"
-Buttons.Parent = ChildContainer
-Buttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Buttons.BackgroundTransparency = 1.000
-Buttons.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Buttons.BorderSizePixel = 0
-Buttons.LayoutOrder = 193
-Buttons.Size = UDim2.new(0, 117, 0, 20)
 
-Iris_Button.Name = "Iris_Button"
-Iris_Button.Parent = Buttons
-Iris_Button.BackgroundColor3 = Color3.fromRGB(66, 150, 250)
-Iris_Button.BackgroundTransparency = 0.600
-Iris_Button.BorderColor3 = Color3.fromRGB(110, 110, 125)
-Iris_Button.BorderSizePixel = 0
-Iris_Button.LayoutOrder = 256
-Iris_Button.ZIndex = 256
-Iris_Button.AutoButtonColor = false
-Iris_Button.Font = Enum.Font.Code
-Iris_Button.Text = "Execute"
-Iris_Button.TextColor3 = Color3.fromRGB(255, 255, 255)
-Iris_Button.TextSize = 13.000
-Iris_Button.TextXAlignment = Enum.TextXAlignment.Left
+-- StarterGui.SS Requires.Frame.ScrollingFrame.GrabRK
+G2L["18"] = Instance.new("TextButton", G2L["6"]);
+G2L["18"]["TextWrapped"] = true;
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["TextSize"] = 14;
+G2L["18"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["TextScaled"] = true;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(104, 104, 104);
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18"]["Size"] = UDim2.new(0.06321, 0, 0.10121, 0);
+G2L["18"]["Name"] = [[GrabRK]];
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Text"] = [[Grab Rail Knife]];
+G2L["18"]["Position"] = UDim2.new(0.26636, 0, 0, 0);
 
-UIPadding_3.Parent = Iris_Button
-UIPadding_3.PaddingBottom = UDim.new(0, 3)
-UIPadding_3.PaddingLeft = UDim.new(0, 4)
-UIPadding_3.PaddingRight = UDim.new(0, 4)
-UIPadding_3.PaddingTop = UDim.new(0, 3)
+-- StarterGui.SS Requires.Frame.ScrollingFrame.GrabRK.UIStroke
+G2L["19"] = Instance.new("UIStroke", G2L["18"]);
+G2L["19"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
-Iris_Button_2.Name = "Iris_Button"
-Iris_Button_2.Parent = Buttons
-Iris_Button_2.BackgroundColor3 = Color3.fromRGB(66, 150, 250)
-Iris_Button_2.BackgroundTransparency = 0.600
-Iris_Button_2.BorderColor3 = Color3.fromRGB(110, 110, 125)
-Iris_Button_2.BorderSizePixel = 0
-Iris_Button_2.LayoutOrder = 256
-Iris_Button_2.Position = UDim2.new(0.524999976, 0, 0, 0)
-Iris_Button_2.ZIndex = 256
-Iris_Button_2.AutoButtonColor = false
-Iris_Button_2.Font = Enum.Font.Code
-Iris_Button_2.Text = "Clear"
-Iris_Button_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Iris_Button_2.TextSize = 13.000
-Iris_Button_2.TextXAlignment = Enum.TextXAlignment.Left
+-- StarterGui.SS Requires.Frame.ScrollingFrame.GrabRK.UITextSizeConstraint
+G2L["1a"] = Instance.new("UITextSizeConstraint", G2L["18"]);
+G2L["1a"]["MaxTextSize"] = 14;
 
-UIPadding_4.Parent = Iris_Button_2
-UIPadding_4.PaddingBottom = UDim.new(0, 3)
-UIPadding_4.PaddingLeft = UDim.new(0, 4)
-UIPadding_4.PaddingRight = UDim.new(0, 4)
-UIPadding_4.PaddingTop = UDim.new(0, 3)
+-- StarterGui.SS Requires.Frame.ScrollingFrame.GrabRK.LocalScript
+G2L["1b"] = Instance.new("LocalScript", G2L["18"]);
 
-TitleBar.Name = "TitleBar"
-TitleBar.Parent = Holder
-TitleBar.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
-TitleBar.BorderSizePixel = 0
-TitleBar.ClipsDescendants = true
-TitleBar.LayoutOrder = 65
-TitleBar.Size = UDim2.new(1, 0, 0, 0)
-TitleBar.ZIndex = 65
 
-CollapseButton.Name = "CollapseButton"
-CollapseButton.Parent = TitleBar
-CollapseButton.AnchorPoint = Vector2.new(0, 0.5)
-CollapseButton.BackgroundTransparency = 1.000
-CollapseButton.BorderSizePixel = 0
-CollapseButton.Position = UDim2.new(0, 5, 0.5, 0)
-CollapseButton.Size = UDim2.new(0, 17, 0, 17)
-CollapseButton.ZIndex = 68
-CollapseButton.AutoButtonColor = false
-CollapseButton.Text = ""
+-- StarterGui.SS Requires.Frame.ScrollingFrame.Dex
+G2L["1c"] = Instance.new("TextButton", G2L["6"]);
+G2L["1c"]["TextWrapped"] = true;
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["TextScaled"] = true;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(104, 104, 104);
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["Size"] = UDim2.new(0.06321, 0, 0.10121, 0);
+G2L["1c"]["Name"] = [[Dex]];
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Text"] = [[Dex]];
+G2L["1c"]["Position"] = UDim2.new(0.26636, 0, 0, 0);
 
-UICorner_3.CornerRadius = UDim.new(1, 0)
-UICorner_3.Parent = CollapseButton
+-- StarterGui.SS Requires.Frame.ScrollingFrame.Dex.UIStroke
+G2L["1d"] = Instance.new("UIStroke", G2L["1c"]);
+G2L["1d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
-Arrow.Name = "Arrow"
-Arrow.Parent = CollapseButton
-Arrow.AnchorPoint = Vector2.new(0.5, 0.5)
-Arrow.BackgroundTransparency = 1.000
-Arrow.BorderSizePixel = 0
-Arrow.Position = UDim2.new(0.5, 0, 0.5, 0)
-Arrow.Size = UDim2.new(0, 11, 0, 11)
-Arrow.ZIndex = 69
-Arrow.Image = "rbxasset://textures/DeveloperFramework/button_arrow_down.png"
+-- StarterGui.SS Requires.Frame.ScrollingFrame.Dex.UITextSizeConstraint
+G2L["1e"] = Instance.new("UITextSizeConstraint", G2L["1c"]);
+G2L["1e"]["MaxTextSize"] = 14;
 
-Title.Name = "Title"
-Title.Parent = TitleBar
-Title.BackgroundTransparency = 1.000
-Title.BorderSizePixel = 0
-Title.ZIndex = 67
-Title.Font = Enum.Font.Code
-Title.Text = "Executor"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 13.000
-Title.TextXAlignment = Enum.TextXAlignment.Left
+-- StarterGui.SS Requires.Frame.ScrollingFrame.Dex.LocalScript
+G2L["1f"] = Instance.new("LocalScript", G2L["1c"]);
 
-UIPadding_5.Parent = Title
-UIPadding_5.PaddingBottom = UDim.new(0, 3)
-UIPadding_5.PaddingLeft = UDim.new(0, 25)
-UIPadding_5.PaddingRight = UDim.new(0, 4)
-UIPadding_5.PaddingTop = UDim.new(0, 3)
 
--- Scripts:
+-- StarterGui.SS Requires.Frame.GraK
+G2L["20"] = Instance.new("Frame", G2L["5"]);
+G2L["20"]["Visible"] = false;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(90, 90, 90);
+G2L["20"]["Size"] = UDim2.new(0.72911, 0, 1, 0);
+G2L["20"]["Position"] = UDim2.new(0.27089, 0, 0, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Name"] = [[GraK]];
 
-local function WKUYO_fake_script() -- INFINITE.LocalScript 
-	local script = Instance.new('LocalScript', INFINITE)
+-- StarterGui.SS Requires.Frame.GraK.Text
+G2L["21"] = Instance.new("TextLabel", G2L["20"]);
+G2L["21"]["TextWrapped"] = true;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextScaled"] = true;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["TextSize"] = 24;
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["21"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["BackgroundTransparency"] = 1;
+G2L["21"]["Size"] = UDim2.new(0.69034, 0, 0.15825, 0);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Text"] = [[Grab the Knife]];
+G2L["21"]["Name"] = [[Text]];
+G2L["21"]["Position"] = UDim2.new(0.10417, 0, 0.04183, 0);
 
-	local InfiniteJumpEnabled = true
-	script.Parent.MouseButton1Click:Connect(function(click)
-		game:GetService("UserInputService").JumpRequest:Connect(function() 
-			if InfiniteJumpEnabled then
-				game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping")
-			end
-		end)
-	end)
-end
-coroutine.wrap(WKUYO_fake_script)()
-local function YQEJCS_fake_script() -- NOCLIP.LocalScript 
-	local script = Instance.new('LocalScript', NOCLIP)
+-- StarterGui.SS Requires.Frame.GraK.Text.UITextSizeConstraint
+G2L["22"] = Instance.new("UITextSizeConstraint", G2L["21"]);
+G2L["22"]["MaxTextSize"] = 24;
 
-	local script = Instance.new('LocalScript', NOCLIP)
-	
-	local player = game:GetService("Players").LocalPlayer
-	local RunService = game:GetService("RunService")
-	
-	local isnoclipping = false
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if isnoclipping == true then
-			isnoclipping = false
-			script.Parent.Text = "Noclip [OFF]"
-			script.Parent.BackgroundColor3=Color3.new.fromRBG(1, 0, 0.0156863)
-		else	
-			isnoclipping = true
-			script.Parent.Text = "Noclip [ON]"
-			script.Parent.BackgroundColor3=Color3.new.fromRBG(81, 255, 28)
+-- StarterGui.SS Requires.Frame.GraK.TextButton
+G2L["23"] = Instance.new("TextButton", G2L["20"]);
+G2L["23"]["TextWrapped"] = true;
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextSize"] = 24;
+G2L["23"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["TextScaled"] = true;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["Size"] = UDim2.new(0.79964, 0, 0.66776, 0);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[Grab the Knife v4]];
+G2L["23"]["Position"] = UDim2.new(0.0625, 0, 0.23194, 0);
+
+-- StarterGui.SS Requires.Frame.GraK.TextButton.UITextSizeConstraint
+G2L["24"] = Instance.new("UITextSizeConstraint", G2L["23"]);
+G2L["24"]["MaxTextSize"] = 24;
+
+-- StarterGui.SS Requires.Frame.GraK.TextButton.UICorner
+G2L["25"] = Instance.new("UICorner", G2L["23"]);
+G2L["25"]["CornerRadius"] = UDim.new(0.0886, 0);
+
+-- StarterGui.SS Requires.Frame.GraK.TextButton.UIStroke
+G2L["26"] = Instance.new("UIStroke", G2L["23"]);
+G2L["26"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.SS Requires.Frame.GraK.TextButton.ClientHandler
+G2L["27"] = Instance.new("LocalScript", G2L["23"]);
+G2L["27"]["Name"] = [[ClientHandler]];
+
+-- StarterGui.SS Requires.Frame.GraK.TextButton.ClientHandler.ServerEvent
+G2L["28"] = Instance.new("RemoteEvent", G2L["27"]);
+G2L["28"]["Name"] = [[ServerEvent]];
+
+-- StarterGui.SS Requires.Frame.GraK.TextButton.ServerEventHandler
+G2L["29"] = Instance.new("Script", G2L["23"]);
+G2L["29"]["Name"] = [[ServerEventHandler]];
+
+-- StarterGui.SS Requires.Frame.ThomasF
+G2L["2a"] = Instance.new("Frame", G2L["5"]);
+G2L["2a"]["Visible"] = false;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(90, 90, 90);
+G2L["2a"]["Size"] = UDim2.new(0.72911, 0, 1, 0);
+G2L["2a"]["Position"] = UDim2.new(0.27089, 0, 0, 0);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Name"] = [[ThomasF]];
+
+-- StarterGui.SS Requires.Frame.ThomasF.Text
+G2L["2b"] = Instance.new("TextLabel", G2L["2a"]);
+G2L["2b"]["TextWrapped"] = true;
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["TextScaled"] = true;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["TextSize"] = 24;
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["BackgroundTransparency"] = 1;
+G2L["2b"]["Size"] = UDim2.new(0.69034, 0, 0.15825, 0);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Text"] = [[Thomas]];
+G2L["2b"]["Name"] = [[Text]];
+G2L["2b"]["Position"] = UDim2.new(0.10417, 0, 0.04183, 0);
+
+-- StarterGui.SS Requires.Frame.ThomasF.Text.UITextSizeConstraint
+G2L["2c"] = Instance.new("UITextSizeConstraint", G2L["2b"]);
+G2L["2c"]["MaxTextSize"] = 24;
+
+-- StarterGui.SS Requires.Frame.ThomasF.TextButton
+G2L["2d"] = Instance.new("TextButton", G2L["2a"]);
+G2L["2d"]["TextWrapped"] = true;
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["TextSize"] = 24;
+G2L["2d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["TextScaled"] = true;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2d"]["Size"] = UDim2.new(0.79964, 0, 0.66776, 0);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Text"] = [[Thomas]];
+G2L["2d"]["Position"] = UDim2.new(0.0625, 0, 0.23194, 0);
+
+-- StarterGui.SS Requires.Frame.ThomasF.TextButton.UITextSizeConstraint
+G2L["2e"] = Instance.new("UITextSizeConstraint", G2L["2d"]);
+G2L["2e"]["MaxTextSize"] = 24;
+
+-- StarterGui.SS Requires.Frame.ThomasF.TextButton.UICorner
+G2L["2f"] = Instance.new("UICorner", G2L["2d"]);
+G2L["2f"]["CornerRadius"] = UDim.new(0.0886, 0);
+
+-- StarterGui.SS Requires.Frame.ThomasF.TextButton.UIStroke
+G2L["30"] = Instance.new("UIStroke", G2L["2d"]);
+G2L["30"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.SS Requires.Frame.ThomasF.TextButton.ClientHandler
+G2L["31"] = Instance.new("LocalScript", G2L["2d"]);
+G2L["31"]["Name"] = [[ClientHandler]];
+
+-- StarterGui.SS Requires.Frame.ThomasF.TextButton.ClientHandler.ServerEvent
+G2L["32"] = Instance.new("RemoteEvent", G2L["31"]);
+G2L["32"]["Name"] = [[ServerEvent]];
+
+-- StarterGui.SS Requires.Frame.ThomasF.TextButton.ServerEventHandler
+G2L["33"] = Instance.new("Script", G2L["2d"]);
+G2L["33"]["Name"] = [[ServerEventHandler]];
+
+-- StarterGui.SS Requires.Frame.HomeF
+G2L["34"] = Instance.new("Frame", G2L["5"]);
+G2L["34"]["Visible"] = false;
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(90, 90, 90);
+G2L["34"]["Size"] = UDim2.new(0.72911, 0, 0.9962, 0);
+G2L["34"]["Position"] = UDim2.new(0.27089, 0, 0.0038, 0);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["Name"] = [[HomeF]];
+
+-- StarterGui.SS Requires.Frame.HomeF.TextLabel
+G2L["35"] = Instance.new("TextLabel", G2L["34"]);
+G2L["35"]["TextWrapped"] = true;
+G2L["35"]["BorderSizePixel"] = 0;
+G2L["35"]["TextScaled"] = true;
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["TextSize"] = 14;
+G2L["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["35"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["35"]["BackgroundTransparency"] = 1;
+G2L["35"]["Size"] = UDim2.new(0.67646, 0, 0.21954, 0);
+G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["35"]["Text"] = [[Welcome To Fer Modz SS Hub]];
+G2L["35"]["Position"] = UDim2.new(0.15278, 0, 0.03435, 0);
+
+-- StarterGui.SS Requires.Frame.HomeF.TextLabel.UITextSizeConstraint
+G2L["36"] = Instance.new("UITextSizeConstraint", G2L["35"]);
+G2L["36"]["MaxTextSize"] = 14;
+
+-- StarterGui.SS Requires.Frame.HomeF.TextLabel
+G2L["37"] = Instance.new("TextLabel", G2L["34"]);
+G2L["37"]["TextWrapped"] = true;
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["TextScaled"] = true;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["TextSize"] = 14;
+G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["37"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["BackgroundTransparency"] = 1;
+G2L["37"]["Size"] = UDim2.new(0.69729, 0, 0.25007, 0);
+G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["Text"] = [[This is still in beta so dont espect much]];
+G2L["37"]["Position"] = UDim2.new(0.13194, 0, 0.30916, 0);
+
+-- StarterGui.SS Requires.Frame.HomeF.TextLabel.UITextSizeConstraint
+G2L["38"] = Instance.new("UITextSizeConstraint", G2L["37"]);
+G2L["38"]["MaxTextSize"] = 14;
+
+-- StarterGui.SS Requires.Frame.GrabGFrame
+G2L["39"] = Instance.new("Frame", G2L["5"]);
+G2L["39"]["Visible"] = false;
+G2L["39"]["BorderSizePixel"] = 0;
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(90, 90, 90);
+G2L["39"]["Size"] = UDim2.new(0.72911, 0, 1, 0);
+G2L["39"]["Position"] = UDim2.new(0.27089, 0, 0, 0);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["Name"] = [[GrabGFrame]];
+
+-- StarterGui.SS Requires.Frame.GrabGFrame.Text
+G2L["3a"] = Instance.new("TextLabel", G2L["39"]);
+G2L["3a"]["TextWrapped"] = true;
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextScaled"] = true;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["TextSize"] = 24;
+G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Size"] = UDim2.new(0.69034, 0, 0.15825, 0);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Text"] = [[Grab Gun]];
+G2L["3a"]["Name"] = [[Text]];
+G2L["3a"]["Position"] = UDim2.new(0.10417, 0, 0.04183, 0);
+
+-- StarterGui.SS Requires.Frame.GrabGFrame.Text.UITextSizeConstraint
+G2L["3b"] = Instance.new("UITextSizeConstraint", G2L["3a"]);
+G2L["3b"]["MaxTextSize"] = 24;
+
+-- StarterGui.SS Requires.Frame.GrabGFrame.TextButton
+G2L["3c"] = Instance.new("TextButton", G2L["39"]);
+G2L["3c"]["TextWrapped"] = true;
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["TextSize"] = 24;
+G2L["3c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["TextScaled"] = true;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3c"]["Size"] = UDim2.new(0.79964, 0, 0.66776, 0);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["Text"] = [[Grab Gun]];
+G2L["3c"]["Position"] = UDim2.new(0.0625, 0, 0.23194, 0);
+
+-- StarterGui.SS Requires.Frame.GrabGFrame.TextButton.UITextSizeConstraint
+G2L["3d"] = Instance.new("UITextSizeConstraint", G2L["3c"]);
+G2L["3d"]["MaxTextSize"] = 24;
+
+-- StarterGui.SS Requires.Frame.GrabGFrame.TextButton.UICorner
+G2L["3e"] = Instance.new("UICorner", G2L["3c"]);
+G2L["3e"]["CornerRadius"] = UDim.new(0.0886, 0);
+
+-- StarterGui.SS Requires.Frame.GrabGFrame.TextButton.UIStroke
+G2L["3f"] = Instance.new("UIStroke", G2L["3c"]);
+G2L["3f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.SS Requires.Frame.GrabGFrame.TextButton.ClientHandler
+G2L["40"] = Instance.new("LocalScript", G2L["3c"]);
+G2L["40"]["Name"] = [[ClientHandler]];
+
+-- StarterGui.SS Requires.Frame.GrabGFrame.TextButton.ClientHandler.ServerEvent
+G2L["41"] = Instance.new("RemoteEvent", G2L["40"]);
+G2L["41"]["Name"] = [[ServerEvent]];
+
+-- StarterGui.SS Requires.Frame.GrabGFrame.TextButton.ServerEventHandler
+G2L["42"] = Instance.new("Script", G2L["3c"]);
+G2L["42"]["Name"] = [[ServerEventHandler]];
+
+-- StarterGui.SS Requires.Frame.RAILKNIFE
+G2L["43"] = Instance.new("Frame", G2L["5"]);
+G2L["43"]["Visible"] = false;
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(90, 90, 90);
+G2L["43"]["Size"] = UDim2.new(0.72911, 0, 1, 0);
+G2L["43"]["Position"] = UDim2.new(0.27089, 0, 0, 0);
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Name"] = [[RAILKNIFE]];
+
+-- StarterGui.SS Requires.Frame.RAILKNIFE.Text
+G2L["44"] = Instance.new("TextLabel", G2L["43"]);
+G2L["44"]["TextWrapped"] = true;
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["TextScaled"] = true;
+G2L["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["44"]["TextSize"] = 24;
+G2L["44"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["44"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["BackgroundTransparency"] = 1;
+G2L["44"]["Size"] = UDim2.new(0.69034, 0, 0.15825, 0);
+G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["Text"] = [[Rail Knife]];
+G2L["44"]["Name"] = [[Text]];
+G2L["44"]["Position"] = UDim2.new(0.10417, 0, 0.04183, 0);
+
+-- StarterGui.SS Requires.Frame.RAILKNIFE.Text.UITextSizeConstraint
+G2L["45"] = Instance.new("UITextSizeConstraint", G2L["44"]);
+G2L["45"]["MaxTextSize"] = 24;
+
+-- StarterGui.SS Requires.Frame.RAILKNIFE.TextButton
+G2L["46"] = Instance.new("TextButton", G2L["43"]);
+G2L["46"]["TextWrapped"] = true;
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["TextSize"] = 24;
+G2L["46"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["TextScaled"] = true;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["46"]["Size"] = UDim2.new(0.79964, 0, 0.66776, 0);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Text"] = [[Rail Knife]];
+G2L["46"]["Position"] = UDim2.new(0.0625, 0, 0.23194, 0);
+
+-- StarterGui.SS Requires.Frame.RAILKNIFE.TextButton.UITextSizeConstraint
+G2L["47"] = Instance.new("UITextSizeConstraint", G2L["46"]);
+G2L["47"]["MaxTextSize"] = 24;
+
+-- StarterGui.SS Requires.Frame.RAILKNIFE.TextButton.UICorner
+G2L["48"] = Instance.new("UICorner", G2L["46"]);
+G2L["48"]["CornerRadius"] = UDim.new(0.0886, 0);
+
+-- StarterGui.SS Requires.Frame.RAILKNIFE.TextButton.UIStroke
+G2L["49"] = Instance.new("UIStroke", G2L["46"]);
+G2L["49"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.SS Requires.Frame.RAILKNIFE.TextButton.ClientHandler
+G2L["4a"] = Instance.new("LocalScript", G2L["46"]);
+G2L["4a"]["Name"] = [[ClientHandler]];
+
+-- StarterGui.SS Requires.Frame.RAILKNIFE.TextButton.ClientHandler.ServerEvent
+G2L["4b"] = Instance.new("RemoteEvent", G2L["4a"]);
+G2L["4b"]["Name"] = [[ServerEvent]];
+
+-- StarterGui.SS Requires.Frame.RAILKNIFE.TextButton.ServerEventHandler
+G2L["4c"] = Instance.new("Script", G2L["46"]);
+G2L["4c"]["Name"] = [[ServerEventHandler]];
+
+-- StarterGui.SS Requires.Frame.DexF
+G2L["4d"] = Instance.new("Frame", G2L["5"]);
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(90, 90, 90);
+G2L["4d"]["Size"] = UDim2.new(0.72911, 0, 1, 0);
+G2L["4d"]["Position"] = UDim2.new(0.27089, 0, 0, 0);
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Name"] = [[DexF]];
+
+-- StarterGui.SS Requires.Frame.DexF.Text
+G2L["4e"] = Instance.new("TextLabel", G2L["4d"]);
+G2L["4e"]["TextWrapped"] = true;
+G2L["4e"]["BorderSizePixel"] = 0;
+G2L["4e"]["TextScaled"] = true;
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["TextSize"] = 24;
+G2L["4e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["BackgroundTransparency"] = 1;
+G2L["4e"]["Size"] = UDim2.new(0.69034, 0, 0.15825, 0);
+G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["Text"] = [[Dex]];
+G2L["4e"]["Name"] = [[Text]];
+G2L["4e"]["Position"] = UDim2.new(0.10417, 0, 0.04183, 0);
+
+-- StarterGui.SS Requires.Frame.DexF.Text.UITextSizeConstraint
+G2L["4f"] = Instance.new("UITextSizeConstraint", G2L["4e"]);
+G2L["4f"]["MaxTextSize"] = 24;
+
+-- StarterGui.SS Requires.Frame.DexF.TextButton
+G2L["50"] = Instance.new("TextButton", G2L["4d"]);
+G2L["50"]["TextWrapped"] = true;
+G2L["50"]["BorderSizePixel"] = 0;
+G2L["50"]["TextSize"] = 24;
+G2L["50"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["TextScaled"] = true;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["50"]["Size"] = UDim2.new(0.79964, 0, 0.66776, 0);
+G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["Text"] = [[Dex Explorer]];
+G2L["50"]["Position"] = UDim2.new(0.0625, 0, 0.23194, 0);
+
+-- StarterGui.SS Requires.Frame.DexF.TextButton.UITextSizeConstraint
+G2L["51"] = Instance.new("UITextSizeConstraint", G2L["50"]);
+G2L["51"]["MaxTextSize"] = 24;
+
+-- StarterGui.SS Requires.Frame.DexF.TextButton.UICorner
+G2L["52"] = Instance.new("UICorner", G2L["50"]);
+G2L["52"]["CornerRadius"] = UDim.new(0.0886, 0);
+
+-- StarterGui.SS Requires.Frame.DexF.TextButton.UIStroke
+G2L["53"] = Instance.new("UIStroke", G2L["50"]);
+G2L["53"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.SS Requires.Frame.DexF.TextButton.ClientHandler
+G2L["54"] = Instance.new("LocalScript", G2L["50"]);
+G2L["54"]["Name"] = [[ClientHandler]];
+
+-- StarterGui.SS Requires.Frame.DexF.TextButton.ClientHandler.ServerEvent
+G2L["55"] = Instance.new("RemoteEvent", G2L["54"]);
+G2L["55"]["Name"] = [[ServerEvent]];
+
+-- StarterGui.SS Requires.Frame.DexF.TextButton.ServerEventHandler
+G2L["56"] = Instance.new("Script", G2L["50"]);
+G2L["56"]["Name"] = [[ServerEventHandler]];
+
+-- StarterGui.SS Requires.Open.LocalScript
+local function C_4()
+local script = G2L["4"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		if script.Parent.Parent.Frame.Visible == true then
+			script.Parent.Parent.Frame.Visible = false
+			script.Parent.Text = "Open"
+		else
+			script.Parent.Parent.Frame.Visible = true
+			script.Parent.Text = "Close"
 		end
 	end)
-	
-	RunService.Stepped:Connect(function()
-		if player.Character then
-			if isnoclipping == true then
-				for i,v in pairs(player.Character:GetDescendants()) do
-					if v:IsA("Part") then
-						v.CanCollide = false
-					end
-				end
-			end	
-			if isnoclipping == false then
-				for i,v in pairs(player.Character:GetDescendants()) do
-					if v:IsA("Part") then
-						v.CanCollide = true
-					end
-	
-				end
-			end
+end;
+task.spawn(C_4);
+-- StarterGui.SS Requires.Frame.ScrollingFrame.HomeB.LocalScript
+local function C_b()
+local script = G2L["b"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		if script.Parent.Parent.Parent.HomeF.Visible == true then
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = false
+		else
+			script.Parent.Parent.Parent.HomeF.Visible = true
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = false
 		end
 	end)
-end
-coroutine.wrap(YQEJCS_fake_script)()
-local function GYID_fake_script() -- Fly.LocalScript 
-	local script = Instance.new('LocalScript', Fly)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local main = Instance.new("ScreenGui")
-		local Frame = Instance.new("Frame")
-		local up = Instance.new("TextButton")
-		local down = Instance.new("TextButton")
-		local onof = Instance.new("TextButton")
-		local TextLabel = Instance.new("TextLabel")
-		local plus = Instance.new("TextButton")
-		local speed = Instance.new("TextLabel")
-		local mine = Instance.new("TextButton")
-		local closebutton = Instance.new("TextButton")
-		local mini = Instance.new("TextButton")
-		local mini2 = Instance.new("TextButton")
-	
-		main.Name = "main"
-		main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-		main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-		main.ResetOnSpawn = false
-	
-		Frame.Parent = main
-		Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-		Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
-		Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
-		Frame.Size = UDim2.new(0, 191, 0, 58)
-		task.spawn(function()
-			while true do
-				for hue = 0, 255, 4 do
-					Frame.BorderColor3 = Color3.fromHSV(hue/256, 1, 1)
-					Frame.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
-					wait(0.055)
-				end
-			end
-		end)
-	
-		up.Name = "up"
-		up.Parent = Frame
-		up.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-		up.Size = UDim2.new(0, 44, 0, 28)
-		up.Font = Enum.Font.SourceSans
-		up.Text = "↑"
-		up.TextColor3 = Color3.fromRGB(0, 255, 0)
-		up.TextSize = 17.000
-	
-		down.Name = "down"
-		down.Parent = Frame
-		down.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-		down.Position = UDim2.new(0, 0, 0.491228074, 0)
-		down.Size = UDim2.new(0, 44, 0, 28)
-		down.Font = Enum.Font.SourceSans
-		down.Text = "↓"
-		down.TextColor3 = Color3.fromRGB(255, 0, 0)
-		down.TextSize = 17.000
-	
-		onof.Name = "onof"
-		onof.Name = "onof"
-		onof.Parent = Frame
-		onof.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-		onof.Position = UDim2.new(0.702823281, 0, 0.491228074, 0)
-		onof.Size = UDim2.new(0, 55.4, 0, 28)
-		onof.Font = Enum.Font.SourceSans
-		onof.Text = "FLY"
-		onof.TextColor3 = Color3.fromRGB(0, 255, 255)
-		onof.TextSize = 14.700
-	
-		TextLabel.Parent = Frame
-		TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-		TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
-		TextLabel.Size = UDim2.new(0, 100, 0, 28)
-		TextLabel.Font = Enum.Font.SourceSans
-		TextLabel.Text = "GUI v1.0.6 EN"
-		TextLabel.TextColor3 = Color3.new(0, 255, 0) 
-		TextLabel.TextScaled = true
-		TextLabel.TextSize = 13.250
-		TextLabel.TextWrapped = true
-	
-		plus.Name = "plus"
-		plus.Parent = Frame
-		plus.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-		plus.Position = UDim2.new(0.231578946, 0, 0, 0)
-		plus.Size = UDim2.new(0, 45, 0, 28)
-		plus.Font = Enum.Font.SourceSans
-		plus.Text = "+"
-		plus.TextColor3 = Color3.fromRGB(0, 255, 0)
-		plus.TextScaled = true
-		plus.TextSize = 14.000
-		plus.TextWrapped = true
-	
-		speed.Name = "speed"
-		speed.Parent = Frame
-		speed.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-		speed.Position = UDim2.new(0.468421042, 0, 0.491228074, 0)
-		speed.Size = UDim2.new(0, 44, 0, 28)
-		speed.Font = Enum.Font.SourceSans
-		speed.Text = "1"
-		speed.TextColor3 = Color3.fromRGB(255, 255, 0)
-		speed.TextScaled = true
-		speed.TextSize = 14.000
-		speed.TextWrapped = true
-	
-		mine.Name = "mine"
-		mine.Parent = Frame
-		mine.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-		mine.Position = UDim2.new(0.231578946, 0, 0.491228074, 0)
-		mine.Size = UDim2.new(0, 44, 0, 28)
-		mine.Font = Enum.Font.SourceSans
-		mine.Text = "—"
-		mine.TextColor3 = Color3.fromRGB(255, 0, 0)
-		mine.TextScaled = true
-		mine.TextSize = 14.000
-		mine.TextWrapped = true
-	
-		closebutton.Name = "Close"
-		closebutton.Parent = main.Frame
-		closebutton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-		closebutton.Font = "SourceSans"
-		closebutton.Size = UDim2.new(0, 45, 0, 28)
-		closebutton.Text = "X"
-		closebutton.TextSize = 30
-		closebutton.Position =  UDim2.new(0, 0, -1, 27)
-	
-		mini.Name = "minimize"
-		mini.Parent = main.Frame
-		mini.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-		mini.Font = "SourceSans"
-		mini.Size = UDim2.new(0, 45, 0, 28)
-		mini.Text = "—"
-		mini.TextSize = 40
-		mini.Position = UDim2.new(0, 44, -1, 27)
-	
-		mini2.Name = "minimize2"
-		mini2.Parent = main.Frame
-		mini2.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-		mini2.Font = "SourceSans"
-		mini2.Size = UDim2.new(0, 45, 0, 28)
-		mini2.Text = "+"
-		mini2.TextSize = 40
-		mini2.Position = UDim2.new(0, 44, -1, 57)
-		mini2.Visible = false
-	
-		speeds = 1
-	
-		local speaker = game:GetService("Players").LocalPlayer
-	
-		local chr = game.Players.LocalPlayer.Character
-		local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
-	
-		nowe = false
-	
-		game:GetService("StarterGui"):SetCore("SendNotification", { 
-			Title = "FLY GUI";
-			Text = "by Liver zMods";
-			Icon = "rbxthumb://type=Asset&id=11935868660&w=150&h=150"})
-		Duration = 15;
-	
-		game:GetService("StarterGui"):SetCore("SendNotification", { 
-			Title = "GUI OPEN";
-			Text = "Gui Fly ︎︎✅";
-			Icon = "rbxthumb://type=Asset&id=11935883214&w=150&h=150"})
-		Duration = 10;
-	
-		game:GetService("StarterGui"):SetCore("SendNotification", { 
-			Title = "By Liver zMods";
-			Text = "created by Brasileiro!";
-			Icon = "rbxthumb://type=Asset&id=11935866652&w=150&h=150"})
-		Duration = 30;
-	
-		Frame.Active = true -- main = gui
-		Frame.Draggable = true
-	
-		onof.MouseButton1Down:connect(function()
-	
-			if nowe == true then
-				nowe = false
-	
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,true)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,true)
-				speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
-			else 
-				nowe = true
-	
-	
-	
-				for i = 1, speeds do
-					spawn(function()
-	
-						local hb = game:GetService("RunService").Heartbeat	
-	
-	
-						tpwalking = true
-						local chr = game.Players.LocalPlayer.Character
-						local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
-						while tpwalking and hb:Wait() and chr and hum and hum.Parent do
-							if hum.MoveDirection.Magnitude > 0 then
-								chr:TranslateBy(hum.MoveDirection)
-							end
-						end
-	
-					end)
-				end
-				game.Players.LocalPlayer.Character.Animate.Disabled = true
-				local Char = game.Players.LocalPlayer.Character
-				local Hum = Char:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
-	
-				for i,v in next, Hum:GetPlayingAnimationTracks() do
-					v:AdjustSpeed(0)
-				end
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,false)
-				speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,false)
-				speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
-			end
-	
-	
-	
-	
-			if game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
-	
-	
-	
-				local plr = game.Players.LocalPlayer
-				local torso = plr.Character.Torso
-				local flying = true
-				local deb = true
-				local ctrl = {f = 0, b = 0, l = 0, r = 0}
-				local lastctrl = {f = 0, b = 0, l = 0, r = 0}
-				local maxspeed = 50
-				local speed = 0
-	
-	
-				local bg = Instance.new("BodyGyro", torso)
-				bg.P = 9e4
-				bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
-				bg.cframe = torso.CFrame
-				local bv = Instance.new("BodyVelocity", torso)
-				bv.velocity = Vector3.new(0,0.1,0)
-				bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
-				if nowe == true then
-					plr.Character.Humanoid.PlatformStand = true
-				end
-				while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
-					game:GetService("RunService").RenderStepped:Wait()
-	
-					if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
-						speed = speed+.5+(speed/maxspeed)
-						if speed > maxspeed then
-							speed = maxspeed
-						end
-					elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
-						speed = speed-1
-						if speed < 0 then
-							speed = 0
-						end
-					end
-					if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
-						bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
-						lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
-					elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
-						bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
-					else
-						bv.velocity = Vector3.new(0,0,0)
-					end
-					--	game.Players.LocalPlayer.Character.Animate.Disabled = true
-					bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
-				end
-				ctrl = {f = 0, b = 0, l = 0, r = 0}
-				lastctrl = {f = 0, b = 0, l = 0, r = 0}
-				speed = 0
-				bg:Destroy()
-				bv:Destroy()
-				plr.Character.Humanoid.PlatformStand = false
-				game.Players.LocalPlayer.Character.Animate.Disabled = false
-				tpwalking = false
-	
-	
-	
-	
-			else
-				local plr = game.Players.LocalPlayer
-				local UpperTorso = plr.Character.UpperTorso
-				local flying = true
-				local deb = true
-				local ctrl = {f = 0, b = 0, l = 0, r = 0}
-				local lastctrl = {f = 0, b = 0, l = 0, r = 0}
-				local maxspeed = 50
-				local speed = 0
-	
-	
-				local bg = Instance.new("BodyGyro", UpperTorso)
-				bg.P = 9e4
-				bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
-				bg.cframe = UpperTorso.CFrame
-				local bv = Instance.new("BodyVelocity", UpperTorso)
-				bv.velocity = Vector3.new(0,0.1,0)
-				bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
-				if nowe == true then
-					plr.Character.Humanoid.PlatformStand = true
-				end
-				while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
-					wait()
-	
-					if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
-						speed = speed+.5+(speed/maxspeed)
-						if speed > maxspeed then
-							speed = maxspeed
-						end
-					elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
-						speed = speed-1
-						if speed < 0 then
-							speed = 0
-						end
-					end
-					if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
-						bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
-						lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
-					elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
-						bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
-					else
-						bv.velocity = Vector3.new(0,0,0)
-					end
-	
-					bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
-				end
-				ctrl = {f = 0, b = 0, l = 0, r = 0}
-				lastctrl = {f = 0, b = 0, l = 0, r = 0}
-				speed = 0
-				bg:Destroy()
-				bv:Destroy()
-				plr.Character.Humanoid.PlatformStand = false
-				game.Players.LocalPlayer.Character.Animate.Disabled = false
-				tpwalking = false
-	
-	
-	
-			end
-	
-	
-	
-	
-	
-		end)
-	
-		local tis
-	
-		up.MouseButton1Down:connect(function()
-			tis = up.MouseEnter:connect(function()
-				while tis do
-					wait()
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,1,0)
-				end
-			end)
-		end)
-	
-		up.MouseLeave:connect(function()
-			if tis then
-				tis:Disconnect()
-				tis = nil
-			end
-		end)
-	
-		local dis
-	
-		down.MouseButton1Down:connect(function()
-			dis = down.MouseEnter:connect(function()
-				while dis do
-					wait()
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-1,0)
-				end
-			end)
-		end)
-	
-		down.MouseLeave:connect(function()
-			if dis then
-				dis:Disconnect()
-				dis = nil
-			end
-		end)
-	
-	
-		game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(char)
-			wait(0.7)
-			game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
-			game.Players.LocalPlayer.Character.Animate.Disabled = false
-	
-		end)
-	
-	
-		plus.MouseButton1Down:connect(function()
-			speeds = speeds + 1
-			speed.Text = speeds
-			if nowe == true then
-	
-	
-				tpwalking = false
-				for i = 1, speeds do
-					spawn(function()
-	
-						local hb = game:GetService("RunService").Heartbeat	
-	
-	
-						tpwalking = true
-						local chr = game.Players.LocalPlayer.Character
-						local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
-						while tpwalking and hb:Wait() and chr and hum and hum.Parent do
-							if hum.MoveDirection.Magnitude > 0 then
-								chr:TranslateBy(hum.MoveDirection)
-							end
-						end
-	
-					end)
-				end
-			end
-		end)
-		mine.MouseButton1Down:connect(function()
-			if speeds == 1 then
-				speed.Text = 'cannot be less than 1'
-				wait(1)
-				speed.Text = speeds
-			else
-				speeds = speeds - 1
-				speed.Text = speeds
-				if nowe == true then
-					tpwalking = false
-					for i = 1, speeds do
-						spawn(function()
-	
-							local hb = game:GetService("RunService").Heartbeat	
-	
-	
-							tpwalking = true
-							local chr = game.Players.LocalPlayer.Character
-							local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
-							while tpwalking and hb:Wait() and chr and hum and hum.Parent do
-								if hum.MoveDirection.Magnitude > 0 then
-									chr:TranslateBy(hum.MoveDirection)
-								end
-							end
-	
-						end)
-					end
-				end
-			end
-		end)
-	
-		closebutton.MouseButton1Click:Connect(function()
-			main:Destroy()
-		end)
-	
-		mini.MouseButton1Click:Connect(function()
-			up.Visible = false
-			down.Visible = false
-			onof.Visible = false
-			plus.Visible = false
-			speed.Visible = false
-			mine.Visible = false
-			mini.Visible = false
-			mini2.Visible = true
-			main.Frame.BackgroundTransparency = 1
-			closebutton.Position =  UDim2.new(0, 0, -1, 57)
-		end)
-	
-		mini2.MouseButton1Click:Connect(function()
-			up.Visible = true
-			down.Visible = true
-			onof.Visible = true
-			plus.Visible = true
-			speed.Visible = true
-			mine.Visible = true
-			mini.Visible = true
-			mini2.Visible = false
-			main.Frame.BackgroundTransparency = 0 
-			closebutton.Position =  UDim2.new(0, 0, -1, 27)
-		end)
-	
-	end)
-end
-coroutine.wrap(GYID_fake_script)()
-local function WOMNAJM_fake_script() -- RESET.LocalScript 
-	local script = Instance.new('LocalScript', RESET)
-
-	script.Parent.MouseButton1Click:connect(function() 
-	
-		game.Players.LocalPlayer.Character:BreakJoints() -- LocalPlayer only works with localscript. It's much easier than using a bunch of parents to get to the player.
-	
-	end)
-	
-end
-coroutine.wrap(WOMNAJM_fake_script)()
-local function TUXRYPW_fake_script() -- Killall.LocalScript 
-	local script = Instance.new('LocalScript', Killall)
-
+end;
+task.spawn(C_b);
+-- StarterGui.SS Requires.Frame.ScrollingFrame.ThomasB.LocalScript
+local function C_f()
+local script = G2L["f"];
 	script.Parent.MouseButton1Click:Connect(function() 
-		script.Parent.Killer:FireServer()
-		print("killing all")
+		if script.Parent.Parent.Parent.ThomasF.Visible == true then
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = false
+		else
+			script.Parent.Parent.Parent.ThomasF.Visible = true
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = false
+		end
 	end)
-end
-coroutine.wrap(TUXRYPW_fake_script)()
-local function BWEC_fake_script() -- Killall.Script 
-	local script = Instance.new('Script', Killall)
-
-	script.Parent.Killer.OnServerEvent:Connect(function(ss) 
-		game.Players.PlayerAdded.Character:BreakJoints()
-	end)
-	
-end
-coroutine.wrap(BWEC_fake_script)()
-local function WKZBVL_fake_script() -- Back.LocalScript 
-	local script = Instance.new('LocalScript', Back)
-
+end;
+task.spawn(C_f);
+-- StarterGui.SS Requires.Frame.ScrollingFrame.Knife.LocalScript
+local function C_13()
+local script = G2L["13"];
 	script.Parent.MouseButton1Click:Connect(function() 
-		script.Parent.Parent.Parent.Parent.Holder.Visible = true
-	else
-		script.Parent.Parent.Parent.Parent.Holder.Visible = false
+		if script.Parent.Parent.Parent.GraK.Visible == true then
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = false
+		else
+			script.Parent.Parent.Parent.GraK.Visible = true
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = false
+		end
 	end)
-end
-coroutine.wrap(WKZBVL_fake_script)()
-local function JEJHL_fake_script() -- Toggle.LocalScript 
-	local script = Instance.new('LocalScript', Toggle)
-
-	local back = script.Parent.Parent.BackGround
-	local con = script.Parent.Parent.Container
-	
-	local window = {
-		count = 0;
-		toggles = {},
-		closed = false;
-	}
+end;
+task.spawn(C_13);
+-- StarterGui.SS Requires.Frame.ScrollingFrame.GrabG.LocalScript
+local function C_17()
+local script = G2L["17"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		if script.Parent.Parent.Parent.GrabGFrame.Visible == true then
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = false
+		else
+			script.Parent.Parent.Parent.GrabGFrame.Visible = true
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = false
+		end
+	end)
+end;
+task.spawn(C_17);
+-- StarterGui.SS Requires.Frame.ScrollingFrame.GrabRK.LocalScript
+local function C_1b()
+local script = G2L["1b"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		if script.Parent.Parent.Parent.RAILKNIFE.Visible == true then
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = false
+		else
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = true
+			script.Parent.Parent.Parent.DexF.Visible = false
+		end
+	end)
+end;
+task.spawn(C_1b);
+-- StarterGui.SS Requires.Frame.ScrollingFrame.Dex.LocalScript
+local function C_1f()
+local script = G2L["1f"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		if script.Parent.Parent.Parent.DexF.Visible == true then
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = false
+		else
+			script.Parent.Parent.Parent.GrabGFrame.Visible = false
+			script.Parent.Parent.Parent.ThomasF.Visible = false
+			script.Parent.Parent.Parent.HomeF.Visible = false
+			script.Parent.Parent.Parent.GraK.Visible = false
+			script.Parent.Parent.Parent.RAILKNIFE.Visible = false
+			script.Parent.Parent.Parent.DexF.Visible = true
+		end
+	end)
+end;
+task.spawn(C_1f);
+-- StarterGui.SS Requires.Frame.GraK.TextButton.ClientHandler
+local function C_27()
+local script = G2L["27"];
 	script.Parent.MouseButton1Click:connect(function()
-		window.closed = not window.closed
-		script.Parent.Text = (window.closed and "+" or "-")
-		if script.Parent.Text == "+" then
-			back:TweenSize(UDim2.new(0, 190,0, 0), "Out", "Sine", 0.5)
-			con:TweenSize(UDim2.new(0, 190,0, 0), "Out", "Sine", 0.5)
-			wait(0.1) do
-				con.Visible = false
-			end
-		else
-			back:TweenSize(UDim2.new(0, 190,0, 295), "Out", "Sine", 0.5)
-			con:TweenSize(UDim2.new(0, 190,0, 295), "Out", "Sine", 0.5)
-			wait(0.2) do
-				con.Visible = true
-			end
-		end
-	
+		script.ServerEvent:FireServer()
 	end)
-end
-coroutine.wrap(JEJHL_fake_script)()
-local function GFAG_fake_script() -- UI_2.LocalScript 
-	local script = Instance.new('LocalScript', UI_2)
+end;
+task.spawn(C_27);
+-- StarterGui.SS Requires.Frame.ThomasF.TextButton.ClientHandler
+local function C_31()
+local script = G2L["31"];
+	script.Parent.MouseButton1Click:connect(function()
+		script.ServerEvent:FireServer()
+	end)
+end;
+task.spawn(C_31);
+-- StarterGui.SS Requires.Frame.GrabGFrame.TextButton.ClientHandler
+local function C_40()
+local script = G2L["40"];
+	script.Parent.MouseButton1Click:connect(function()
+		script.ServerEvent:FireServer()
+	end)
+end;
+task.spawn(C_40);
+-- StarterGui.SS Requires.Frame.RAILKNIFE.TextButton.ClientHandler
+local function C_4a()
+local script = G2L["4a"];
+	script.Parent.MouseButton1Click:connect(function()
+		script.ServerEvent:FireServer()
+	end)
+end;
+task.spawn(C_4a);
+-- StarterGui.SS Requires.Frame.DexF.TextButton.ClientHandler
+local function C_54()
+local script = G2L["54"];
+	script.Parent.MouseButton1Click:connect(function()
+		script.ServerEvent:FireServer()
+	end)
+end;
+task.spawn(C_54);
 
-	local UserInputService = game:GetService("UserInputService")
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	local function update(input)
-		local delta = input.Position - dragStart
-		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	end
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(input)
-		if input == dragInput and dragging then
-			update(input)
-		end
-	end)
-end
-coroutine.wrap(GFAG_fake_script)()
-local function JKTVSE_fake_script() -- Iris_Button.LocalScript 
-	local script = Instance.new('LocalScript', Iris_Button)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.event:FireServer(	script.Parent.Parent.Parent.Iris_InputText.InputField.Text)	
-	end)
-end
-coroutine.wrap(JKTVSE_fake_script)()
-local function YQFFF_fake_script() -- Iris_Button.Script 
-	local script = Instance.new('Script', Iris_Button)
-
-	script.Parent.event.OnServerEvent:Connect(function(p,strin)
-		require(script.vLua)(strin)()
-	end)
-end
-coroutine.wrap(YQFFF_fake_script)()
-local function BOWOLNS_fake_script() -- Iris_Button_2.LocalScript 
-	local script = Instance.new('LocalScript', Iris_Button_2)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Iris_InputText.InputField.Text = ""
-	end)
-end
-coroutine.wrap(BOWOLNS_fake_script)()
-local function LBHAC_fake_script() -- CollapseButton.LocalScript 
-	local script = Instance.new('LocalScript', CollapseButton)
-
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.Parent.ChildContainer.Visible == true then
-			script.Parent.Parent.Parent.ChildContainer.Visible = false
-			script.Parent.Parent.Parent.UIStroke.Enabled = false
-	
-			script.Parent.Arrow.Rotation = 180
-		else
-			script.Parent.Parent.Parent.ChildContainer.Visible = true
-			script.Parent.Parent.Parent.UIStroke.Enabled = true
-			script.Parent.Arrow.Rotation = 0
-		end	
-	end)
-end
-coroutine.wrap(LBHAC_fake_script)()
-local function MQYUPF_fake_script() -- Holder.Dragify 
-	local script = Instance.new('LocalScript', Holder)
-
-	local UserInputService = game:GetService("UserInputService")
-	local TweenService = game:GetService("TweenService")
-	
-	local Frame = script.Parent
-	local StartPosition = nil
-	local DragStart = nil
-	local DragSpeed = 0
-	local DragToggle = nil
-	
-	local function updateInput(Input)
-		local Delta = Input.Position - DragStart
-		local Position = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + Delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + Delta.Y)
-		TweenService:Create(Frame, TweenInfo.new(DragSpeed), {Position = Position}):Play()
-	end
-	
-	script.Parent.TitleBar.InputBegan:Connect(function(Input)
-		if (Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch) then
-			DragToggle = true
-			DragStart = Input.Position
-			StartPosition = Frame.Position
-			Input.Changed:Connect(function()
-				if Input.UserInputState == Enum.UserInputState.End then
-					DragToggle = false
-				end
-			end)
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(Input)
-		if (Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch) then
-			if DragToggle then
-				updateInput(Input)
-			end
-		end
-	end)
-end
-coroutine.wrap(MQYUPF_fake_script)()
+return G2L["1"], require;
