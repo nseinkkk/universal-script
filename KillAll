@@ -1,0 +1,134 @@
+-- Made by Fer Modz
+
+-- Instances: 16 | Scripts: 3 | Modules: 0
+local G2L = {};
+
+-- StarterGui.Kill All
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Kill All]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.Kill All.Top
+G2L["2"] = Instance.new("TextLabel", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["TextSize"] = 24;
+G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Size"] = UDim2.new(0, 200, 0, 20);
+G2L["2"]["Visible"] = false;
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Text"] = [[Kill all]];
+G2L["2"]["Name"] = [[Top]];
+G2L["2"]["Position"] = UDim2.new(0.37295, 0, 0.29352, 0);
+
+-- StarterGui.Kill All.Top.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.Kill All.Top.UIStroke
+G2L["4"] = Instance.new("UIStroke", G2L["2"]);
+G2L["4"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.Kill All.Top.Frame
+G2L["5"] = Instance.new("Frame", G2L["2"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(98, 98, 98);
+G2L["5"]["Size"] = UDim2.new(0, 200, 0, 154);
+G2L["5"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Kill All.Top.Frame.KillButton
+G2L["6"] = Instance.new("TextButton", G2L["5"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["TextSize"] = 14;
+G2L["6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6"]["Size"] = UDim2.new(0, 90, 0, 27);
+G2L["6"]["Name"] = [[KillButton]];
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[Kill all]];
+G2L["6"]["Position"] = UDim2.new(0.275, 0, 0.44156, 0);
+
+-- StarterGui.Kill All.Top.Frame.KillButton.UIStroke
+G2L["7"] = Instance.new("UIStroke", G2L["6"]);
+G2L["7"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.Kill All.Top.Frame.KillButton.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["6"]);
+
+
+-- StarterGui.Kill All.Top.Frame.KillButton.Script
+G2L["9"] = Instance.new("Script", G2L["6"]);
+
+
+-- StarterGui.Kill All.Top.Frame.KillButton.killevent
+G2L["a"] = Instance.new("RemoteEvent", G2L["6"]);
+G2L["a"]["Name"] = [[killevent]];
+
+-- StarterGui.Kill All.Top.Frame.KillButton.LocalScript
+G2L["b"] = Instance.new("LocalScript", G2L["6"]);
+
+
+-- StarterGui.Kill All.Top.LocalScript
+G2L["c"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.Kill All.Open
+G2L["d"] = Instance.new("TextButton", G2L["1"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 14;
+G2L["d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["Size"] = UDim2.new(0, 58, 0, 50);
+G2L["d"]["Name"] = [[Open]];
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[Open]];
+G2L["d"]["Position"] = UDim2.new(0, 0, 0.52632, 0);
+
+-- StarterGui.Kill All.Open.UIStroke
+G2L["e"] = Instance.new("UIStroke", G2L["d"]);
+G2L["e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.Kill All.Open.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["d"]);
+
+
+-- StarterGui.Kill All.Open.LocalScript
+G2L["10"] = Instance.new("LocalScript", G2L["d"]);
+
+
+-- StarterGui.Kill All.Top.Frame.KillButton.LocalScript
+local function C_b()
+local script = G2L["b"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.killevent:FireServer(script.Parent.Parent.Parent.Text)
+	end)
+end;
+task.spawn(C_b);
+-- StarterGui.Kill All.Top.LocalScript
+local function C_c()
+local script = G2L["c"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	print("Drag enabled")
+end;
+task.spawn(C_c);
+-- StarterGui.Kill All.Open.LocalScript
+local function C_10()
+local script = G2L["10"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	script.Parent.MouseButton1Click:Connect(function() 
+		if script.Parent.Parent.Top.Visible == true then
+			script.Parent.Parent.Top.Visible = false
+		else
+			script.Parent.Parent.Top.Visible = true
+		end
+	end)
+end;
+task.spawn(C_10);
+
+return G2L["1"], require;
