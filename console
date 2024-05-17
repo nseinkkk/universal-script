@@ -1,0 +1,160 @@
+-- Made by Fer Modz
+
+-- Instances: 14 | Scripts: 3 | Modules: 0
+local G2L = {};
+
+-- StarterGui.Console
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Console]];
+
+-- StarterGui.Console.console
+G2L["2"] = Instance.new("ScrollingFrame", G2L["1"]);
+G2L["2"]["Visible"] = false;
+G2L["2"]["BorderSizePixel"] = 3;
+G2L["2"]["CanvasSize"] = UDim2.new(0, 0, 7, 0);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(77, 77, 77);
+G2L["2"]["Name"] = [[console]];
+G2L["2"]["Size"] = UDim2.new(0, 246, 0, 116);
+G2L["2"]["Position"] = UDim2.new(0.34893, -13, 0.48785, -60);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["BackgroundTransparency"] = 0.5;
+
+-- StarterGui.Console.console.output
+G2L["3"] = Instance.new("TextLabel", G2L["2"]);
+G2L["3"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["TextSize"] = 14;
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3"]["TextColor3"] = Color3.fromRGB(60, 255, 0);
+G2L["3"]["BackgroundTransparency"] = 1;
+G2L["3"]["Size"] = UDim2.new(0, 517, 0, 11);
+G2L["3"]["Text"] = [[Console Output:]];
+G2L["3"]["Name"] = [[output]];
+
+-- StarterGui.Console.console.Script
+G2L["4"] = Instance.new("Script", G2L["2"]);
+
+
+-- StarterGui.Console.console.LocalScript
+G2L["5"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.Console.console.LogAdded
+G2L["6"] = Instance.new("RemoteEvent", G2L["2"]);
+G2L["6"]["Name"] = [[LogAdded]];
+
+-- StarterGui.Console.button
+G2L["7"] = Instance.new("TextButton", G2L["1"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["TextStrokeTransparency"] = 0;
+G2L["7"]["TextSize"] = 34;
+G2L["7"]["TextColor3"] = Color3.fromRGB(39, 255, 0);
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["Size"] = UDim2.new(0, 84, 0, 55);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Name"] = [[button]];
+G2L["7"]["Text"] = [[<>]];
+G2L["7"]["Position"] = UDim2.new(0.01643, -13, 0.61134, -60);
+
+-- StarterGui.Console.button.head
+G2L["8"] = Instance.new("TextLabel", G2L["7"]);
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["TextSize"] = 14;
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8"]["TextColor3"] = Color3.fromRGB(60, 255, 0);
+G2L["8"]["BackgroundTransparency"] = 1;
+G2L["8"]["Size"] = UDim2.new(0, 84, 0, 1);
+G2L["8"]["Text"] = [[CONSOLE]];
+G2L["8"]["Name"] = [[head]];
+G2L["8"]["Position"] = UDim2.new(0, 0, 0.89091, 0);
+
+-- StarterGui.Console.button.LocalScript
+G2L["9"] = Instance.new("LocalScript", G2L["7"]);
+
+
+-- StarterGui.Console.Close
+G2L["a"] = Instance.new("TextButton", G2L["1"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextSize"] = 24;
+G2L["a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["Size"] = UDim2.new(0, 40, 0, 39);
+G2L["a"]["Name"] = [[Close]];
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[X]];
+G2L["a"]["Visible"] = false;
+G2L["a"]["Position"] = UDim2.new(0.61568, 0, 0.30972, 0);
+
+-- StarterGui.Console.Close.UICorner
+G2L["b"] = Instance.new("UICorner", G2L["a"]);
+
+
+-- StarterGui.Console.Close.UIStroke
+G2L["c"] = Instance.new("UIStroke", G2L["a"]);
+
+
+-- StarterGui.Console.Close.UIStroke
+G2L["d"] = Instance.new("UIStroke", G2L["a"]);
+G2L["d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.Console.Close.LocalScript
+G2L["e"] = Instance.new("LocalScript", G2L["a"]);
+
+
+-- StarterGui.Console.console.LocalScript
+local function C_5()
+local script = G2L["5"];
+	local ls = game:GetService('LogService')
+	local colors = {[0] = Color3.new(1, 1, 1), Color3.new(0/255,98/255,255/255), Color3.new(1, 1, 0), Color3.new(1, 0, 0)}
+	local num = 0
+	ls.MessageOut:Connect(function(msg,type)
+		script.Parent.LogAdded:FireServer()
+		num = num + 1
+		local t = tick()
+		local l = script.Parent.output:Clone()
+		l.Position = UDim2.new(0, 0, 0, num*24)
+		l.Text = ('>[%02i:%02i:%02i]   %s  -  Client'):format((t/3600)%24, (t/60)%60, t%60, msg)
+		l.TextColor3 = colors[type.Value]
+		l.Parent = script.Parent
+		wait(60)
+		l:Destroy()
+	end)
+	script.Parent.Parent.button.MouseButton1Click:Connect(function()
+		script.Parent.Visible = not script.Parent.Visible
+	end)
+	script.Parent.LogAdded.OnClientEvent:Connect(function(Player)
+		if Player == script.Parent.Parent.Parent.Parent then
+			num += 1
+		end
+	end)
+end;
+task.spawn(C_5);
+-- StarterGui.Console.button.LocalScript
+local function C_9()
+local script = G2L["9"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	local close = script.Parent.Parent.Close
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.idk:FireServer()
+		close.Visible = true
+	end)
+end;
+task.spawn(C_9);
+-- StarterGui.Console.Close.LocalScript
+local function C_e()
+local script = G2L["e"];
+	local console = script.Parent.Parent.console
+	script.Parent.MouseButton1Click:Connect(function() 
+		console.Visible = false
+		script.Parent.Visible = false
+	end)
+end;
+task.spawn(C_e);
+
+return G2L["1"], require;
