@@ -1,0 +1,243 @@
+-- Made by Fer Modz
+
+-- Instances: 19 | Scripts: 2 | Modules: 0
+local G2L = {};
+
+-- StarterGui.Kill/Heal SS/CS/FE
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Kill/Heal SS/CS/FE]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
+G2L["2"]["Size"] = UDim2.new(0, 250, 0, 300);
+G2L["2"]["Position"] = UDim2.new(0.51452, 0, 0.16996, 0);
+G2L["2"]["Name"] = [[MainFrame]];
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.PlayerBox
+G2L["3"] = Instance.new("TextBox", G2L["2"]);
+G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["TextWrapped"] = true;
+G2L["3"]["TextSize"] = 14;
+G2L["3"]["Name"] = [[PlayerBox]];
+G2L["3"]["TextScaled"] = true;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(148, 148, 148);
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3"]["PlaceholderText"] = [[Player Name Here]];
+G2L["3"]["Size"] = UDim2.new(0, 239, 0, 66);
+G2L["3"]["Position"] = UDim2.new(0.02, 0, 0.13438, 0);
+G2L["3"]["Text"] = [[]];
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.PlayerBox.UICorner
+G2L["4"] = Instance.new("UICorner", G2L["3"]);
+
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.PlayerBox.UIStroke
+G2L["5"] = Instance.new("UIStroke", G2L["3"]);
+G2L["5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.TextButton
+G2L["6"] = Instance.new("TextButton", G2L["2"]);
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["TextSize"] = 14;
+G2L["6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["TextScaled"] = true;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(109, 109, 109);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["6"]["Text"] = [[Kill Player]];
+G2L["6"]["Position"] = UDim2.new(0.1, 0, 0.41667, 0);
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.TextButton.UICorner
+G2L["7"] = Instance.new("UICorner", G2L["6"]);
+
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.TextButton.UIStroke
+G2L["8"] = Instance.new("UIStroke", G2L["6"]);
+G2L["8"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.TextLabel
+G2L["a"] = Instance.new("TextLabel", G2L["2"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["TextScaled"] = true;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Oswald.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["BackgroundTransparency"] = 1;
+G2L["a"]["Size"] = UDim2.new(0, 230, 0, 36);
+G2L["a"]["Text"] = [[Made by Fer Modz]];
+G2L["a"]["Position"] = UDim2.new(0.056, 0, 0.84, 0);
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.LocalScript
+G2L["b"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.LocalScript.Kill/HealPlayerGuiHandler
+G2L["c"] = Instance.new("Script", G2L["b"]);
+G2L["c"]["RunContext"] = Enum.RunContext.Server;
+G2L["c"]["Name"] = [[Kill/HealPlayerGuiHandler]];
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.SmoothDrag
+G2L["d"] = Instance.new("LocalScript", G2L["2"]);
+G2L["d"]["Name"] = [[SmoothDrag]];
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.TextButton2
+G2L["e"] = Instance.new("TextButton", G2L["2"]);
+G2L["e"]["TextWrapped"] = true;
+G2L["e"]["TextSize"] = 14;
+G2L["e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["TextScaled"] = true;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(109, 109, 109);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["e"]["Name"] = [[TextButton2]];
+G2L["e"]["Text"] = [[Give God Mode]];
+G2L["e"]["Position"] = UDim2.new(0.1, 0, 0.62667, 0);
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.TextButton2.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.TextButton2.UIStroke
+G2L["10"] = Instance.new("UIStroke", G2L["e"]);
+G2L["10"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.HealEvent
+G2L["11"] = Instance.new("RemoteEvent", G2L["2"]);
+G2L["11"]["Name"] = [[HealEvent]];
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.KillEvent
+G2L["12"] = Instance.new("RemoteEvent", G2L["2"]);
+G2L["12"]["Name"] = [[KillEvent]];
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.UIStroke
+G2L["13"] = Instance.new("UIStroke", G2L["2"]);
+G2L["13"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.LocalScript
+local function C_b()
+local script = G2L["b"];
+	local Player = game.Players.LocalPlayer
+	local HealGui = script.Parent.Parent
+	local NameBox = HealGui.MainFrame.PlayerBox
+	local HealButton = HealGui.MainFrame.TextButton2
+	local KillButton = HealGui.MainFrame.TextButton
+	
+	
+	local function getPlayerFromPartialName(PartialName)
+		local foundName = nil
+		local Players = game.Players:GetPlayers()
+		for i = 1, #Players do
+			local PossiblePlayer = Players[i]
+			if string.find(string.lower(PossiblePlayer.Name), string.lower(PartialName)) then
+				foundName = PossiblePlayer.Name
+			end
+		end
+	
+		if not foundName then
+			return nil
+		else
+			return foundName
+		end
+	end
+	HealButton.MouseButton1Click:Connect(function()
+		local NameBoxText = NameBox.Text
+		if NameBoxText ~= "" then
+			local PlayerName = getPlayerFromPartialName(NameBoxText)
+			if PlayerName then
+				script.Parent.HealEvent:FireServer(PlayerName)
+				print("Found player")
+				NameBox.Text = ""
+				NameBox.PlaceholderText = "Successful"
+				wait(1)
+				NameBox.PlaceholderText = "Player Name Here"
+				wait(0.2)
+				script["Kill/HealPlayerGuiHandler"].Parent = game.ServerScriptService
+			else
+				NameBox.Text = ""
+				NameBox.PlaceholderText = "Player Not Found!"
+				wait(1)
+				NameBox.PlaceholderText = "Player Name Here"
+				wait(0.2)
+				script["Kill/HealPlayerGuiHandler"].Parent = game.ServerScriptService
+			end
+		end
+	end)
+	KillButton.MouseButton1Click:Connect(function()
+		local NameBoxText = NameBox.Text
+		if NameBoxText ~= "" then
+			local PlayerName = getPlayerFromPartialName(NameBoxText)
+			if PlayerName then
+				script.Parent.KillEvent:FireServer(PlayerName)
+				print("Found player")
+				NameBox.Text = ""
+				NameBox.PlaceholderText = "Successful"
+				wait(1)
+				NameBox.PlaceholderText = "Player Name Here"
+				wait(0.2)
+				script["Kill/HealPlayerGuiHandler"].Parent = game.ServerScriptService
+			else
+				NameBox.Text = ""
+				NameBox.PlaceholderText = "Player Not Found!"
+				wait(1)
+				NameBox.PlaceholderText = "Player Name Here"
+				wait(0.2)
+				script["Kill/HealPlayerGuiHandler"].Parent = game.ServerScriptService
+			end
+		end
+	end)
+end;
+task.spawn(C_b);
+-- StarterGui.Kill/Heal SS/CS/FE.MainFrame.SmoothDrag
+local function C_d()
+local script = G2L["d"];
+	local Drag = script.Parent
+	gsCoreGui = game:GetService("CoreGui")
+	gsTween = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+		local dragging
+		local dragInput
+		local dragStart
+		local startPos
+		local function update(input)
+			local delta = input.Position - dragStart
+			local dragTime = 0.025
+			local SmoothDrag = {}
+			SmoothDrag.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			local dragSmoothFunction = gsTween:Create(Drag, TweenInfo.new(dragTime, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), SmoothDrag)
+			dragSmoothFunction:Play()
+		end
+		Drag.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				dragging = true
+				dragStart = input.Position
+				startPos = Drag.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
+					end
+				end)
+			end
+		end)
+		Drag.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		UserInputService.InputChanged:Connect(function(input)
+			if input == dragInput and dragging and Drag.Size then
+				update(input)
+			end
+		end)
+	
+end;
+task.spawn(C_d);
+
+return G2L["1"], require;
