@@ -1,0 +1,198 @@
+-- Made by Fer Modz
+
+-- Instances: 18 | Scripts: 3 | Modules: 0
+local G2L = {};
+
+-- StarterGui.Speed
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Speed]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.Speed.Top
+G2L["2"] = Instance.new("TextLabel", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["TextSize"] = 14;
+G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Size"] = UDim2.new(0, 200, 0, 28);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Text"] = [[Speed Gui]];
+G2L["2"]["Name"] = [[Top]];
+G2L["2"]["Position"] = UDim2.new(0.37262, 0, 0.25761, 0);
+
+-- StarterGui.Speed.Top.Frame
+G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(99, 99, 99);
+G2L["3"]["Size"] = UDim2.new(0, 200, 0, 150);
+G2L["3"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Speed.Top.Frame.TextBox
+G2L["4"] = Instance.new("TextBox", G2L["3"]);
+G2L["4"]["CursorPosition"] = -1;
+G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextSize"] = 14;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["PlaceholderText"] = [[Put Your Num here]];
+G2L["4"]["Size"] = UDim2.new(0, 160, 0, 39);
+G2L["4"]["Position"] = UDim2.new(0.115, 0, 0.08, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[]];
+
+-- StarterGui.Speed.Top.Frame.TextBox.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+
+
+-- StarterGui.Speed.Top.Frame.TextBox.UIStroke
+G2L["6"] = Instance.new("UIStroke", G2L["4"]);
+G2L["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.Speed.Top.Frame.UICorner
+G2L["7"] = Instance.new("UICorner", G2L["3"]);
+
+
+-- StarterGui.Speed.Top.Frame.SetC
+G2L["8"] = Instance.new("TextButton", G2L["3"]);
+G2L["8"]["TextWrapped"] = true;
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["TextSize"] = 14;
+G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["TextScaled"] = true;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8"]["Size"] = UDim2.new(0, 160, 0, 39);
+G2L["8"]["Name"] = [[SetC]];
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Text"] = [[Set Speed]];
+G2L["8"]["Position"] = UDim2.new(0.115, 0, 0.5, 0);
+
+-- StarterGui.Speed.Top.Frame.SetC.LocalScript
+G2L["9"] = Instance.new("LocalScript", G2L["8"]);
+
+
+-- StarterGui.Speed.Top.Frame.SetC.UIStroke
+G2L["a"] = Instance.new("UIStroke", G2L["8"]);
+G2L["a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.Speed.Top.Frame.SetC.UICorner
+G2L["b"] = Instance.new("UICorner", G2L["8"]);
+
+
+-- StarterGui.Speed.Top.Frame.SetC.UITextSizeConstraint
+G2L["c"] = Instance.new("UITextSizeConstraint", G2L["8"]);
+G2L["c"]["MaxTextSize"] = 14;
+
+-- StarterGui.Speed.Top.Frame.SetC.Script
+G2L["d"] = Instance.new("Script", G2L["8"]);
+
+
+-- StarterGui.Speed.Top.Frame.SetC.speed
+G2L["e"] = Instance.new("RemoteEvent", G2L["8"]);
+G2L["e"]["Name"] = [[speed]];
+
+-- StarterGui.Speed.Top.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.Speed.Top.Close
+G2L["10"] = Instance.new("TextButton", G2L["2"]);
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["TextSize"] = 24;
+G2L["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["10"]["Size"] = UDim2.new(0, 55, 0, 37);
+G2L["10"]["Name"] = [[Close]];
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Text"] = [[X]];
+G2L["10"]["Position"] = UDim2.new(0.84, 0, -0.75, 0);
+
+-- StarterGui.Speed.Top.Close.LocalScript
+G2L["11"] = Instance.new("LocalScript", G2L["10"]);
+
+
+-- StarterGui.Speed.Top.Smooth GUI Dragging
+G2L["12"] = Instance.new("LocalScript", G2L["2"]);
+G2L["12"]["Name"] = [[Smooth GUI Dragging]];
+
+-- StarterGui.Speed.Top.Frame.SetC.LocalScript
+local function C_9()
+local script = G2L["9"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = script.Parent.Parent.TextBox.Text
+		script.Parent.speed:FireServer()
+	end)
+end;
+task.spawn(C_9);
+-- StarterGui.Speed.Top.Close.LocalScript
+local function C_11()
+local script = G2L["11"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end;
+task.spawn(C_11);
+-- StarterGui.Speed.Top.Smooth GUI Dragging
+local function C_12()
+local script = G2L["12"];
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end;
+task.spawn(C_12);
+
+return G2L["1"], require;
