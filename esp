@@ -53,9 +53,129 @@ local script = G2L["3"];
 		for _, v in next, game.Players:GetPlayers() do
 			if v:IsA("Player") then
 				if script.Parent.Text == "ON" then
-						local high = Instance.new("Highlight")
-						high.Parent = v.Character
-						wait(0.5)
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
+				else
+					if v.Character:FindFirstChild("Highlight") then
+						v.Character:FindFirstChild("Highlight"):Destroy()
+
+					end
+				end
+			end
+			if v:IsA("Player") then
+				if script.Parent.Text == "ON" then
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
+				else
+					if v.Character:FindFirstChild("Highlight") then
+						v.Character:FindFirstChild("Highlight"):Destroy()
+
+					end
+				end
+			end
+			if v:IsA("Player") then
+				if script.Parent.Text == "ON" then
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
+				else
+					if v.Character:FindFirstChild("Highlight") then
+						v.Character:FindFirstChild("Highlight"):Destroy()
+
+					end
+				end
+			end
+			if v:IsA("Player") then
+				if script.Parent.Text == "ON" then
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
+				else
+					if v.Character:FindFirstChild("Highlight") then
+						v.Character:FindFirstChild("Highlight"):Destroy()
+
+					end
+				end
+			end
+			if v:IsA("Player") then
+				if script.Parent.Text == "ON" then
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
+				else
+					if v.Character:FindFirstChild("Highlight") then
+						v.Character:FindFirstChild("Highlight"):Destroy()
+
+					end
+				end
+			end
+			if v:IsA("Player") then
+				if script.Parent.Text == "ON" then
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
+				else
+					if v.Character:FindFirstChild("Highlight") then
+						v.Character:FindFirstChild("Highlight"):Destroy()
+
+					end
+				end
+			end
+			if v:IsA("Player") then
+				if script.Parent.Text == "ON" then
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
+				else
+					if v.Character:FindFirstChild("Highlight") then
+						v.Character:FindFirstChild("Highlight"):Destroy()
+
+					end
+				end
+			end
+			if v:IsA("Player") then
+				if script.Parent.Text == "ON" then
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
+				else
+					if v.Character:FindFirstChild("Highlight") then
+						v.Character:FindFirstChild("Highlight"):Destroy()
+
+					end
+				end
+			end
+			if v:IsA("Player") then
+				if script.Parent.Text == "ON" then
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
+				else
+					if v.Character:FindFirstChild("Highlight") then
+						v.Character:FindFirstChild("Highlight"):Destroy()
+
+					end
+				end
+			end
+			if v:IsA("Player") then
+				if script.Parent.Text == "ON" then
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
+				else
+					if v.Character:FindFirstChild("Highlight") then
+						v.Character:FindFirstChild("Highlight"):Destroy()
+
+					end
+				end
+			end
+			if v:IsA("Player") then
+				if script.Parent.Text == "ON" then
+					local high = Instance.new("Highlight")
+					high.Parent = v.Character
+					wait(0.5)
 				else
 					if v.Character:FindFirstChild("Highlight") then
 						v.Character:FindFirstChild("Highlight"):Destroy()
