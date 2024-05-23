@@ -1,0 +1,190 @@
+-- Made by FerModz
+
+-- Instances: 11 | Scripts: 2 | Modules: 0
+local G2L = {};
+
+-- StarterGui.Noclip
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[Noclip]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.Noclip.Top
+G2L["2"] = Instance.new("TextLabel", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(100, 100, 100);
+G2L["2"]["TextSize"] = 14;
+G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Size"] = UDim2.new(0.24335, 0, 0.04868, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Text"] = [[Noclip Gui Made By Fer Modz]];
+G2L["2"]["Name"] = [[Top]];
+G2L["2"]["Position"] = UDim2.new(0.38276, 0, 0.23732, 0);
+
+-- StarterGui.Noclip.Top.Frame
+G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
+G2L["3"]["Size"] = UDim2.new(1, 0, 5.0644, 0);
+G2L["3"]["Position"] = UDim2.new(0, 0, 1.00001, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.Noclip.Top.Frame.UICorner
+G2L["4"] = Instance.new("UICorner", G2L["3"]);
+
+
+-- StarterGui.Noclip.Top.Frame.TextButton
+G2L["5"] = Instance.new("TextButton", G2L["3"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["TextSize"] = 14;
+G2L["5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5"]["Size"] = UDim2.new(0.59896, 0, 0.23374, 0);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Text"] = [[Noclip: OFF]];
+G2L["5"]["Position"] = UDim2.new(0.22396, 0, 0.59355, 0);
+
+-- StarterGui.Noclip.Top.Frame.TextButton.UICorner
+G2L["6"] = Instance.new("UICorner", G2L["5"]);
+
+
+-- StarterGui.Noclip.Top.Frame.TextButton.LocalScript
+G2L["7"] = Instance.new("LocalScript", G2L["5"]);
+
+
+-- StarterGui.Noclip.Top.Frame.TextLabel
+G2L["8"] = Instance.new("TextLabel", G2L["3"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["TextSize"] = 14;
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Size"] = UDim2.new(0.625, 0, 0.24997, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Text"] = [[Noclip]];
+G2L["8"]["Position"] = UDim2.new(0.19792, 0, 0.16774, 0);
+
+-- StarterGui.Noclip.Top.Frame.TextLabel.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["8"]);
+
+
+-- StarterGui.Noclip.Top.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.Noclip.Top.Smooth GUI Dragging
+G2L["b"] = Instance.new("LocalScript", G2L["2"]);
+G2L["b"]["Name"] = [[Smooth GUI Dragging]];
+
+-- StarterGui.Noclip.Top.Frame.TextButton.LocalScript
+local function C_7()
+local script = G2L["7"];
+	local noclip = false
+	local player = game.Players.LocalPlayer
+	local character = player.Character
+	
+	local mouse = script.Parent
+	
+	mouse.MouseButton1Click:Connect(function()
+		if noclip == true then
+			noclip = false
+		else
+			noclip = true
+		end
+		while true do
+			player = game.Players.LocalPlayer
+			character = player.Character
+			character.Humanoid.AutoJumpEnabled = false
+	
+			if noclip == true then
+				mouse.Text = "Noclip: ON"
+				for _, v in pairs(character:GetDescendants()) do
+					pcall(function()
+						if v:IsA("BasePart") then
+							v.CanCollide = false
+						end
+					end)
+				end
+			end
+			if noclip == false then
+				mouse.Text = "Noclip: OFF"
+				for _, v in pairs(character:GetDescendants()) do
+					pcall(function()
+						if v:IsA("BasePart") then
+							v.CanCollide = true
+							wait(0.001)
+							if v.Name == "HumanoidRootPart" then
+								v.CanCollide = false
+							end
+						end
+					end)
+				end
+			end
+			game:GetService("RunService").Stepped:wait()
+		end
+	end)
+	
+	
+end;
+task.spawn(C_7);
+-- StarterGui.Noclip.Top.Smooth GUI Dragging
+local function C_b()
+local script = G2L["b"];
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end;
+task.spawn(C_b);
+
+return G2L["1"], require;
