@@ -1,0 +1,38 @@
+-- Made by Fer Modz
+
+-- Instances: 5 | Scripts: 0 | Modules: 0
+local G2L = {};
+
+-- StarterGui.RandomJumpscare
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[RandomJumpscare]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.RandomJumpscare.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["Visible"] = false;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
+
+-- StarterGui.RandomJumpscare.Frame.Scary
+G2L["3"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["3"]["ZIndex"] = 8;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["ImageTransparency"] = 0.5;
+G2L["3"]["Image"] = [[rbxassetid://121958034]];
+G2L["3"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["3"]["Name"] = [[Scary]];
+
+-- StarterGui.RandomJumpscare.Frame.Static
+G2L["4"] = Instance.new("Sound", G2L["2"]);
+G2L["4"]["Volume"] = 0.08;
+G2L["4"]["Name"] = [[Static]];
+G2L["4"]["SoundId"] = [[rbxassetid://223103466]];
+
+-- StarterGui.RandomJumpscare.Frame.jumpscare
+G2L["5"] = Instance.new("Script", G2L["2"]);
+G2L["5"]["Name"] = [[jumpscare]];
+
+
+return G2L["1"], require;
