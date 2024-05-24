@@ -1,0 +1,89 @@
+-- Made by Fer Modz
+
+-- Instances: 11 | Scripts: 1 | Modules: 0
+local G2L = {};
+
+-- StarterGui.title
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[title]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.title.ActivateA
+G2L["2"] = Instance.new("TextButton", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["TextSize"] = 14;
+G2L["2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2"]["Size"] = UDim2.new(0, 211, 0, 52);
+G2L["2"]["Name"] = [[ActivateA]];
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Text"] = [[Activate]];
+G2L["2"]["Position"] = UDim2.new(0.36629, 0, 0.41582, 0);
+
+-- StarterGui.title.ActivateA.LocalScript
+G2L["3"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.title.ActivateA.Script
+G2L["4"] = Instance.new("Script", G2L["2"]);
+
+
+-- StarterGui.title.ActivateA.Script.Part
+G2L["5"] = Instance.new("Part", G2L["4"]);
+G2L["5"]["Anchored"] = true;
+G2L["5"]["BottomSurface"] = Enum.SurfaceType.Smooth;
+G2L["5"]["TopSurface"] = Enum.SurfaceType.Smooth;
+G2L["5"]["Size"] = Vector3.new(4, 1, 2);
+-- [ERROR] cannot convert CFrame, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+
+-- StarterGui.title.ActivateA.Script.Part.Title
+G2L["6"] = Instance.new("BillboardGui", G2L["5"]);
+G2L["6"]["LightInfluence"] = 1;
+G2L["6"]["AlwaysOnTop"] = true;
+G2L["6"]["MaxDistance"] = 9.999999848243207e+30;
+G2L["6"]["StudsOffset"] = Vector3.new(0, 4, 0);
+G2L["6"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["6"]["Name"] = [[Title]];
+
+-- StarterGui.title.ActivateA.Script.Part.Title.TextLabel
+G2L["7"] = Instance.new("TextLabel", G2L["6"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["TextStrokeTransparency"] = 0;
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["TextSize"] = 24;
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/PermanentMarker.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["7"]["Text"] = [[Imaginary Technique: Hollow Purple]];
+
+-- StarterGui.title.ActivateA.Script.Part.Title.TextLabel.RotationScript
+G2L["8"] = Instance.new("Script", G2L["7"]);
+G2L["8"]["Name"] = [[RotationScript]];
+
+-- StarterGui.title.ActivateA.Script.Part.Title.TextLabel.TextEffect
+G2L["9"] = Instance.new("Script", G2L["7"]);
+G2L["9"]["Name"] = [[TextEffect]];
+
+-- StarterGui.title.ActivateA.Script.Part.Title.TextLabel.UIGradient
+G2L["a"] = Instance.new("UIGradient", G2L["7"]);
+G2L["a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(171, 0, 0)),ColorSequenceKeypoint.new(0.500, Color3.fromRGB(67, 0, 156)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 255))};
+
+-- StarterGui.title.ActivateA.RemoteEvent
+G2L["b"] = Instance.new("RemoteEvent", G2L["2"]);
+
+
+-- StarterGui.title.ActivateA.LocalScript
+local function C_3()
+local script = G2L["3"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.RemoteEvent:FireServer()
+		wait(2)
+		script.Parent.Parent:Destroy()
+	end)
+end;
+task.spawn(C_3);
+
+return G2L["1"], require;
