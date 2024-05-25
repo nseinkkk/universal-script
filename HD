@@ -1,0 +1,518 @@
+-- Made by Fer Modz
+
+-- Instances: 26 | Scripts: 0 | Modules: 4
+local G2L = {};
+
+-- StarterGui.HdA
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[HdA]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.HdA.HD Admin
+G2L["2"] = Instance.new("Folder", G2L["1"]);
+G2L["2"]["Name"] = [[HD Admin]];
+
+-- StarterGui.HdA.HD Admin.About
+G2L["3"] = Instance.new("Script", G2L["2"]);
+G2L["3"]["Name"] = [[About]];
+
+-- StarterGui.HdA.HD Admin.Settings
+G2L["4"] = Instance.new("ModuleScript", G2L["2"]);
+G2L["4"]["Name"] = [[Settings]];
+
+-- StarterGui.HdA.HD Admin.Settings.Loader
+G2L["5"] = Instance.new("Script", G2L["4"]);
+G2L["5"]["Name"] = [[Loader]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures
+G2L["6"] = Instance.new("Configuration", G2L["2"]);
+G2L["6"]["Name"] = [[CustomFeatures]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Server
+G2L["7"] = Instance.new("Folder", G2L["6"]);
+G2L["7"]["Name"] = [[Server]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Server.Assets
+G2L["8"] = Instance.new("Folder", G2L["7"]);
+G2L["8"]["Name"] = [[Assets]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Server.Modules
+G2L["9"] = Instance.new("Folder", G2L["7"]);
+G2L["9"]["Name"] = [[Modules]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Server.Modules.Commands
+G2L["a"] = Instance.new("ModuleScript", G2L["9"]);
+G2L["a"]["Name"] = [[Commands]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Server.Morphs
+G2L["b"] = Instance.new("Folder", G2L["7"]);
+G2L["b"]["Name"] = [[Morphs]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Server.Tools
+G2L["c"] = Instance.new("Folder", G2L["7"]);
+G2L["c"]["Name"] = [[Tools]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client
+G2L["d"] = Instance.new("Folder", G2L["6"]);
+G2L["d"]["Name"] = [[Client]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.StarterKit
+G2L["e"] = Instance.new("Folder", G2L["d"]);
+G2L["e"]["Name"] = [[StarterKit]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.Assets
+G2L["f"] = Instance.new("Folder", G2L["d"]);
+G2L["f"]["Name"] = [[Assets]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.Audio
+G2L["10"] = Instance.new("Folder", G2L["d"]);
+G2L["10"]["Name"] = [[Audio]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.Modules
+G2L["11"] = Instance.new("Folder", G2L["d"]);
+G2L["11"]["Name"] = [[Modules]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.Modules.ClientCommands
+G2L["12"] = Instance.new("ModuleScript", G2L["11"]);
+G2L["12"]["Name"] = [[ClientCommands]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.SharedModules
+G2L["13"] = Instance.new("Folder", G2L["d"]);
+G2L["13"]["Name"] = [[SharedModules]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.SharedModules.Events
+G2L["14"] = Instance.new("ModuleScript", G2L["13"]);
+G2L["14"]["Name"] = [[Events]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.Signals
+G2L["15"] = Instance.new("Folder", G2L["d"]);
+G2L["15"]["Name"] = [[Signals]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.Signals.ExampleRemoteEvent
+G2L["16"] = Instance.new("RemoteEvent", G2L["15"]);
+G2L["16"]["Name"] = [[ExampleRemoteEvent]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.Signals.ExampleBindableEvent
+G2L["17"] = Instance.new("BindableEvent", G2L["15"]);
+G2L["17"]["Name"] = [[ExampleBindableEvent]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.Signals.ExampleRemoteFunction
+G2L["18"] = Instance.new("RemoteFunction", G2L["15"]);
+G2L["18"]["Name"] = [[ExampleRemoteFunction]];
+
+-- StarterGui.HdA.HD Admin.CustomFeatures.Client.Signals.ExampleBindableFunction
+G2L["19"] = Instance.new("BindableFunction", G2L["15"]);
+G2L["19"]["Name"] = [[ExampleBindableFunction]];
+
+-- StarterGui.HdA.Script
+G2L["1a"] = Instance.new("Script", G2L["1"]);
+
+
+-- Require G2L wrapper
+local G2L_REQUIRE = require;
+local G2L_MODULES = {};
+local function require(Module:ModuleScript)
+    local ModuleState = G2L_MODULES[Module];
+    if ModuleState then
+        if not ModuleState.Required then
+            ModuleState.Required = true;
+            ModuleState.Value = ModuleState.Closure();
+        end
+        return ModuleState.Value;
+    end;
+    return G2L_REQUIRE(Module);
+end
+
+G2L_MODULES[G2L["4"]] = {
+Closure = function()
+    local script = G2L["4"];
+--[[
+
+--------------| ABOUT RANKS |--------------
+
+RANK	| DEFAULT NAME	| COMMANDS	| EXTRA DETAILS
+-------------------------------------------------------------------------------------------------------------------
+5		| Owner			| All		| Is automtically set. The Owner has full access to commands and features.
+-------------------------------------------------------------------------------------------------------------------
+4 		| HeadAdmin		| 1,2,3,4	| 
+3 		| Admin			| 1,2,3		| 
+2		| Mod			| 1,2		| Can only use commands on one person at a time. 
+1 		| VIP			| 1			| Can only use commands on theirself.
+-------------------------------------------------------------------------------------------------------------------
+0		| NonAdmin		| 0			| The default rank. Players are limited to basic features.
+
+
+
+
+--------------| SETUP RANKS |--------------																															 ]] return{
+
+-- RANK, RANK NAMES & SPECIFIC USERS
+Ranks = {
+	{5,	"Owner",		{game.Players.LocalPlayer,0}, };
+	{4,	"HeadAdmin",	{"",0},	};
+	{3,	"Admin",		{"",0},	};
+	{2,	"Mod",			{"",0},	};
+	{1,	"VIP",			{"",0},	};
+	{0,	"NonAdmin",		};
+};
+
+
+
+-- GAMEPASSES
+Gamepasses = {
+	[0] = "VIP";
+};
+
+
+-- ASSETS
+Assets = {
+	[0] = "VIP";
+};
+
+
+-- GROUPS
+Groups = {
+	[0] = {
+		[254] = "Admin";
+		[1] = "VIP";
+		};
+};
+
+
+-- FRIENDS
+Friends = "NonAdmin";
+
+
+-- VIP SERVER OWNER
+VipServerOwner = "NonAdmin";
+
+
+-- FREE ADMIN
+FreeAdmin = "NonAdmin";
+
+
+
+
+
+
+
+
+--------------| BANLAND |--------------
+Banned = {"",0};
+
+
+
+
+
+
+
+
+--------------| SYSTEM SETTINGS |--------------
+Prefix				= ";";			-- The character you use before every command (e.g. ';jump me').
+SplitKey 			= " ";			-- The character inbetween command arguments (e.g. setting it to '/' would change ';jump me' to ';jump/me').
+BatchKey 			= "";			-- The character inbetween batch commands (e.g. setting it to '|' would change ';jump me ;fire me ;smoke me' to ';jump me | ;fire me | ;smoke me'
+QualifierBatchKey 	= ",";			-- The character used to split up qualifiers (e.g. ;jump player1,player2,player3)
+
+Theme				= "Blue";		-- The default UI theme.
+NoticeSoundId		= 2865227271;	-- The SoundId for notices.
+NoticeVolume		= 0.1;			-- The Volume for notices.
+NoticePitch			= 1;			-- The Pitch/PlaybackSpeed for notices.
+ErrorSoundId		= 2865228021;	-- The SoundId for error notifications.
+ErrorVolume			= 0.1;			-- The Volume for error notifications.
+ErrorPitch			= 1;			-- The Pitch/PlaybackSpeed for error notifications.
+AlertSoundId		= 9161622880;	-- The SoundId for alerts.
+AlertVolume			= 0.5;			-- The Volume for alerts.
+AlertPitch			= 1;			-- The Pitch/PlaybackSpeed for alerts.
+
+WelcomeBadgeId		= 0;			-- Award new players a badge, such as 'Welcome to the game!'. Set to 0 for no badge.
+
+CommandDebounce		= true;			-- Wait until the command effect is over to use again. Helps to limit abuse & lag. Set to 'false' to disable.
+SaveRank			= true;			-- Saves a player's rank in the server they received it. (e.g. ;rank plrName rank). Use ';permRank plrName rank' to permanently save a rank. Set to 'false' to disable.
+LoopCommands		= 3;			-- The minimum rank required to use LoopCommands.
+MusicList 			= {};	-- Songs which automatically appear in a user's radio. Type '!radio' to display the radio.
+
+ThemeColors = {						-- The colours players can set their HD Admin UI (in the 'Settings' menu). | Format: {ThemeName, ThemeColor3Value};
+	{"Red", 	Color3.fromRGB(150, 0, 0),		};
+	{"Orange", 	Color3.fromRGB(150, 75, 0),		};
+	{"Brown", 	Color3.fromRGB(120, 80, 30),	};
+	{"Yellow", 	Color3.fromRGB(130, 120, 0),	};
+	{"Green", 	Color3.fromRGB(0, 120, 0),		};
+	{"Blue", 	Color3.fromRGB(0, 100, 150),	};
+	{"Purple", 	Color3.fromRGB(100, 0, 150),	};
+	{"Pink",	Color3.fromRGB(150, 0, 100),	};
+	{"Black", 	Color3.fromRGB(60, 60, 60),		};
+};
+
+Colors = {							-- The colours for ChatColors and command arguments. | Format: {"ShortName", "FullName", Color3Value};
+	{"r", 		"Red",		 		Color3.fromRGB(255, 0, 0)		};
+	{"o", 		"Orange",	 		Color3.fromRGB(250, 100, 0)		};
+	{"y", 		"Yellow",			Color3.fromRGB(255, 255, 0)		};
+	{"g", 		"Green"	,			Color3.fromRGB(0, 255, 0)		};
+	{"dg", 		"DarkGreen"	, 		Color3.fromRGB(0, 125, 0)		};
+	{"b", 		"Blue",		 		Color3.fromRGB(0, 255, 255)		};
+	{"db", 		"DarkBlue",			Color3.fromRGB(0, 50, 255)		};
+	{"p", 		"Purple",	 		Color3.fromRGB(150, 0, 255)		};
+	{"pk",		"Pink",		 		Color3.fromRGB(255, 85, 185)	};
+	{"bk",		"Black",		 	Color3.fromRGB(0, 0, 0)			};
+	{"w",		"White",	 		Color3.fromRGB(255, 255, 255)	};
+};
+ChatColors = {						-- The colour a player's chat will appear depending on their rank. '["Owner"] = "Yellow";' makes the owner's chat yellow.
+	[5] 		= "Yellow";
+};
+
+Cmdbar						= 1;			-- The minimum rank required to use the Cmdbar.
+Cmdbar2						= 3;			-- The minimum rank required to use the Cmdbar2.
+ViewBanland					= 3;			-- The minimum rank required to view the banland.
+OnlyShowUsableCommands		= false;		-- Only display commands equal to or below the user's rank on the Commands page.
+RankRequiredToViewPage		= {				-- || The pages on the main menu ||
+	["Commands"]		= 0;
+	["Admin"]			= 0;
+	["Settings"]		= 0;
+};
+RankRequiredToViewRank		= {				-- || The rank categories on the 'Ranks' subPage under Admin ||
+	["Owner"]			= 0;
+	["HeadAdmin"]		= 0;
+	["Admin"]			= 0;
+	["Mod"]				= 0;
+	["VIP"]				= 0;
+};
+RankRequiredToViewRankType	= {				-- || The collection of loader-rank-rewarders on the 'Ranks' subPage under Admin ||
+	["Owner"]			= 0;
+	["SpecificUsers"]	= 5;
+	["Gamepasses"] 		= 0;
+	["Assets"] 			= 0;
+	["Groups"] 			= 0;
+	["Friends"] 		= 0;
+	["FreeAdmin"] 		= 0;
+	["VipServerOwner"] 	= 0;
+};
+RankRequiredToViewIcon		= 0;
+
+WelcomeRankNotice			= true;			-- The 'You're a [rankName]' notice that appears when you join the game. Set to false to disable.
+WelcomeDonorNotice			= true;			-- The 'You're a Donor' notice that appears when you join the game. Set to false to disable.
+WarnIncorrectPrefix			= true;			-- Warn the user if using the wrong prefix | "Invalid prefix! Try using [correctPrefix][commandName] instead!"
+DisableAllNotices			= false;		-- Set to true to disable all HD Admin notices.
+
+ScaleLimit					= 4;			-- The maximum size players with a rank lower than 'IgnoreScaleLimit' can scale theirself. For example, players will be limited to ;size me 4 (if limit is 4) - any number above is blocked.
+IgnoreScaleLimit			= 3;			-- Any ranks equal or above this value will ignore 'ScaleLimit'
+CommandLimits				= {				-- Enables you to set limits for commands which have a number argument. Ranks equal to or higher than 'IgnoreLimit' will not be affected by Limit.
+	["fly"]	= {
+		Limit 				= 10000;
+		IgnoreLimit 		= 3;
+	};
+	["fly2"]	= {
+		Limit 				= 10000;
+		IgnoreLimit 		= 3;
+	};
+	["noclip"]	= {
+		Limit 				= 10000;
+		IgnoreLimit 		= 3;
+	};
+	["noclip2"]	= {
+		Limit 				= 10000;
+		IgnoreLimit 		= 3;
+	};
+	["speed"]	= {
+		Limit 				= 10000;
+		IgnoreLimit 		= 3;
+	};
+	["jumpPower"]	= {
+		Limit 				= 10000;
+		IgnoreLimit 		= 3;
+	};
+};
+
+VIPServerCommandBlacklist	= {"permRank", "permBan", "globalAnnouncement"};	-- Commands players are probihited from using in VIP Servers.
+GearBlacklist				= {67798397};	-- The IDs of gear items to block when using the ;gear command.
+IgnoreGearBlacklist			= 4;			-- The minimum rank required to ignore the gear blacklist.
+
+PlayerDataStoreVersion		= "V1.0";		-- Data about the player (i.e. permRanks, custom settings, etc). Changing the Version name will reset all PlayerData.
+SystemDataStoreVersion		= "V1.0";		-- Data about the game (i.e. the banland, universal message system, etc). Changing the Version name will reset all SystemData.
+
+CoreNotices					= {				-- Modify core notices. You can find a table of all CoreNotices under [MainModule > Client > SharedModules > CoreNotices]
+	--NoticeName = NoticeDetails;
+};
+
+
+
+
+--------------| MODIFY COMMANDS |--------------
+SetCommandRankByName = {
+	--["jump"] = "VIP";
+};	
+SetCommandRankByTag = {
+	--["abusive"] = "Admin";
+};
+
+
+
+
+
+
+
+
+};
+end;
+};
+G2L_MODULES[G2L["a"]] = {
+Closure = function()
+    local script = G2L["a"];
+-- << RETRIEVE FRAMEWORK >>
+local main = _G.HDAdminMain
+local settings = main.settings
+
+
+
+-- << COMMANDS >>
+local module = {
+	
+	-----------------------------------
+	{
+	Name = "";
+	Aliases	= {};
+	Prefixes = {settings.Prefix};
+	Rank = 1;
+	RankLock = false;
+	Loopable = false;
+	Tags = {};
+	Description = "";
+	Contributors = {};
+	--
+	Args = {};
+	Function = function(speaker, args)
+		
+	end;
+	UnFunction = function(speaker, args)
+		
+	end;
+	--
+	};
+	
+	
+	
+	
+	-----------------------------------
+	{
+	Name = "";
+	Aliases	= {};
+	Prefixes = {settings.Prefix};
+	Rank = 1;
+	RankLock = false;
+	Loopable = false;
+	Tags = {};
+	Description = "";
+	Contributors = {};
+	--
+	Args = {};
+	--[[
+	ClientCommand = true;
+	FireAllClients = true;
+	BlockWhenPunished = true;
+	PreFunction = function(speaker, args)
+		
+	end;
+	Function = function(speaker, args)
+		wait(1)
+	end;
+	--]]
+	--
+	};
+	
+	
+	
+	
+	-----------------------------------
+	
+};
+
+
+
+return module
+
+end;
+};
+G2L_MODULES[G2L["12"]] = {
+Closure = function()
+    local script = G2L["12"];
+-- << RETRIEVE FRAMEWORK >>
+local main = _G.HDAdminMain
+
+
+
+-- << CLIENT COMMANDS >>
+local module = {
+	
+	----------------------------------------------------------------------
+	["commandName1"] = {
+		Function = function(speaker, args)
+			
+		end;
+		};
+	
+	
+	
+	
+	----------------------------------------------------------------------
+	["commandName2"] = {
+		Function = function(speaker, args)
+			
+		end;
+		};
+	
+	
+	
+	
+	----------------------------------------------------------------------
+	
+};
+
+
+
+-- << SETUP >>
+for commandName, command in pairs(module) do
+	command.Name = commandName
+end
+
+
+
+return module
+end;
+};
+G2L_MODULES[G2L["14"]] = {
+Closure = function()
+    local script = G2L["14"];
+-- << RETRIEVE FRAMEWORK >>
+local main = _G.HDAdminMain
+
+
+
+-- << EVENTS >>
+local module = {
+	
+	----------------------------------------------------------------------
+	["EventName"] = function(bindable, parent, ...)
+		
+	end;
+	
+	
+	
+	
+	----------------------------------------------------------------------
+	["EventName"] = function(bindable, parent, ...)
+		
+	end;
+	
+	
+	
+	
+	----------------------------------------------------------------------
+	
+};
+
+
+
+return module
+end;
+};
+
+return G2L["1"], require;
