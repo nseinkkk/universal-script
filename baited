@@ -1,0 +1,115 @@
+-- Made by Fer Modz
+
+-- Instances: 13 | Scripts: 1 | Modules: 0
+local G2L = {};
+
+-- StarterGui.bait
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[bait]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+-- StarterGui.bait.TextButton
+G2L["2"] = Instance.new("TextButton", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["TextSize"] = 14;
+G2L["2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Text"] = [[Activate]];
+G2L["2"]["Position"] = UDim2.new(0.37262, 0, 0, 0);
+
+-- StarterGui.bait.TextButton.bait
+G2L["3"] = Instance.new("Part", G2L["2"]);
+G2L["3"]["Anchored"] = true;
+G2L["3"]["BottomSurface"] = Enum.SurfaceType.Smooth;
+G2L["3"]["Color"] = Color3.fromRGB(0, 255, 0);
+G2L["3"]["TopSurface"] = Enum.SurfaceType.Smooth;
+G2L["3"]["Size"] = Vector3.new(4, 1, 5.09945);
+-- [ERROR] cannot convert BrickColor, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["3"]["Rotation"] = Vector3.new(0, 90, 0);
+G2L["3"]["Name"] = [[bait]];
+-- [ERROR] cannot convert CFrame, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["3"]["CastShadow"] = false;
+
+-- StarterGui.bait.TextButton.bait.conveyorScript
+G2L["4"] = Instance.new("Script", G2L["3"]);
+G2L["4"]["Name"] = [[conveyorScript]];
+
+-- StarterGui.bait.TextButton.bait.Speed
+G2L["5"] = Instance.new("NumberValue", G2L["3"]);
+G2L["5"]["Name"] = [[Speed]];
+G2L["5"]["Value"] = inf;
+
+-- StarterGui.bait.TextButton.bait.Attachment1
+G2L["6"] = Instance.new("Attachment", G2L["3"]);
+-- [ERROR] cannot convert CFrame, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["6"]["Axis"] = Vector3.new(-0, 1, 0);
+G2L["6"]["WorldSecondaryAxis"] = Vector3.new(0, -0, 1);
+-- [ERROR] cannot convert WorldCFrame, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["6"]["Name"] = [[Attachment1]];
+G2L["6"]["WorldAxis"] = Vector3.new(0, 1, 0);
+G2L["6"]["SecondaryAxis"] = Vector3.new(-1, -0, 0);
+
+-- StarterGui.bait.TextButton.bait.Attachment0
+G2L["7"] = Instance.new("Attachment", G2L["3"]);
+-- [ERROR] cannot convert CFrame, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["7"]["Axis"] = Vector3.new(-0, 1, 0);
+G2L["7"]["WorldSecondaryAxis"] = Vector3.new(0, -0, 1);
+-- [ERROR] cannot convert WorldCFrame, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["7"]["Name"] = [[Attachment0]];
+G2L["7"]["WorldAxis"] = Vector3.new(0, 1, 0);
+G2L["7"]["SecondaryAxis"] = Vector3.new(-1, -0, 0);
+
+-- StarterGui.bait.TextButton.bait.BillboardGui
+G2L["8"] = Instance.new("BillboardGui", G2L["3"]);
+G2L["8"]["Active"] = true;
+G2L["8"]["LightInfluence"] = 1;
+G2L["8"]["StudsOffset"] = Vector3.new(0, 3, 0);
+G2L["8"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["8"]["ClipsDescendants"] = true;
+G2L["8"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.bait.TextButton.bait.BillboardGui.TextLabel
+G2L["9"] = Instance.new("TextLabel", G2L["8"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["TextSize"] = 14;
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["BackgroundTransparency"] = 1;
+G2L["9"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[Touch For Admin]];
+
+-- StarterGui.bait.TextButton.bait.Script
+G2L["a"] = Instance.new("Script", G2L["3"]);
+
+
+-- StarterGui.bait.TextButton.LocalScript
+G2L["b"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.bait.TextButton.baitEvent
+G2L["c"] = Instance.new("RemoteEvent", G2L["2"]);
+G2L["c"]["Name"] = [[baitEvent]];
+
+-- StarterGui.bait.TextButton.Script
+G2L["d"] = Instance.new("Script", G2L["2"]);
+
+
+-- StarterGui.bait.TextButton.LocalScript
+local function C_b()
+local script = G2L["b"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.baitEvent:FireServer()
+	end)
+	script.Parent.baitEvent.OnClientEvent:Connect(function() 
+		print("Kill brick wad placed")
+	end)
+end;
+task.spawn(C_b);
+
+return G2L["1"], require;
