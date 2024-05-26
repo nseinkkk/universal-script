@@ -153,7 +153,7 @@ G2L["10"]["MaxTextSize"] = 24;
 -- StarterGui.HitboxEx.Frame.Start.LocalScript
 local function C_4()
 local script = G2L["4"];
-	local Player = nil
+	local Player = game.Players.LocalPlayer
 	
 	
 	local HitboxExpanderEnabled = false
