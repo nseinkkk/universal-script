@@ -166,7 +166,8 @@ local script = G2L["4"];
 		else
 			HitboxExpanderEnabled = false
 		end
-		local PlayersHitbox = function(Visible)
+		while task.wait() do
+			local PlayersHitbox = function(Visible)
 			if Visible == true then
 				for i,v in next, game:GetService('Players'):GetPlayers() do
 					if v ~= Player then
@@ -189,6 +190,8 @@ local script = G2L["4"];
 			IsDisabled = true
 			PlayersHitbox(false)
 	   end
+		end
+		
 	end)
 	
 	
@@ -210,7 +213,8 @@ local script = G2L["a"];
 		else
 			HitboxExpanderEnabled = false
 		end
-		local PlayersHitbox = function(Visible)
+		while task.wait() do
+			local PlayersHitbox = function(Visible)
 			if Visible == true then
 				for i,v in next, game:GetService('Players'):GetPlayers() do
 					if v ~= Player then
@@ -239,6 +243,8 @@ local script = G2L["a"];
 			IsDisabled = true
 			PlayersHitbox(false)
 	   end
+		end
+		
 	end)
 	
 	
