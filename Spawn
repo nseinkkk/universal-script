@@ -1,0 +1,48 @@
+-- Made by Fer Modz
+
+-- Instances: 4 | Scripts: 1 | Modules: 0
+local G2L = {};
+
+-- StarterGui.Spawn Part
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Spawn Part]];
+G2L["1"]["ResetOnSpawn"] = false
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.Spawn Part.TextButton
+G2L["2"] = Instance.new("TextButton", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["TextSize"] = 14;
+G2L["2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2"]["Size"] = UDim2.new(0, 71, 0, 45);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Text"] = [[Spawn Part]];
+G2L["2"]["Position"] = UDim2.new(0, 0, 0.45842, 0);
+
+-- StarterGui.Spawn Part.TextButton.LocalScript
+G2L["3"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.Spawn Part.TextButton.LocalScript.Part
+G2L["4"] = Instance.new("Part", G2L["3"]);
+G2L["4"]["BottomSurface"] = Enum.SurfaceType.Smooth;
+G2L["4"]["TopSurface"] = Enum.SurfaceType.Smooth;
+G2L["4"]["Size"] = Vector3.new(16.15516, 0.4373, 12.22119);
+-- [ERROR] cannot convert CFrame, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+
+-- StarterGui.Spawn Part.TextButton.LocalScript
+local function C_3()
+local script = G2L["3"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		local v = script.Part:Clone()
+		v.Anchored = true
+		v.Parent = workspace
+		v.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(0, 3, 0)
+		v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame - Vector3.new(0, 3, 0)
+	end)
+end;
+task.spawn(C_3);
+
+return G2L["1"], require;
