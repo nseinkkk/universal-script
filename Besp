@@ -1,0 +1,75 @@
+-- Better esp Made by Fer Modz
+
+-- Instances: 4 | Scripts: 1 | Modules: 0
+local G2L = {};
+
+-- StarterGui.EspB
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+G2L["1"]["Name"] = [[EspB]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.EspB.ViewportFrame
+G2L["2"] = Instance.new("ViewportFrame", G2L["1"]);
+-- [ERROR] cannot convert CurrentCamera, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["Size"] = UDim2.new(0.99873, 0, 0.99797, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.EspB.LocalScript
+G2L["3"] = Instance.new("LocalScript", G2L["1"]);
+
+
+-- StarterGui.EspB.ActivateB
+G2L["4"] = Instance.new("TextButton", G2L["1"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextSize"] = 14;
+G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["Size"] = UDim2.new(0, 90, 0, 48);
+G2L["4"]["Name"] = [[ActivateB]];
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[Activate]];
+G2L["4"]["Position"] = UDim2.new(0, 0, 0.3854, 0);
+
+-- StarterGui.EspB.LocalScript
+local function C_3()
+local script = G2L["3"];
+	local view = script.Parent:WaitForChild("ViewportFrame")
+	local Bu = script.Parent.ActivateB
+	
+	Bu.MouseButton1Click:Connect(function()
+		Bu:Destroy()
+		while task.wait() do
+		view:ClearAllChildren()
+		view.CurrentCamera = workspace.CurrentCamera
+		    for _, v in game.Players:GetChildren() do
+			    if v:IsA("Player") then
+				    local char = v.Character or v.CharacterAdded:Wait()
+				    for _, idk in char:GetChildren() do
+					    if idk:IsA("BasePart") and idk.Name ~= "HumanoidRootPart" then
+						    idk.Transparency = 1
+						    local newP = idk:Clone()
+						    newP.Parent = view
+							newP.Transparency = 0
+							newP.Material = "Neon"
+						    newP.Color = Color3.fromRGB(255, 0, 0)
+						    newP.Position = newP.Position + Vector3.new(0, 0, 0)
+						    if newP:FindFirstChildOfClass("Decal") then
+							    newP:FindFirstChildOfClass("Decal").Transparency = 0
+						    end
+					    end
+				    end
+			    end
+		    end
+		end
+	end)
+	
+end;
+task.spawn(C_3);
+
+return G2L["1"], require;
