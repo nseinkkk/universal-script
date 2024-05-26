@@ -197,7 +197,7 @@ task.spawn(C_4);
 -- StarterGui.HitboxEx.Frame.Start2.LocalScript
 local function C_a()
 local script = G2L["a"];
-	local Player = nil
+	local Player = game.Players.LocalPlayer
 	
 	
 	local HitboxExpanderEnabled = false
