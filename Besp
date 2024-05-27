@@ -41,14 +41,15 @@ local function C_3()
 local script = G2L["3"];
 	local view = script.Parent:WaitForChild("ViewportFrame")
 	local Bu = script.Parent.ActivateB
+	local player = game.Players.LocalPlayer
 	
 	Bu.MouseButton1Click:Connect(function()
 		Bu:Destroy()
 		while task.wait() do
 		view:ClearAllChildren()
 		view.CurrentCamera = workspace.CurrentCamera
-		    for _, v in game.Players:GetChildren() do
-			    if v:IsA("Player") then
+		    for _, v in game.Players:GetPlayers() do
+			    if v ~= player then
 				    local char = v.Character or v.CharacterAdded:Wait()
 				    for _, idk in char:GetChildren() do
 					    if idk:IsA("BasePart") and idk.Name ~= "HumanoidRootPart" then
