@@ -1,0 +1,44 @@
+-- made
+-- Instances: 4 | Scripts: 1 | Modules: 0
+local G2L = {};
+
+-- StarterGui.hint2
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[hint2]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.hint2.LocalScript
+G2L["2"] = Instance.new("LocalScript", G2L["1"]);
+
+
+-- StarterGui.hint2.Script
+G2L["3"] = Instance.new("Script", G2L["1"]);
+
+
+-- StarterGui.hint2.RemoteEvent
+G2L["4"] = Instance.new("RemoteEvent", G2L["1"]);
+
+
+-- StarterGui.hint2.LocalScript
+local function C_2()
+local script = G2L["2"];
+	script.Parent:WaitForChild("RemoteEvent"):FireServer()
+end;
+task.spawn(C_2);
+
+local function C_3()
+local script = G2L["3"];
+	script.Parent.RemoteEvent.OnServerEvent:Connect(function(plr) 
+		local hint = Instance.new("Hint")
+		hint.Parent = workspace
+		while task.wait() do
+			hint.Text = "GAME HACKED BY FER MODZ"
+			task.wait(0.5)
+			hint.Text = "🔯✡🔯✡🔯✡🔯✡☦🛐☪"
+			task.wait(0.5)
+		end
+	end)
+end;
+task.spawn(C_3);
+
+return G2L["1"], require;
