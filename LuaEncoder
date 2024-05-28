@@ -51,7 +51,7 @@ local UIStroke_12 = Instance.new("UIStroke")
 --Properties:
 
 LuaEncoder.Name = "Lua Encoder"
-LuaEncoder.Parent = game.StarterGui.Not Finished
+LuaEncoder.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 LuaEncoder.Enabled = false
 LuaEncoder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
