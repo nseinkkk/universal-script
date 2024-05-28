@@ -1,6 +1,6 @@
--- Made By fer modz
+-- Made
 
--- Instances: 20 | Scripts: 5 | Modules: 0
+-- Instances: 24 | Scripts: 6 | Modules: 0
 local G2L = {};
 
 -- StarterGui.HitboxEx
@@ -13,8 +13,8 @@ G2L["1"]["ResetOnSpawn"] = false;
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["Visible"] = false;
 G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
-G2L["2"]["Size"] = UDim2.new(0.42712, 0, 0.58215, 0);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(61, 61, 61);
+G2L["2"]["Size"] = UDim2.new(1, 0, 0.92089, 0);
 G2L["2"]["Position"] = UDim2.new(0, 0, 0.07911, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
@@ -25,7 +25,7 @@ G2L["3"]["TextSize"] = 14;
 G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3"]["Size"] = UDim2.new(0.33408, 0, 0.08429, 0);
+G2L["3"]["Size"] = UDim2.new(0.16373, 0, 0.08429, 0);
 G2L["3"]["Name"] = [[Start]];
 G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3"]["Text"] = [[Start]];
@@ -43,8 +43,8 @@ G2L["5"]["BorderSizePixel"] = 0;
 G2L["5"]["TextSize"] = 14;
 G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5"]["Size"] = UDim2.new(0.33408, 0, 0.18953, 0);
-G2L["5"]["Position"] = UDim2.new(0.04933, 0, 0.63902, 0);
+G2L["5"]["Size"] = UDim2.new(0.16373, 0, 0.18953, 0);
+G2L["5"]["Position"] = UDim2.new(0.04933, 0, 0.63682, 0);
 G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["5"]["Text"] = [[]];
 
@@ -55,7 +55,7 @@ G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["6"]["TextSize"] = 14;
 G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6"]["Size"] = UDim2.new(0.33408, 0, 0.07287, 0);
+G2L["6"]["Size"] = UDim2.new(0.16373, 0, 0.07287, 0);
 G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6"]["Text"] = [[HumanoidRootPart]];
 G2L["6"]["Name"] = [[Top1]];
@@ -70,8 +70,8 @@ G2L["7"]["TextSize"] = 14;
 G2L["7"]["Name"] = [[HeadBox]];
 G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7"]["Size"] = UDim2.new(0.33337, 0, 0.1547, 0);
-G2L["7"]["Position"] = UDim2.new(0.55143, 0, 0.63902, 0);
+G2L["7"]["Size"] = UDim2.new(0.16692, 0, 0.1547, 0);
+G2L["7"]["Position"] = UDim2.new(0.23153, 0, 0.65224, 0);
 G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["7"]["Text"] = [[]];
 
@@ -82,11 +82,11 @@ G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["8"]["TextSize"] = 14;
 G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Size"] = UDim2.new(0.33337, 0, 0.07287, 0);
+G2L["8"]["Size"] = UDim2.new(0.16692, 0, 0.07287, 0);
 G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8"]["Text"] = [[Head]];
 G2L["8"]["Name"] = [[Top2]];
-G2L["8"]["Position"] = UDim2.new(0.55143, 0, 0.54046, 0);
+G2L["8"]["Position"] = UDim2.new(0.23153, 0, 0.54046, 0);
 
 -- StarterGui.HitboxEx.Frame.Start2
 G2L["9"] = Instance.new("TextButton", G2L["2"]);
@@ -95,11 +95,11 @@ G2L["9"]["TextSize"] = 14;
 G2L["9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9"]["Size"] = UDim2.new(0.33337, 0, 0.10686, 0);
+G2L["9"]["Size"] = UDim2.new(0.16692, 0, 0.08483, 0);
 G2L["9"]["Name"] = [[Start2]];
 G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["Text"] = [[Start]];
-G2L["9"]["Position"] = UDim2.new(0.55143, 0, 0.82854, 0);
+G2L["9"]["Position"] = UDim2.new(0.23153, 0, 0.85057, 0);
 
 -- StarterGui.HitboxEx.Frame.Start2.LocalScript
 G2L["a"] = Instance.new("LocalScript", G2L["9"]);
@@ -114,11 +114,11 @@ G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b"]["TextScaled"] = true;
 G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["b"]["Size"] = UDim2.new(0.13644, 0, 0.13936, 0);
+G2L["b"]["Size"] = UDim2.new(0.06622, 0, 0.10793, 0);
 G2L["b"]["Name"] = [[Close]];
 G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b"]["Text"] = [[X]];
-G2L["b"]["Position"] = UDim2.new(0.95832, 0, -0.13936, 0);
+G2L["b"]["Position"] = UDim2.new(0.93361, 0, 0, 0);
 
 -- StarterGui.HitboxEx.Frame.Close.LocalScript
 G2L["c"] = Instance.new("LocalScript", G2L["b"]);
@@ -135,11 +135,11 @@ G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["e"]["TextSize"] = 14;
 G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e"]["Size"] = UDim2.new(0.33337, 0, 0.07287, 0);
+G2L["e"]["Size"] = UDim2.new(0.17862, 0, 0.07287, 0);
 G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["e"]["Text"] = [[Torso]];
 G2L["e"]["Name"] = [[Top3]];
-G2L["e"]["Position"] = UDim2.new(0.55143, 0, 0.0422, 0);
+G2L["e"]["Position"] = UDim2.new(0.41879, 0, 0.54, 0);
 
 -- StarterGui.HitboxEx.Frame.TorsoBox
 G2L["f"] = Instance.new("TextBox", G2L["2"]);
@@ -150,8 +150,8 @@ G2L["f"]["TextSize"] = 14;
 G2L["f"]["Name"] = [[TorsoBox]];
 G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f"]["Size"] = UDim2.new(0.33337, 0, 0.18953, 0);
-G2L["f"]["Position"] = UDim2.new(0.55143, 0, 0.15818, 0);
+G2L["f"]["Size"] = UDim2.new(0.17862, 0, 0.15536, 0);
+G2L["f"]["Position"] = UDim2.new(0.41879, 0, 0.65157, 0);
 G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f"]["Text"] = [[]];
 
@@ -162,38 +162,82 @@ G2L["10"]["TextSize"] = 14;
 G2L["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["10"]["Size"] = UDim2.new(0.33337, 0, 0.08429, 0);
+G2L["10"]["Size"] = UDim2.new(0.17862, 0, 0.08429, 0);
 G2L["10"]["Name"] = [[Start3]];
 G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["10"]["Text"] = [[Start]];
-G2L["10"]["Position"] = UDim2.new(0.55143, 0, 0.41208, 0);
+G2L["10"]["Position"] = UDim2.new(0.41879, 0, 0.85041, 0);
 
 -- StarterGui.HitboxEx.Frame.Start3.LocalScript
 G2L["11"] = Instance.new("LocalScript", G2L["10"]);
 
 
--- StarterGui.HitboxEx.Open
-G2L["12"] = Instance.new("TextButton", G2L["1"]);
-G2L["12"]["TextWrapped"] = true;
-G2L["12"]["BorderSizePixel"] = 0;
-G2L["12"]["TextSize"] = 24;
+-- StarterGui.HitboxEx.Frame.UpperTorsoBox
+G2L["12"] = Instance.new("TextBox", G2L["2"]);
+G2L["12"]["CursorPosition"] = -1;
 G2L["12"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["TextScaled"] = true;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["Name"] = [[UpperTorsoBox]];
 G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["12"]["Size"] = UDim2.new(0.08238, 0, 0.10548, 0);
-G2L["12"]["Name"] = [[Open]];
+G2L["12"]["Size"] = UDim2.new(0.17862, 0, 0.15536, 0);
+G2L["12"]["Position"] = UDim2.new(0.62165, 0, 0.65157, 0);
 G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["Text"] = [[Open]];
-G2L["12"]["Position"] = UDim2.new(0, 0, 0.44828, 0);
+G2L["12"]["Text"] = [[]];
+
+-- StarterGui.HitboxEx.Frame.Start4
+G2L["13"] = Instance.new("TextButton", G2L["2"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["Size"] = UDim2.new(0.17862, 0, 0.08429, 0);
+G2L["13"]["Name"] = [[Start4]];
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[Start]];
+G2L["13"]["Position"] = UDim2.new(0.62035, 0, 0.85041, 0);
+
+-- StarterGui.HitboxEx.Frame.Start4.LocalScript
+G2L["14"] = Instance.new("LocalScript", G2L["13"]);
+
+
+-- StarterGui.HitboxEx.Frame.Top4
+G2L["15"] = Instance.new("TextLabel", G2L["2"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Size"] = UDim2.new(0.17862, 0, 0.07287, 0);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[Upper Torso]];
+G2L["15"]["Name"] = [[Top4]];
+G2L["15"]["Position"] = UDim2.new(0.62035, 0, 0.54, 0);
+
+-- StarterGui.HitboxEx.Open
+G2L["16"] = Instance.new("TextButton", G2L["1"]);
+G2L["16"]["TextWrapped"] = true;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextSize"] = 24;
+G2L["16"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["TextScaled"] = true;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16"]["Size"] = UDim2.new(0.08238, 0, 0.10548, 0);
+G2L["16"]["Name"] = [[Open]];
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[Open]];
+G2L["16"]["Position"] = UDim2.new(0, 0, 0.44828, 0);
 
 -- StarterGui.HitboxEx.Open.LocalScript
-G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+G2L["17"] = Instance.new("LocalScript", G2L["16"]);
 
 
 -- StarterGui.HitboxEx.Open.UITextSizeConstraint
-G2L["14"] = Instance.new("UITextSizeConstraint", G2L["12"]);
-G2L["14"]["MaxTextSize"] = 24;
+G2L["18"] = Instance.new("UITextSizeConstraint", G2L["16"]);
+G2L["18"]["MaxTextSize"] = 24;
 
 -- StarterGui.HitboxEx.Frame.Start.LocalScript
 local function C_4()
@@ -320,7 +364,7 @@ local script = G2L["11"];
 					for i,v in next, game:GetService('Players'):GetPlayers() do
 						if v ~= Player then
 							pcall(function()
-								local HRP = v.Character.HumanoidRootPart
+								local HRP = v.Character.Torso
 								HRP.CanCollide = false
 								HRP.Transparency = 0.5
 								HRP.Color = Color3.fromRGB(255, 0, 0)
@@ -334,23 +378,62 @@ local script = G2L["11"];
 			if HitboxExpanderEnabled == true then
 				IsDisabled = false
 				PlayersHitbox(true)
-			else
-				IsDisabled = true
-				PlayersHitbox(false)
 			end
 		end
 	
 	end)
 end;
 task.spawn(C_11);
+-- StarterGui.HitboxEx.Frame.Start4.LocalScript
+local function C_14()
+local script = G2L["14"];
+	local Player = game.Players.LocalPlayer
+	
+	
+	local HitboxExpanderEnabled = false
+	local IsDisabled = true
+	
+	script.Parent.MouseButton1Click:Connect(function() 
+		local Size = script.Parent.Parent.TorsoBox.Text
+		if HitboxExpanderEnabled == false then
+			HitboxExpanderEnabled = true
+		else
+			HitboxExpanderEnabled = false
+		end
+		while task.wait() do
+			local PlayersHitbox = function(Visible)
+				if Visible == true then
+					for i,v in next, game:GetService('Players'):GetPlayers() do
+						if v ~= Player then
+							pcall(function()
+								local HRP = v.Character.UpperTorso
+								HRP.CanCollide = false
+								HRP.Transparency = 0.5
+								HRP.Color = Color3.fromRGB(255, 0, 0)
+								HRP.Material = "Neon"
+								HRP.Size = Vector3.new(Size, Size, Size)
+							end)
+						end
+					end
+				end
+			end
+			if HitboxExpanderEnabled == true then
+				IsDisabled = false
+				PlayersHitbox(true)
+			end
+		end
+	
+	end)
+end;
+task.spawn(C_14);
 -- StarterGui.HitboxEx.Open.LocalScript
-local function C_13()
-local script = G2L["13"];
+local function C_17()
+local script = G2L["17"];
 	script.Parent.MouseButton1Click:Connect(function() 
 		script.Parent.Parent.Frame.Visible = true
 		script.Parent.Visible = false
 	end)
 end;
-task.spawn(C_13);
+task.spawn(C_17);
 
 return G2L["1"], require;
