@@ -1,617 +1,723 @@
--- imie his Gui to Lua
--- Version: 1
-
--- Instances:
-
-local BestOne = Instance.new("ScreenGui")
-local Frame1 = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local Credits = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local Main = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local LocalP = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local Help = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local CreditsF = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local UIStroke = Instance.new("UIStroke")
-local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-local MainF = Instance.new("Frame")
-local Fling = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
-local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
-local RESET = Instance.new("TextButton")
-local UICorner_7 = Instance.new("UICorner")
-local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
-local Fly = Instance.new("TextButton")
-local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
-local UICorner_8 = Instance.new("UICorner")
-local INFINITE = Instance.new("TextButton")
-local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
-local UICorner_9 = Instance.new("UICorner")
-local NOCLIP = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
-local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
-local Top = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local Main_2 = Instance.new("ImageLabel")
-local TextBox = Instance.new("TextBox")
-local TextButton = Instance.new("TextButton")
-local X = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
-local Open = Instance.new("TextButton")
-local UIStroke_2 = Instance.new("UIStroke")
-local UICorner_12 = Instance.new("UICorner")
-local KeyF = Instance.new("Frame")
-local TextBox_2 = Instance.new("TextBox")
-local UIStroke_3 = Instance.new("UIStroke")
-local UICorner_13 = Instance.new("UICorner")
-local Verify = Instance.new("TextButton")
-local UIStroke_4 = Instance.new("UIStroke")
-local UICorner_14 = Instance.new("UICorner")
-local UIStroke_5 = Instance.new("UIStroke")
-local UICorner_15 = Instance.new("UICorner")
-local KillFrame = Instance.new("TextButton")
-local UIStroke_6 = Instance.new("UIStroke")
-local UICorner_16 = Instance.new("UICorner")
-local Link = Instance.new("TextBox")
-local UIStroke_7 = Instance.new("UIStroke")
-local UICorner_17 = Instance.new("UICorner")
-local LocalPlayerF = Instance.new("Frame")
-local Speed = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextButton_2 = Instance.new("TextButton")
-local UICorner_18 = Instance.new("UICorner")
-local TextButton_3 = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
-local Clicktp = Instance.new("TextButton")
-local Btools = Instance.new("TextButton")
-local HelpF = Instance.new("Frame")
-local TextLabel_3 = Instance.new("TextLabel")
-local TextLabel_4 = Instance.new("TextLabel")
-
---Properties:
-
-BestOne.Name = "BestOne"
-BestOne.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
-BestOne.Enabled = false
-BestOne.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-BestOne.ResetOnSpawn = false
-
-Frame1.Name = "Frame1"
-Frame1.Parent = BestOne
-Frame1.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
-Frame1.Position = UDim2.new(0.331994742, 0, 0.27509293, 0)
-Frame1.Size = UDim2.new(0.368908077, 0, 0.449814141, 0)
-Frame1.Visible = false
-
-UICorner.Parent = Frame1
-
-Credits.Name = "Credits"
-Credits.Parent = Frame1
-Credits.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
-Credits.Position = UDim2.new(0.0418060198, 0, 0.0964187309, 0)
-Credits.Size = UDim2.new(0.207357854, 0, 0.104683205, 0)
-Credits.ZIndex = 9
-Credits.Font = Enum.Font.FredokaOne
-Credits.Text = "Credits"
-Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
-Credits.TextScaled = true
-Credits.TextSize = 23.000
-Credits.TextWrapped = true
-
-UICorner_2.Parent = Credits
-
-Main.Name = "Main"
-Main.Parent = Frame1
-Main.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
-Main.Position = UDim2.new(0.0418060198, 0, 0.225895315, 0)
-Main.Size = UDim2.new(0.207357883, 0, 0.107438013, 0)
-Main.ZIndex = 9
-Main.Font = Enum.Font.FredokaOne
-Main.Text = "Main"
-Main.TextColor3 = Color3.fromRGB(0, 0, 0)
-Main.TextScaled = true
-Main.TextSize = 28.000
-Main.TextWrapped = true
-
-UICorner_3.Parent = Main
-
-LocalP.Name = "LocalP"
-LocalP.Parent = Frame1
-LocalP.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
-LocalP.Position = UDim2.new(0.0418060198, 0, 0.35812673, 0)
-LocalP.Size = UDim2.new(0.207357854, 0, 0.11570248, 0)
-LocalP.ZIndex = 9
-LocalP.Font = Enum.Font.FredokaOne
-LocalP.Text = "Local Player"
-LocalP.TextColor3 = Color3.fromRGB(0, 0, 0)
-LocalP.TextScaled = true
-LocalP.TextSize = 14.000
-LocalP.TextWrapped = true
-
-UICorner_4.Parent = LocalP
-
-Help.Name = "Help"
-Help.Parent = Frame1
-Help.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
-Help.Position = UDim2.new(0.0418060198, 0, 0.501377404, 0)
-Help.Size = UDim2.new(0.207357854, 0, 0.104683198, 0)
-Help.ZIndex = 9
-Help.Font = Enum.Font.FredokaOne
-Help.Text = "Help"
-Help.TextColor3 = Color3.fromRGB(0, 0, 0)
-Help.TextScaled = true
-Help.TextSize = 14.000
-Help.TextWrapped = true
-
-UICorner_5.Parent = Help
-
-CreditsF.Name = "CreditsF"
-CreditsF.Parent = BestOne
-CreditsF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CreditsF.BackgroundTransparency = 1.000
-CreditsF.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CreditsF.BorderSizePixel = 0
-CreditsF.Position = UDim2.new(0.43615675, 0, 0.27509293, 0)
-CreditsF.Size = UDim2.new(0.260429829, 0, 0.449392706, 0)
-CreditsF.Visible = false
-CreditsF.ZIndex = 2
-
-TextLabel.Parent = CreditsF
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.0291259177, 0, 0.0675675645, 0)
-TextLabel.Size = UDim2.new(0.936905622, 0, 0.235693201, 0)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Made by Fer Modz"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 24.000
-TextLabel.TextWrapped = true
-
-UIStroke.Parent = TextLabel
-
-UITextSizeConstraint.Parent = TextLabel
-UITextSizeConstraint.MaxTextSize = 24
-
-MainF.Name = "MainF"
-MainF.Parent = BestOne
-MainF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainF.BackgroundTransparency = 1.000
-MainF.BorderColor3 = Color3.fromRGB(0, 0, 0)
-MainF.BorderSizePixel = 0
-MainF.Position = UDim2.new(0.435994923, 0, 0.273279339, 0)
-MainF.Size = UDim2.new(0.261089981, 0, 0.451416999, 0)
-MainF.Visible = false
-
-Fling.Name = "Fling"
-Fling.Parent = MainF
-Fling.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
-Fling.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Fling.BorderSizePixel = 0
-Fling.Position = UDim2.new(2.96287169e-07, 0, 0.0672645718, 0)
-Fling.Size = UDim2.new(0.380403548, 0, 0.123337269, 0)
-Fling.Font = Enum.Font.SourceSans
-Fling.Text = "Fling GUI"
-Fling.TextColor3 = Color3.fromRGB(255, 0, 0)
-Fling.TextScaled = true
-Fling.TextSize = 24.000
-Fling.TextWrapped = true
-
-UICorner_6.Parent = Fling
-
-UITextSizeConstraint_2.Parent = Fling
-UITextSizeConstraint_2.MaxTextSize = 24
-
-RESET.Name = "RESET"
-RESET.Parent = MainF
-RESET.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
-RESET.BorderColor3 = Color3.fromRGB(0, 0, 0)
-RESET.BorderSizePixel = 0
-RESET.Position = UDim2.new(0.493900627, 0, 0.0672645718, 0)
-RESET.Size = UDim2.new(0.352518171, 0, 0.123337321, 0)
-RESET.Font = Enum.Font.SourceSans
-RESET.Text = "RE (reset)"
-RESET.TextColor3 = Color3.fromRGB(255, 0, 0)
-RESET.TextScaled = true
-RESET.TextSize = 24.000
-RESET.TextWrapped = true
-
-UICorner_7.Parent = RESET
-
-UITextSizeConstraint_3.Parent = RESET
-UITextSizeConstraint_3.MaxTextSize = 24
-
-Fly.Name = "Fly"
-Fly.Parent = MainF
-Fly.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
-Fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Fly.BorderSizePixel = 0
-Fly.Position = UDim2.new(2.96287169e-07, 0, 0.243827373, 0)
-Fly.Size = UDim2.new(0.380403548, 0, 0.116289422, 0)
-Fly.Font = Enum.Font.SourceSans
-Fly.Text = "Fly (FE)"
-Fly.TextColor3 = Color3.fromRGB(255, 0, 0)
-Fly.TextScaled = true
-Fly.TextSize = 24.000
-Fly.TextWrapped = true
-
-UITextSizeConstraint_4.Parent = Fly
-UITextSizeConstraint_4.MaxTextSize = 24
-
-UICorner_8.Parent = Fly
-
-INFINITE.Name = "INFINITE"
-INFINITE.Parent = MainF
-INFINITE.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
-INFINITE.BorderColor3 = Color3.fromRGB(0, 0, 0)
-INFINITE.BorderSizePixel = 0
-INFINITE.Position = UDim2.new(0.493900478, 0, 0.243827373, 0)
-INFINITE.Size = UDim2.new(0.35251829, 0, 0.116289422, 0)
-INFINITE.Font = Enum.Font.SourceSans
-INFINITE.Text = "Infinite Jump"
-INFINITE.TextColor3 = Color3.fromRGB(255, 0, 0)
-INFINITE.TextScaled = true
-INFINITE.TextSize = 24.000
-INFINITE.TextWrapped = true
-
-UITextSizeConstraint_5.Parent = INFINITE
-UITextSizeConstraint_5.MaxTextSize = 24
-
-UICorner_9.Parent = INFINITE
-
-NOCLIP.Name = "NOCLIP"
-NOCLIP.Parent = MainF
-NOCLIP.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
-NOCLIP.BorderColor3 = Color3.fromRGB(0, 0, 0)
-NOCLIP.BorderSizePixel = 0
-NOCLIP.Position = UDim2.new(-2.96287169e-07, 0, 0.399931073, 0)
-NOCLIP.Size = UDim2.new(0.380403847, 0, 0.132477626, 0)
-NOCLIP.Font = Enum.Font.SourceSans
-NOCLIP.Text = "Noclip"
-NOCLIP.TextColor3 = Color3.fromRGB(249, 0, 0)
-NOCLIP.TextScaled = true
-NOCLIP.TextSize = 24.000
-NOCLIP.TextWrapped = true
-
-UICorner_10.Parent = NOCLIP
-
-UITextSizeConstraint_6.Parent = NOCLIP
-UITextSizeConstraint_6.MaxTextSize = 24
-
-Top.Name = "Top"
-Top.Parent = BestOne
-Top.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
-Top.BorderSizePixel = 0
-Top.Position = UDim2.new(0.173969075, 0, 0.370445341, 0)
-Top.Size = UDim2.new(0, 260, 0, 44)
-Top.Visible = false
-
-Title.Name = "Title"
-Title.Parent = Top
-Title.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0, 0, 0.295454532, 0)
-Title.Size = UDim2.new(0, 252, 0, 30)
-Title.Font = Enum.Font.SourceSans
-Title.Text = "FE Yeet Gui (trollface edition)"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextScaled = true
-Title.TextSize = 14.000
-Title.TextWrapped = true
-
-Main_2.Name = "Main"
-Main_2.Parent = Top
-Main_2.Active = true
-Main_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main_2.BorderSizePixel = 0
-Main_2.Draggable = true
-Main_2.Position = UDim2.new(0.1668531, -43, 0.436847329, 27)
-Main_2.Size = UDim2.new(0, 260, 0, 136)
-Main_2.Image = "rbxassetid://2005276185"
-
-TextBox.Parent = Main_2
-TextBox.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.0704845712, 0, 0.339923173, 0)
-TextBox.Size = UDim2.new(0, 220, 0, 43)
-TextBox.Font = Enum.Font.SourceSans
-TextBox.PlaceholderText = "Player Name here"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextScaled = true
-TextBox.TextSize = 14.000
-TextBox.TextWrapped = true
-
-TextButton.Parent = Main_2
-TextButton.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.161216617, 0, 0.699270785, 0)
-TextButton.Size = UDim2.new(0, 159, 0, 27)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Cheese em'"
-TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-
-X.Name = "X"
-X.Parent = Top
-X.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-X.BorderColor3 = Color3.fromRGB(0, 0, 0)
-X.BorderSizePixel = 0
-X.Position = UDim2.new(0.969230771, 0, -0.35111931, 0)
-X.Size = UDim2.new(0, 35, 0, 28)
-X.Font = Enum.Font.SourceSans
-X.Text = "X"
-X.TextColor3 = Color3.fromRGB(0, 0, 0)
-X.TextSize = 24.000
-
-UICorner_11.Parent = X
-
-Open.Name = "Open"
-Open.Parent = BestOne
-Open.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
-Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Open.BorderSizePixel = 0
-Open.Position = UDim2.new(0, 0, 0.5, 0)
-Open.Size = UDim2.new(0, 63, 0, 50)
-Open.Visible = false
-Open.Font = Enum.Font.SourceSans
-Open.Text = "Open"
-Open.TextColor3 = Color3.fromRGB(0, 0, 0)
-Open.TextSize = 24.000
-
-UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_2.Parent = Open
-
-UICorner_12.Parent = Open
-
-KeyF.Name = "KeyF"
-KeyF.Parent = BestOne
-KeyF.BackgroundColor3 = Color3.fromRGB(93, 93, 93)
-KeyF.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KeyF.BorderSizePixel = 0
-KeyF.Position = UDim2.new(0.362484157, 0, 0.210526317, 0)
-KeyF.Size = UDim2.new(0.299112797, 0, 0.39068827, 0)
-
-TextBox_2.Parent = KeyF
-TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextBox_2.BorderSizePixel = 0
-TextBox_2.Position = UDim2.new(0.0762713179, 0, 0.082901597, 0)
-TextBox_2.Size = UDim2.new(0.847457349, 0, 0.241110906, 0)
-TextBox_2.Font = Enum.Font.SourceSans
-TextBox_2.Text = ""
-TextBox_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox_2.TextSize = 14.000
-
-UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_3.Parent = TextBox_2
-
-UICorner_13.Parent = TextBox_2
-
-Verify.Name = "Verify"
-Verify.Parent = KeyF
-Verify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Verify.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Verify.BorderSizePixel = 0
-Verify.Position = UDim2.new(0.0762714446, 0, 0.435233235, 0)
-Verify.Size = UDim2.new(0.84745723, 0, 0.277380407, 0)
-Verify.Font = Enum.Font.SourceSans
-Verify.Text = "Verify"
-Verify.TextColor3 = Color3.fromRGB(0, 0, 0)
-Verify.TextSize = 24.000
-
-UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_4.Parent = Verify
-
-UICorner_14.Parent = Verify
-
-UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_5.Thickness = 3
-UIStroke_5.Parent = KeyF
-
-UICorner_15.Parent = KeyF
-
-KillFrame.Name = "KillFrame"
-KillFrame.Parent = KeyF
-KillFrame.BackgroundColor3 = Color3.fromRGB(255, 1, 1)
-KillFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KillFrame.BorderSizePixel = 0
-KillFrame.Position = UDim2.new(0.961864412, 0, -0.170984462, 0)
-KillFrame.Size = UDim2.new(0.16720365, 0, 0.170984492, 0)
-KillFrame.Font = Enum.Font.SourceSans
-KillFrame.Text = "X"
-KillFrame.TextColor3 = Color3.fromRGB(0, 0, 0)
-KillFrame.TextSize = 24.000
-
-UIStroke_6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_6.Parent = KillFrame
-
-UICorner_16.Parent = KillFrame
-
-Link.Name = "Link"
-Link.Parent = KeyF
-Link.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Link.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Link.BorderSizePixel = 0
-Link.Position = UDim2.new(0.0762714446, 0, 0.787564754, 0)
-Link.Size = UDim2.new(0.84745729, 0, 0.165488452, 0)
-Link.Font = Enum.Font.SourceSans
-Link.Text = "https://pastebin.com/bgRQUA2D"
-Link.TextColor3 = Color3.fromRGB(0, 0, 0)
-Link.TextSize = 14.000
-
-UIStroke_7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_7.Parent = Link
-
-UICorner_17.Parent = Link
-
-LocalPlayerF.Name = "LocalPlayerF"
-LocalPlayerF.Parent = BestOne
-LocalPlayerF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-LocalPlayerF.BackgroundTransparency = 1.000
-LocalPlayerF.BorderColor3 = Color3.fromRGB(0, 0, 0)
-LocalPlayerF.BorderSizePixel = 0
-LocalPlayerF.Position = UDim2.new(0.419518381, 0, 0.273279339, 0)
-LocalPlayerF.Size = UDim2.new(0.277566552, 0, 0.451416999, 0)
-LocalPlayerF.Visible = false
-
-Speed.Name = "Speed"
-Speed.Parent = LocalPlayerF
-Speed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Speed.BackgroundTransparency = 1.000
-Speed.Position = UDim2.new(0.0525752343, 0, 0.100878865, 0)
-Speed.Size = UDim2.new(0.42509535, 0, 0.128231823, 0)
-Speed.Font = Enum.Font.FredokaOne
-Speed.Text = "Speed"
-Speed.TextColor3 = Color3.fromRGB(0, 0, 0)
-Speed.TextScaled = true
-Speed.TextSize = 14.000
-Speed.TextWrapped = true
-
-TextLabel_2.Parent = LocalPlayerF
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.121295102, 0, 0.229110718, 0)
-TextLabel_2.Size = UDim2.new(0.310479313, 0, 0.189071417, 0)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "16"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
-
-TextButton_2.Name = "-"
-TextButton_2.Parent = LocalPlayerF
-TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 49, 79)
-TextButton_2.Position = UDim2.new(0.0847650096, 0, 0.418182105, 0)
-TextButton_2.Size = UDim2.new(0.137407064, 0, 0.153845131, 0)
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = "-"
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 14.000
-TextButton_2.TextWrapped = true
-
-UICorner_18.CornerRadius = UDim.new(0.200000003, 2)
-UICorner_18.Parent = TextButton_2
-
-TextButton_3.Name = "+"
-TextButton_3.Parent = LocalPlayerF
-TextButton_3.BackgroundColor3 = Color3.fromRGB(0, 49, 79)
-TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.Position = UDim2.new(0.268431485, 0, 0.418182045, 0)
-TextButton_3.Size = UDim2.new(0.163342997, 0, 0.153845266, 0)
-TextButton_3.Font = Enum.Font.SourceSans
-TextButton_3.Text = "+"
-TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.TextScaled = true
-TextButton_3.TextSize = 1.000
-TextButton_3.TextWrapped = true
-
-UICorner_19.CornerRadius = UDim.new(0.200000003, 2)
-UICorner_19.Parent = TextButton_3
-
-Clicktp.Name = "Clicktp"
-Clicktp.Parent = LocalPlayerF
-Clicktp.BackgroundColor3 = Color3.fromRGB(0, 49, 79)
-Clicktp.BorderSizePixel = 0
-Clicktp.Position = UDim2.new(0.531098485, 0, 0.121076234, 0)
-Clicktp.Size = UDim2.new(0.234965861, 0, 0.108034469, 0)
-Clicktp.Font = Enum.Font.FredokaOne
-Clicktp.Text = "ClickTP"
-Clicktp.TextColor3 = Color3.fromRGB(255, 255, 255)
-Clicktp.TextSize = 14.000
-Clicktp.TextWrapped = true
-
-Btools.Name = "Btools"
-Btools.Parent = LocalPlayerF
-Btools.BackgroundColor3 = Color3.fromRGB(7, 29, 58)
-Btools.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Btools.BorderSizePixel = 0
-Btools.Position = UDim2.new(0.529856443, 0, 0.267245382, 0)
-Btools.Size = UDim2.new(0.236207843, 0, 0.150936633, 0)
-Btools.Font = Enum.Font.SourceSans
-Btools.Text = "Btool/FE"
-Btools.TextColor3 = Color3.fromRGB(255, 255, 255)
-Btools.TextSize = 14.000
-
-HelpF.Name = "HelpF"
-HelpF.Parent = BestOne
-HelpF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-HelpF.BackgroundTransparency = 1.000
-HelpF.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HelpF.BorderSizePixel = 0
-HelpF.Position = UDim2.new(0.423320651, 0, 0.273279339, 0)
-HelpF.Size = UDim2.new(0, 219, 0, 223)
-HelpF.Visible = false
-
-TextLabel_3.Parent = HelpF
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.114155248, 0, 0.073187992, 0)
-TextLabel_3.Size = UDim2.new(0, 178, 0, 35)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "Contact us on Dc"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextSize = 14.000
-
-TextLabel_4.Parent = HelpF
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.260273963, 0, 0.22869955, 0)
-TextLabel_4.Size = UDim2.new(0, 113, 0, 32)
-TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = ""
-TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.TextSize = 14.000
-
--- Module Scripts:
-
-local fake_module_scripts = {}
-
-do -- nil.Instructions
-	local script = Instance.new('ModuleScript', nil)
-	script.Name = "Instructions"
-	local function module_script()
-		
-		
-		--You can change the respawn time by changing the "0" to another number.
-		
-		--I did not steal this from another free model.
-		
-		--I made this script myself.
-		
-	end
-	fake_module_scripts[script] = module_script
-end
-
-
--- Scripts:
-
-local function LFLOQD_fake_script() -- Credits.LocalScript 
-	local script = Instance.new('LocalScript', Credits)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+--best
+
+-- Instances: 96 | Scripts: 26 | Modules: 0
+local G2L = {};
+
+-- StarterGui.BestOne
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[BestOne]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+-- StarterGui.BestOne.Frame1
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["Visible"] = false;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
+G2L["2"]["Size"] = UDim2.new(0.36891, 0, 0.44981, 0);
+G2L["2"]["Position"] = UDim2.new(0.33199, 0, 0.27509, 0);
+G2L["2"]["Name"] = [[Frame1]];
+
+-- StarterGui.BestOne.Frame1.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.BestOne.Frame1.Credits
+G2L["4"] = Instance.new("TextButton", G2L["2"]);
+G2L["4"]["TextWrapped"] = true;
+G2L["4"]["TextSize"] = 23;
+G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["TextScaled"] = true;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(49, 49, 49);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["ZIndex"] = 9;
+G2L["4"]["Size"] = UDim2.new(0.20736, 0, 0.10468, 0);
+G2L["4"]["Name"] = [[Credits]];
+G2L["4"]["Text"] = [[Credits]];
+G2L["4"]["Position"] = UDim2.new(0.04181, 0, 0.09642, 0);
+
+-- StarterGui.BestOne.Frame1.Credits.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+
+
+-- StarterGui.BestOne.Frame1.Credits.LocalScript
+G2L["6"] = Instance.new("LocalScript", G2L["4"]);
+
+
+-- StarterGui.BestOne.Frame1.Main
+G2L["7"] = Instance.new("TextButton", G2L["2"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["TextSize"] = 28;
+G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(49, 49, 49);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["ZIndex"] = 9;
+G2L["7"]["Size"] = UDim2.new(0.20736, 0, 0.10744, 0);
+G2L["7"]["Name"] = [[Main]];
+G2L["7"]["Text"] = [[Main]];
+G2L["7"]["Position"] = UDim2.new(0.04181, 0, 0.2259, 0);
+
+-- StarterGui.BestOne.Frame1.Main.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+
+
+-- StarterGui.BestOne.Frame1.Main.LocalScript
+G2L["9"] = Instance.new("LocalScript", G2L["7"]);
+
+
+-- StarterGui.BestOne.Frame1.LocalP
+G2L["a"] = Instance.new("TextButton", G2L["2"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["TextScaled"] = true;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(49, 49, 49);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["ZIndex"] = 9;
+G2L["a"]["Size"] = UDim2.new(0.20736, 0, 0.1157, 0);
+G2L["a"]["Name"] = [[LocalP]];
+G2L["a"]["Text"] = [[Local Player]];
+G2L["a"]["Position"] = UDim2.new(0.04181, 0, 0.35813, 0);
+
+-- StarterGui.BestOne.Frame1.LocalP.UICorner
+G2L["b"] = Instance.new("UICorner", G2L["a"]);
+
+
+-- StarterGui.BestOne.Frame1.LocalP.LocalScript
+G2L["c"] = Instance.new("LocalScript", G2L["a"]);
+
+
+-- StarterGui.BestOne.Frame1.Help
+G2L["d"] = Instance.new("TextButton", G2L["2"]);
+G2L["d"]["TextWrapped"] = true;
+G2L["d"]["TextSize"] = 14;
+G2L["d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["TextScaled"] = true;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(49, 49, 49);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["ZIndex"] = 9;
+G2L["d"]["Size"] = UDim2.new(0.20736, 0, 0.10468, 0);
+G2L["d"]["Name"] = [[Help]];
+G2L["d"]["Text"] = [[Help]];
+G2L["d"]["Position"] = UDim2.new(0.04181, 0, 0.50138, 0);
+
+-- StarterGui.BestOne.Frame1.Help.UICorner
+G2L["e"] = Instance.new("UICorner", G2L["d"]);
+
+
+-- StarterGui.BestOne.Frame1.Help.LocalScript
+G2L["f"] = Instance.new("LocalScript", G2L["d"]);
+
+
+-- StarterGui.BestOne.CreditsF
+G2L["10"] = Instance.new("Frame", G2L["1"]);
+G2L["10"]["Visible"] = false;
+G2L["10"]["ZIndex"] = 2;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["Size"] = UDim2.new(0.26043, 0, 0.44939, 0);
+G2L["10"]["Position"] = UDim2.new(0.43616, 0, 0.27509, 0);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Name"] = [[CreditsF]];
+G2L["10"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.BestOne.CreditsF.TextLabel
+G2L["11"] = Instance.new("TextLabel", G2L["10"]);
+G2L["11"]["TextWrapped"] = true;
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["TextScaled"] = true;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["TextSize"] = 24;
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["BackgroundTransparency"] = 1;
+G2L["11"]["Size"] = UDim2.new(0.93691, 0, 0.23569, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[Made by Fer Modz]];
+G2L["11"]["Position"] = UDim2.new(0.02913, 0, 0.06757, 0);
+
+-- StarterGui.BestOne.CreditsF.TextLabel.UIStroke
+G2L["12"] = Instance.new("UIStroke", G2L["11"]);
+
+
+-- StarterGui.BestOne.CreditsF.TextLabel.UITextSizeConstraint
+G2L["13"] = Instance.new("UITextSizeConstraint", G2L["11"]);
+G2L["13"]["MaxTextSize"] = 24;
+
+-- StarterGui.BestOne.MainF
+G2L["14"] = Instance.new("Frame", G2L["1"]);
+G2L["14"]["Visible"] = false;
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["Size"] = UDim2.new(0.26109, 0, 0.45142, 0);
+G2L["14"]["Position"] = UDim2.new(0.43599, 0, 0.27328, 0);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Name"] = [[MainF]];
+G2L["14"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.BestOne.MainF.Fling
+G2L["15"] = Instance.new("TextButton", G2L["14"]);
+G2L["15"]["TextWrapped"] = true;
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextSize"] = 24;
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["15"]["TextScaled"] = true;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(94, 94, 94);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["Size"] = UDim2.new(0.3804, 0, 0.12334, 0);
+G2L["15"]["Name"] = [[Fling]];
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[Fling GUI]];
+G2L["15"]["Position"] = UDim2.new(0, 0, 0.06726, 0);
+
+-- StarterGui.BestOne.MainF.Fling.LocalScript
+G2L["16"] = Instance.new("LocalScript", G2L["15"]);
+
+
+-- StarterGui.BestOne.MainF.Fling.UICorner
+G2L["17"] = Instance.new("UICorner", G2L["15"]);
+
+
+-- StarterGui.BestOne.MainF.Fling.UITextSizeConstraint
+G2L["18"] = Instance.new("UITextSizeConstraint", G2L["15"]);
+G2L["18"]["MaxTextSize"] = 24;
+
+-- StarterGui.BestOne.MainF.RESET
+G2L["19"] = Instance.new("TextButton", G2L["14"]);
+G2L["19"]["TextWrapped"] = true;
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["TextSize"] = 24;
+G2L["19"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["19"]["TextScaled"] = true;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(94, 94, 94);
+G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["19"]["Size"] = UDim2.new(0.35252, 0, 0.12334, 0);
+G2L["19"]["Name"] = [[RESET]];
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Text"] = [[RE (reset)]];
+G2L["19"]["Position"] = UDim2.new(0.4939, 0, 0.06726, 0);
+
+-- StarterGui.BestOne.MainF.RESET.LocalScript
+G2L["1a"] = Instance.new("LocalScript", G2L["19"]);
+
+
+-- StarterGui.BestOne.MainF.RESET.UICorner
+G2L["1b"] = Instance.new("UICorner", G2L["19"]);
+
+
+-- StarterGui.BestOne.MainF.RESET.UITextSizeConstraint
+G2L["1c"] = Instance.new("UITextSizeConstraint", G2L["19"]);
+G2L["1c"]["MaxTextSize"] = 24;
+
+-- StarterGui.BestOne.MainF.Fly
+G2L["1d"] = Instance.new("TextButton", G2L["14"]);
+G2L["1d"]["TextWrapped"] = true;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextSize"] = 24;
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["1d"]["TextScaled"] = true;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(94, 94, 94);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1d"]["Size"] = UDim2.new(0.3804, 0, 0.11629, 0);
+G2L["1d"]["Name"] = [[Fly]];
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[Fly (FE)]];
+G2L["1d"]["Position"] = UDim2.new(0, 0, 0.24383, 0);
+
+-- StarterGui.BestOne.MainF.Fly.LocalScript
+G2L["1e"] = Instance.new("LocalScript", G2L["1d"]);
+
+
+-- StarterGui.BestOne.MainF.Fly.UITextSizeConstraint
+G2L["1f"] = Instance.new("UITextSizeConstraint", G2L["1d"]);
+G2L["1f"]["MaxTextSize"] = 24;
+
+-- StarterGui.BestOne.MainF.Fly.UICorner
+G2L["20"] = Instance.new("UICorner", G2L["1d"]);
+
+
+-- StarterGui.BestOne.MainF.INFINITE
+G2L["21"] = Instance.new("TextButton", G2L["14"]);
+G2L["21"]["TextWrapped"] = true;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextSize"] = 24;
+G2L["21"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["21"]["TextScaled"] = true;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(94, 94, 94);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["21"]["Size"] = UDim2.new(0.35252, 0, 0.11629, 0);
+G2L["21"]["Name"] = [[INFINITE]];
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Text"] = [[Infinite Jump]];
+G2L["21"]["Position"] = UDim2.new(0.4939, 0, 0.24383, 0);
+
+-- StarterGui.BestOne.MainF.INFINITE.LocalScript
+G2L["22"] = Instance.new("LocalScript", G2L["21"]);
+
+
+-- StarterGui.BestOne.MainF.INFINITE.UITextSizeConstraint
+G2L["23"] = Instance.new("UITextSizeConstraint", G2L["21"]);
+G2L["23"]["MaxTextSize"] = 24;
+
+-- StarterGui.BestOne.MainF.INFINITE.UICorner
+G2L["24"] = Instance.new("UICorner", G2L["21"]);
+
+
+-- StarterGui.BestOne.MainF.NOCLIP
+G2L["25"] = Instance.new("TextButton", G2L["14"]);
+G2L["25"]["TextWrapped"] = true;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextSize"] = 24;
+G2L["25"]["TextColor3"] = Color3.fromRGB(250, 0, 0);
+G2L["25"]["TextScaled"] = true;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(94, 94, 94);
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25"]["Size"] = UDim2.new(0.3804, 0, 0.13248, 0);
+G2L["25"]["Name"] = [[NOCLIP]];
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Text"] = [[Noclip]];
+G2L["25"]["Position"] = UDim2.new(-0, 0, 0.39993, 0);
+
+-- StarterGui.BestOne.MainF.NOCLIP.UICorner
+G2L["26"] = Instance.new("UICorner", G2L["25"]);
+
+
+-- StarterGui.BestOne.MainF.NOCLIP.UITextSizeConstraint
+G2L["27"] = Instance.new("UITextSizeConstraint", G2L["25"]);
+G2L["27"]["MaxTextSize"] = 24;
+
+-- StarterGui.BestOne.MainF.NOCLIP.LocalScript
+G2L["28"] = Instance.new("LocalScript", G2L["25"]);
+
+
+-- StarterGui.BestOne.Top
+G2L["29"] = Instance.new("Frame", G2L["1"]);
+G2L["29"]["Visible"] = false;
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(58, 58, 58);
+G2L["29"]["Size"] = UDim2.new(0, 260, 0, 44);
+G2L["29"]["Position"] = UDim2.new(0.17397, 0, 0.37045, 0);
+G2L["29"]["Name"] = [[Top]];
+
+-- StarterGui.BestOne.Top.Title
+G2L["2a"] = Instance.new("TextLabel", G2L["29"]);
+G2L["2a"]["TextWrapped"] = true;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextScaled"] = true;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(50, 50, 50);
+G2L["2a"]["TextSize"] = 14;
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["Size"] = UDim2.new(0, 252, 0, 30);
+G2L["2a"]["Text"] = [[FE Yeet Gui (trollface edition)]];
+G2L["2a"]["Name"] = [[Title]];
+G2L["2a"]["Position"] = UDim2.new(0, 0, 0.29545, 0);
+
+-- StarterGui.BestOne.Top.Main
+G2L["2b"] = Instance.new("ImageLabel", G2L["29"]);
+G2L["2b"]["Active"] = true;
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["Image"] = [[rbxassetid://2005276185]];
+G2L["2b"]["Size"] = UDim2.new(0, 260, 0, 136);
+G2L["2b"]["Name"] = [[Main]];
+G2L["2b"]["Position"] = UDim2.new(0.16685, -43, 0.43685, 27);
+
+-- StarterGui.BestOne.Top.Main.TextBox
+G2L["2c"] = Instance.new("TextBox", G2L["2b"]);
+G2L["2c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["TextWrapped"] = true;
+G2L["2c"]["TextSize"] = 14;
+G2L["2c"]["TextScaled"] = true;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(50, 50, 50);
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2c"]["PlaceholderText"] = [[Player Name here]];
+G2L["2c"]["Size"] = UDim2.new(0, 220, 0, 43);
+G2L["2c"]["Position"] = UDim2.new(0.07048, 0, 0.33992, 0);
+G2L["2c"]["Text"] = [[]];
+
+-- StarterGui.BestOne.Top.Main.TextButton
+G2L["2d"] = Instance.new("TextButton", G2L["2b"]);
+G2L["2d"]["TextWrapped"] = true;
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["TextSize"] = 14;
+G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["TextScaled"] = true;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(50, 50, 50);
+G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2d"]["Size"] = UDim2.new(0, 159, 0, 27);
+G2L["2d"]["Text"] = [[Cheese em']];
+G2L["2d"]["Position"] = UDim2.new(0.16122, 0, 0.69927, 0);
+
+-- StarterGui.BestOne.Top.Main.TextButton.LocalScript
+G2L["2e"] = Instance.new("LocalScript", G2L["2d"]);
+
+
+-- StarterGui.BestOne.Top.LocalScript
+G2L["2f"] = Instance.new("LocalScript", G2L["29"]);
+
+
+-- StarterGui.BestOne.Top.X
+G2L["30"] = Instance.new("TextButton", G2L["29"]);
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["TextSize"] = 24;
+G2L["30"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["30"]["Size"] = UDim2.new(0, 35, 0, 28);
+G2L["30"]["Name"] = [[X]];
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[X]];
+G2L["30"]["Position"] = UDim2.new(0.96923, 0, -0.35112, 0);
+
+-- StarterGui.BestOne.Top.X.UICorner
+G2L["31"] = Instance.new("UICorner", G2L["30"]);
+
+
+-- StarterGui.BestOne.Top.X.LocalScript
+G2L["32"] = Instance.new("LocalScript", G2L["30"]);
+
+
+-- StarterGui.BestOne.Open
+G2L["33"] = Instance.new("TextButton", G2L["1"]);
+G2L["33"]["BorderSizePixel"] = 0;
+G2L["33"]["TextSize"] = 24;
+G2L["33"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(87, 87, 87);
+G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["33"]["Size"] = UDim2.new(0, 63, 0, 50);
+G2L["33"]["Name"] = [[Open]];
+G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["33"]["Text"] = [[Open]];
+G2L["33"]["Visible"] = false;
+G2L["33"]["Position"] = UDim2.new(0, 0, 0.5, 0);
+
+-- StarterGui.BestOne.Open.LocalScript
+G2L["34"] = Instance.new("LocalScript", G2L["33"]);
+
+
+-- StarterGui.BestOne.Open.UIStroke
+G2L["35"] = Instance.new("UIStroke", G2L["33"]);
+G2L["35"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.BestOne.Open.UICorner
+G2L["36"] = Instance.new("UICorner", G2L["33"]);
+
+
+-- StarterGui.BestOne.KeyF
+G2L["37"] = Instance.new("Frame", G2L["1"]);
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(94, 94, 94);
+G2L["37"]["Size"] = UDim2.new(0.29911, 0, 0.39069, 0);
+G2L["37"]["Position"] = UDim2.new(0.36248, 0, 0.21053, 0);
+G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["Name"] = [[KeyF]];
+
+-- StarterGui.BestOne.KeyF.TextBox
+G2L["38"] = Instance.new("TextBox", G2L["37"]);
+G2L["38"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["TextSize"] = 14;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["38"]["Size"] = UDim2.new(0.84746, 0, 0.24111, 0);
+G2L["38"]["Position"] = UDim2.new(0.07627, 0, 0.0829, 0);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Text"] = [[]];
+
+-- StarterGui.BestOne.KeyF.TextBox.UIStroke
+G2L["39"] = Instance.new("UIStroke", G2L["38"]);
+G2L["39"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.BestOne.KeyF.TextBox.UICorner
+G2L["3a"] = Instance.new("UICorner", G2L["38"]);
+
+
+-- StarterGui.BestOne.KeyF.Verify
+G2L["3b"] = Instance.new("TextButton", G2L["37"]);
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["TextSize"] = 24;
+G2L["3b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3b"]["Size"] = UDim2.new(0.84746, 0, 0.27738, 0);
+G2L["3b"]["Name"] = [[Verify]];
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Text"] = [[Verify]];
+G2L["3b"]["Position"] = UDim2.new(0.07627, 0, 0.43523, 0);
+
+-- StarterGui.BestOne.KeyF.Verify.UIStroke
+G2L["3c"] = Instance.new("UIStroke", G2L["3b"]);
+G2L["3c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.BestOne.KeyF.Verify.UICorner
+G2L["3d"] = Instance.new("UICorner", G2L["3b"]);
+
+
+-- StarterGui.BestOne.KeyF.Verify.LocalScript
+G2L["3e"] = Instance.new("LocalScript", G2L["3b"]);
+
+
+-- StarterGui.BestOne.KeyF.UIStroke
+G2L["3f"] = Instance.new("UIStroke", G2L["37"]);
+G2L["3f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["3f"]["Thickness"] = 3;
+
+-- StarterGui.BestOne.KeyF.UICorner
+G2L["40"] = Instance.new("UICorner", G2L["37"]);
+
+
+-- StarterGui.BestOne.KeyF.KillFrame
+G2L["41"] = Instance.new("TextButton", G2L["37"]);
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["TextSize"] = 24;
+G2L["41"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 2, 2);
+G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["41"]["Size"] = UDim2.new(0.1672, 0, 0.17098, 0);
+G2L["41"]["Name"] = [[KillFrame]];
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Text"] = [[X]];
+G2L["41"]["Position"] = UDim2.new(0.96186, 0, -0.17098, 0);
+
+-- StarterGui.BestOne.KeyF.KillFrame.UIStroke
+G2L["42"] = Instance.new("UIStroke", G2L["41"]);
+G2L["42"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.BestOne.KeyF.KillFrame.UICorner
+G2L["43"] = Instance.new("UICorner", G2L["41"]);
+
+
+-- StarterGui.BestOne.KeyF.KillFrame.LocalScript
+G2L["44"] = Instance.new("LocalScript", G2L["41"]);
+
+
+-- StarterGui.BestOne.KeyF.Link
+G2L["45"] = Instance.new("TextBox", G2L["37"]);
+G2L["45"]["CursorPosition"] = -1;
+G2L["45"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["TextSize"] = 14;
+G2L["45"]["Name"] = [[Link]];
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["45"]["Size"] = UDim2.new(0.84746, 0, 0.16549, 0);
+G2L["45"]["Position"] = UDim2.new(0.07627, 0, 0.78756, 0);
+G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["45"]["Text"] = [[https://pastebin.com/bgRQUA2D]];
+
+-- StarterGui.BestOne.KeyF.Link.LocalScript
+G2L["46"] = Instance.new("LocalScript", G2L["45"]);
+
+
+-- StarterGui.BestOne.KeyF.Link.UIStroke
+G2L["47"] = Instance.new("UIStroke", G2L["45"]);
+G2L["47"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.BestOne.KeyF.Link.UICorner
+G2L["48"] = Instance.new("UICorner", G2L["45"]);
+
+
+-- StarterGui.BestOne.KeyF.Link.LocalScript
+G2L["49"] = Instance.new("LocalScript", G2L["45"]);
+
+
+-- StarterGui.BestOne.KeyF.Link.LocalScript
+G2L["4a"] = Instance.new("LocalScript", G2L["45"]);
+
+
+-- StarterGui.BestOne.KeyF.Link.LocalScript
+G2L["4b"] = Instance.new("LocalScript", G2L["45"]);
+
+
+-- StarterGui.BestOne.KeyF.LocalScript
+G2L["4c"] = Instance.new("LocalScript", G2L["37"]);
+
+
+-- StarterGui.BestOne.LocalPlayerF
+G2L["4d"] = Instance.new("Frame", G2L["1"]);
+G2L["4d"]["Visible"] = false;
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["Size"] = UDim2.new(0.27757, 0, 0.45142, 0);
+G2L["4d"]["Position"] = UDim2.new(0.41952, 0, 0.27328, 0);
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Name"] = [[LocalPlayerF]];
+G2L["4d"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.BestOne.LocalPlayerF.Speed
+G2L["4e"] = Instance.new("TextLabel", G2L["4d"]);
+G2L["4e"]["TextWrapped"] = true;
+G2L["4e"]["TextScaled"] = true;
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["TextSize"] = 14;
+G2L["4e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["BackgroundTransparency"] = 1;
+G2L["4e"]["Size"] = UDim2.new(0.4251, 0, 0.12823, 0);
+G2L["4e"]["Text"] = [[Speed]];
+G2L["4e"]["Name"] = [[Speed]];
+G2L["4e"]["Position"] = UDim2.new(0.05258, 0, 0.10088, 0);
+
+-- StarterGui.BestOne.LocalPlayerF.TextLabel
+G2L["4f"] = Instance.new("TextLabel", G2L["4d"]);
+G2L["4f"]["TextWrapped"] = true;
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["TextScaled"] = true;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["TextSize"] = 14;
+G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["BackgroundTransparency"] = 1;
+G2L["4f"]["Size"] = UDim2.new(0.31048, 0, 0.18907, 0);
+G2L["4f"]["Text"] = [[16]];
+G2L["4f"]["Position"] = UDim2.new(0.1213, 0, 0.22911, 0);
+
+-- StarterGui.BestOne.LocalPlayerF.-
+G2L["50"] = Instance.new("TextButton", G2L["4d"]);
+G2L["50"]["TextWrapped"] = true;
+G2L["50"]["TextSize"] = 14;
+G2L["50"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["TextScaled"] = true;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(0, 50, 80);
+G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["50"]["Size"] = UDim2.new(0.13741, 0, 0.15385, 0);
+G2L["50"]["Name"] = [[-]];
+G2L["50"]["Text"] = [[-]];
+G2L["50"]["Position"] = UDim2.new(0.08477, 0, 0.41818, 0);
+
+-- StarterGui.BestOne.LocalPlayerF.-.UICorner
+G2L["51"] = Instance.new("UICorner", G2L["50"]);
+G2L["51"]["CornerRadius"] = UDim.new(0.2, 2);
+
+-- StarterGui.BestOne.LocalPlayerF.-.LocalScript
+G2L["52"] = Instance.new("LocalScript", G2L["50"]);
+
+
+-- StarterGui.BestOne.LocalPlayerF.+
+G2L["53"] = Instance.new("TextButton", G2L["4d"]);
+G2L["53"]["TextWrapped"] = true;
+G2L["53"]["TextSize"] = 1;
+G2L["53"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["TextScaled"] = true;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(0, 50, 80);
+G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["53"]["Size"] = UDim2.new(0.16334, 0, 0.15385, 0);
+G2L["53"]["Name"] = [[+]];
+G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["Text"] = [[+]];
+G2L["53"]["Position"] = UDim2.new(0.26843, 0, 0.41818, 0);
+
+-- StarterGui.BestOne.LocalPlayerF.+.UICorner
+G2L["54"] = Instance.new("UICorner", G2L["53"]);
+G2L["54"]["CornerRadius"] = UDim.new(0.2, 2);
+
+-- StarterGui.BestOne.LocalPlayerF.+.LocalScript
+G2L["55"] = Instance.new("LocalScript", G2L["53"]);
+
+
+-- StarterGui.BestOne.LocalPlayerF.Clicktp
+G2L["56"] = Instance.new("TextButton", G2L["4d"]);
+G2L["56"]["TextWrapped"] = true;
+G2L["56"]["BorderSizePixel"] = 0;
+G2L["56"]["TextSize"] = 14;
+G2L["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(0, 50, 80);
+G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["56"]["Size"] = UDim2.new(0.23497, 0, 0.10803, 0);
+G2L["56"]["Name"] = [[Clicktp]];
+G2L["56"]["Text"] = [[ClickTP]];
+G2L["56"]["Position"] = UDim2.new(0.5311, 0, 0.12108, 0);
+
+-- StarterGui.BestOne.LocalPlayerF.Clicktp.LocalScript
+G2L["57"] = Instance.new("LocalScript", G2L["56"]);
+
+
+-- StarterGui.BestOne.LocalPlayerF.kick
+G2L["58"] = Instance.new("TextButton", G2L["4d"]);
+G2L["58"]["TextWrapped"] = true;
+G2L["58"]["BorderSizePixel"] = 0;
+G2L["58"]["TextSize"] = 14;
+G2L["58"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["TextScaled"] = true;
+G2L["58"]["BackgroundColor3"] = Color3.fromRGB(29, 44, 173);
+G2L["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["58"]["Size"] = UDim2.new(0.23528, 0, 0.13959, 0);
+G2L["58"]["Name"] = [[kick]];
+G2L["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["Text"] = [[Kick yourself]];
+G2L["58"]["Position"] = UDim2.new(0.53078, 0, 0.27859, 0);
+
+-- StarterGui.BestOne.LocalPlayerF.kick.UITextSizeConstraint
+G2L["59"] = Instance.new("UITextSizeConstraint", G2L["58"]);
+G2L["59"]["MaxTextSize"] = 14;
+
+-- StarterGui.BestOne.LocalPlayerF.kick.LocalScript
+G2L["5a"] = Instance.new("LocalScript", G2L["58"]);
+
+
+-- StarterGui.BestOne.LocalPlayerF.God
+G2L["5b"] = Instance.new("TextButton", G2L["4d"]);
+G2L["5b"]["BorderSizePixel"] = 0;
+G2L["5b"]["TextSize"] = 14;
+G2L["5b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(28, 24, 149);
+G2L["5b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5b"]["Size"] = UDim2.new(0, 50, 0, 30);
+G2L["5b"]["Name"] = [[God]];
+G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["Text"] = [[GodM]];
+G2L["5b"]["Position"] = UDim2.new(0.53078, 0, 0.47181, 0);
+
+-- StarterGui.BestOne.LocalPlayerF.God.LocalScript
+G2L["5c"] = Instance.new("LocalScript", G2L["5b"]);
+
+
+-- StarterGui.BestOne.HelpF
+G2L["5d"] = Instance.new("Frame", G2L["1"]);
+G2L["5d"]["Visible"] = false;
+G2L["5d"]["BorderSizePixel"] = 0;
+G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5d"]["Size"] = UDim2.new(0, 219, 0, 223);
+G2L["5d"]["Position"] = UDim2.new(0.42332, 0, 0.27328, 0);
+G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5d"]["Name"] = [[HelpF]];
+G2L["5d"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.BestOne.HelpF.TextLabel
+G2L["5e"] = Instance.new("TextLabel", G2L["5d"]);
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["TextSize"] = 14;
+G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["BackgroundTransparency"] = 1;
+G2L["5e"]["Size"] = UDim2.new(0, 178, 0, 35);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Text"] = [[Contact us on Dc]];
+G2L["5e"]["Position"] = UDim2.new(0.11416, 0, 0.07319, 0);
+
+-- StarterGui.BestOne.HelpF.TextLabel
+G2L["5f"] = Instance.new("TextLabel", G2L["5d"]);
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["TextSize"] = 14;
+G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["BackgroundTransparency"] = 1;
+G2L["5f"]["Size"] = UDim2.new(0, 113, 0, 32);
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["Text"] = [[]];
+G2L["5f"]["Position"] = UDim2.new(0.26027, 0, 0.2287, 0);
+
+-- StarterGui.BestOne.HelpF.TextLabel.LocalScript
+G2L["60"] = Instance.new("LocalScript", G2L["5f"]);
+
+
+-- StarterGui.BestOne.Frame1.Credits.LocalScript
+local function C_6()
+local script = G2L["6"];
 	local CreditF = script.Parent.Parent.Parent.CreditsF
 	local MainF = script.Parent.Parent.Parent.MainF
 	local PlayerF = script.Parent.Parent.Parent.LocalPlayerF
@@ -629,19 +735,11 @@ local function LFLOQD_fake_script() -- Credits.LocalScript
 			HelpF.Visible = false
 		end
 	end)
-end
-coroutine.wrap(LFLOQD_fake_script)()
-local function QARVLB_fake_script() -- Main.LocalScript 
-	local script = Instance.new('LocalScript', Main)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_6);
+-- StarterGui.BestOne.Frame1.Main.LocalScript
+local function C_9()
+local script = G2L["9"];
 	local CreditF = script.Parent.Parent.Parent.CreditsF
 	local MainF = script.Parent.Parent.Parent.MainF
 	local PlayerF = script.Parent.Parent.Parent.LocalPlayerF
@@ -659,19 +757,11 @@ local function QARVLB_fake_script() -- Main.LocalScript
 			HelpF.Visible = false
 		end
 	end)
-end
-coroutine.wrap(QARVLB_fake_script)()
-local function CCJGPOE_fake_script() -- LocalP.LocalScript 
-	local script = Instance.new('LocalScript', LocalP)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_9);
+-- StarterGui.BestOne.Frame1.LocalP.LocalScript
+local function C_c()
+local script = G2L["c"];
 	local CreditF = script.Parent.Parent.Parent.CreditsF
 	local MainF = script.Parent.Parent.Parent.MainF
 	local PlayerF = script.Parent.Parent.Parent.LocalPlayerF
@@ -689,19 +779,11 @@ local function CCJGPOE_fake_script() -- LocalP.LocalScript
 			HelpF.Visible = false
 		end
 	end)
-end
-coroutine.wrap(CCJGPOE_fake_script)()
-local function UNNNE_fake_script() -- Help.LocalScript 
-	local script = Instance.new('LocalScript', Help)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_c);
+-- StarterGui.BestOne.Frame1.Help.LocalScript
+local function C_f()
+local script = G2L["f"];
 	local CreditF = script.Parent.Parent.Parent.CreditsF
 	local MainF = script.Parent.Parent.Parent.MainF
 	local PlayerF = script.Parent.Parent.Parent.LocalPlayerF
@@ -719,69 +801,29 @@ local function UNNNE_fake_script() -- Help.LocalScript
 			HelpF.Visible = true
 		end
 	end)
-end
-coroutine.wrap(UNNNE_fake_script)()
-local function SRIBN_fake_script() -- Fling.LocalScript 
-	local script = Instance.new('LocalScript', Fling)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_f);
+-- StarterGui.BestOne.MainF.Fling.LocalScript
+local function C_16()
+local script = G2L["16"];
 	script.Parent.Text = "Fling GUI"
 	script.Parent.MouseButton1Click:Connect(function() 
 		script.Parent.Parent.Parent.Top.Visible = true
 	end)
-end
-coroutine.wrap(SRIBN_fake_script)()
-local function YNHH_fake_script() -- RESET.LocalScript 
-	local script = Instance.new('LocalScript', RESET)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_16);
+-- StarterGui.BestOne.MainF.RESET.LocalScript
+local function C_1a()
+local script = G2L["1a"];
 	script.Parent.MouseButton1Click:connect(function() 
 		game.Players.LocalPlayer.Character:BreakJoints()
-		script.InstantRespawn.Parent = game.ServerScriptService
 	end)
 	
-end
-coroutine.wrap(YNHH_fake_script)()
-local function HNEVGKX_fake_script() -- nil.InstantRespawn 
-	local script = Instance.new('Script', nil)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
-	game.Players.RespawnTime = 1.e-9999
-	
-end
-coroutine.wrap(HNEVGKX_fake_script)()
-local function ORFHV_fake_script() -- Fly.LocalScript 
-	local script = Instance.new('LocalScript', Fly)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_1a);
+-- StarterGui.BestOne.MainF.Fly.LocalScript
+local function C_1e()
+local script = G2L["1e"];
 	script.Parent.MouseButton1Click:Connect(function()
 		local main = Instance.new("ScreenGui")
 		local Frame = Instance.new("Frame")
@@ -1281,19 +1323,11 @@ local function ORFHV_fake_script() -- Fly.LocalScript
 		end)
 	
 	end)
-end
-coroutine.wrap(ORFHV_fake_script)()
-local function KNBBE_fake_script() -- INFINITE.LocalScript 
-	local script = Instance.new('LocalScript', INFINITE)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_1e);
+-- StarterGui.BestOne.MainF.INFINITE.LocalScript
+local function C_22()
+local script = G2L["22"];
 	local InfiniteJumpEnabled = true
 	script.Parent.MouseButton1Click:Connect(function(click)
 		game:GetService("UserInputService").JumpRequest:Connect(function() 
@@ -1302,19 +1336,11 @@ local function KNBBE_fake_script() -- INFINITE.LocalScript
 			end
 		end)
 	end)
-end
-coroutine.wrap(KNBBE_fake_script)()
-local function HSPZ_fake_script() -- NOCLIP.LocalScript 
-	local script = Instance.new('LocalScript', NOCLIP)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_22);
+-- StarterGui.BestOne.MainF.NOCLIP.LocalScript
+local function C_28()
+local script = G2L["28"];
 	local noclip = false
 	local player = game.Players.LocalPlayer
 	local character = player.Character
@@ -1395,19 +1421,11 @@ local function HSPZ_fake_script() -- NOCLIP.LocalScript
 	end)
 	
 	
-end
-coroutine.wrap(HSPZ_fake_script)()
-local function XIGXWW_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_28);
+-- StarterGui.BestOne.Top.Main.TextButton.LocalScript
+local function C_2e()
+local script = G2L["2e"];
 	local TextButton = script.Parent
 	local TextBox = script.Parent.Parent.TextBox
 	local lp = game:FindService("Players").LocalPlayer
@@ -1468,50 +1486,26 @@ local function XIGXWW_fake_script() -- TextButton.LocalScript
 		end
 	end)
 	
-end
-coroutine.wrap(XIGXWW_fake_script)()
-local function TFLG_fake_script() -- Top.LocalScript 
-	local script = Instance.new('LocalScript', Top)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_2e);
+-- StarterGui.BestOne.Top.LocalScript
+local function C_2f()
+local script = G2L["2f"];
 	script.Parent.Draggable = true
 	script.Parent.Active = true
-end
-coroutine.wrap(TFLG_fake_script)()
-local function IBBCPK_fake_script() -- X.LocalScript 
-	local script = Instance.new('LocalScript', X)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_2f);
+-- StarterGui.BestOne.Top.X.LocalScript
+local function C_32()
+local script = G2L["32"];
 	script.Parent.MouseButton1Click:Connect(function() 
 		script.Parent.Parent.Visible = false
 	end)
-end
-coroutine.wrap(IBBCPK_fake_script)()
-local function NNUKHFW_fake_script() -- Open.LocalScript 
-	local script = Instance.new('LocalScript', Open)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_32);
+-- StarterGui.BestOne.Open.LocalScript
+local function C_34()
+local script = G2L["34"];
 	local Frame1 = script.Parent.Parent.Frame1
 	local CreditF = script.Parent.Parent.CreditsF
 	local MainF = script.Parent.Parent.MainF
@@ -1526,19 +1520,11 @@ local function NNUKHFW_fake_script() -- Open.LocalScript
 			MainF.Visible = false
 		end
 	end)
-end
-coroutine.wrap(NNUKHFW_fake_script)()
-local function WHPAJ_fake_script() -- Verify.LocalScript 
-	local script = Instance.new('LocalScript', Verify)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_34);
+-- StarterGui.BestOne.KeyF.Verify.LocalScript
+local function C_3e()
+local script = G2L["3e"];
 	local key = script.Parent.Parent.TextBox
 	script.Parent.MouseButton1Click:Connect(function() 
 		if key.Text == "infinitekeyFerModz" then
@@ -1553,122 +1539,66 @@ local function WHPAJ_fake_script() -- Verify.LocalScript
 		end
 	end)
 	
-end
-coroutine.wrap(WHPAJ_fake_script)()
-local function VFPZ_fake_script() -- KillFrame.LocalScript 
-	local script = Instance.new('LocalScript', KillFrame)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_3e);
+-- StarterGui.BestOne.KeyF.KillFrame.LocalScript
+local function C_44()
+local script = G2L["44"];
 	script.Parent.MouseButton1Click:Connect(function() 
 		script.Parent.Parent.Parent:Destroy()
 	end)
-end
-coroutine.wrap(VFPZ_fake_script)()
-local function IOFAWET_fake_script() -- Link.LocalScript 
-	local script = Instance.new('LocalScript', Link)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_44);
+-- StarterGui.BestOne.KeyF.Link.LocalScript
+local function C_46()
+local script = G2L["46"];
 	while true do
 		script.Parent.Text = "https://pastebin.com/bgRQUA2D"
 		wait()
 	end
 	
-end
-coroutine.wrap(IOFAWET_fake_script)()
-local function IDWLT_fake_script() -- Link.LocalScript 
-	local script = Instance.new('LocalScript', Link)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_46);
+-- StarterGui.BestOne.KeyF.Link.LocalScript
+local function C_49()
+local script = G2L["49"];
 	while true do
 		script.Parent.Text = "https://pastebin.com/bgRQUA2D"
 		wait()
 	end
 	
-end
-coroutine.wrap(IDWLT_fake_script)()
-local function YCSW_fake_script() -- Link.LocalScript 
-	local script = Instance.new('LocalScript', Link)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_49);
+-- StarterGui.BestOne.KeyF.Link.LocalScript
+local function C_4a()
+local script = G2L["4a"];
 	while true do
 		script.Parent.Text = "https://pastebin.com/bgRQUA2D"
 		wait()
 	end
 	
-end
-coroutine.wrap(YCSW_fake_script)()
-local function QSVKWVM_fake_script() -- Link.LocalScript 
-	local script = Instance.new('LocalScript', Link)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_4a);
+-- StarterGui.BestOne.KeyF.Link.LocalScript
+local function C_4b()
+local script = G2L["4b"];
 	while true do
 		script.Parent.Text = "https://pastebin.com/bgRQUA2D"
-		wait()
+		task.wait()
 	end
 	
-end
-coroutine.wrap(QSVKWVM_fake_script)()
-local function OSWDPV_fake_script() -- KeyF.LocalScript 
-	local script = Instance.new('LocalScript', KeyF)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_4b);
+-- StarterGui.BestOne.KeyF.LocalScript
+local function C_4c()
+local script = G2L["4c"];
 	script.Parent.Draggable = true
 	script.Parent.Active = true
-end
-coroutine.wrap(OSWDPV_fake_script)()
-local function CXILN_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_4c);
+-- StarterGui.BestOne.LocalPlayerF.-.LocalScript
+local function C_52()
+local script = G2L["52"];
 	local label = script.Parent.Parent.TextLabel
 	
 	
@@ -1677,19 +1607,11 @@ local function CXILN_fake_script() -- TextButton_2.LocalScript
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed -5
 		label.Text = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
 	end)
-end
-coroutine.wrap(CXILN_fake_script)()
-local function DFUBUUQ_fake_script() -- TextButton_3.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_3)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_52);
+-- StarterGui.BestOne.LocalPlayerF.+.LocalScript
+local function C_55()
+local script = G2L["55"];
 	local label = script.Parent.Parent.TextLabel
 	
 	
@@ -1698,19 +1620,11 @@ local function DFUBUUQ_fake_script() -- TextButton_3.LocalScript
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed +5
 		label.Text = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
 	end)
-end
-coroutine.wrap(DFUBUUQ_fake_script)()
-local function BQAZ_fake_script() -- Clicktp.LocalScript 
-	local script = Instance.new('LocalScript', Clicktp)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_55);
+-- StarterGui.BestOne.LocalPlayerF.Clicktp.LocalScript
+local function C_57()
+local script = G2L["57"];
 	script.Parent.MouseButton1Click:Connect(function()
 		mouse = game.Players.LocalPlayer:GetMouse()
 		tool = Instance.new("Tool")
@@ -1723,40 +1637,72 @@ local function BQAZ_fake_script() -- Clicktp.LocalScript
 		end)
 		tool.Parent = game.Players.LocalPlayer.Backpack
 	end)
-end
-coroutine.wrap(BQAZ_fake_script)()
-local function IAHPG_fake_script() -- Btools.LocalScript 
-	local script = Instance.new('LocalScript', Btools)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
+end;
+task.spawn(C_57);
+-- StarterGui.BestOne.LocalPlayerF.kick.LocalScript
+local function C_5a()
+local script = G2L["5a"];
 	script.Parent.MouseButton1Click:Connect(function() 
-		local tool = script["F3X Btools!"]
-		tool:Clone()
-		tool.Parent = game.Players.LocalPlayer.Backpack
+		game.Players.LocalPlayer:Kick("SECURITY KICK (LAG)")
 	end)
-end
-coroutine.wrap(IAHPG_fake_script)()
-local function KEBIF_fake_script() -- TextLabel_4.LocalScript 
-	local script = Instance.new('LocalScript', TextLabel_4)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
+end;
+task.spawn(C_5a);
+-- StarterGui.BestOne.LocalPlayerF.God.LocalScript
+local function C_5c()
+local script = G2L["5c"];
+	local hack = false
+	script.Parent.MouseButton1Click:Connect(function()
+		hack = not hack
+		if hack then
+			script.Parent.Text = "GodM: on"
+			script.Parent.BackgroundColor3 = Color3.fromRGB(0,255,0)
+			local humanoid = nil
+			while hack do
+				local fps = game["Run Service"].RenderStepped:Wait()
+				if not humanoid or not humanoid.Parent or not humanoid.Parent.Parent then
+					if game.Players.LocalPlayer.Character then
+						if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+							humanoid = game.Players.LocalPlayer.Character.Humanoid
+							if humanoid.RootPart then
+								humanoid.RootPart.Anchored = true
+							end
+						end
+					end
+				else
+					if humanoid.RootPart then
+						humanoid.RootPart.Anchored = true
+						local vel = humanoid.MoveDirection*humanoid.WalkSpeed
+						if humanoid.Jump then
+							vel = vel+Vector3.new(0,humanoid.WalkSpeed,0)
+						end
+						if keys.LeftShift then
+							vel = vel+Vector3.new(0,-humanoid.WalkSpeed,0)
+						end
+						humanoid.RootPart.Velocity = ((humanoid.RootPart.Velocity-vel)*(0.75^(30/(1/fps))))+vel
+						humanoid.RootPart.CFrame = (humanoid.RootPart.CFrame+(humanoid.RootPart.Velocity*fps))*CFrame.Angles(humanoid.RootPart.RotVelocity.X*fps,humanoid.RootPart.RotVelocity.Y*fps,humanoid.RootPart.RotVelocity.Z*fps)
+					end
+				end
+			end
+		else
+			script.Parent.Text = "GodM: off"
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255,0,0)
+			game["Run Service"].RenderStepped:Wait()
+			game["Run Service"].RenderStepped:Wait()
+			if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character.Humanoid.RootPart then
+				game.Players.LocalPlayer.Character.Humanoid.RootPart.Anchored = false
+			end
 		end
-		return req(obj)
-	end
-
+	end)
+end;
+task.spawn(C_5c);
+-- StarterGui.BestOne.HelpF.TextLabel.LocalScript
+local function C_60()
+local script = G2L["60"];
 	while true do 
 		script.Parent.Text = "https://discord.com/invite/PfBP9kBF"
 		wait()
 	end
-end
-coroutine.wrap(KEBIF_fake_script)()
+end;
+task.spawn(C_60);
+
+return G2L["1"], require;
