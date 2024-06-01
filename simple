@@ -250,7 +250,7 @@ local function C_9()
 local script = G2L["9"];
 	script.Parent.MouseButton1Click:Connect(function() 
 		if script.Parent.Parent.Lfolder.AttachV.Value == true then
-			loadstring(script.Parent.Parent.Lfolder.Value.Value)
+			loadstring(script.Parent.Parent.TextBox.Text)
 		else
 			local hint = Instance.new("Hint")
 			hint.Parent = workspace
@@ -290,9 +290,11 @@ local function C_12()
 local script = G2L["12"];
 	script.Parent.MouseButton1Click:Connect(function() 
 		if script.Parent.Text == "Injected" then
-			script.Parent.Text = "Already Injected"
-			wait(1)
-			script.Parent.Text = "Injected"
+			local hint = Instance.new("Hint")
+			hint.Parent = workspace
+			hint.Text = "Already Injected"
+			wait(0.3)
+			hint:Destroy()
 		else
 			script.Parent.Text = "Injecting..."
 			wait(1)
