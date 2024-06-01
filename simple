@@ -249,8 +249,8 @@ task.spawn(C_6);
 local function C_9()
 local script = G2L["9"];
 	script.Parent.MouseButton1Click:Connect(function() 
-		if script.Parent.Parent.Lfolder.AttachV.Value == true then
-			loadstring(script.Parent.Parent.TextBox.Text)
+		if script.Parent.Parent.Attach.Text == "Injected" then
+			loadstring(script.Parent.Parent.TextBox.Text)()
 		else
 			local hint = Instance.new("Hint")
 			hint.Parent = workspace
