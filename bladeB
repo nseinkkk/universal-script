@@ -1,0 +1,369 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 35 | Scripts: 10 | Modules: 0
+local BLADE = {};
+
+-- StarterGui.AllB
+BLADE["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+BLADE["1"]["Name"] = [[AllB]];
+BLADE["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+BLADE["1"]["ResetOnSpawn"] = false;
+
+-- StarterGui.AllB.Frame
+BLADE["2"] = Instance.new("Frame", BLADE["1"]);
+BLADE["2"]["Visible"] = false;
+BLADE["2"]["BorderSizePixel"] = 0;
+BLADE["2"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+BLADE["2"]["Size"] = UDim2.new(0.69231, 0, 0.76113, 0);
+BLADE["2"]["Position"] = UDim2.new(0.1369, 0, 0.11943, 0);
+BLADE["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.AllB.Frame.Divisor
+BLADE["3"] = Instance.new("Frame", BLADE["2"]);
+BLADE["3"]["BorderSizePixel"] = 0;
+BLADE["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["3"]["Size"] = UDim2.new(-0.0071, 0, 1, 0);
+BLADE["3"]["Position"] = UDim2.new(0.24482, 0, 0, 0);
+BLADE["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["3"]["Name"] = [[Divisor]];
+
+-- StarterGui.AllB.Frame.ScriptsF
+BLADE["4"] = Instance.new("Frame", BLADE["2"]);
+BLADE["4"]["Visible"] = false;
+BLADE["4"]["BorderSizePixel"] = 0;
+BLADE["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["4"]["Size"] = UDim2.new(0.75518, 0, 1.00266, 0);
+BLADE["4"]["Position"] = UDim2.new(0.24482, 0, -0.00266, 0);
+BLADE["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["4"]["Name"] = [[ScriptsF]];
+BLADE["4"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.AllB.Frame.ScriptsF.Alchemy
+BLADE["5"] = Instance.new("TextButton", BLADE["4"]);
+BLADE["5"]["BorderSizePixel"] = 0;
+BLADE["5"]["TextSize"] = 14;
+BLADE["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BLADE["5"]["Size"] = UDim2.new(0.23772, 0, 0.10121, 0);
+BLADE["5"]["BackgroundTransparency"] = 1;
+BLADE["5"]["Name"] = [[Alchemy]];
+BLADE["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["5"]["Text"] = [[Alchemy Hub]];
+BLADE["5"]["Position"] = UDim2.new(0.02494, 0, 0.03448, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.Alchemy.LocalScript
+BLADE["6"] = Instance.new("LocalScript", BLADE["5"]);
+
+
+-- StarterGui.AllB.Frame.ScriptsF.Alchemy.UICorner
+BLADE["7"] = Instance.new("UICorner", BLADE["5"]);
+BLADE["7"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.Neon
+BLADE["8"] = Instance.new("TextButton", BLADE["4"]);
+BLADE["8"]["BorderSizePixel"] = 0;
+BLADE["8"]["TextSize"] = 14;
+BLADE["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BLADE["8"]["Size"] = UDim2.new(0.23772, 0, 0.10121, 0);
+BLADE["8"]["BackgroundTransparency"] = 1;
+BLADE["8"]["Name"] = [[Neon]];
+BLADE["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["8"]["Text"] = [[Neon Hub]];
+BLADE["8"]["Position"] = UDim2.new(0.33167, 0, 0.03448, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.Neon.LocalScript
+BLADE["9"] = Instance.new("LocalScript", BLADE["8"]);
+
+
+-- StarterGui.AllB.Frame.ScriptsF.Neon.UICorner
+BLADE["a"] = Instance.new("UICorner", BLADE["8"]);
+BLADE["a"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.GrandM
+BLADE["b"] = Instance.new("TextButton", BLADE["4"]);
+BLADE["b"]["BorderSizePixel"] = 0;
+BLADE["b"]["TextSize"] = 14;
+BLADE["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BLADE["b"]["Size"] = UDim2.new(0.23772, 0, 0.10121, 0);
+BLADE["b"]["BackgroundTransparency"] = 1;
+BLADE["b"]["Name"] = [[GrandM]];
+BLADE["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["b"]["Text"] = [[Grand Hub]];
+BLADE["b"]["Position"] = UDim2.new(0.68579, 0, 0.03448, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.GrandM.LocalScript
+BLADE["c"] = Instance.new("LocalScript", BLADE["b"]);
+
+
+-- StarterGui.AllB.Frame.ScriptsF.GrandM.UICorner
+BLADE["d"] = Instance.new("UICorner", BLADE["b"]);
+BLADE["d"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.Den
+BLADE["e"] = Instance.new("TextButton", BLADE["4"]);
+BLADE["e"]["BorderSizePixel"] = 0;
+BLADE["e"]["TextSize"] = 14;
+BLADE["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BLADE["e"]["Size"] = UDim2.new(0.23772, 0, 0.10121, 0);
+BLADE["e"]["BackgroundTransparency"] = 1;
+BLADE["e"]["Name"] = [[Den]];
+BLADE["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["e"]["Text"] = [[Den Den Hub]];
+BLADE["e"]["Position"] = UDim2.new(0.02494, 0, 0.18568, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.Den.LocalScript
+BLADE["f"] = Instance.new("LocalScript", BLADE["e"]);
+
+
+-- StarterGui.AllB.Frame.ScriptsF.Den.UICorner
+BLADE["10"] = Instance.new("UICorner", BLADE["e"]);
+BLADE["10"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.IDK
+BLADE["11"] = Instance.new("TextButton", BLADE["4"]);
+BLADE["11"]["BorderSizePixel"] = 0;
+BLADE["11"]["TextSize"] = 14;
+BLADE["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BLADE["11"]["Size"] = UDim2.new(0.23772, 0, 0.10121, 0);
+BLADE["11"]["BackgroundTransparency"] = 1;
+BLADE["11"]["Name"] = [[IDK]];
+BLADE["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["11"]["Text"] = [[IDK HUB]];
+BLADE["11"]["Position"] = UDim2.new(0.33167, 0, 0.18568, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.IDK.LocalScript
+BLADE["12"] = Instance.new("LocalScript", BLADE["11"]);
+
+
+-- StarterGui.AllB.Frame.ScriptsF.IDK.UICorner
+BLADE["13"] = Instance.new("UICorner", BLADE["11"]);
+BLADE["13"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.Zap
+BLADE["14"] = Instance.new("TextButton", BLADE["4"]);
+BLADE["14"]["BorderSizePixel"] = 0;
+BLADE["14"]["TextSize"] = 14;
+BLADE["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BLADE["14"]["Size"] = UDim2.new(0.23772, 0, 0.10121, 0);
+BLADE["14"]["BackgroundTransparency"] = 1;
+BLADE["14"]["Name"] = [[Zap]];
+BLADE["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["14"]["Text"] = [[Zap Hub]];
+BLADE["14"]["Position"] = UDim2.new(0.68579, 0, 0.18568, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.Zap.LocalScript
+BLADE["15"] = Instance.new("LocalScript", BLADE["14"]);
+
+
+-- StarterGui.AllB.Frame.ScriptsF.Zap.UICorner
+BLADE["16"] = Instance.new("UICorner", BLADE["14"]);
+BLADE["16"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.Redz
+BLADE["17"] = Instance.new("TextButton", BLADE["4"]);
+BLADE["17"]["BorderSizePixel"] = 0;
+BLADE["17"]["TextSize"] = 14;
+BLADE["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BLADE["17"]["Size"] = UDim2.new(0.23772, 0, 0.10121, 0);
+BLADE["17"]["BackgroundTransparency"] = 1;
+BLADE["17"]["Name"] = [[Redz]];
+BLADE["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["17"]["Text"] = [[Redz Blade B.]];
+BLADE["17"]["Position"] = UDim2.new(0.02494, 0, 0.35544, 0);
+
+-- StarterGui.AllB.Frame.ScriptsF.Redz.LocalScript
+BLADE["18"] = Instance.new("LocalScript", BLADE["17"]);
+
+
+-- StarterGui.AllB.Frame.ScriptsF.Redz.UICorner
+BLADE["19"] = Instance.new("UICorner", BLADE["17"]);
+BLADE["19"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.AllB.Frame.UICorner
+BLADE["1a"] = Instance.new("UICorner", BLADE["2"]);
+BLADE["1a"]["CornerRadius"] = UDim.new(0.09, 0);
+
+-- StarterGui.AllB.Frame.Close
+BLADE["1b"] = Instance.new("TextButton", BLADE["2"]);
+BLADE["1b"]["BorderSizePixel"] = 0;
+BLADE["1b"]["TextSize"] = 14;
+BLADE["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["1b"]["BackgroundColor3"] = Color3.fromRGB(78, 78, 78);
+BLADE["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BLADE["1b"]["Size"] = UDim2.new(0.09021, 0, 0.10121, 0);
+BLADE["1b"]["Name"] = [[Close]];
+BLADE["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["1b"]["Text"] = [[X]];
+BLADE["1b"]["Position"] = UDim2.new(0.94035, 0, -0.10372, 0);
+
+-- StarterGui.AllB.Frame.Close.LocalScript
+BLADE["1c"] = Instance.new("LocalScript", BLADE["1b"]);
+
+
+-- StarterGui.AllB.Frame.Close.UICorner
+BLADE["1d"] = Instance.new("UICorner", BLADE["1b"]);
+BLADE["1d"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.AllB.Frame.DividedF
+BLADE["1e"] = Instance.new("Frame", BLADE["2"]);
+BLADE["1e"]["BorderSizePixel"] = 0;
+BLADE["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["1e"]["Size"] = UDim2.new(0.23772, 0, 1, 0);
+BLADE["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["1e"]["Name"] = [[DividedF]];
+BLADE["1e"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.AllB.Frame.DividedF.TextButton
+BLADE["1f"] = Instance.new("TextButton", BLADE["1e"]);
+BLADE["1f"]["BorderSizePixel"] = 0;
+BLADE["1f"]["TextSize"] = 14;
+BLADE["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BLADE["1f"]["Size"] = UDim2.new(1, 0, 0.10121, 0);
+BLADE["1f"]["BackgroundTransparency"] = 1;
+BLADE["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["1f"]["Text"] = [[Scripts]];
+BLADE["1f"]["Position"] = UDim2.new(-0, 0, 0.03191, 0);
+
+-- StarterGui.AllB.Frame.DividedF.TextButton.LocalScript
+BLADE["20"] = Instance.new("LocalScript", BLADE["1f"]);
+
+
+-- StarterGui.AllB.Frame.DividedF.TextButton.UICorner
+BLADE["21"] = Instance.new("UICorner", BLADE["1f"]);
+BLADE["21"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.AllB.Open/Close
+BLADE["22"] = Instance.new("TextButton", BLADE["1"]);
+BLADE["22"]["BorderSizePixel"] = 0;
+BLADE["22"]["TextSize"] = 24;
+BLADE["22"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BLADE["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BLADE["22"]["Size"] = UDim2.new(0.08475, 0, 0.10121, 0);
+BLADE["22"]["Name"] = [[Open/Close]];
+BLADE["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BLADE["22"]["Text"] = [[Open]];
+BLADE["22"]["Position"] = UDim2.new(0, 0, 0.47368, 0);
+
+-- StarterGui.AllB.Open/Close.LocalScript
+BLADE["23"] = Instance.new("LocalScript", BLADE["22"]);
+
+
+-- StarterGui.AllB.Frame.ScriptsF.Alchemy.LocalScript
+local function C_6()
+local script = BLADE["6"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		v=1;loadstring(game:HttpGet("https://alchemyhub.xyz/v2"))()
+	end)
+end;
+task.spawn(C_6);
+-- StarterGui.AllB.Frame.ScriptsF.Neon.LocalScript
+local function C_9()
+local script = BLADE["9"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Neoncat765/Neon.C-Hub-X/main/UnknownVersion"))();
+	end)
+end;
+task.spawn(C_9);
+-- StarterGui.AllB.Frame.ScriptsF.GrandM.LocalScript
+local function C_c()
+local script = BLADE["c"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GrandmasterOfLife123/lua/main/releasedbladeball.lua"))()
+	end)
+end;
+task.spawn(C_c);
+-- StarterGui.AllB.Frame.ScriptsF.Den.LocalScript
+local function C_f()
+local script = BLADE["f"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/DenDenZYT/ScriptCollectionKeyless/main/REVAMPED%20V2"))()
+	end)
+end;
+task.spawn(C_f);
+-- StarterGui.AllB.Frame.ScriptsF.IDK.LocalScript
+local function C_12()
+local script = BLADE["12"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet("https://paste.gg/p/anonymous/1734a4ee207844b994df2f36157afacd/files/1e79ac12fc8a47ef8263d5e9d43b7137/raw"))()
+	end)
+end;
+task.spawn(C_12);
+-- StarterGui.AllB.Frame.ScriptsF.Zap.LocalScript
+local function C_15()
+local script = BLADE["15"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet('https://zaphub.xyz/ExecBB'))()
+	end)
+end;
+task.spawn(C_15);
+-- StarterGui.AllB.Frame.ScriptsF.Redz.LocalScript
+local function C_18()
+local script = BLADE["18"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BladeBall/main/redz9999"))()
+	end)
+end;
+task.spawn(C_18);
+-- StarterGui.AllB.Frame.Close.LocalScript
+local function C_1c()
+local script = BLADE["1c"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end;
+task.spawn(C_1c);
+-- StarterGui.AllB.Frame.DividedF.TextButton.LocalScript
+local function C_20()
+local script = BLADE["20"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		local scriptsF = script.Parent.Parent.Parent.ScriptsF
+		if scriptsF.Visible == true then
+			scriptsF.Visible = false
+		else
+			scriptsF.Visible = true
+		end
+	end)
+end;
+task.spawn(C_20);
+-- StarterGui.AllB.Open/Close.LocalScript
+local function C_23()
+local script = BLADE["23"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	script.Parent.MouseButton1Click:Connect(function() 
+		local frame2open = script.Parent.Parent.Frame
+		if frame2open.Visible == true then
+			frame2open.Visible = false
+			script.Parent.Text = "Open"
+		else
+			frame2open.Visible = true
+			script.Parent.Text = "Close"
+		end
+	end)
+end;
+task.spawn(C_23);
+
+return BLADE["1"], require;
