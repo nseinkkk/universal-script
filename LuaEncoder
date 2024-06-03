@@ -1,6 +1,6 @@
 -- Lua
 
--- Instances: 70 | Scripts: 11 | Modules: 3
+-- Instances: 80 | Scripts: 12 | Modules: 3
 local LUA = {};
 
 -- StarterGui.Lua Encoder
@@ -14,7 +14,7 @@ LUA["2"] = Instance.new("ImageButton", LUA["1"]);
 LUA["2"]["BorderSizePixel"] = 0;
 LUA["2"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
 LUA["2"]["Image"] = [[rbxassetid://17546664635]];
-LUA["2"]["Size"] = UDim2.new(0.05606, 0, 0.11968, 0);
+LUA["2"]["Size"] = UDim2.new(0.05737, 0, 0.11968, 0);
 LUA["2"]["Name"] = [[Open]];
 LUA["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 LUA["2"]["Position"] = UDim2.new(0.29073, 0, 0.03441, 0);
@@ -375,120 +375,192 @@ LUA["38"] = Instance.new("UIStroke", LUA["34"]);
 LUA["38"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 LUA["38"]["Thickness"] = 2;
 
--- StarterGui.Lua Encoder.BackGround
-LUA["39"] = Instance.new("Frame", LUA["1"]);
-LUA["39"]["Visible"] = false;
-LUA["39"]["ZIndex"] = 0;
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF2
+LUA["39"] = Instance.new("Frame", LUA["1c"]);
 LUA["39"]["BorderSizePixel"] = 0;
-LUA["39"]["BackgroundColor3"] = Color3.fromRGB(12, 12, 12);
-LUA["39"]["Size"] = UDim2.new(0, 787, 0, 500);
+LUA["39"]["BackgroundColor3"] = Color3.fromRGB(149, 41, 185);
+LUA["39"]["Size"] = UDim2.new(0.28054, 0, 0.31465, 0);
+LUA["39"]["Position"] = UDim2.new(-0.3437, 0, 0.4784, 0);
 LUA["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-LUA["39"]["Name"] = [[BackGround]];
-LUA["39"]["BackgroundTransparency"] = 0.4;
+LUA["39"]["Name"] = [[AlsoF2]];
 
--- StarterGui.Lua Encoder.BackGround.UICorner
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF2.UICorner
 LUA["3a"] = Instance.new("UICorner", LUA["39"]);
-LUA["3a"]["CornerRadius"] = UDim.new(0, 0);
 
--- StarterGui.Lua Encoder.AlreadyF
-LUA["3b"] = Instance.new("Frame", LUA["1"]);
-LUA["3b"]["Visible"] = false;
-LUA["3b"]["BorderSizePixel"] = 0;
-LUA["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LUA["3b"]["Size"] = UDim2.new(0.21121, 0, 0.25963, 0);
-LUA["3b"]["Position"] = UDim2.new(0.36424, 0, 0.35497, 0);
-LUA["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-LUA["3b"]["Name"] = [[AlreadyF]];
 
--- StarterGui.Lua Encoder.AlreadyF.TextLabel
-LUA["3c"] = Instance.new("TextLabel", LUA["3b"]);
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF2.UIStroke
+LUA["3b"] = Instance.new("UIStroke", LUA["39"]);
+LUA["3b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LUA["3b"]["Thickness"] = 2;
+
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF2.TextLabel
+LUA["3c"] = Instance.new("TextLabel", LUA["39"]);
 LUA["3c"]["TextWrapped"] = true;
 LUA["3c"]["BorderSizePixel"] = 0;
 LUA["3c"]["TextScaled"] = true;
 LUA["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LUA["3c"]["TextSize"] = 14;
+LUA["3c"]["TextSize"] = 24;
 LUA["3c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 LUA["3c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 LUA["3c"]["BackgroundTransparency"] = 1;
-LUA["3c"]["Size"] = UDim2.new(0.60351, 0, 0.28111, 0);
+LUA["3c"]["Size"] = UDim2.new(0.76011, 0, 1, 0);
 LUA["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-LUA["3c"]["Text"] = [[Lua E.]];
-LUA["3c"]["Position"] = UDim2.new(0, 0, 0, 0);
+LUA["3c"]["Text"] = [[Find scripts in scriptblox.com]];
+LUA["3c"]["Position"] = UDim2.new(0.10281, 0, 0, 0);
 
--- StarterGui.Lua Encoder.AlreadyF.TextLabel.UITextSizeConstraint
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF2.TextLabel.UITextSizeConstraint
 LUA["3d"] = Instance.new("UITextSizeConstraint", LUA["3c"]);
-LUA["3d"]["MaxTextSize"] = 14;
+LUA["3d"]["MaxTextSize"] = 24;
 
--- StarterGui.Lua Encoder.AlreadyF.Close
-LUA["3e"] = Instance.new("TextButton", LUA["3b"]);
-LUA["3e"]["TextWrapped"] = true;
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF3
+LUA["3e"] = Instance.new("Frame", LUA["1c"]);
 LUA["3e"]["BorderSizePixel"] = 0;
-LUA["3e"]["TextSize"] = 20;
-LUA["3e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-LUA["3e"]["TextScaled"] = true;
-LUA["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LUA["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-LUA["3e"]["Size"] = UDim2.new(0.24691, 0, 0.28111, 0);
-LUA["3e"]["BackgroundTransparency"] = 1;
-LUA["3e"]["Name"] = [[Close]];
+LUA["3e"]["BackgroundColor3"] = Color3.fromRGB(149, 41, 185);
+LUA["3e"]["Size"] = UDim2.new(0.28054, 0, 0.21294, 0);
+LUA["3e"]["Position"] = UDim2.new(-0.3485, 0, 0.84756, 0);
 LUA["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-LUA["3e"]["Text"] = [[X]];
-LUA["3e"]["Position"] = UDim2.new(0.75309, 0, 0, 0);
+LUA["3e"]["Name"] = [[AlsoF3]];
 
--- StarterGui.Lua Encoder.AlreadyF.Close.UITextSizeConstraint
-LUA["3f"] = Instance.new("UITextSizeConstraint", LUA["3e"]);
-LUA["3f"]["MaxTextSize"] = 20;
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF3.UICorner
+LUA["3f"] = Instance.new("UICorner", LUA["3e"]);
+
+
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF3.TextButton
+LUA["40"] = Instance.new("TextButton", LUA["3e"]);
+LUA["40"]["BorderSizePixel"] = 0;
+LUA["40"]["TextSize"] = 14;
+LUA["40"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LUA["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LUA["40"]["Size"] = UDim2.new(1, 0, 0.68778, 0);
+LUA["40"]["BackgroundTransparency"] = 1;
+LUA["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["40"]["Text"] = [[Best Hub]];
+LUA["40"]["Position"] = UDim2.new(-0.00857, 0, 0.17179, 0);
+
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF3.TextButton.LocalScript
+LUA["41"] = Instance.new("LocalScript", LUA["40"]);
+
+
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF3.UIStroke
+LUA["42"] = Instance.new("UIStroke", LUA["3e"]);
+LUA["42"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LUA["42"]["Thickness"] = 2;
+
+-- StarterGui.Lua Encoder.BackGround
+LUA["43"] = Instance.new("Frame", LUA["1"]);
+LUA["43"]["Visible"] = false;
+LUA["43"]["ZIndex"] = 0;
+LUA["43"]["BorderSizePixel"] = 0;
+LUA["43"]["BackgroundColor3"] = Color3.fromRGB(12, 12, 12);
+LUA["43"]["Size"] = UDim2.new(0, 787, 0, 500);
+LUA["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["43"]["Name"] = [[BackGround]];
+LUA["43"]["BackgroundTransparency"] = 0.4;
+
+-- StarterGui.Lua Encoder.BackGround.UICorner
+LUA["44"] = Instance.new("UICorner", LUA["43"]);
+LUA["44"]["CornerRadius"] = UDim.new(0, 0);
+
+-- StarterGui.Lua Encoder.AlreadyF
+LUA["45"] = Instance.new("Frame", LUA["1"]);
+LUA["45"]["Visible"] = false;
+LUA["45"]["BorderSizePixel"] = 0;
+LUA["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LUA["45"]["Size"] = UDim2.new(0.21121, 0, 0.25963, 0);
+LUA["45"]["Position"] = UDim2.new(0.36424, 0, 0.35497, 0);
+LUA["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["45"]["Name"] = [[AlreadyF]];
 
 -- StarterGui.Lua Encoder.AlreadyF.TextLabel
-LUA["40"] = Instance.new("TextLabel", LUA["3b"]);
-LUA["40"]["TextWrapped"] = true;
-LUA["40"]["BorderSizePixel"] = 0;
-LUA["40"]["TextScaled"] = true;
-LUA["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LUA["40"]["TextSize"] = 14;
-LUA["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-LUA["40"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-LUA["40"]["Size"] = UDim2.new(0.7284, 0, 0.32798, 0);
-LUA["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-LUA["40"]["Text"] = [[Was already injected]];
-LUA["40"]["Position"] = UDim2.new(0.02469, 0, 0.30469, 0);
+LUA["46"] = Instance.new("TextLabel", LUA["45"]);
+LUA["46"]["TextWrapped"] = true;
+LUA["46"]["BorderSizePixel"] = 0;
+LUA["46"]["TextScaled"] = true;
+LUA["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LUA["46"]["TextSize"] = 14;
+LUA["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LUA["46"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["46"]["BackgroundTransparency"] = 1;
+LUA["46"]["Size"] = UDim2.new(0.60351, 0, 0.28111, 0);
+LUA["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["46"]["Text"] = [[Lua E.]];
+LUA["46"]["Position"] = UDim2.new(0, 0, 0, 0);
 
 -- StarterGui.Lua Encoder.AlreadyF.TextLabel.UITextSizeConstraint
-LUA["41"] = Instance.new("UITextSizeConstraint", LUA["40"]);
-LUA["41"]["MaxTextSize"] = 14;
+LUA["47"] = Instance.new("UITextSizeConstraint", LUA["46"]);
+LUA["47"]["MaxTextSize"] = 14;
+
+-- StarterGui.Lua Encoder.AlreadyF.Close
+LUA["48"] = Instance.new("TextButton", LUA["45"]);
+LUA["48"]["TextWrapped"] = true;
+LUA["48"]["BorderSizePixel"] = 0;
+LUA["48"]["TextSize"] = 20;
+LUA["48"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["48"]["TextScaled"] = true;
+LUA["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LUA["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LUA["48"]["Size"] = UDim2.new(0.24691, 0, 0.28111, 0);
+LUA["48"]["BackgroundTransparency"] = 1;
+LUA["48"]["Name"] = [[Close]];
+LUA["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["48"]["Text"] = [[X]];
+LUA["48"]["Position"] = UDim2.new(0.75309, 0, 0, 0);
+
+-- StarterGui.Lua Encoder.AlreadyF.Close.UITextSizeConstraint
+LUA["49"] = Instance.new("UITextSizeConstraint", LUA["48"]);
+LUA["49"]["MaxTextSize"] = 20;
+
+-- StarterGui.Lua Encoder.AlreadyF.TextLabel
+LUA["4a"] = Instance.new("TextLabel", LUA["45"]);
+LUA["4a"]["TextWrapped"] = true;
+LUA["4a"]["BorderSizePixel"] = 0;
+LUA["4a"]["TextScaled"] = true;
+LUA["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LUA["4a"]["TextSize"] = 14;
+LUA["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LUA["4a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["4a"]["Size"] = UDim2.new(0.7284, 0, 0.32798, 0);
+LUA["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["4a"]["Text"] = [[Was already injected]];
+LUA["4a"]["Position"] = UDim2.new(0.02469, 0, 0.30469, 0);
+
+-- StarterGui.Lua Encoder.AlreadyF.TextLabel.UITextSizeConstraint
+LUA["4b"] = Instance.new("UITextSizeConstraint", LUA["4a"]);
+LUA["4b"]["MaxTextSize"] = 14;
 
 -- StarterGui.Lua Encoder.AlreadyF.OkB
-LUA["42"] = Instance.new("TextButton", LUA["3b"]);
-LUA["42"]["TextWrapped"] = true;
-LUA["42"]["BorderSizePixel"] = 0;
-LUA["42"]["TextSize"] = 20;
-LUA["42"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-LUA["42"]["TextScaled"] = true;
-LUA["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-LUA["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-LUA["42"]["Size"] = UDim2.new(0.27778, 0, 0.21079, 0);
-LUA["42"]["BackgroundTransparency"] = 1;
-LUA["42"]["Name"] = [[OkB]];
-LUA["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-LUA["42"]["Text"] = [[Ok]];
-LUA["42"]["Position"] = UDim2.new(0.68519, 0, 0.78906, 0);
+LUA["4c"] = Instance.new("TextButton", LUA["45"]);
+LUA["4c"]["TextWrapped"] = true;
+LUA["4c"]["BorderSizePixel"] = 0;
+LUA["4c"]["TextSize"] = 20;
+LUA["4c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["4c"]["TextScaled"] = true;
+LUA["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LUA["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LUA["4c"]["Size"] = UDim2.new(0.27778, 0, 0.21079, 0);
+LUA["4c"]["BackgroundTransparency"] = 1;
+LUA["4c"]["Name"] = [[OkB]];
+LUA["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LUA["4c"]["Text"] = [[Ok]];
+LUA["4c"]["Position"] = UDim2.new(0.68519, 0, 0.78906, 0);
 
 -- StarterGui.Lua Encoder.AlreadyF.OkB.UITextSizeConstraint
-LUA["43"] = Instance.new("UITextSizeConstraint", LUA["42"]);
-LUA["43"]["MaxTextSize"] = 20;
+LUA["4d"] = Instance.new("UITextSizeConstraint", LUA["4c"]);
+LUA["4d"]["MaxTextSize"] = 20;
 
 -- StarterGui.Lua Encoder.AlreadyF.OkB.UIStroke
-LUA["44"] = Instance.new("UIStroke", LUA["42"]);
-LUA["44"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-LUA["44"]["Thickness"] = 0.5;
+LUA["4e"] = Instance.new("UIStroke", LUA["4c"]);
+LUA["4e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LUA["4e"]["Thickness"] = 0.5;
 
 -- StarterGui.Lua Encoder.AlreadyF.UIStroke
-LUA["45"] = Instance.new("UIStroke", LUA["3b"]);
-LUA["45"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LUA["4f"] = Instance.new("UIStroke", LUA["45"]);
+LUA["4f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.Lua Encoder.AlreadyF.AlreadyHandler
-LUA["46"] = Instance.new("LocalScript", LUA["3b"]);
-LUA["46"]["Name"] = [[AlreadyHandler]];
+LUA["50"] = Instance.new("LocalScript", LUA["45"]);
+LUA["50"]["Name"] = [[AlreadyHandler]];
 
 -- Require LUA wrapper
 local LUA_REQUIRE = require;
@@ -776,9 +848,17 @@ local script = LUA["37"];
 	end)
 end;
 task.spawn(C_37);
+-- StarterGui.Lua Encoder.ExecutingF.AlsoF3.TextButton.LocalScript
+local function C_41()
+local script = LUA["41"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/nseinkkk/universal-script/main/BEST"))
+	end)
+end;
+task.spawn(C_41);
 -- StarterGui.Lua Encoder.AlreadyF.AlreadyHandler
-local function C_46()
-local script = LUA["46"];
+local function C_50()
+local script = LUA["50"];
 	-- Locals
 	local close = script.Parent.Close
 	local bu = script.Parent.OkB
@@ -791,6 +871,6 @@ local script = LUA["46"];
 		frame.Visible = false
 	end)
 end;
-task.spawn(C_46);
+task.spawn(C_50);
 
 return LUA["1"], require;
