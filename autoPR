@@ -1,0 +1,403 @@
+-- Made by fer modz
+-- Instances: 21 | Scripts: 4 | Modules: 0
+local G2L = {};
+
+-- StarterGui.Auto
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Auto]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false
+
+-- StarterGui.Auto.UI
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["2"]["Size"] = UDim2.new(0, 190, 0, 30);
+G2L["2"]["Position"] = UDim2.new(0, 15, 0, 15);
+G2L["2"]["Name"] = [[UI]];
+
+-- StarterGui.Auto.UI.BackGround
+G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["3"]["Size"] = UDim2.new(0, 190, 0, 200);
+G2L["3"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["3"]["Name"] = [[BackGround]];
+
+-- StarterGui.Auto.UI.BackGround.UICorner
+G2L["4"] = Instance.new("UICorner", G2L["3"]);
+
+
+-- StarterGui.Auto.UI.Container
+G2L["5"] = Instance.new("Frame", G2L["2"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["5"]["Size"] = UDim2.new(0, 190, 0, 200);
+G2L["5"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["5"]["Name"] = [[Container]];
+
+-- StarterGui.Auto.UI.Container.auto1
+G2L["6"] = Instance.new("TextButton", G2L["5"]);
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["TextSize"] = 25;
+G2L["6"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["6"]["BackgroundTransparency"] = 1;
+G2L["6"]["Name"] = [[auto1]];
+G2L["6"]["Text"] = [[Auto Parry]];
+
+-- StarterGui.Auto.UI.Container.auto1.UICorner
+G2L["7"] = Instance.new("UICorner", G2L["6"]);
+
+
+-- StarterGui.Auto.UI.Container.auto1.AutoParry
+G2L["8"] = Instance.new("LocalScript", G2L["6"]);
+G2L["8"]["Name"] = [[AutoParry]];
+
+-- StarterGui.Auto.UI.Container.UIGridLayout
+G2L["9"] = Instance.new("UIGridLayout", G2L["5"]);
+G2L["9"]["CellSize"] = UDim2.new(0, 180, 0, 40);
+G2L["9"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+-- StarterGui.Auto.UI.Container.Padding
+G2L["a"] = Instance.new("UIPadding", G2L["5"]);
+G2L["a"]["PaddingTop"] = UDim.new(0, 5);
+G2L["a"]["Name"] = [[Padding]];
+G2L["a"]["PaddingLeft"] = UDim.new(0, 5);
+
+-- StarterGui.Auto.UI.Container.UICorner
+G2L["b"] = Instance.new("UICorner", G2L["5"]);
+
+
+-- StarterGui.Auto.UI.Container.auto2
+G2L["c"] = Instance.new("TextButton", G2L["5"]);
+G2L["c"]["TextWrapped"] = true;
+G2L["c"]["TextSize"] = 25;
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["Name"] = [[auto2]];
+G2L["c"]["Text"] = [[Auto Spam]];
+
+-- StarterGui.Auto.UI.Container.auto2.UICorner
+G2L["d"] = Instance.new("UICorner", G2L["c"]);
+
+
+-- StarterGui.Auto.UI.Container.auto2.AutoSpam
+G2L["e"] = Instance.new("LocalScript", G2L["c"]);
+G2L["e"]["Name"] = [[AutoSpam]];
+
+-- StarterGui.Auto.UI.UnderLine
+G2L["f"] = Instance.new("Frame", G2L["2"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 26, 26);
+G2L["f"]["Size"] = UDim2.new(1, 0, 0, 1);
+G2L["f"]["Position"] = UDim2.new(0, 0, 1, -1);
+G2L["f"]["Name"] = [[UnderLine]];
+
+-- StarterGui.Auto.UI.UnderLine.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["f"]);
+
+
+-- StarterGui.Auto.UI.Toggle
+G2L["11"] = Instance.new("TextButton", G2L["2"]);
+G2L["11"]["TextSize"] = 17;
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["Size"] = UDim2.new(0, 25, 1, 0);
+G2L["11"]["BackgroundTransparency"] = 1;
+G2L["11"]["Name"] = [[Toggle]];
+G2L["11"]["Text"] = [[-]];
+G2L["11"]["Position"] = UDim2.new(1, -25, 0, 0);
+
+-- StarterGui.Auto.UI.Toggle.LocalScript
+G2L["12"] = Instance.new("LocalScript", G2L["11"]);
+
+
+-- StarterGui.Auto.UI.Window
+G2L["13"] = Instance.new("TextLabel", G2L["2"]);
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["TextSize"] = 17;
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["TextColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["13"]["BackgroundTransparency"] = 1;
+G2L["13"]["Size"] = UDim2.new(0.86842, 0, 1, 0);
+G2L["13"]["Text"] = [[Auto Parry/Spam]];
+G2L["13"]["Name"] = [[Window]];
+
+-- StarterGui.Auto.UI.LocalScript
+G2L["14"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.Auto.UI.UICorner
+G2L["15"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.Auto.UI.Container.auto1.AutoParry
+local function C_8()
+local script = G2L["8"];
+	script.Parent.MouseButton1Click:Connect(function()
+		local Debug = false -- Set this to true if you want my debug output.
+		local ReplicatedStorage = game:GetService("ReplicatedStorage")
+		local Players = game:GetService("Players")
+	
+		local Player = Players.LocalPlayer or Players.PlayerAdded:Wait()
+		local Remotes = ReplicatedStorage:WaitForChild("Remotes", 9e9) -- A second argument in waitforchild what could it mean?
+		local Balls = workspace:WaitForChild("Balls", 9e9)
+	
+		-- Functions
+	
+		local function print(...) -- Debug print.
+			if Debug then
+				warn(...)
+			end
+		end
+	
+		local function VerifyBall(Ball) -- Returns nil if the ball isn't a valid projectile; true if it's the right ball.
+			if typeof(Ball) == "Instance" and Ball:IsDescendantOf(Balls) then
+				return true
+			end
+		end
+	
+		local function IsTarget() -- Returns true if we are the current target.
+			return (Player.Character and Player.Character:FindFirstChild("Highlight"))
+		end
+	
+		local function Parry() -- Parries.
+			Remotes:WaitForChild("ParryButtonPress"):Fire()
+		end
+	
+		-- The actual code
+	
+		Balls.ChildAdded:Connect(function(Ball)
+			if not VerifyBall(Ball) then
+				return
+			end
+	
+			print(`Ball Spawned: {Ball}`)
+	
+			local OldPosition = Ball.Position
+			local OldTick = tick()
+	
+			Ball:GetPropertyChangedSignal("Position"):Connect(function()
+				if IsTarget() then -- No need to do the math if we're not being attacked.
+					local Distance = (Ball.Position - workspace.CurrentCamera.Focus.Position).Magnitude
+					local Velocity = (OldPosition - Ball.Position).Magnitude -- Fix for .Velocity not working. Yes I got the lowest possible grade in accuplacer math.
+	
+					print(`Distance: {Distance}\nVelocity: {Velocity}\nTime: {Distance / Velocity}`)
+	
+					if (Distance / Velocity) <= 10 then -- Sorry for the magic number. This just works. No, you don't get a slider for this because it's 2am.
+						Parry()
+					end
+				end
+	
+				if (tick() - OldTick >= 1/60) then -- Don't want it to update too quickly because my velocity implementation is aids. Yes, I tried Ball.Velocity. No, it didn't work.
+					OldTick = tick()
+					OldPosition = Ball.Position
+				end
+			end)
+		end)
+	end)
+end;
+task.spawn(C_8);
+-- StarterGui.Auto.UI.Container.auto2.AutoSpam
+local function C_e()
+local script = G2L["e"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		local AutoDetectSpam = false
+		local SpamClickA = false
+	
+	
+	
+	
+	    AutoDetectSpam = true
+		SpamClickA = true
+	
+		--///////////////////////////////////////////////////////////////////--
+	
+		local Alive = workspace:WaitForChild("Alive", 9e9)
+		local Players = game:GetService("Players")
+		local Player = Players.LocalPlayer
+	
+		local ReplicatedStorage = game:GetService("ReplicatedStorage")
+		local Remotes = ReplicatedStorage:WaitForChild("Remotes", 9e9)
+		local ParryAttempt = Remotes:WaitForChild("ParryAttempt", 9e9)
+		local Balls = workspace:WaitForChild("Balls", 9e9)
+	
+		--///////////////////////////////////////////////////////////////////--
+	
+		local function get_ProxyPlayer()
+			local Distance = math.huge
+			local plrRP = Player.Character and Player.Character:FindFirstChild("HumanoidRootPart")
+			local PlayerReturn = nil
+	
+			for _,plr1 in pairs(Alive:GetChildren()) do
+				if plr1:FindFirstChild("Humanoid") and plr1.Humanoid.Health > 50 then
+					if plr1.Name ~= Player.Name and plrRP and plr1:FindFirstChild("HumanoidRootPart") then
+						local magnitude = (plr1.HumanoidRootPart.Position - plrRP.Position).Magnitude
+						if magnitude <= Distance then
+							Distance = magnitude
+							PlayerReturn = plr1
+						end
+					end
+				end
+			end
+			return PlayerReturn
+		end
+	
+		local function SuperClick()
+			task.spawn(function()
+				if #Alive:GetChildren() > 1 then
+					local args1 = 0.5
+					local args2 = CFrame.new()
+					local args4 = {500, 500}
+	
+					if args1 and args2 and args4 then
+						ParryAttempt:FireServer(args1, args2, args4)
+					end
+				end
+			end)
+		end
+	
+		task.spawn(function()
+			while task.wait(0.0000000000000000000000001) do
+				if SpamClickA == true and AutoDetectSpam == true then
+					SuperClick()
+				end
+			end
+		end)
+	
+		local ParryCounter = 0
+		local DetectSpamDistance = 0
+	
+		local function GetBall(ball)
+			local Target = ""
+	
+			ball:GetPropertyChangedSignal("Position"):Connect(function()
+				local PlayerPP = Player.Character.PrimaryPart
+				local NearestPlayer = get_ProxyPlayer()
+	
+				if ball and PlayerPP and NearestPlayer and NearestPlayer.PrimaryPart then
+					local PlayerDistance = (PlayerPP.Position - NearestPlayer.PrimaryPart.Position).Magnitude
+					local BallDistance = (PlayerPP.Position - ball.Position).Magnitude
+	
+					DetectSpamDistance = 25 + math.clamp(ParryCounter / 3, 0, 25)
+	
+					if ParryCounter > 2 and PlayerDistance < DetectSpamDistance and BallDistance < 25 then
+						SpamClickA = true
+					else
+						SpamClickA = false
+					end
+				end
+			end)
+			ball:GetAttributeChangedSignal("target"):Connect(function()
+				Target = ball:GetAttribute("target")
+				local NearestPlayer = get_ProxyPlayer()
+	
+				if NearestPlayer then
+					if Target == NearestPlayer.Name or Target == Player.Name then
+						ParryCounter = ParryCounter + 1
+					else
+						ParryCounter = 0
+					end
+				end
+			end)
+		end
+	
+		for _,ball in pairs(Balls:GetChildren()) do
+			if ball and not ball:GetAttribute("realBall") then
+				return
+			end
+	
+			GetBall(ball)
+		end
+	end)
+end;
+task.spawn(C_e);
+-- StarterGui.Auto.UI.Toggle.LocalScript
+local function C_12()
+local script = G2L["12"];
+	local back = script.Parent.Parent.BackGround
+	local con = script.Parent.Parent.Container
+	
+	local window = {
+			count = 0;
+			toggles = {},
+			closed = false;
+		}
+		script.Parent.MouseButton1Click:connect(function()
+			window.closed = not window.closed
+			script.Parent.Text = (window.closed and "+" or "-")
+			if script.Parent.Text == "+" then
+				back:TweenSize(UDim2.new(0, 190,0, 0), "Out", "Sine", 0.5)
+				con:TweenSize(UDim2.new(0, 190,0, 0), "Out", "Sine", 0.5)
+				wait(0.1) do
+				con.Visible = false
+				end
+			else
+				back:TweenSize(UDim2.new(0, 190,0, 200), "Out", "Sine", 0.5)
+				con:TweenSize(UDim2.new(0, 190,0, 200), "Out", "Sine", 0.5)
+				wait(0.2) do
+				con.Visible = true
+				end
+				end
+			
+		end)
+	
+end;
+task.spawn(C_12);
+-- StarterGui.Auto.UI.LocalScript
+local function C_14()
+local script = G2L["14"];
+	local dragger = {}; 
+	local resizer = {};
+	
+	do
+		local mouse = game:GetService("Players").LocalPlayer:GetMouse();
+		local inputService = game:GetService('UserInputService');
+		local heartbeat = game:GetService("RunService").Heartbeat;
+		-- // credits to Ririchi / Inori for this cute drag function :)
+		function dragger.new(frame)
+		    local s, event = pcall(function()
+		    	return frame.MouseEnter
+		    end)
+	
+		    if s then
+		    	frame.Active = true;
+	
+		    	event:connect(function()
+		    		local input = frame.InputBegan:connect(function(key)
+		    			if key.UserInputType == Enum.UserInputType.MouseButton1 then
+		    				local objectPosition = Vector2.new(mouse.X - frame.AbsolutePosition.X, mouse.Y - frame.AbsolutePosition.Y);
+		    				while heartbeat:wait() and inputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
+		    					frame:TweenPosition(UDim2.new(0, mouse.X - objectPosition.X + (frame.Size.X.Offset * frame.AnchorPoint.X), 0, mouse.Y - objectPosition.Y + (frame.Size.Y.Offset * frame.AnchorPoint.Y)), 'Out', 'Quad', 0.1, true);
+		    				end
+		    			end
+		    		end)
+	
+		    		local leave;
+		    		leave = frame.MouseLeave:connect(function()
+		    			input:disconnect();
+		    			leave:disconnect();
+		    		end)
+		    	end)
+		    end
+		end
+		
+		function resizer.new(p, s)
+			p:GetPropertyChangedSignal('AbsoluteSize'):connect(function()
+				s.Size = UDim2.new(s.Size.X.Scale, s.Size.X.Offset, s.Size.Y.Scale, p.AbsoluteSize.Y);
+			end)
+		end
+	end
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end;
+task.spawn(C_14);
+
+return G2L["1"], require;
