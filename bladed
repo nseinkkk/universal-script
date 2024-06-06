@@ -1,0 +1,237 @@
+-- Made by fer modz
+
+-- Instances: 11 | Scripts: 3 | Modules: 1
+local G2L = {};
+
+-- StarterGui.AutoSpam
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[AutoSpam]];
+G2L["1"]["ResetOnSpawn"] = false;
+
+-- StarterGui.AutoSpam.parry
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["Active"] = true;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Size"] = UDim2.new(0, 207, 0, 82);
+G2L["2"]["Position"] = UDim2.new(0, 485, 0, 42);
+G2L["2"]["Name"] = [[parry]];
+
+-- StarterGui.AutoSpam.parry.TextButton
+G2L["3"] = Instance.new("TextButton", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 2;
+G2L["3"]["TextSize"] = 16;
+G2L["3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3"]["Size"] = UDim2.new(0.876, -20, 1, -20);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Text"] = [[Auto parry]];
+G2L["3"]["Position"] = UDim2.new(0, 30, 0, 10);
+
+-- StarterGui.AutoSpam.parry.TextButton.UIStroke
+G2L["4"] = Instance.new("UIStroke", G2L["3"]);
+G2L["4"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["4"]["Color"] = Color3.fromRGB(255, 255, 255);
+
+-- StarterGui.AutoSpam.parry.TextButton.auto
+G2L["5"] = Instance.new("LocalScript", G2L["3"]);
+G2L["5"]["Name"] = [[auto]];
+
+-- StarterGui.AutoSpam.manual
+G2L["6"] = Instance.new("Frame", G2L["1"]);
+G2L["6"]["Active"] = true;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Size"] = UDim2.new(0, 200, 0, 75);
+G2L["6"]["Position"] = UDim2.new(0, 58, 0, 45);
+G2L["6"]["Name"] = [[manual]];
+
+-- StarterGui.AutoSpam.manual.TextButton
+G2L["7"] = Instance.new("TextButton", G2L["6"]);
+G2L["7"]["BorderSizePixel"] = 2;
+G2L["7"]["TextSize"] = 16;
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["Size"] = UDim2.new(0.876, -20, 1, -20);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[Manual spam]];
+G2L["7"]["Position"] = UDim2.new(0, 21, 0, 10);
+
+-- StarterGui.AutoSpam.manual.TextButton.LocalScript
+G2L["8"] = Instance.new("LocalScript", G2L["7"]);
+
+
+-- StarterGui.AutoSpam.manual.TextButton.UIStroke
+G2L["9"] = Instance.new("UIStroke", G2L["7"]);
+G2L["9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["9"]["Color"] = Color3.fromRGB(255, 255, 255);
+
+-- StarterGui.AutoSpam.LocalScript
+G2L["a"] = Instance.new("LocalScript", G2L["1"]);
+
+
+-- StarterGui.AutoSpam.shownotif
+G2L["b"] = Instance.new("ModuleScript", G2L["1"]);
+G2L["b"]["Name"] = [[shownotif]];
+
+-- Require G2L wrapper
+local G2L_REQUIRE = require;
+local G2L_MODULES = {};
+local function require(Module:ModuleScript)
+    local ModuleState = G2L_MODULES[Module];
+    if ModuleState then
+        if not ModuleState.Required then
+            ModuleState.Required = true;
+            ModuleState.Value = ModuleState.Closure();
+        end
+        return ModuleState.Value;
+    end;
+    return G2L_REQUIRE(Module);
+end
+
+G2L_MODULES[G2L["b"]] = {
+Closure = function()
+    local script = G2L["b"];
+local module = {}
+game.StarterGui:SetCore("SendNotification", {
+	Title = "this script is highly good but laggy";
+	Text = "This dont have auto spam(its mostly bad since the range is too far then oof)";
+	Duration = 15;
+})
+return module
+
+end;
+};
+-- StarterGui.AutoSpam.parry.TextButton.auto
+local function C_5()
+local script = G2L["5"];
+	local function shownot()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Activated Auto parry";
+			Text = "The auto parry if laggy it wont work";
+			Duration = 15;
+		})
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(function() 
+		shownot()
+		while task.wait() do
+		    for _,ball in next, workspace.Balls:GetChildren() do
+			    if ball then
+				    if game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+					    if (ball.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 10 then
+						    game:GetService("ReplicatedStorage").Remotes.ParryButtonPress:FireServer()
+					    end
+				    end
+			    end
+	    	end
+	    end
+	end)
+	
+end;
+task.spawn(C_5);
+-- StarterGui.AutoSpam.manual.TextButton.LocalScript
+local function C_8()
+local script = G2L["8"];
+	local button = script.Parent
+	
+	local activated = false
+	local remotetofire = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ParryAttempt")
+	local pastact = activated
+	local rep = game:GetService("ReplicatedStorage")
+	local remotes = rep:WaitForChild("Remotes")
+	local parry2 = remotes:WaitForChild("ParryButtonPress")
+	local char = game:GetService("Players").LocalPlayer.Character or game:GetService("Players").LocalPlayer.CharacterAdded:Wait()
+	local hum = char.HumanoidRootPart
+	local pos = hum.Position
+	
+	local function notif()
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Activated manual spam";
+			Text = "rlly good but maybe laggy";
+			Duration = 15;
+		})
+	end
+	
+	local function toggle()
+		if activated == true then
+			while task.wait() do
+				local args = {
+					[1] = Vector3.new(pos, pos, pos);
+				}
+				if remotes:FindFirstChild("ParryButtonPress") then
+					parry2:FireServer()
+					parry2:FireServer()
+					parry2:FireServer()
+					parry2:FireServer()
+					parry2:FireServer()
+				end
+				
+				
+				
+				
+				if remotes:FindFirstChild("ParryAttempt") then
+					remotetofire:FireServer(unpack(args))
+					remotetofire:FireServer(unpack(args))
+					remotetofire:FireServer(unpack(args))
+					remotetofire:FireServer(unpack(args))
+					remotetofire:FireServer(unpack(args))
+				end
+			end
+		end
+	end
+	
+	local function work()
+		if remotes:FindFirstChild("ParryAttempt") then
+			remotes:FindFirstChild("ParryAttempt").Parent = script.Parent
+		end
+		if remotes:FindFirstChild("ParryButtonPress") then
+			remotes:FindFirstChild("ParryButtonPress").Parent = script.Parent
+		end
+	end
+	
+	
+	local function find()
+		if button:FindFirstChild("ParryAttempt") then
+			button:FindFirstChild("ParryAttempt").Parent = remotes
+		end
+		if button:FindFirstChild("ParryButtonPress") then
+			button:FindFirstChild("ParryButtonPress").Parent = remotes
+		end
+	end
+	
+	
+	button.MouseButton1Click:Connect(function()
+		if activated == true then
+			
+			activated = false
+			
+			button.Text = "Off"
+			
+			work()
+		else 
+			find()
+			
+			activated = true
+			
+			button.Text = "On, CPS = 30+"
+			
+			toggle()
+			
+			notif()
+		end
+	end)
+end;
+task.spawn(C_8);
+-- StarterGui.AutoSpam.LocalScript
+local function C_a()
+local script = G2L["a"];
+	wait(7.5)
+	require(script.Parent.shownotif)
+end;
+task.spawn(C_a);
+
+return G2L["1"], require;
