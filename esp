@@ -1,150 +1,84 @@
--- Made by Fer Modz
+-- Hughlight
 
--- Instances: 7 | Scripts: 2 | Modules: 0
+-- Instances: 4 | Scripts: 1 | Modules: 1
 local G2L = {};
 
--- StarterGui.Esp
+-- StarterGui.Hightlight
 G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
-G2L["1"]["Name"] = [[Esp]];
+G2L["1"]["Name"] = [[Hightlight]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
--- StarterGui.Esp.Button
+-- StarterGui.Hightlight.TextButton
 G2L["2"] = Instance.new("TextButton", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["TextSize"] = 14;
 G2L["2"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2"]["Size"] = UDim2.new(0, 52, 0, 41);
-G2L["2"]["Name"] = [[Button]];
+G2L["2"]["Size"] = UDim2.new(0.11895, 0, 0.10616, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Text"] = [[OFF]];
-G2L["2"]["Position"] = UDim2.new(0, 0, 0.62272, 0);
+G2L["2"]["Text"] = [[Activate]];
+G2L["2"]["Position"] = UDim2.new(0, 0, 0.44586, 0);
 
--- StarterGui.Esp.Button.LocalScript
-G2L["3"] = Instance.new("LocalScript", G2L["2"]);
-
-
--- StarterGui.Esp.Button.LocalScript.Highlight
-G2L["4"] = Instance.new("Highlight", G2L["3"]);
+-- StarterGui.Hightlight.TextButton.ModuleScript
+G2L["3"] = Instance.new("ModuleScript", G2L["2"]);
 
 
--- StarterGui.Esp.Button.UICorner
-G2L["5"] = Instance.new("UICorner", G2L["2"]);
+-- StarterGui.Hightlight.TextButton.LocalScript
+G2L["4"] = Instance.new("LocalScript", G2L["2"]);
 
 
--- StarterGui.Esp.Button.UIStroke
-G2L["6"] = Instance.new("UIStroke", G2L["2"]);
-G2L["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+-- Require G2L wrapper
+local G2L_REQUIRE = require;
+local G2L_MODULES = {};
+local function require(Module:ModuleScript)
+    local ModuleState = G2L_MODULES[Module];
+    if ModuleState then
+        if not ModuleState.Required then
+            ModuleState.Required = true;
+            ModuleState.Value = ModuleState.Closure();
+        end
+        return ModuleState.Value;
+    end;
+    return G2L_REQUIRE(Module);
+end
 
--- StarterGui.Esp.Button.Smooth GUI Dragging
-G2L["7"] = Instance.new("LocalScript", G2L["2"]);
-G2L["7"]["Name"] = [[Smooth GUI Dragging]];
+G2L_MODULES[G2L["3"]] = {
+Closure = function()
+    local script = G2L["3"];
+local module = {}
+local plr = game:GetService("Players").LocalPlayer
+local highlight = Instance.new("Highlight")
+for _, v in game.Players:GetPlayers() do
+	if v ~= plr then
+		highlight.Parent = v.Character
+		highlight.Adornee = v.Character
+		highlight.FillTransparency = 0.3
+		highlight.OutlineTransparency = 0
+		highlight.OutlineColor = Color3.fromRGB(0, 0, 0)
+		highlight.FillColor = Color3.fromRGB(98, 25, 150)
+	end
+end
 
--- StarterGui.Esp.Button.LocalScript
-local function C_3()
-local script = G2L["3"];
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Text == "OFF" then
-			script.Parent.Text = "ON"
-		else
-			script.Parent.Text = "OFF"
-		end
-		for _, v in next, game.Players:GetPlayers() do
-			if v:IsA("Player") then
-				if script.Parent.Text == "ON" then
-					while true do
-						local high = Instance.new("Highlight")
-					    high.Parent = v.Character
-					    wait(0.01)
-					end
-				else
-					if v.Character:FindFirstChild("Highlight") then
-						while true do
-							v.Character:FindFirstChild("Highlight"):Destroy()
-						end
-					end
-				end
-			end
-		end
-		for _, v in next, game.Players:GetChildren() do
-			if v:IsA("Player") then
-				if script.Parent.Text == "ON" then
-					while true do
-						local high = Instance.new("Highlight")
-					    high.Parent = v.Character
-					    wait(0.001)
-					end
-				else
-					if v.Character:FindFirstChild("Highlight") then
-						while true do
-						v.Character:FindFirstChild("Highlight"):Destroy()
-						wait()
-						end
-					end
-				end
-			end
-		end
+
+
+
+
+
+
+return module
+
+end;
+};
+-- StarterGui.Hightlight.TextButton.LocalScript
+local function C_4()
+local script = G2L["4"];
+	script.Parent.MouseButton1Click:Once(function() 
+		require(script.Parent.ModuleScript)
+		wait(2)
+		script.Parent:Destroy()
 	end)
 end;
-task.spawn(C_3);
--- StarterGui.Esp.Button.Smooth GUI Dragging
-local function C_7()
-local script = G2L["7"];
-	local UserInputService = game:GetService("UserInputService")
-	local runService = (game:GetService("RunService"));
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	function Lerp(a, b, m)
-		return a + (b - a) * m
-	end;
-	
-	local lastMousePos
-	local lastGoalPos
-	local DRAG_SPEED = (8); -- // The speed of the UI darg.
-	function Update(dt)
-		if not (startPos) then return end;
-		if not (dragging) and (lastGoalPos) then
-			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
-			return 
-		end;
-	
-		local delta = (lastMousePos - UserInputService:GetMouseLocation())
-		local xGoal = (startPos.X.Offset - delta.X);
-		local yGoal = (startPos.Y.Offset - delta.Y);
-		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
-		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
-	end;
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-			lastMousePos = UserInputService:GetMouseLocation()
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	runService.Heartbeat:Connect(Update)
-end;
-task.spawn(C_7);
+task.spawn(C_4);
 
 return G2L["1"], require;
