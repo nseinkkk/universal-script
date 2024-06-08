@@ -1,204 +1,271 @@
--- Made
+-- Synapse
 
--- Instances: 25 | Scripts: 5 | Modules: 0
-local G2L = {};
+-- Instances: 34 | Scripts: 8 | Modules: 0
+local SYNP = {};
 
 -- StarterGui.idkwhattoputlikelol
-G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
-G2L["1"]["Name"] = [[idkwhattoputlikelol]];
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+SYNP["1"] = Instance.new("ScreenGui", game.CoreGui);
+SYNP["1"]["Name"] = [[SynapseX]];
+SYNP["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
 -- StarterGui.idkwhattoputlikelol.Top
-G2L["2"] = Instance.new("TextLabel", G2L["1"]);
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
-G2L["2"]["TextSize"] = 14;
-G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2"]["Size"] = UDim2.new(0.56863, 0, 0.0552, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Text"] = [[Synapse X - vRBX]];
-G2L["2"]["Name"] = [[Top]];
-G2L["2"]["Position"] = UDim2.new(0.19477, 0, 0.19958, 0);
+SYNP["2"] = Instance.new("TextLabel", SYNP["1"]);
+SYNP["2"]["Active"] = true;
+SYNP["2"]["BorderSizePixel"] = 0;
+SYNP["2"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
+SYNP["2"]["TextSize"] = 14;
+SYNP["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SYNP["2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["2"]["Size"] = UDim2.new(0.56863, 0, 0.0552, 0);
+SYNP["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["2"]["Text"] = [[Synapse X - vRBX]];
+SYNP["2"]["Name"] = [[Top]];
+SYNP["2"]["Position"] = UDim2.new(0.19477, -7, 0.19958, 9);
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame
-G2L["3"] = Instance.new("Frame", G2L["2"]);
-G2L["3"]["BorderSizePixel"] = 0;
-G2L["3"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
-G2L["3"]["Size"] = UDim2.new(1, 0, 7.98154, 0);
-G2L["3"]["Position"] = UDim2.new(-0, 0, 1, 0);
-G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["3"] = Instance.new("Frame", SYNP["2"]);
+SYNP["3"]["BorderSizePixel"] = 0;
+SYNP["3"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
+SYNP["3"]["Size"] = UDim2.new(1, 0, 7.98154, 0);
+SYNP["3"]["Position"] = UDim2.new(0, 0, 1, 0);
+SYNP["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Execute
-G2L["4"] = Instance.new("TextButton", G2L["3"]);
-G2L["4"]["BorderSizePixel"] = 0;
-G2L["4"]["TextSize"] = 14;
-G2L["4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4"]["BackgroundColor3"] = Color3.fromRGB(63, 63, 63);
-G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4"]["Size"] = UDim2.new(0.16719, 0, 0.17362, 0);
-G2L["4"]["Name"] = [[Execute]];
-G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Text"] = [[Execute]];
-G2L["4"]["Position"] = UDim2.new(0.02989, 0, 0.78547, 0);
+SYNP["4"] = Instance.new("TextButton", SYNP["3"]);
+SYNP["4"]["BorderSizePixel"] = 0;
+SYNP["4"]["TextSize"] = 14;
+SYNP["4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["4"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64);
+SYNP["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SYNP["4"]["Size"] = UDim2.new(0.16719, 0, 0.11097, 0);
+SYNP["4"]["Name"] = [[Execute]];
+SYNP["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["4"]["Text"] = [[Execute]];
+SYNP["4"]["Position"] = UDim2.new(0.02989, 0, 0.84812, 0);
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Execute.UIStroke
-G2L["5"] = Instance.new("UIStroke", G2L["4"]);
-G2L["5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+SYNP["5"] = Instance.new("UIStroke", SYNP["4"]);
+SYNP["5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Execute.LocalScript
-G2L["6"] = Instance.new("LocalScript", G2L["4"]);
+SYNP["6"] = Instance.new("LocalScript", SYNP["4"]);
 
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Values
-G2L["7"] = Instance.new("Folder", G2L["3"]);
-G2L["7"]["Name"] = [[Values]];
+SYNP["7"] = Instance.new("Folder", SYNP["3"]);
+SYNP["7"]["Name"] = [[Values]];
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Values.Attached
-G2L["8"] = Instance.new("BoolValue", G2L["7"]);
-G2L["8"]["Name"] = [[Attached]];
+SYNP["8"] = Instance.new("BoolValue", SYNP["7"]);
+SYNP["8"]["Name"] = [[Attached]];
+
+-- StarterGui.idkwhattoputlikelol.Top.Frame.Values.Used
+SYNP["9"] = Instance.new("IntValue", SYNP["7"]);
+SYNP["9"]["Name"] = [[Used]];
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Clear
-G2L["9"] = Instance.new("TextButton", G2L["3"]);
-G2L["9"]["BorderSizePixel"] = 0;
-G2L["9"]["TextSize"] = 14;
-G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9"]["BackgroundColor3"] = Color3.fromRGB(63, 63, 63);
-G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9"]["Size"] = UDim2.new(0.16719, 0, 0.17362, 0);
-G2L["9"]["Name"] = [[Clear]];
-G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9"]["Text"] = [[Clear]];
-G2L["9"]["Position"] = UDim2.new(0.21149, 0, 0.78547, 0);
+SYNP["a"] = Instance.new("TextButton", SYNP["3"]);
+SYNP["a"]["BorderSizePixel"] = 0;
+SYNP["a"]["TextSize"] = 14;
+SYNP["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["a"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64);
+SYNP["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SYNP["a"]["Size"] = UDim2.new(0.16719, 0, 0.11097, 0);
+SYNP["a"]["Name"] = [[Clear]];
+SYNP["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["a"]["Text"] = [[Clear]];
+SYNP["a"]["Position"] = UDim2.new(0.21149, 0, 0.84812, 0);
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Clear.UIStroke
-G2L["a"] = Instance.new("UIStroke", G2L["9"]);
-G2L["a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+SYNP["b"] = Instance.new("UIStroke", SYNP["a"]);
+SYNP["b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Clear.LocalScript
-G2L["b"] = Instance.new("LocalScript", G2L["9"]);
+SYNP["c"] = Instance.new("LocalScript", SYNP["a"]);
 
 
--- StarterGui.idkwhattoputlikelol.Top.Frame.Attach
-G2L["c"] = Instance.new("TextButton", G2L["3"]);
-G2L["c"]["BorderSizePixel"] = 0;
-G2L["c"]["TextSize"] = 14;
-G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c"]["BackgroundColor3"] = Color3.fromRGB(63, 63, 63);
-G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["c"]["Size"] = UDim2.new(0.16719, 0, 0.17362, 0);
-G2L["c"]["Name"] = [[Attach]];
-G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c"]["Text"] = [[Attach]];
-G2L["c"]["Position"] = UDim2.new(0.81379, 0, 0.78547, 0);
+-- StarterGui.idkwhattoputlikelol.Top.Frame.Hub
+SYNP["d"] = Instance.new("TextButton", SYNP["3"]);
+SYNP["d"]["BorderSizePixel"] = 0;
+SYNP["d"]["TextSize"] = 14;
+SYNP["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["d"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64);
+SYNP["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SYNP["d"]["Size"] = UDim2.new(0.16719, 0, 0.11097, 0);
+SYNP["d"]["Name"] = [[Hub]];
+SYNP["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["d"]["Text"] = [[Script Hub]];
+SYNP["d"]["Position"] = UDim2.new(0.81379, 0, 0.84812, 0);
 
--- StarterGui.idkwhattoputlikelol.Top.Frame.Attach.UIStroke
-G2L["d"] = Instance.new("UIStroke", G2L["c"]);
-G2L["d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+-- StarterGui.idkwhattoputlikelol.Top.Frame.Hub.UIStroke
+SYNP["e"] = Instance.new("UIStroke", SYNP["d"]);
+SYNP["e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
--- StarterGui.idkwhattoputlikelol.Top.Frame.Attach.LocalScript
-G2L["e"] = Instance.new("LocalScript", G2L["c"]);
+-- StarterGui.idkwhattoputlikelol.Top.Frame.Hub.LocalScript
+SYNP["f"] = Instance.new("LocalScript", SYNP["d"]);
 
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Close
-G2L["f"] = Instance.new("TextButton", G2L["3"]);
-G2L["f"]["BorderSizePixel"] = 0;
-G2L["f"]["TextSize"] = 24;
-G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(63, 63, 63);
-G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f"]["Size"] = UDim2.new(0.05517, 0, 0.10616, 0);
-G2L["f"]["Name"] = [[Close]];
-G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f"]["Text"] = [[X]];
-G2L["f"]["Position"] = UDim2.new(0.94483, 0, -0.12047, 0);
+SYNP["10"] = Instance.new("TextButton", SYNP["3"]);
+SYNP["10"]["BorderSizePixel"] = 0;
+SYNP["10"]["TextSize"] = 24;
+SYNP["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["10"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64);
+SYNP["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SYNP["10"]["Size"] = UDim2.new(0.05517, 0, 0.10616, 0);
+SYNP["10"]["Name"] = [[Close]];
+SYNP["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["10"]["Text"] = [[X]];
+SYNP["10"]["Position"] = UDim2.new(0.94483, 0, -0.12047, 0);
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Close.UIStroke
-G2L["10"] = Instance.new("UIStroke", G2L["f"]);
-G2L["10"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+SYNP["11"] = Instance.new("UIStroke", SYNP["10"]);
+SYNP["11"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Close.LocalScript
-G2L["11"] = Instance.new("LocalScript", G2L["f"]);
+SYNP["12"] = Instance.new("LocalScript", SYNP["10"]);
 
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.ScrollingFrame
-G2L["12"] = Instance.new("ScrollingFrame", G2L["3"]);
-G2L["12"]["Active"] = true;
-G2L["12"]["BorderSizePixel"] = 0;
-G2L["12"]["CanvasSize"] = UDim2.new(1, 0, 20, 0);
-G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["Size"] = UDim2.new(0.82326, 0, 0.73811, 0);
-G2L["12"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["Position"] = UDim2.new(0.02988, 0, 0.02891, 0);
-G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["BackgroundTransparency"] = 1;
+SYNP["13"] = Instance.new("ScrollingFrame", SYNP["3"]);
+SYNP["13"]["Active"] = true;
+SYNP["13"]["BorderSizePixel"] = 0;
+SYNP["13"]["CanvasSize"] = UDim2.new(20, 0, 20, 0);
+SYNP["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["13"]["Size"] = UDim2.new(0.82326, 0, 0.73811, 0);
+SYNP["13"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["13"]["Position"] = UDim2.new(0.02988, 0, 0.02891, 0);
+SYNP["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["13"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.ScrollingFrame.CodeBox
-G2L["13"] = Instance.new("TextBox", G2L["12"]);
-G2L["13"]["CursorPosition"] = -1;
-G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["13"]["BorderSizePixel"] = 0;
-G2L["13"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["13"]["TextSize"] = 14;
-G2L["13"]["Name"] = [[CodeBox]];
-G2L["13"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["13"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
-G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["13"]["MultiLine"] = true;
-G2L["13"]["ClearTextOnFocus"] = false;
-G2L["13"]["PlaceholderText"] = [[-- Script here]];
-G2L["13"]["Size"] = UDim2.new(1.59198, 0, 4134.64355, 0);
-G2L["13"]["Position"] = UDim2.new(0, 0, -0.0002, 0);
-G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13"]["Text"] = [[]];
+SYNP["14"] = Instance.new("TextBox", SYNP["13"]);
+SYNP["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["14"]["BorderSizePixel"] = 0;
+SYNP["14"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+SYNP["14"]["TextSize"] = 14;
+SYNP["14"]["Name"] = [[CodeBox]];
+SYNP["14"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+SYNP["14"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
+SYNP["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SYNP["14"]["MultiLine"] = true;
+SYNP["14"]["ClearTextOnFocus"] = false;
+SYNP["14"]["PlaceholderText"] = [[-- Script here]];
+SYNP["14"]["Size"] = UDim2.new(1.59198, 0, 4134.64355, 0);
+SYNP["14"]["Position"] = UDim2.new(0, 0, -0.0002, 0);
+SYNP["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["14"]["Text"] = [[]];
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.ScrollingFrame.CodeBox.UIStroke2
-G2L["14"] = Instance.new("UIStroke", G2L["13"]);
-G2L["14"]["Name"] = [[UIStroke2]];
+SYNP["15"] = Instance.new("UIStroke", SYNP["14"]);
+SYNP["15"]["Name"] = [[UIStroke2]];
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.ScrollingFrame.CodeBox.UIStroke
-G2L["15"] = Instance.new("UIStroke", G2L["13"]);
-G2L["15"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+SYNP["16"] = Instance.new("UIStroke", SYNP["14"]);
+SYNP["16"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.ScrollingFrame.UIStroke
-G2L["16"] = Instance.new("UIStroke", G2L["12"]);
+SYNP["17"] = Instance.new("UIStroke", SYNP["13"]);
 
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.idkF
-G2L["17"] = Instance.new("Frame", G2L["3"]);
-G2L["17"]["BorderSizePixel"] = 0;
-G2L["17"]["BackgroundColor3"] = Color3.fromRGB(84, 84, 84);
-G2L["17"]["Size"] = UDim2.new(0.11201, 0, 0.76619, 0);
-G2L["17"]["Position"] = UDim2.new(0.86897, 0, 0.01928, 0);
-G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17"]["Name"] = [[idkF]];
+SYNP["18"] = Instance.new("Frame", SYNP["3"]);
+SYNP["18"]["BorderSizePixel"] = 0;
+SYNP["18"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
+SYNP["18"]["Size"] = UDim2.new(0.11201, 0, 0.76619, 0);
+SYNP["18"]["Position"] = UDim2.new(0.86897, 0, 0.01928, 0);
+SYNP["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["18"]["Name"] = [[idkF]];
+
+-- StarterGui.idkwhattoputlikelol.Top.Frame.Attach
+SYNP["19"] = Instance.new("TextButton", SYNP["3"]);
+SYNP["19"]["BorderSizePixel"] = 0;
+SYNP["19"]["TextSize"] = 14;
+SYNP["19"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["19"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64);
+SYNP["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SYNP["19"]["Size"] = UDim2.new(0.16719, 0, 0.11097, 0);
+SYNP["19"]["Name"] = [[Attach]];
+SYNP["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["19"]["Text"] = [[Attach]];
+SYNP["19"]["Position"] = UDim2.new(0.62988, 0, 0.84812, 0);
+
+-- StarterGui.idkwhattoputlikelol.Top.Frame.Attach.UIStroke
+SYNP["1a"] = Instance.new("UIStroke", SYNP["19"]);
+SYNP["1a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.idkwhattoputlikelol.Top.Frame.Attach.LocalScript
+SYNP["1b"] = Instance.new("LocalScript", SYNP["19"]);
+
 
 -- StarterGui.idkwhattoputlikelol.Top.LocalScript
-G2L["18"] = Instance.new("LocalScript", G2L["2"]);
+SYNP["1c"] = Instance.new("LocalScript", SYNP["2"]);
 
 
 -- StarterGui.idkwhattoputlikelol.Top.ImageLabel
-G2L["19"] = Instance.new("ImageLabel", G2L["2"]);
-G2L["19"]["BorderSizePixel"] = 0;
-G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["19"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["19"]["ImageTransparency"] = 0.3;
-G2L["19"]["Image"] = [[rbxassetid://17773069588]];
-G2L["19"]["Size"] = UDim2.new(0.06865, 0, 1, 0);
-G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["19"]["BackgroundTransparency"] = 1;
-G2L["19"]["Position"] = UDim2.new(0, 0, 0, 0);
+SYNP["1d"] = Instance.new("ImageLabel", SYNP["2"]);
+SYNP["1d"]["BorderSizePixel"] = 0;
+SYNP["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["1d"]["Image"] = [[rbxassetid://17779276539]];
+SYNP["1d"]["Size"] = UDim2.new(0.08474, 0, 1.1538, 0);
+SYNP["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["1d"]["BackgroundTransparency"] = 1;
+SYNP["1d"]["Position"] = UDim2.new(-0.0023, 0, -0.07692, 0);
+
+-- StarterGui.idkwhattoputlikelol.ScripthubTop
+SYNP["1e"] = Instance.new("TextLabel", SYNP["1"]);
+SYNP["1e"]["BorderSizePixel"] = 0;
+SYNP["1e"]["BackgroundColor3"] = Color3.fromRGB(86, 86, 86);
+SYNP["1e"]["TextSize"] = 14;
+SYNP["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SYNP["1e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["1e"]["Size"] = UDim2.new(0.18954, 0, 0.05945, 0);
+SYNP["1e"]["Visible"] = false;
+SYNP["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["1e"]["Text"] = [[Script Hub]];
+SYNP["1e"]["Name"] = [[ScripthubTop]];
+SYNP["1e"]["Position"] = UDim2.new(0.77908, 0, 0.08705, 0);
+
+-- StarterGui.idkwhattoputlikelol.ScripthubTop.LocalScript
+SYNP["1f"] = Instance.new("LocalScript", SYNP["1e"]);
+
+
+-- StarterGui.idkwhattoputlikelol.ScripthubTop.Frame
+SYNP["20"] = Instance.new("Frame", SYNP["1e"]);
+SYNP["20"]["BorderSizePixel"] = 0;
+SYNP["20"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+SYNP["20"]["Size"] = UDim2.new(1, 0, 4.31946, 0);
+SYNP["20"]["Position"] = UDim2.new(0, 0, 0.96429, 0);
+SYNP["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.idkwhattoputlikelol.ScripthubTop.Frame.TextButton
+SYNP["21"] = Instance.new("TextButton", SYNP["20"]);
+SYNP["21"]["BorderSizePixel"] = 0;
+SYNP["21"]["TextSize"] = 14;
+SYNP["21"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SYNP["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SYNP["21"]["Size"] = UDim2.new(1, 0, 0.19711, 0);
+SYNP["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SYNP["21"]["Text"] = [[Ghost hub]];
+SYNP["21"]["Position"] = UDim2.new(-0, 0, 0, 0);
+
+-- StarterGui.idkwhattoputlikelol.ScripthubTop.Frame.TextButton.LocalScript
+SYNP["22"] = Instance.new("LocalScript", SYNP["21"]);
+
 
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Execute.LocalScript
 local function C_6()
-local script = G2L["6"];
+local script = SYNP["6"];
 	script.Parent.MouseButton1Click:Connect(function() 
-		local code = script.Parent.Parent.CodeBox.Text
+		local code = script.Parent.Parent.ScrollingFrame.CodeBox.Text
 		local attached = script.Parent.Parent.Values.Attached
+		local used = script.Parent.Parent.Values.Used
 		if attached.Value == true then
+			used.Value += 1
 			loadstring(code)()
 		else
-			script.Parent.Parent.Parent.Text = "Synapse X - vRBX (NOT ATTACHED)"
+			script.Parent.Parent.Parent.Text = "Synapse X - vRBX (Not Injected)"
 			wait(0.5)
 			script.Parent.Parent.Parent.Text = "Synapse X - vRBX"
 		end
@@ -206,51 +273,87 @@ local script = G2L["6"];
 end;
 task.spawn(C_6);
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Clear.LocalScript
-local function C_b()
-local script = G2L["b"];
+local function C_c()
+local script = SYNP["c"];
 	script.Parent.MouseButton1Click:Connect(function() 
-		local code = script.Parent.Parent.CodeBox
+		local code = script.Parent.Parent.ScrollingFrame.CodeBox
 		code.Text = ""
 	end)
 end;
-task.spawn(C_b);
--- StarterGui.idkwhattoputlikelol.Top.Frame.Attach.LocalScript
-local function C_e()
-local script = G2L["e"];
+task.spawn(C_c);
+-- StarterGui.idkwhattoputlikelol.Top.Frame.Hub.LocalScript
+local function C_f()
+local script = SYNP["f"];
 	script.Parent.MouseButton1Click:Connect(function() 
-		local txt = script.Parent.Parent.Parent
-		local attached = script.Parent.Parent.Values.Attached
-		local att = 1
-		repeat
-			txt.Text = "Synapse X - vRBX (Injecting.)"
-		    wait(1)
-			txt.Text = "Synapse X - vRBX (Injecting..)"
-			wait(1)
-			txt.Text = "Synapse X - vRBX (Injecting...)"
-			att += 1
-			if att == 3 then
-			    txt.Text = "Synapse X -- rblx (Injected!)"
-			    attached.Value = true
-		    end
-		until att == 3
-		
+		local sh = script.Parent.Parent.Parent.Parent.ScripthubTop
+		if sh.Visible == true then
+			sh.Visible = false
+		else
+			sh.Visible = true
+		end
 	end)
 end;
-task.spawn(C_e);
+task.spawn(C_f);
 -- StarterGui.idkwhattoputlikelol.Top.Frame.Close.LocalScript
-local function C_11()
-local script = G2L["11"];
+local function C_12()
+local script = SYNP["12"];
 	script.Parent.MouseButton1Click:Connect(function() 
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end;
-task.spawn(C_11);
+task.spawn(C_12);
+-- StarterGui.idkwhattoputlikelol.Top.Frame.Attach.LocalScript
+local function C_1b()
+local script = SYNP["1b"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		local txt = script.Parent.Parent.Parent
+		local attached = script.Parent.Parent.Values.Attached
+		local att = 1
+		if attached.Value == true then
+			txt.Text = "Synapse X - vRBX (Already Injected!)"
+			wait(1)
+			txt.Text = "Synapse X - vRBX"
+		else
+			repeat
+				txt.Text = "Synapse X - vRBX (Injecting.)"
+				wait(1)
+				txt.Text = "Synapse X - vRBX (Injecting..)"
+				wait(1)
+				txt.Text = "Synapse X - vRBX (Injecting...)"
+				att += 1
+				if att == 3 then
+					txt.Text = "Synapse X - vRBX (Injected!)"
+					attached.Value = true
+					wait(0.5)
+					txt.Text = "Synapse X - vRBX"
+				end
+				wait(1)
+			until att == 3
+		end
+	end)
+end;
+task.spawn(C_1b);
 -- StarterGui.idkwhattoputlikelol.Top.LocalScript
-local function C_18()
-local script = G2L["18"];
+local function C_1c()
+local script = SYNP["1c"];
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 end;
-task.spawn(C_18);
+task.spawn(C_1c);
+-- StarterGui.idkwhattoputlikelol.ScripthubTop.LocalScript
+local function C_1f()
+local script = SYNP["1f"];
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end;
+task.spawn(C_1f);
+-- StarterGui.idkwhattoputlikelol.ScripthubTop.Frame.TextButton.LocalScript
+local function C_22()
+local script = SYNP["22"];
+	script.Parent.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+	end)
+end;
+task.spawn(C_22);
 
-return G2L["1"], require;
+return SYNP["1"], require;
