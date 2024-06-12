@@ -3,13 +3,13 @@
 -- Instances: 51 | Scripts: 3 | Modules: 0
 local G2L = {};
 
--- StarterGui.The start of a new ERA.LuaEncoderPC
+-- StarterGui.LuaEncoderPC
 G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
 G2L["1"]["Name"] = [[LuaEncoderPC]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame
+-- StarterGui.LuaEncoderPC.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
@@ -17,7 +17,7 @@ G2L["2"]["Size"] = UDim2.new(0.53862, 0, 0.45011, 0);
 G2L["2"]["Position"] = UDim2.new(0.01569, 0, 0.02972, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.ImageLabel
+-- StarterGui.LuaEncoderPC.Frame.ImageLabel
 G2L["3"] = Instance.new("ImageLabel", G2L["2"]);
 G2L["3"]["BorderSizePixel"] = 0;
 G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -26,7 +26,7 @@ G2L["3"]["Size"] = UDim2.new(0.10276, 0, 0.15285, 0);
 G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3"]["BackgroundTransparency"] = 1;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.TextBox
+-- StarterGui.LuaEncoderPC.Frame.TextBox
 G2L["4"] = Instance.new("TextBox", G2L["2"]);
 G2L["4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
@@ -46,26 +46,26 @@ G2L["4"]["Position"] = UDim2.new(0.03038, 0, 0.26887, 0);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["4"]["Text"] = [[]];
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.TextBox.UIStroke
+-- StarterGui.LuaEncoderPC.Frame.TextBox.UIStroke
 G2L["5"] = Instance.new("UIStroke", G2L["4"]);
 G2L["5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["5"]["Thickness"] = 2;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.TextBox.UICorner
+-- StarterGui.LuaEncoderPC.Frame.TextBox.UICorner
 G2L["6"] = Instance.new("UICorner", G2L["4"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.UIStroke
+-- StarterGui.LuaEncoderPC.Frame.UIStroke
 G2L["7"] = Instance.new("UIStroke", G2L["2"]);
 G2L["7"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["7"]["Thickness"] = 3;
 G2L["7"]["Color"] = Color3.fromRGB(79, 12, 101);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.UICorner
+-- StarterGui.LuaEncoderPC.Frame.UICorner
 G2L["8"] = Instance.new("UICorner", G2L["2"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Execute
+-- StarterGui.LuaEncoderPC.Frame.Execute
 G2L["9"] = Instance.new("TextButton", G2L["2"]);
 G2L["9"]["BorderSizePixel"] = 0;
 G2L["9"]["TextSize"] = 14;
@@ -78,16 +78,16 @@ G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["Text"] = [[Execute]];
 G2L["9"]["Position"] = UDim2.new(0.03038, 0, 0.80189, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Execute.UIStroke
+-- StarterGui.LuaEncoderPC.Frame.Execute.UIStroke
 G2L["a"] = Instance.new("UIStroke", G2L["9"]);
 G2L["a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["a"]["Thickness"] = 2;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Execute.UICorner
+-- StarterGui.LuaEncoderPC.Frame.Execute.UICorner
 G2L["b"] = Instance.new("UICorner", G2L["9"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Clear
+-- StarterGui.LuaEncoderPC.Frame.Clear
 G2L["c"] = Instance.new("TextButton", G2L["2"]);
 G2L["c"]["BorderSizePixel"] = 0;
 G2L["c"]["TextSize"] = 14;
@@ -100,16 +100,16 @@ G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c"]["Text"] = [[Clear]];
 G2L["c"]["Position"] = UDim2.new(0.22479, 0, 0.80189, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Clear.UIStroke
+-- StarterGui.LuaEncoderPC.Frame.Clear.UIStroke
 G2L["d"] = Instance.new("UIStroke", G2L["c"]);
 G2L["d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["d"]["Thickness"] = 2;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Clear.UICorner
+-- StarterGui.LuaEncoderPC.Frame.Clear.UICorner
 G2L["e"] = Instance.new("UICorner", G2L["c"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Attach
+-- StarterGui.LuaEncoderPC.Frame.Attach
 G2L["f"] = Instance.new("TextButton", G2L["2"]);
 G2L["f"]["BorderSizePixel"] = 0;
 G2L["f"]["TextSize"] = 14;
@@ -122,24 +122,24 @@ G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f"]["Text"] = [[Attach]];
 G2L["f"]["Position"] = UDim2.new(0.85733, 0, 0.80189, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Attach.UIStroke
+-- StarterGui.LuaEncoderPC.Frame.Attach.UIStroke
 G2L["10"] = Instance.new("UIStroke", G2L["f"]);
 G2L["10"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["10"]["Thickness"] = 2;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Attach.UICorner
+-- StarterGui.LuaEncoderPC.Frame.Attach.UICorner
 G2L["11"] = Instance.new("UICorner", G2L["f"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Values
+-- StarterGui.LuaEncoderPC.Frame.Values
 G2L["12"] = Instance.new("Folder", G2L["2"]);
 G2L["12"]["Name"] = [[Values]];
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Values.Attached
+-- StarterGui.LuaEncoderPC.Frame.Values.Attached
 G2L["13"] = Instance.new("BoolValue", G2L["12"]);
 G2L["13"]["Name"] = [[Attached]];
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Close
+-- StarterGui.LuaEncoderPC.Frame.Close
 G2L["14"] = Instance.new("TextButton", G2L["2"]);
 G2L["14"]["BorderSizePixel"] = 0;
 G2L["14"]["TextSize"] = 24;
@@ -152,16 +152,16 @@ G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["14"]["Text"] = [[X]];
 G2L["14"]["Position"] = UDim2.new(0.8962, 0, -0, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Close.UIStroke
+-- StarterGui.LuaEncoderPC.Frame.Close.UIStroke
 G2L["15"] = Instance.new("UIStroke", G2L["14"]);
 G2L["15"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["15"]["Thickness"] = 2;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Close.UICorner
+-- StarterGui.LuaEncoderPC.Frame.Close.UICorner
 G2L["16"] = Instance.new("UICorner", G2L["14"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Title
+-- StarterGui.LuaEncoderPC.Frame.Title
 G2L["17"] = Instance.new("TextLabel", G2L["2"]);
 G2L["17"]["BorderSizePixel"] = 0;
 G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -175,7 +175,7 @@ G2L["17"]["Text"] = [[Lua Encoder - vRBX - v4.0]];
 G2L["17"]["Name"] = [[Title]];
 G2L["17"]["Position"] = UDim2.new(0.16456, 0, -0, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Fire
+-- StarterGui.LuaEncoderPC.Frame.Fire
 G2L["18"] = Instance.new("TextButton", G2L["2"]);
 G2L["18"]["BorderSizePixel"] = 0;
 G2L["18"]["TextSize"] = 14;
@@ -188,16 +188,16 @@ G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["18"]["Text"] = [[Script Hub]];
 G2L["18"]["Position"] = UDim2.new(0.43172, 0, 0.80189, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Fire.UIStroke
+-- StarterGui.LuaEncoderPC.Frame.Fire.UIStroke
 G2L["19"] = Instance.new("UIStroke", G2L["18"]);
 G2L["19"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["19"]["Thickness"] = 2;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Fire.UICorner
+-- StarterGui.LuaEncoderPC.Frame.Fire.UICorner
 G2L["1a"] = Instance.new("UICorner", G2L["18"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Credits
+-- StarterGui.LuaEncoderPC.Frame.Credits
 G2L["1b"] = Instance.new("TextButton", G2L["2"]);
 G2L["1b"]["BorderSizePixel"] = 0;
 G2L["1b"]["TextSize"] = 14;
@@ -210,20 +210,20 @@ G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1b"]["Text"] = [[Credits]];
 G2L["1b"]["Position"] = UDim2.new(0.89616, 0, 0.26887, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Credits.UIStroke
+-- StarterGui.LuaEncoderPC.Frame.Credits.UIStroke
 G2L["1c"] = Instance.new("UIStroke", G2L["1b"]);
 G2L["1c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["1c"]["Thickness"] = 2;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Credits.UICorner
+-- StarterGui.LuaEncoderPC.Frame.Credits.UICorner
 G2L["1d"] = Instance.new("UICorner", G2L["1b"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Main
+-- StarterGui.LuaEncoderPC.Frame.Main
 G2L["1e"] = Instance.new("LocalScript", G2L["2"]);
 G2L["1e"]["Name"] = [[Main]];
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub
+-- StarterGui.LuaEncoderPC.Hub
 G2L["1f"] = Instance.new("Frame", G2L["1"]);
 G2L["1f"]["Visible"] = false;
 G2L["1f"]["BorderSizePixel"] = 0;
@@ -233,7 +233,7 @@ G2L["1f"]["Position"] = UDim2.new(0.6532, 0, 0.15074, 0);
 G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1f"]["Name"] = [[Hub]];
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub.Title
+-- StarterGui.LuaEncoderPC.Hub.Title
 G2L["20"] = Instance.new("TextLabel", G2L["1f"]);
 G2L["20"]["BorderSizePixel"] = 0;
 G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -246,15 +246,15 @@ G2L["20"]["Text"] = [[Script Hub]];
 G2L["20"]["Name"] = [[Title]];
 G2L["20"]["Position"] = UDim2.new(-0, 0, 0, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub.Title.UICorner
+-- StarterGui.LuaEncoderPC.Hub.Title.UICorner
 G2L["21"] = Instance.new("UICorner", G2L["20"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub.Title.UIStroke
+-- StarterGui.LuaEncoderPC.Hub.Title.UIStroke
 G2L["22"] = Instance.new("UIStroke", G2L["20"]);
 G2L["22"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub.Ghost
+-- StarterGui.LuaEncoderPC.Hub.Ghost
 G2L["23"] = Instance.new("TextButton", G2L["1f"]);
 G2L["23"]["BorderSizePixel"] = 0;
 G2L["23"]["TextSize"] = 14;
@@ -267,28 +267,28 @@ G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["23"]["Text"] = [[Ghost Hub]];
 G2L["23"]["Position"] = UDim2.new(0.0652, 0, 0.18623, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub.Ghost.UIStroke
+-- StarterGui.LuaEncoderPC.Hub.Ghost.UIStroke
 G2L["24"] = Instance.new("UIStroke", G2L["23"]);
 G2L["24"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["24"]["Thickness"] = 2;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub.Ghost.UICorner
+-- StarterGui.LuaEncoderPC.Hub.Ghost.UICorner
 G2L["25"] = Instance.new("UICorner", G2L["23"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub.HubMain
+-- StarterGui.LuaEncoderPC.Hub.HubMain
 G2L["26"] = Instance.new("LocalScript", G2L["1f"]);
 G2L["26"]["Name"] = [[HubMain]];
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub.UICorner
+-- StarterGui.LuaEncoderPC.Hub.UICorner
 G2L["27"] = Instance.new("UICorner", G2L["1f"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub.UIStroke
+-- StarterGui.LuaEncoderPC.Hub.UIStroke
 G2L["28"] = Instance.new("UIStroke", G2L["1f"]);
 G2L["28"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits
+-- StarterGui.LuaEncoderPC.Credits
 G2L["29"] = Instance.new("Frame", G2L["1"]);
 G2L["29"]["Visible"] = false;
 G2L["29"]["BorderSizePixel"] = 0;
@@ -298,7 +298,7 @@ G2L["29"]["Position"] = UDim2.new(0.6532, 0, 0.15074, 0);
 G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["29"]["Name"] = [[Credits]];
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.Title
+-- StarterGui.LuaEncoderPC.Credits.Title
 G2L["2a"] = Instance.new("TextLabel", G2L["29"]);
 G2L["2a"]["BorderSizePixel"] = 0;
 G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
@@ -311,27 +311,27 @@ G2L["2a"]["Text"] = [[Credits]];
 G2L["2a"]["Name"] = [[Title]];
 G2L["2a"]["Position"] = UDim2.new(-0, 0, 0, 0);
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.Title.UICorner
+-- StarterGui.LuaEncoderPC.Credits.Title.UICorner
 G2L["2b"] = Instance.new("UICorner", G2L["2a"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.Title.UIStroke
+-- StarterGui.LuaEncoderPC.Credits.Title.UIStroke
 G2L["2c"] = Instance.new("UIStroke", G2L["2a"]);
 G2L["2c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.CreditMain
+-- StarterGui.LuaEncoderPC.Credits.CreditMain
 G2L["2d"] = Instance.new("LocalScript", G2L["29"]);
 G2L["2d"]["Name"] = [[CreditMain]];
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.UICorner
+-- StarterGui.LuaEncoderPC.Credits.UICorner
 G2L["2e"] = Instance.new("UICorner", G2L["29"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.UIStroke
+-- StarterGui.LuaEncoderPC.Credits.UIStroke
 G2L["2f"] = Instance.new("UIStroke", G2L["29"]);
 G2L["2f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.TextBox
+-- StarterGui.LuaEncoderPC.Credits.TextBox
 G2L["30"] = Instance.new("TextBox", G2L["29"]);
 G2L["30"]["Interactable"] = false;
 G2L["30"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
@@ -352,19 +352,19 @@ G2L["30"]["Position"] = UDim2.new(0.05028, 0, 0.24027, 0);
 G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["30"]["Text"] = [[-- Inspired by delta, fluxus, synapse]];
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.TextBox.UIStroke
+-- StarterGui.LuaEncoderPC.Credits.TextBox.UIStroke
 G2L["31"] = Instance.new("UIStroke", G2L["30"]);
 G2L["31"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.TextBox.UICorner
+-- StarterGui.LuaEncoderPC.Credits.TextBox.UICorner
 G2L["32"] = Instance.new("UICorner", G2L["30"]);
 
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.TextBox.UITextSizeConstraint
+-- StarterGui.LuaEncoderPC.Credits.TextBox.UITextSizeConstraint
 G2L["33"] = Instance.new("UITextSizeConstraint", G2L["30"]);
 G2L["33"]["MaxTextSize"] = 14;
 
--- StarterGui.The start of a new ERA.LuaEncoderPC.Frame.Main
+-- StarterGui.LuaEncoderPC.Frame.Main
 local function C_1e()
 local script = G2L["1e"];
 	--// Variables
@@ -385,43 +385,31 @@ local script = G2L["1e"];
 	local cls = frame.Close
 	local title = frame.Title
 	local fire = frame.Fire
-	local mod = frame.Module
 	local crd = frame.Credits
 	
 	--// Lua Encoder versions variables
 	
 	local luaversion = "vRBX"
 	local luav2 = "v4.0"
-	local realVersion = 5.0 -- Its the real version but not told to the public
-	
-	--// Player values
-	
-	local plr = game:GetService("Players").LocalPlayer
-	local char = plr.Character or plr.CharacterAdded:Wait()
-	local root = char:WaitForChild("HumanoidRootPart")
-	local hum = char:WaitForChild("Humanoid")
+	local LuaCode = "2.628.388"
+	print("Version of Lua Encoder/Roblox: "..LuaCode)
 	
 	--// Booleans
 	
 	frame.Draggable = true
 	frame.Active = true
 	
-	--// Added Variables
+	--// Local Functions
 	
+	local function execute(code)
+		loadstring(code)()
+	end
 	
+	local function clear(thing)
+		thing.Text = ""
+	end
 	
-	--// Button Functions
-	
-	exe.MouseButton1Click:Connect(function() 
-		loadstring(txtb.Text)()
-	end)
-	
-	
-	clr.MouseButton1Click:Connect(function() 
-		txtb.Text = ""
-	end)
-	
-	atc.MouseButton1Click:Connect(function() 
+	local function attach()
 		local repeated = 1
 		if att.Value == true then
 			title.Text = "Lua Encoder - "..luaversion.." - "..luav2.." (Already Injected!)"
@@ -449,56 +437,66 @@ local script = G2L["1e"];
 					wait(0.75)
 					title.Text = "Lua Encoder - "..luaversion.." - "..luav2
 					game:GetService("ServerScriptService"):SetAttribute("LoadStringEnabled", true)
-					game:GetService("ServerScriptService"):SetAttribute("ExecuteCode", true)
+					game:GetService("ServerScriptService"):SetAttribute("CanExecuteCode", true)
 					game:GetService("ServerScriptService"):SetAttribute("LocalLoadStringEnabled", true)
 					att.Value = true
 				end
 			until repeated == 3
 		end
-	end)
+	end
 	
-	
-	cls.MouseButton1Click:Connect(function() 
+	local function close()
 		gui:Destroy()
-	end)
+	end
 	
-	fire.MouseButton1Click:Connect(function() 
+	local function shub()
 		if hub.Visible == true then
 			hub.Visible = false
 		else
 			hub.Visible = true
 		end
-	end)
+	end
 	
-	crd.MouseButton1Click:Connect(function() 
+	local function credits()
 		if cred.Visible == true then
 			cred.Visible = false
 		else
 			cred.Visible = true
 		end
+	end
+	
+	
+	
+	--// Button Functions
+	
+	exe.MouseButton1Click:Connect(function() 
+		execute(txtb.Text)
 	end)
 	
-	--// Tasks.spawn(functions()
-	
-	task.spawn(function()
-		task.spawn(function()
-			while task.wait(2) do
-				if hum.WalkSpeed >= 300 then
-					plr:Kick("This is a security kick so you dont get banned in games with anti cheats")
-				end
-				if hum.JumpPower >= 300 then
-					plr:Kick("This is a security kick so you dont get banned in games with anti cheats")
-				end
-			end
-		end)
+	clr.MouseButton1Click:Connect(function() 
+		clear(txtb)
 	end)
 	
+	atc.MouseButton1Click:Connect(function() 
+		attach()
+	end)
 	
+	cls.MouseButton1Click:Connect(function() 
+		close()
+	end)
+	
+	fire.MouseButton1Click:Connect(function() 
+		shub()
+	end)
+	
+	crd.MouseButton1Click:Connect(function() 
+		credits()
+	end)
 	
 	--[[ End ]]--
 end;
 task.spawn(C_1e);
--- StarterGui.The start of a new ERA.LuaEncoderPC.Hub.HubMain
+-- StarterGui.LuaEncoderPC.Hub.HubMain
 local function C_26()
 local script = G2L["26"];
 	--// Variables
@@ -521,7 +519,7 @@ local script = G2L["26"];
 	--[[ End ]]--
 end;
 task.spawn(C_26);
--- StarterGui.The start of a new ERA.LuaEncoderPC.Credits.CreditMain
+-- StarterGui.LuaEncoderPC.Credits.CreditMain
 local function C_2d()
 local script = G2L["2d"];
 	--// Variables
