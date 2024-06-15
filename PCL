@@ -1,9 +1,9 @@
--- Lua
+-- lua
 
 if game.CoreGui:FindFirstChild("LuaEncoderPC") then
 	game.CoreGui:FindFirstChild("LuaEncoderPC"):Destroy()
 end
-task.wait(0.2)
+task.wait()
 
 -- Instances: 104 | Scripts: 6 | Modules: 0
 local G2L = {};
@@ -951,7 +951,7 @@ local script = G2L["31"];
 	end)
 	
 	cld.MouseButton1Click:Connect(function() 
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/laderite/scripts/main/Cloudscripts.lua'))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/nseinkkk/universal-script/main/searcher.lua"))()
 	end)
 	
 	--[[ End ]]--
