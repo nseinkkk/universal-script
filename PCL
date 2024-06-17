@@ -5,7 +5,7 @@ if game.CoreGui:FindFirstChild("LuaEncoderPC") then
 end
 task.wait()
 
--- Instances: 107 | Scripts: 6 | Modules: 0
+-- Instances: 110 | Scripts: 6 | Modules: 0
 local G2L = {};
 
 -- StarterGui.LuaEncoderPC
@@ -316,7 +316,7 @@ G2L["2a"] = Instance.new("Frame", G2L["1"]);
 G2L["2a"]["Visible"] = false;
 G2L["2a"]["BorderSizePixel"] = 0;
 G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
-G2L["2a"]["Size"] = UDim2.new(0.23398, 0, 0.42416, 0);
+G2L["2a"]["Size"] = UDim2.new(0.23398, 0, 0.54517, 0);
 G2L["2a"]["Position"] = UDim2.new(0.6532, 0, 0.15074, 0);
 G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2a"]["Name"] = [[Hub]];
@@ -349,11 +349,11 @@ G2L["2e"]["TextSize"] = 14;
 G2L["2e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2e"]["Size"] = UDim2.new(0.86044, 0, 0.19103, 0);
+G2L["2e"]["Size"] = UDim2.new(0.86044, 0, 0.12872, 0);
 G2L["2e"]["Name"] = [[Ghost]];
 G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2e"]["Text"] = [[Ghost Hub]];
-G2L["2e"]["Position"] = UDim2.new(0.0652, 0, 0.18623, 0);
+G2L["2e"]["Position"] = UDim2.new(0.0652, 0, 0.2096, 0);
 
 -- StarterGui.LuaEncoderPC.Hub.Ghost.UIStroke
 G2L["2f"] = Instance.new("UIStroke", G2L["2e"]);
@@ -383,11 +383,11 @@ G2L["34"]["TextSize"] = 14;
 G2L["34"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["34"]["Size"] = UDim2.new(0.86044, 0, 0.19103, 0);
+G2L["34"]["Size"] = UDim2.new(0.86044, 0, 0.12093, 0);
 G2L["34"]["Name"] = [[DLT]];
 G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["34"]["Text"] = [[Script searcher(Paid)]];
-G2L["34"]["Position"] = UDim2.new(0.0652, 0, 0.40147, 0);
+G2L["34"]["Position"] = UDim2.new(0.0652, 0, 0.33527, 0);
 
 -- StarterGui.LuaEncoderPC.Hub.DLT.UIStroke
 G2L["35"] = Instance.new("UIStroke", G2L["34"]);
@@ -405,11 +405,11 @@ G2L["37"]["TextSize"] = 14;
 G2L["37"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["37"]["Size"] = UDim2.new(0.86044, 0, 0.19103, 0);
+G2L["37"]["Size"] = UDim2.new(0.86044, 0, 0.12872, 0);
 G2L["37"]["Name"] = [[Cloud]];
 G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["37"]["Text"] = [[Cloud Script]];
-G2L["37"]["Position"] = UDim2.new(0.0652, 0, 0.59168, 0);
+G2L["37"]["Position"] = UDim2.new(0.0652, 0, 0.45538, 0);
 
 -- StarterGui.LuaEncoderPC.Hub.Cloud.UIStroke
 G2L["38"] = Instance.new("UIStroke", G2L["37"]);
@@ -431,7 +431,7 @@ G2L["3a"]["Size"] = UDim2.new(0.86044, 0, 0.14097, 0);
 G2L["3a"]["Name"] = [[fe]];
 G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3a"]["Text"] = [[FE]];
-G2L["3a"]["Position"] = UDim2.new(0.0652, 0, 0.80692, 0);
+G2L["3a"]["Position"] = UDim2.new(0.0652, 0, 0.56936, 0);
 
 -- StarterGui.LuaEncoderPC.Hub.fe.UIStroke
 G2L["3b"] = Instance.new("UIStroke", G2L["3a"]);
@@ -442,229 +442,227 @@ G2L["3b"]["Thickness"] = 2;
 G2L["3c"] = Instance.new("UICorner", G2L["3a"]);
 
 
--- StarterGui.LuaEncoderPC.Credits
-G2L["3d"] = Instance.new("Frame", G2L["1"]);
-G2L["3d"]["Visible"] = false;
+-- StarterGui.LuaEncoderPC.Hub.fel
+G2L["3d"] = Instance.new("TextButton", G2L["2a"]);
 G2L["3d"]["BorderSizePixel"] = 0;
-G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
-G2L["3d"]["Size"] = UDim2.new(0.23398, 0, 0.42416, 0);
-G2L["3d"]["Position"] = UDim2.new(0.6532, 0, 0.15074, 0);
+G2L["3d"]["TextSize"] = 14;
+G2L["3d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3d"]["Size"] = UDim2.new(0.86044, 0, 0.14097, 0);
+G2L["3d"]["Name"] = [[fel]];
 G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3d"]["Name"] = [[Credits]];
+G2L["3d"]["Text"] = [[FE illusion]];
+G2L["3d"]["Position"] = UDim2.new(0.0652, 0, 0.70956, 0);
+
+-- StarterGui.LuaEncoderPC.Hub.fel.UIStroke
+G2L["3e"] = Instance.new("UIStroke", G2L["3d"]);
+G2L["3e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["3e"]["Thickness"] = 2;
+
+-- StarterGui.LuaEncoderPC.Hub.fel.UICorner
+G2L["3f"] = Instance.new("UICorner", G2L["3d"]);
+
+
+-- StarterGui.LuaEncoderPC.Credits
+G2L["40"] = Instance.new("Frame", G2L["1"]);
+G2L["40"]["Visible"] = false;
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["40"]["Size"] = UDim2.new(0.23398, 0, 0.42416, 0);
+G2L["40"]["Position"] = UDim2.new(0.6532, 0, 0.15074, 0);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["Name"] = [[Credits]];
 
 -- StarterGui.LuaEncoderPC.Credits.Title
-G2L["3e"] = Instance.new("TextLabel", G2L["3d"]);
-G2L["3e"]["BorderSizePixel"] = 0;
-G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3e"]["TextSize"] = 14;
-G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Size"] = UDim2.new(1, 0, 0.14417, 0);
-G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Text"] = [[Credits]];
-G2L["3e"]["Name"] = [[Title]];
-G2L["3e"]["Position"] = UDim2.new(-0, 0, 0, 0);
+G2L["41"] = Instance.new("TextLabel", G2L["40"]);
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["TextSize"] = 14;
+G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["41"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Size"] = UDim2.new(1, 0, 0.14417, 0);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Text"] = [[Credits]];
+G2L["41"]["Name"] = [[Title]];
+G2L["41"]["Position"] = UDim2.new(-0, 0, 0, 0);
 
 -- StarterGui.LuaEncoderPC.Credits.Title.UICorner
-G2L["3f"] = Instance.new("UICorner", G2L["3e"]);
+G2L["42"] = Instance.new("UICorner", G2L["41"]);
 
 
 -- StarterGui.LuaEncoderPC.Credits.Title.UIStroke
-G2L["40"] = Instance.new("UIStroke", G2L["3e"]);
-G2L["40"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["43"] = Instance.new("UIStroke", G2L["41"]);
+G2L["43"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.LuaEncoderPC.Credits.CreditMain
-G2L["41"] = Instance.new("LocalScript", G2L["3d"]);
-G2L["41"]["Name"] = [[CreditMain]];
+G2L["44"] = Instance.new("LocalScript", G2L["40"]);
+G2L["44"]["Name"] = [[CreditMain]];
 
 -- StarterGui.LuaEncoderPC.Credits.UICorner
-G2L["42"] = Instance.new("UICorner", G2L["3d"]);
+G2L["45"] = Instance.new("UICorner", G2L["40"]);
 
 
 -- StarterGui.LuaEncoderPC.Credits.UIStroke
-G2L["43"] = Instance.new("UIStroke", G2L["3d"]);
-G2L["43"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["46"] = Instance.new("UIStroke", G2L["40"]);
+G2L["46"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.LuaEncoderPC.Credits.TextBox
-G2L["44"] = Instance.new("TextBox", G2L["3d"]);
-G2L["44"]["Interactable"] = false;
-G2L["44"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["44"]["BorderSizePixel"] = 0;
-G2L["44"]["TextEditable"] = false;
-G2L["44"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["44"]["TextWrapped"] = true;
-G2L["44"]["TextSize"] = 14;
-G2L["44"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["44"]["TextScaled"] = true;
-G2L["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["44"]["ShowNativeInput"] = false;
-G2L["44"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["44"]["MultiLine"] = true;
-G2L["44"]["ClearTextOnFocus"] = false;
-G2L["44"]["Size"] = UDim2.new(0.90356, 0, 0.63004, 0);
-G2L["44"]["Position"] = UDim2.new(0.05028, 0, 0.24027, 0);
-G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["44"]["Text"] = [[-- Inspired by delta, fluxus, synapse]];
+G2L["47"] = Instance.new("TextBox", G2L["40"]);
+G2L["47"]["Interactable"] = false;
+G2L["47"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["TextEditable"] = false;
+G2L["47"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["47"]["TextWrapped"] = true;
+G2L["47"]["TextSize"] = 14;
+G2L["47"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["47"]["TextScaled"] = true;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["ShowNativeInput"] = false;
+G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["47"]["MultiLine"] = true;
+G2L["47"]["ClearTextOnFocus"] = false;
+G2L["47"]["Size"] = UDim2.new(0.90356, 0, 0.63004, 0);
+G2L["47"]["Position"] = UDim2.new(0.05028, 0, 0.24027, 0);
+G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Text"] = [[-- Inspired by delta, fluxus, synapse]];
 
 -- StarterGui.LuaEncoderPC.Credits.TextBox.UIStroke
-G2L["45"] = Instance.new("UIStroke", G2L["44"]);
-G2L["45"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["48"] = Instance.new("UIStroke", G2L["47"]);
+G2L["48"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.LuaEncoderPC.Credits.TextBox.UICorner
-G2L["46"] = Instance.new("UICorner", G2L["44"]);
+G2L["49"] = Instance.new("UICorner", G2L["47"]);
 
 
 -- StarterGui.LuaEncoderPC.Credits.TextBox.UITextSizeConstraint
-G2L["47"] = Instance.new("UITextSizeConstraint", G2L["44"]);
-G2L["47"]["MaxTextSize"] = 14;
+G2L["4a"] = Instance.new("UITextSizeConstraint", G2L["47"]);
+G2L["4a"]["MaxTextSize"] = 14;
 
 -- StarterGui.LuaEncoderPC.About
-G2L["48"] = Instance.new("Frame", G2L["1"]);
-G2L["48"]["Visible"] = false;
-G2L["48"]["BorderSizePixel"] = 0;
-G2L["48"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
-G2L["48"]["Size"] = UDim2.new(0.23398, 0, 0.42416, 0);
-G2L["48"]["Position"] = UDim2.new(0.6532, 0, 0.15074, 0);
-G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["48"]["Name"] = [[About]];
+G2L["4b"] = Instance.new("Frame", G2L["1"]);
+G2L["4b"]["Visible"] = false;
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["4b"]["Size"] = UDim2.new(0.23398, 0, 0.42416, 0);
+G2L["4b"]["Position"] = UDim2.new(0.6532, 0, 0.15074, 0);
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["Name"] = [[About]];
 
 -- StarterGui.LuaEncoderPC.About.Title
-G2L["49"] = Instance.new("TextLabel", G2L["48"]);
-G2L["49"]["BorderSizePixel"] = 0;
-G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["49"]["TextSize"] = 14;
-G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["49"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["49"]["Size"] = UDim2.new(1, 0, 0.14417, 0);
-G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["49"]["Text"] = [[About]];
-G2L["49"]["Name"] = [[Title]];
-G2L["49"]["Position"] = UDim2.new(-0, 0, 0, 0);
+G2L["4c"] = Instance.new("TextLabel", G2L["4b"]);
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4c"]["TextSize"] = 14;
+G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["Size"] = UDim2.new(1, 0, 0.14417, 0);
+G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["Text"] = [[About]];
+G2L["4c"]["Name"] = [[Title]];
+G2L["4c"]["Position"] = UDim2.new(-0, 0, 0, 0);
 
 -- StarterGui.LuaEncoderPC.About.Title.UICorner
-G2L["4a"] = Instance.new("UICorner", G2L["49"]);
+G2L["4d"] = Instance.new("UICorner", G2L["4c"]);
 
 
 -- StarterGui.LuaEncoderPC.About.Title.UIStroke
-G2L["4b"] = Instance.new("UIStroke", G2L["49"]);
-G2L["4b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["4e"] = Instance.new("UIStroke", G2L["4c"]);
+G2L["4e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.LuaEncoderPC.About.Aboutmain
-G2L["4c"] = Instance.new("LocalScript", G2L["48"]);
-G2L["4c"]["Name"] = [[Aboutmain]];
+G2L["4f"] = Instance.new("LocalScript", G2L["4b"]);
+G2L["4f"]["Name"] = [[Aboutmain]];
 
 -- StarterGui.LuaEncoderPC.About.UICorner
-G2L["4d"] = Instance.new("UICorner", G2L["48"]);
+G2L["50"] = Instance.new("UICorner", G2L["4b"]);
 
 
 -- StarterGui.LuaEncoderPC.About.UIStroke
-G2L["4e"] = Instance.new("UIStroke", G2L["48"]);
-G2L["4e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["51"] = Instance.new("UIStroke", G2L["4b"]);
+G2L["51"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.LuaEncoderPC.About.TextBox
-G2L["4f"] = Instance.new("TextBox", G2L["48"]);
-G2L["4f"]["Interactable"] = false;
-G2L["4f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4f"]["BorderSizePixel"] = 0;
-G2L["4f"]["TextEditable"] = false;
-G2L["4f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["4f"]["TextWrapped"] = true;
-G2L["4f"]["TextSize"] = 14;
-G2L["4f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["4f"]["TextScaled"] = true;
-G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4f"]["ShowNativeInput"] = false;
-G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4f"]["MultiLine"] = true;
-G2L["4f"]["ClearTextOnFocus"] = false;
-G2L["4f"]["Size"] = UDim2.new(0.90356, 0, 0.63004, 0);
-G2L["4f"]["Position"] = UDim2.new(0.05028, 0, 0.24027, 0);
-G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4f"]["Text"] = [[-- This can execute: loadstrings, coroutine, tasks, while, for, if, do, etc
+G2L["52"] = Instance.new("TextBox", G2L["4b"]);
+G2L["52"]["Interactable"] = false;
+G2L["52"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["TextEditable"] = false;
+G2L["52"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["52"]["TextWrapped"] = true;
+G2L["52"]["TextSize"] = 14;
+G2L["52"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["52"]["TextScaled"] = true;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["ShowNativeInput"] = false;
+G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["52"]["MultiLine"] = true;
+G2L["52"]["ClearTextOnFocus"] = false;
+G2L["52"]["Size"] = UDim2.new(0.90356, 0, 0.63004, 0);
+G2L["52"]["Position"] = UDim2.new(0.05028, 0, 0.24027, 0);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Text"] = [[-- This can execute: loadstrings, coroutine, tasks, while, for, if, do, etc
 -- This can be an executor that works in the future i think lol (I need to do more researching).
 -- End i think...]];
 
 -- StarterGui.LuaEncoderPC.About.TextBox.UIStroke
-G2L["50"] = Instance.new("UIStroke", G2L["4f"]);
-G2L["50"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["53"] = Instance.new("UIStroke", G2L["52"]);
+G2L["53"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.LuaEncoderPC.About.TextBox.UICorner
-G2L["51"] = Instance.new("UICorner", G2L["4f"]);
+G2L["54"] = Instance.new("UICorner", G2L["52"]);
 
 
 -- StarterGui.LuaEncoderPC.About.TextBox.UITextSizeConstraint
-G2L["52"] = Instance.new("UITextSizeConstraint", G2L["4f"]);
-G2L["52"]["MaxTextSize"] = 14;
+G2L["55"] = Instance.new("UITextSizeConstraint", G2L["52"]);
+G2L["55"]["MaxTextSize"] = 14;
 
 -- StarterGui.LuaEncoderPC.Settings
-G2L["53"] = Instance.new("Frame", G2L["1"]);
-G2L["53"]["Visible"] = false;
-G2L["53"]["BorderSizePixel"] = 0;
-G2L["53"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
-G2L["53"]["Size"] = UDim2.new(0.23398, 0, 0.42416, 0);
-G2L["53"]["Position"] = UDim2.new(0.6532, 0, 0.15074, 0);
-G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["53"]["Name"] = [[Settings]];
+G2L["56"] = Instance.new("Frame", G2L["1"]);
+G2L["56"]["Visible"] = false;
+G2L["56"]["BorderSizePixel"] = 0;
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["56"]["Size"] = UDim2.new(0.23398, 0, 0.42416, 0);
+G2L["56"]["Position"] = UDim2.new(0.6532, 0, 0.15074, 0);
+G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["56"]["Name"] = [[Settings]];
 
 -- StarterGui.LuaEncoderPC.Settings.Title
-G2L["54"] = Instance.new("TextLabel", G2L["53"]);
-G2L["54"]["BorderSizePixel"] = 0;
-G2L["54"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["54"]["TextSize"] = 14;
-G2L["54"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["54"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["54"]["Size"] = UDim2.new(1, 0, 0.14417, 0);
-G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["54"]["Text"] = [[Settings]];
-G2L["54"]["Name"] = [[Title]];
-G2L["54"]["Position"] = UDim2.new(-0, 0, 0, 0);
+G2L["57"] = Instance.new("TextLabel", G2L["56"]);
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["TextSize"] = 14;
+G2L["57"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["57"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["Size"] = UDim2.new(1, 0, 0.14417, 0);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["Text"] = [[Settings]];
+G2L["57"]["Name"] = [[Title]];
+G2L["57"]["Position"] = UDim2.new(-0, 0, 0, 0);
 
 -- StarterGui.LuaEncoderPC.Settings.Title.UICorner
-G2L["55"] = Instance.new("UICorner", G2L["54"]);
+G2L["58"] = Instance.new("UICorner", G2L["57"]);
 
 
 -- StarterGui.LuaEncoderPC.Settings.Title.UIStroke
-G2L["56"] = Instance.new("UIStroke", G2L["54"]);
-G2L["56"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["59"] = Instance.new("UIStroke", G2L["57"]);
+G2L["59"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.LuaEncoderPC.Settings.SettingsMain
-G2L["57"] = Instance.new("LocalScript", G2L["53"]);
-G2L["57"]["Name"] = [[SettingsMain]];
+G2L["5a"] = Instance.new("LocalScript", G2L["56"]);
+G2L["5a"]["Name"] = [[SettingsMain]];
 
 -- StarterGui.LuaEncoderPC.Settings.UICorner
-G2L["58"] = Instance.new("UICorner", G2L["53"]);
+G2L["5b"] = Instance.new("UICorner", G2L["56"]);
 
 
 -- StarterGui.LuaEncoderPC.Settings.UIStroke
-G2L["59"] = Instance.new("UIStroke", G2L["53"]);
-G2L["59"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["5c"] = Instance.new("UIStroke", G2L["56"]);
+G2L["5c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.LuaEncoderPC.Settings.Option1
-G2L["5a"] = Instance.new("TextButton", G2L["53"]);
-G2L["5a"]["TextWrapped"] = true;
-G2L["5a"]["BorderSizePixel"] = 0;
-G2L["5a"]["TextSize"] = 14;
-G2L["5a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5a"]["TextScaled"] = true;
-G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5a"]["Size"] = UDim2.new(0.79777, 0, 0.14516, 0);
-G2L["5a"]["Name"] = [[Option1]];
-G2L["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5a"]["Text"] = [[Protect you from anti cheats]];
-G2L["5a"]["Position"] = UDim2.new(0.0838, 0, 0.20523, 0);
-
--- StarterGui.LuaEncoderPC.Settings.Option1.UITextSizeConstraint
-G2L["5b"] = Instance.new("UITextSizeConstraint", G2L["5a"]);
-G2L["5b"]["MaxTextSize"] = 14;
-
--- StarterGui.LuaEncoderPC.Settings.Option1.UIStroke
-G2L["5c"] = Instance.new("UIStroke", G2L["5a"]);
-G2L["5c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["5c"]["Color"] = Color3.fromRGB(255, 0, 0);
-
--- StarterGui.LuaEncoderPC.Settings.useless
-G2L["5d"] = Instance.new("TextButton", G2L["53"]);
+G2L["5d"] = Instance.new("TextButton", G2L["56"]);
 G2L["5d"]["TextWrapped"] = true;
 G2L["5d"]["BorderSizePixel"] = 0;
 G2L["5d"]["TextSize"] = 14;
@@ -672,23 +670,23 @@ G2L["5d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["5d"]["TextScaled"] = true;
 G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5d"]["Size"] = UDim2.new(0.79777, 0, 0.13014, 0);
-G2L["5d"]["Name"] = [[useless]];
+G2L["5d"]["Size"] = UDim2.new(0.79777, 0, 0.14516, 0);
+G2L["5d"]["Name"] = [[Option1]];
 G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5d"]["Text"] = [[Execute without attaching]];
-G2L["5d"]["Position"] = UDim2.new(0.0838, 0, 0.34538, 0);
+G2L["5d"]["Text"] = [[Protect you from anti cheats]];
+G2L["5d"]["Position"] = UDim2.new(0.0838, 0, 0.20523, 0);
 
--- StarterGui.LuaEncoderPC.Settings.useless.UITextSizeConstraint
+-- StarterGui.LuaEncoderPC.Settings.Option1.UITextSizeConstraint
 G2L["5e"] = Instance.new("UITextSizeConstraint", G2L["5d"]);
 G2L["5e"]["MaxTextSize"] = 14;
 
--- StarterGui.LuaEncoderPC.Settings.useless.UIStroke
+-- StarterGui.LuaEncoderPC.Settings.Option1.UIStroke
 G2L["5f"] = Instance.new("UIStroke", G2L["5d"]);
 G2L["5f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["5f"]["Color"] = Color3.fromRGB(255, 0, 0);
 
--- StarterGui.LuaEncoderPC.Settings.icon
-G2L["60"] = Instance.new("TextButton", G2L["53"]);
+-- StarterGui.LuaEncoderPC.Settings.useless
+G2L["60"] = Instance.new("TextButton", G2L["56"]);
 G2L["60"]["TextWrapped"] = true;
 G2L["60"]["BorderSizePixel"] = 0;
 G2L["60"]["TextSize"] = 14;
@@ -696,23 +694,23 @@ G2L["60"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["60"]["TextScaled"] = true;
 G2L["60"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["60"]["Size"] = UDim2.new(0.79777, 0, 0.11012, 0);
-G2L["60"]["Name"] = [[icon]];
+G2L["60"]["Size"] = UDim2.new(0.79777, 0, 0.13014, 0);
+G2L["60"]["Name"] = [[useless]];
 G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["60"]["Text"] = [[Floating Icon]];
-G2L["60"]["Position"] = UDim2.new(0.0838, 0, 0.47052, 0);
+G2L["60"]["Text"] = [[Execute without attaching]];
+G2L["60"]["Position"] = UDim2.new(0.0838, 0, 0.34538, 0);
 
--- StarterGui.LuaEncoderPC.Settings.icon.UITextSizeConstraint
+-- StarterGui.LuaEncoderPC.Settings.useless.UITextSizeConstraint
 G2L["61"] = Instance.new("UITextSizeConstraint", G2L["60"]);
 G2L["61"]["MaxTextSize"] = 14;
 
--- StarterGui.LuaEncoderPC.Settings.icon.UIStroke
+-- StarterGui.LuaEncoderPC.Settings.useless.UIStroke
 G2L["62"] = Instance.new("UIStroke", G2L["60"]);
 G2L["62"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["62"]["Color"] = Color3.fromRGB(255, 0, 0);
 
--- StarterGui.LuaEncoderPC.Settings.link
-G2L["63"] = Instance.new("TextButton", G2L["53"]);
+-- StarterGui.LuaEncoderPC.Settings.icon
+G2L["63"] = Instance.new("TextButton", G2L["56"]);
 G2L["63"]["TextWrapped"] = true;
 G2L["63"]["BorderSizePixel"] = 0;
 G2L["63"]["TextSize"] = 14;
@@ -720,23 +718,23 @@ G2L["63"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["63"]["TextScaled"] = true;
 G2L["63"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["63"]["Size"] = UDim2.new(0.79777, 0, 0.12514, 0);
-G2L["63"]["Name"] = [[link]];
+G2L["63"]["Size"] = UDim2.new(0.79777, 0, 0.11012, 0);
+G2L["63"]["Name"] = [[icon]];
 G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["63"]["Text"] = [[Get delta link and all my scripts link]];
-G2L["63"]["Position"] = UDim2.new(0.0838, 0, 0.57564, 0);
+G2L["63"]["Text"] = [[Floating Icon]];
+G2L["63"]["Position"] = UDim2.new(0.0838, 0, 0.47052, 0);
 
--- StarterGui.LuaEncoderPC.Settings.link.UITextSizeConstraint
+-- StarterGui.LuaEncoderPC.Settings.icon.UITextSizeConstraint
 G2L["64"] = Instance.new("UITextSizeConstraint", G2L["63"]);
 G2L["64"]["MaxTextSize"] = 14;
 
--- StarterGui.LuaEncoderPC.Settings.link.UIStroke
+-- StarterGui.LuaEncoderPC.Settings.icon.UIStroke
 G2L["65"] = Instance.new("UIStroke", G2L["63"]);
 G2L["65"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["65"]["Color"] = Color3.fromRGB(255, 0, 0);
 
--- StarterGui.LuaEncoderPC.Settings.Change
-G2L["66"] = Instance.new("TextButton", G2L["53"]);
+-- StarterGui.LuaEncoderPC.Settings.link
+G2L["66"] = Instance.new("TextButton", G2L["56"]);
 G2L["66"]["TextWrapped"] = true;
 G2L["66"]["BorderSizePixel"] = 0;
 G2L["66"]["TextSize"] = 14;
@@ -745,38 +743,62 @@ G2L["66"]["TextScaled"] = true;
 G2L["66"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["66"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["66"]["Size"] = UDim2.new(0.79777, 0, 0.12514, 0);
-G2L["66"]["Name"] = [[Change]];
+G2L["66"]["Name"] = [[link]];
 G2L["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["66"]["Text"] = [[change execute button state]];
-G2L["66"]["Visible"] = false;
-G2L["66"]["Position"] = UDim2.new(0.0838, 0, 0.69577, 0);
+G2L["66"]["Text"] = [[Get delta link and all my scripts link]];
+G2L["66"]["Position"] = UDim2.new(0.0838, 0, 0.57564, 0);
 
--- StarterGui.LuaEncoderPC.Settings.Change.UITextSizeConstraint
+-- StarterGui.LuaEncoderPC.Settings.link.UITextSizeConstraint
 G2L["67"] = Instance.new("UITextSizeConstraint", G2L["66"]);
 G2L["67"]["MaxTextSize"] = 14;
 
--- StarterGui.LuaEncoderPC.Settings.Change.UIStroke
+-- StarterGui.LuaEncoderPC.Settings.link.UIStroke
 G2L["68"] = Instance.new("UIStroke", G2L["66"]);
 G2L["68"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 G2L["68"]["Color"] = Color3.fromRGB(255, 0, 0);
 
--- StarterGui.LuaEncoderPC.Open
-G2L["69"] = Instance.new("ImageButton", G2L["1"]);
+-- StarterGui.LuaEncoderPC.Settings.Change
+G2L["69"] = Instance.new("TextButton", G2L["56"]);
+G2L["69"]["TextWrapped"] = true;
 G2L["69"]["BorderSizePixel"] = 0;
-G2L["69"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["69"]["Image"] = [[rbxassetid://17546664635]];
-G2L["69"]["Size"] = UDim2.new(0.03795, 0, 0.10609, 0);
-G2L["69"]["Name"] = [[Open]];
+G2L["69"]["TextSize"] = 14;
+G2L["69"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["69"]["TextScaled"] = true;
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["69"]["Size"] = UDim2.new(0.79777, 0, 0.12514, 0);
+G2L["69"]["Name"] = [[Change]];
 G2L["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["69"]["Position"] = UDim2.new(0.5634, 0, 0.02972, 0);
+G2L["69"]["Text"] = [[change execute button state]];
+G2L["69"]["Visible"] = false;
+G2L["69"]["Position"] = UDim2.new(0.0838, 0, 0.69577, 0);
+
+-- StarterGui.LuaEncoderPC.Settings.Change.UITextSizeConstraint
+G2L["6a"] = Instance.new("UITextSizeConstraint", G2L["69"]);
+G2L["6a"]["MaxTextSize"] = 14;
+
+-- StarterGui.LuaEncoderPC.Settings.Change.UIStroke
+G2L["6b"] = Instance.new("UIStroke", G2L["69"]);
+G2L["6b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["6b"]["Color"] = Color3.fromRGB(255, 0, 0);
+
+-- StarterGui.LuaEncoderPC.Open
+G2L["6c"] = Instance.new("ImageButton", G2L["1"]);
+G2L["6c"]["BorderSizePixel"] = 0;
+G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6c"]["Image"] = [[rbxassetid://17546664635]];
+G2L["6c"]["Size"] = UDim2.new(0.05308, 0, 0.12, 0);
+G2L["6c"]["Name"] = [[Open]];
+G2L["6c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6c"]["Position"] = UDim2.new(0.5634, 0, 0.02972, 0);
 
 -- StarterGui.LuaEncoderPC.Open.UICorner
-G2L["6a"] = Instance.new("UICorner", G2L["69"]);
+G2L["6d"] = Instance.new("UICorner", G2L["6c"]);
 
 
 -- StarterGui.LuaEncoderPC.Open.OpenMain
-G2L["6b"] = Instance.new("LocalScript", G2L["69"]);
-G2L["6b"]["Name"] = [[OpenMain]];
+G2L["6e"] = Instance.new("LocalScript", G2L["6c"]);
+G2L["6e"]["Name"] = [[OpenMain]];
 
 -- StarterGui.LuaEncoderPC.Frame.Main
 local function C_1b()
@@ -859,6 +881,7 @@ local script = G2L["1b"];
 					game:GetService("ServerScriptService"):SetAttribute("LoadStringEnabled", true)
 					game:GetService("ServerScriptService"):SetAttribute("CanExecuteCode", true)
 					game:GetService("ServerScriptService"):SetAttribute("LocalLoadStringEnabled", true)
+					workspace.FilteringEnabled = true
 					att.Value = true
 				end
 			until repeated == 3
@@ -908,6 +931,7 @@ local script = G2L["1b"];
 	--// Button Functions
 	
 	exe.MouseButton1Click:Connect(function() 
+		wait(0.01)
 		execute(txtb.Text)
 	end)
 	
@@ -957,6 +981,7 @@ local script = G2L["31"];
 	local dlt = fm.DLT
 	local cld = fm.Cloud
 	local fe = fm.fe
+	local ilu = fm.fel
 	
 	--// Booleans
 	
@@ -974,18 +999,22 @@ local script = G2L["31"];
 	end)
 	
 	cld.MouseButton1Click:Connect(function() 
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/nseinkkk/universal-script/main/searcher.lua"))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/laderite/scripts/main/Cloudscripts.lua'))()
 	end)
 	fe.MouseButton1Click:Connect(function() 
 		loadstring(game:HttpGet("https://pastebin.com/raw/LMiJ1JK1"))()
+	end)
+	
+	ilu.MouseButton1Click:Connect(function() 
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_11l7Y131YqJjZ31QmV5L8pI23V02b3191sEg26E75472Wl78Vi8870jRv5txZyL1.lua.txt"))()
 	end)
 	
 	--[[ End ]]--
 end;
 task.spawn(C_31);
 -- StarterGui.LuaEncoderPC.Credits.CreditMain
-local function C_41()
-local script = G2L["41"];
+local function C_44()
+local script = G2L["44"];
 	--// Variables
 	
 	local gui = script.Parent.Parent
@@ -998,10 +1027,10 @@ local script = G2L["41"];
 	
 	--[[ End ]]--
 end;
-task.spawn(C_41);
+task.spawn(C_44);
 -- StarterGui.LuaEncoderPC.About.Aboutmain
-local function C_4c()
-local script = G2L["4c"];
+local function C_4f()
+local script = G2L["4f"];
 	--// Variables
 	
 	local gui = script.Parent.Parent
@@ -1014,10 +1043,10 @@ local script = G2L["4c"];
 	
 	--[[ End ]]--
 end;
-task.spawn(C_4c);
+task.spawn(C_4f);
 -- StarterGui.LuaEncoderPC.Settings.SettingsMain
-local function C_57()
-local script = G2L["57"];
+local function C_5a()
+local script = G2L["5a"];
 	--// Variables
 	
 	local gui = script.Parent.Parent
@@ -1089,10 +1118,10 @@ local script = G2L["57"];
 	
 	--[[ End ]]--
 end;
-task.spawn(C_57);
+task.spawn(C_5a);
 -- StarterGui.LuaEncoderPC.Open.OpenMain
-local function C_6b()
-local script = G2L["6b"];
+local function C_6e()
+local script = G2L["6e"];
 	local open = script.Parent
 	local frame = open.Parent.Frame
 	open.Active = true
@@ -1102,6 +1131,6 @@ local script = G2L["6b"];
 		frame.Visible = not frame.Visible
 	end)
 end;
-task.spawn(C_6b);
+task.spawn(C_6e);
 
 return G2L["1"], require;
