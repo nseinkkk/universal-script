@@ -9,7 +9,7 @@ task.wait()
 local G2L = {};
 
 -- StarterGui.LuaEncoderPC
-G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[LuaEncoderPC]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
@@ -97,6 +97,7 @@ G2L["c"]["Size"] = UDim2.new(0.1402, 0, 0.15285, 0);
 G2L["c"]["Name"] = [[Attach]];
 G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c"]["Text"] = [[Attach]];
+G2L["c"]["Visible"] = false;
 G2L["c"]["Position"] = UDim2.new(0.85733, 0, 0.80189, 0);
 
 -- StarterGui.LuaEncoderPC.Frame.Attach.UIStroke
@@ -163,7 +164,7 @@ G2L["15"]["Size"] = UDim2.new(0.17423, 0, 0.15285, 0);
 G2L["15"]["Name"] = [[Fire]];
 G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["15"]["Text"] = [[Script Hub]];
-G2L["15"]["Position"] = UDim2.new(0.65742, 0, 0.80189, 0);
+G2L["15"]["Position"] = UDim2.new(0.78605, 0, 0.80189, 0);
 
 -- StarterGui.LuaEncoderPC.Frame.Fire.UIStroke
 G2L["16"] = Instance.new("UIStroke", G2L["15"]);
@@ -697,7 +698,7 @@ G2L["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]
 G2L["60"]["Size"] = UDim2.new(0.79777, 0, 0.13014, 0);
 G2L["60"]["Name"] = [[useless]];
 G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["60"]["Text"] = [[Execute without attaching]];
+G2L["60"]["Text"] = [[useless]];
 G2L["60"]["Position"] = UDim2.new(0.0838, 0, 0.34538, 0);
 
 -- StarterGui.LuaEncoderPC.Settings.useless.UITextSizeConstraint
