@@ -5,7 +5,8 @@ if game.CoreGui:FindFirstChild("LuaEncoderPC") then
 end
 task.wait()
 
--- Instances: 141 | Scripts: 12 | Modules: 0
+
+-- Instances: 153 | Scripts: 12 | Modules: 0
 local G2L = {};
 
 -- StarterGui.LuaEncoderPC
@@ -20,7 +21,7 @@ G2L["2"]["Visible"] = false;
 G2L["2"]["ZIndex"] = 999999999;
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
-G2L["2"]["Size"] = UDim2.new(0.53993, 0, 0.44586, 0);
+G2L["2"]["Size"] = UDim2.new(0.54647, 0, 0.45435, 0);
 G2L["2"]["Position"] = UDim2.new(0.01569, 0, 0.02972, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
@@ -135,11 +136,11 @@ G2L["11"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["11"]["ZIndex"] = 999999999;
-G2L["11"]["Size"] = UDim2.new(0.07354, 0, 0.10867, 0);
+G2L["11"]["Size"] = UDim2.new(0.08071, 0, 0.12269, 0);
 G2L["11"]["Name"] = [[Close]];
 G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["11"]["Text"] = [[X]];
-G2L["11"]["Position"] = UDim2.new(0.924, 0, -0, 0);
+G2L["11"]["Position"] = UDim2.new(0.91682, 0, -0, 0);
 
 -- StarterGui.LuaEncoderPC.Frame.Close.UIStroke
 G2L["12"] = Instance.new("UIStroke", G2L["11"]);
@@ -233,7 +234,6 @@ G2L["1c"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.LuaEncoderPC.Frame.ScrollingFrame.TextBox
 G2L["1d"] = Instance.new("TextBox", G2L["1c"]);
-G2L["1d"]["CursorPosition"] = -1;
 G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1d"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1d"]["ZIndex"] = 999999999;
@@ -1097,15 +1097,135 @@ G2L["8a"]["Position"] = UDim2.new(0.87594, 0, 0, 0);
 G2L["8b"] = Instance.new("UIStroke", G2L["85"]);
 
 
--- StarterGui.LuaEncoderPC.Checker
-G2L["8c"] = Instance.new("LocalScript", G2L["1"]);
-G2L["8c"]["Enabled"] = false;
-G2L["8c"]["Name"] = [[Checker]];
-G2L["8c"]["Disabled"] = true;
+-- StarterGui.LuaEncoderPC.ExecutedFrame
+G2L["8c"] = Instance.new("Frame", G2L["1"]);
+G2L["8c"]["Visible"] = false;
+G2L["8c"]["ZIndex"] = 999999999;
+G2L["8c"]["BorderSizePixel"] = 0;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["8c"]["Size"] = UDim2.new(0.34771, 0, 0.15711, 0);
+G2L["8c"]["Position"] = UDim2.new(0.63274, 0, 0.82166, 0);
+G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"]["Name"] = [[ExecutedFrame]];
 
--- StarterGui.LuaEncoderPC.ScriptProtector
-G2L["8d"] = Instance.new("LocalScript", G2L["1"]);
-G2L["8d"]["Name"] = [[ScriptProtector]];
+-- StarterGui.LuaEncoderPC.ExecutedFrame.UICorner
+G2L["8d"] = Instance.new("UICorner", G2L["8c"]);
+
+
+-- StarterGui.LuaEncoderPC.ExecutedFrame.LocalScript
+G2L["8e"] = Instance.new("LocalScript", G2L["8c"]);
+
+
+-- StarterGui.LuaEncoderPC.ExecutedFrame.Title
+G2L["8f"] = Instance.new("TextLabel", G2L["8c"]);
+G2L["8f"]["ZIndex"] = 999999999;
+G2L["8f"]["BorderSizePixel"] = 0;
+G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["TextSize"] = 14;
+G2L["8f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["BackgroundTransparency"] = 1;
+G2L["8f"]["Size"] = UDim2.new(0, 84, 0, 29);
+G2L["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8f"]["Text"] = [[Lua Encoder]];
+G2L["8f"]["Name"] = [[Title]];
+
+-- StarterGui.LuaEncoderPC.ExecutedFrame.Desc
+G2L["90"] = Instance.new("TextLabel", G2L["8c"]);
+G2L["90"]["ZIndex"] = 999999999;
+G2L["90"]["BorderSizePixel"] = 0;
+G2L["90"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["90"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["90"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["TextSize"] = 14;
+G2L["90"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["90"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["90"]["BackgroundTransparency"] = 1;
+G2L["90"]["Size"] = UDim2.new(0, 264, 0, 45);
+G2L["90"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["90"]["Text"] = [[Executed Code]];
+G2L["90"]["Name"] = [[Desc]];
+G2L["90"]["Position"] = UDim2.new(0.00752, 0, 0.39189, 0);
+
+-- StarterGui.LuaEncoderPC.ExecutedFrame.ImageLabel
+G2L["91"] = Instance.new("ImageLabel", G2L["8c"]);
+G2L["91"]["ZIndex"] = 999999999;
+G2L["91"]["BorderSizePixel"] = 0;
+G2L["91"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["91"]["Image"] = [[rbxassetid://17546664635]];
+G2L["91"]["Size"] = UDim2.new(0.12155, 0, 0.39189, 0);
+G2L["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["91"]["BackgroundTransparency"] = 1;
+G2L["91"]["Position"] = UDim2.new(0.87594, 0, 0, 0);
+
+-- StarterGui.LuaEncoderPC.ExecutedFrame.UIStroke
+G2L["92"] = Instance.new("UIStroke", G2L["8c"]);
+
+
+-- StarterGui.LuaEncoderPC.ClearedFrame
+G2L["93"] = Instance.new("Frame", G2L["1"]);
+G2L["93"]["Visible"] = false;
+G2L["93"]["ZIndex"] = 999999999;
+G2L["93"]["BorderSizePixel"] = 0;
+G2L["93"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["93"]["Size"] = UDim2.new(0.34771, 0, 0.15711, 0);
+G2L["93"]["Position"] = UDim2.new(0.63274, 0, 0.82166, 0);
+G2L["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["93"]["Name"] = [[ClearedFrame]];
+
+-- StarterGui.LuaEncoderPC.ClearedFrame.UICorner
+G2L["94"] = Instance.new("UICorner", G2L["93"]);
+
+
+-- StarterGui.LuaEncoderPC.ClearedFrame.LocalScript
+G2L["95"] = Instance.new("LocalScript", G2L["93"]);
+
+
+-- StarterGui.LuaEncoderPC.ClearedFrame.Title
+G2L["96"] = Instance.new("TextLabel", G2L["93"]);
+G2L["96"]["ZIndex"] = 999999999;
+G2L["96"]["BorderSizePixel"] = 0;
+G2L["96"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["96"]["TextSize"] = 14;
+G2L["96"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["96"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["96"]["BackgroundTransparency"] = 1;
+G2L["96"]["Size"] = UDim2.new(0, 84, 0, 29);
+G2L["96"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["96"]["Text"] = [[Lua Encoder]];
+G2L["96"]["Name"] = [[Title]];
+
+-- StarterGui.LuaEncoderPC.ClearedFrame.ImageLabel
+G2L["97"] = Instance.new("ImageLabel", G2L["93"]);
+G2L["97"]["ZIndex"] = 999999999;
+G2L["97"]["BorderSizePixel"] = 0;
+G2L["97"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["97"]["Image"] = [[rbxassetid://17546664635]];
+G2L["97"]["Size"] = UDim2.new(0.12155, 0, 0.39189, 0);
+G2L["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["97"]["BackgroundTransparency"] = 1;
+G2L["97"]["Position"] = UDim2.new(0.87594, 0, 0, 0);
+
+-- StarterGui.LuaEncoderPC.ClearedFrame.UIStroke
+G2L["98"] = Instance.new("UIStroke", G2L["93"]);
+
+
+-- StarterGui.LuaEncoderPC.ClearedFrame.Desc
+G2L["99"] = Instance.new("TextLabel", G2L["93"]);
+G2L["99"]["ZIndex"] = 999999999;
+G2L["99"]["BorderSizePixel"] = 0;
+G2L["99"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["99"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["99"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["99"]["TextSize"] = 14;
+G2L["99"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["99"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["99"]["BackgroundTransparency"] = 1;
+G2L["99"]["Size"] = UDim2.new(0, 264, 0, 45);
+G2L["99"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["99"]["Text"] = [[Cleared CodeBox]];
+G2L["99"]["Name"] = [[Desc]];
+G2L["99"]["Position"] = UDim2.new(0.00752, 0, 0.39189, 0);
 
 -- StarterGui.LuaEncoderPC.Frame.Main
 local function C_1b()
@@ -1122,8 +1242,10 @@ local script = G2L["1b"];
 	local notinj = gui.NotInjF
 	local isinj = gui.InjectingFrame
 	local alrinj = gui.AlrInjcFrame
+	local execd = gui.ExecutedFrame
+	local clrdf = gui.ClearedFrame
 	
-	--// Buttons Variables
+	--// Buttons Variables and boolvalues and Folder variables
 	
 	local txtb = frame.ScrollingFrame.TextBox
 	local exe = frame.Execute
@@ -1158,8 +1280,18 @@ local script = G2L["1b"];
 	local function execute(code)
 		if att.Value == true then
 			if txtb.Text == "" then
+				execd.Title.Visible = true
+				execd.ImageLabel.Visible = true
+				execd.Desc.Visible = true
+				execd.Size = UDim2.new(0.348, 0,0.157, 0)
+				execd.Visible = true
 				print("Lua Encoder")
 			else
+				execd.Title.Visible = true
+				execd.ImageLabel.Visible = true
+				execd.Desc.Visible = true
+				execd.Size = UDim2.new(0.348, 0,0.157, 0)
+				execd.Visible = true
 				loadstring(code)()
 			end
 		else
@@ -1174,6 +1306,11 @@ local script = G2L["1b"];
 	end
 	
 	local function clear(thing)
+		clrdf.Title.Visible = true
+		clrdf.ImageLabel.Visible = true
+		clrdf.Desc.Visible = true
+		clrdf.Size = UDim2.new(0.348, 0,0.157, 0)
+		clrdf.Visible = true
 		thing.Text = ""
 	end
 	
@@ -1189,8 +1326,8 @@ local script = G2L["1b"];
 			title.Text = "Lua Encoder - "..luaversion.." - "..luav2.." (Already Injected!)"
 			wait(2)
 			title.Text = "Lua Encoder - "..luaversion.." - "..luav2
-	    else
-		    isinj.Visible = true
+		else
+			isinj.Visible = true
 			repeat
 				title.Text = "Lua Encoder - "..luaversion.." - "..luav2.." (Injecting.)"
 				wait(0.75)
@@ -1572,29 +1709,45 @@ local script = G2L["87"];
 	
 end;
 task.spawn(C_87);
--- StarterGui.LuaEncoderPC.ScriptProtector
-local function C_8d()
-local script = G2L["8d"];
+-- StarterGui.LuaEncoderPC.ExecutedFrame.LocalScript
+local function C_8e()
+local script = G2L["8e"];
 	task.spawn(function()
-		while task.wait(0.01) do
-			local checker = script.Parent:FindFirstChild("Checker")
-			local main1 = script.Parent.Frame:FindFirstChild("Main")
-			local main2 = script.Parent.Hub:FindFirstChild("HubMain")
-			if checker == nil then
-				local plr = game.Players.LocalPlayer
-				plr:Kick("You've been caught trying to delete a script")
-			end
-			if main1 == nil then
-				local plr = game.Players.LocalPlayer
-				plr:Kick("You've been caught trying to delete a script")
-			end
-			if main2 == nil then
-				local plr = game.Players.LocalPlayer
-				plr:Kick("You've been caught trying to delete a script")
+		while task.wait(0.001) do
+			if script.Parent.Visible == true then
+				wait(2)
+				script.Parent.Title.Visible = false
+				script.Parent.Desc.Visible = false
+				script.Parent.ImageLabel.Visible = false
+				script.Parent:TweenSize(UDim2.new(0, 0), "Out", "Sine", 0.1)
+				wait(0.1) do
+					script.Parent.Visible = false
+				end
 			end
 		end
 	end)
+	
 end;
-task.spawn(C_8d);
+task.spawn(C_8e);
+-- StarterGui.LuaEncoderPC.ClearedFrame.LocalScript
+local function C_95()
+local script = G2L["95"];
+	task.spawn(function()
+		while task.wait(0.001) do
+			if script.Parent.Visible == true then
+				wait(2)
+				script.Parent.Title.Visible = false
+				script.Parent.Desc.Visible = false
+				script.Parent.ImageLabel.Visible = false
+				script.Parent:TweenSize(UDim2.new(0, 0), "Out", "Sine", 0.1)
+				wait(0.1) do
+					script.Parent.Visible = false
+				end
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_95);
 
 return G2L["1"], require;
