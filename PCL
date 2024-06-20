@@ -5,8 +5,7 @@ if game.CoreGui:FindFirstChild("LuaEncoderPC") then
 end
 task.wait()
 
-
--- Instances: 153 | Scripts: 12 | Modules: 0
+-- Instances: 160 | Scripts: 13 | Modules: 0
 local G2L = {};
 
 -- StarterGui.LuaEncoderPC
@@ -21,7 +20,7 @@ G2L["2"]["Visible"] = false;
 G2L["2"]["ZIndex"] = 999999999;
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
-G2L["2"]["Size"] = UDim2.new(0.54647, 0, 0.45435, 0);
+G2L["2"]["Size"] = UDim2.new(0.5347, 0, 0.44798, 0);
 G2L["2"]["Position"] = UDim2.new(0.01569, 0, 0.02972, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
@@ -163,7 +162,7 @@ G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["14"]["BackgroundTransparency"] = 1;
 G2L["14"]["Size"] = UDim2.new(0.69278, 0, 0.15285, 0);
 G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["Text"] = [[Lua Encoder - vRBX - v10.5]];
+G2L["14"]["Text"] = [[Lua Encoder - vRBX - v17.5]];
 G2L["14"]["Name"] = [[Title]];
 G2L["14"]["Position"] = UDim2.new(0.16456, 0, -0, 0);
 
@@ -824,7 +823,7 @@ G2L["6d"]["BorderSizePixel"] = 0;
 G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6d"]["ZIndex"] = 999999999;
 G2L["6d"]["Image"] = [[rbxassetid://17546664635]];
-G2L["6d"]["Size"] = UDim2.new(0.05308, 0, 0.12, 0);
+G2L["6d"]["Size"] = UDim2.new(0.057, 0, 0.12, 0);
 G2L["6d"]["Name"] = [[Open]];
 G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6d"]["Position"] = UDim2.new(0.66275, 0, 0.02972, 0);
@@ -1227,6 +1226,71 @@ G2L["99"]["Text"] = [[Cleared CodeBox]];
 G2L["99"]["Name"] = [[Desc]];
 G2L["99"]["Position"] = UDim2.new(0.00752, 0, 0.39189, 0);
 
+-- StarterGui.LuaEncoderPC.ExecutedThing
+G2L["9a"] = Instance.new("Frame", G2L["1"]);
+G2L["9a"]["Visible"] = false;
+G2L["9a"]["ZIndex"] = 999999999;
+G2L["9a"]["BorderSizePixel"] = 0;
+G2L["9a"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["9a"]["Size"] = UDim2.new(0.34771, 0, 0.15711, 0);
+G2L["9a"]["Position"] = UDim2.new(0.63274, 0, 0.82166, 0);
+G2L["9a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9a"]["Name"] = [[ExecutedThing]];
+
+-- StarterGui.LuaEncoderPC.ExecutedThing.UICorner
+G2L["9b"] = Instance.new("UICorner", G2L["9a"]);
+
+
+-- StarterGui.LuaEncoderPC.ExecutedThing.LocalScript
+G2L["9c"] = Instance.new("LocalScript", G2L["9a"]);
+
+
+-- StarterGui.LuaEncoderPC.ExecutedThing.Title
+G2L["9d"] = Instance.new("TextLabel", G2L["9a"]);
+G2L["9d"]["ZIndex"] = 999999999;
+G2L["9d"]["BorderSizePixel"] = 0;
+G2L["9d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9d"]["TextSize"] = 14;
+G2L["9d"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9d"]["BackgroundTransparency"] = 1;
+G2L["9d"]["Size"] = UDim2.new(0, 84, 0, 29);
+G2L["9d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9d"]["Text"] = [[Lua Encoder]];
+G2L["9d"]["Name"] = [[Title]];
+
+-- StarterGui.LuaEncoderPC.ExecutedThing.Desc
+G2L["9e"] = Instance.new("TextLabel", G2L["9a"]);
+G2L["9e"]["ZIndex"] = 999999999;
+G2L["9e"]["BorderSizePixel"] = 0;
+G2L["9e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9e"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["9e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9e"]["TextSize"] = 14;
+G2L["9e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9e"]["BackgroundTransparency"] = 1;
+G2L["9e"]["Size"] = UDim2.new(0, 264, 0, 45);
+G2L["9e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9e"]["Text"] = [[Executed]];
+G2L["9e"]["Name"] = [[Desc]];
+G2L["9e"]["Position"] = UDim2.new(0.00752, 0, 0.39189, 0);
+
+-- StarterGui.LuaEncoderPC.ExecutedThing.ImageLabel
+G2L["9f"] = Instance.new("ImageLabel", G2L["9a"]);
+G2L["9f"]["ZIndex"] = 999999999;
+G2L["9f"]["BorderSizePixel"] = 0;
+G2L["9f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9f"]["Image"] = [[rbxassetid://17546664635]];
+G2L["9f"]["Size"] = UDim2.new(0.12155, 0, 0.39189, 0);
+G2L["9f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9f"]["BackgroundTransparency"] = 1;
+G2L["9f"]["Position"] = UDim2.new(0.87594, 0, 0, 0);
+
+-- StarterGui.LuaEncoderPC.ExecutedThing.UIStroke
+G2L["a0"] = Instance.new("UIStroke", G2L["9a"]);
+
+
 -- StarterGui.LuaEncoderPC.Frame.Main
 local function C_1b()
 local script = G2L["1b"];
@@ -1265,8 +1329,9 @@ local script = G2L["1b"];
 	--// Lua Encoder versions variables
 	
 	local luaversion = "vRBX"
-	local luav2 = "v10.5"
+	local luav2 = "v17.5"
 	local canexecutein = "level 6 or 7 or 8 executors, External/Internal"
+	local canexecutein2 = 6 or 7 or 8
 	local LuaCode = "2.629.609, 2.629.609"
 	print("Version of Lua Encoder/Roblox: "..LuaCode)
 	
@@ -1447,6 +1512,9 @@ local script = G2L["32"];
 	--// Variables
 	
 	local gui = script.Parent.Parent
+	local notinj = gui.NotInjF
+	local exec = gui.ExecutedThing
+	local att = gui.Frame.Values.Attached
 	local fm = gui.Hub
 	local gh = fm.Ghost
 	local dlt = fm.DLT
@@ -1462,22 +1530,93 @@ local script = G2L["32"];
 	--// Functions
 	
 	dlt.MouseButton1Click:Connect(function() 
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/ECCSco/ECCS-V3/main/ECCS%20Searcher%20V2.2"))("Copyright ERROR_CODE ECCS Co")
+		if att.Value == true then
+			exec.Desc.Visible = true
+			exec.Desc.Text = "Executed ECCS-V3"
+			exec.Title.Visible = true
+			exec.ImageLabel.Visible = true
+			exec.Size = UDim2.new(0.348, 0,0.157, 0)
+			exec.Visible = true
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/ECCSco/ECCS-V3/main/ECCS%20Searcher%20V2.2"))("Copyright ERROR_CODE ECCS Co")
+		else
+			notinj.Desc.Visible = true
+			notinj.Title.Visible = true
+			notinj.ImageLabel.Visible = true
+			notinj.Size = UDim2.new(0.348, 0,0.157, 0)
+			notinj.Visible = true
+		end
+	
 	end)
 	
 	gh.MouseButton1Click:Connect(function() 
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+		if att.Value == true then
+			exec.Desc.Visible = true
+			exec.Desc.Text = "Executed Xx Ghost Hub xX"
+			exec.Title.Visible = true
+			exec.ImageLabel.Visible = true
+			exec.Size = UDim2.new(0.348, 0,0.157, 0)
+			exec.Visible = true
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+		else
+			notinj.Desc.Visible = true
+			notinj.Title.Visible = true
+			notinj.ImageLabel.Visible = true
+			notinj.Size = UDim2.new(0.348, 0,0.157, 0)
+			notinj.Visible = true
+		end
 	end)
 	
 	cld.MouseButton1Click:Connect(function() 
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/laderite/scripts/main/Cloudscripts.lua'))()
+		if att.Value == true then
+			exec.Desc.Visible = true
+			exec.Desc.Text = "Executed CloudScript(powered by scriptblox)"
+			exec.Title.Visible = true
+			exec.ImageLabel.Visible = true
+			exec.Size = UDim2.new(0.348, 0,0.157, 0)
+			exec.Visible = true
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/laderite/scripts/main/Cloudscripts.lua'))()
+		else
+			notinj.Desc.Visible = true
+			notinj.Title.Visible = true
+			notinj.ImageLabel.Visible = true
+			notinj.Size = UDim2.new(0.348, 0,0.157, 0)
+			notinj.Visible = true
+		end
 	end)
 	fe.MouseButton1Click:Connect(function() 
-		loadstring(game:HttpGet("https://pastebin.com/raw/LMiJ1JK1"))()
+		if att.Value == true then
+			exec.Desc.Visible = true
+			exec.Desc.Text = "Executed FE Hub(Bypassed key system)"
+			exec.Title.Visible = true
+			exec.ImageLabel.Visible = true
+			exec.Size = UDim2.new(0.348, 0,0.157, 0)
+			exec.Visible = true
+			loadstring(game:HttpGet("https://pastebin.com/raw/LMiJ1JK1"))()
+		else
+			notinj.Desc.Visible = true
+			notinj.Title.Visible = true
+			notinj.ImageLabel.Visible = true
+			notinj.Size = UDim2.new(0.348, 0,0.157, 0)
+			notinj.Visible = true
+		end
 	end)
 	
 	ilu.MouseButton1Click:Connect(function() 
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_11l7Y131YqJjZ31QmV5L8pI23V02b3191sEg26E75472Wl78Vi8870jRv5txZyL1.lua.txt"))()
+		if att.Value == true then
+			exec.Desc.Visible = true
+			exec.Desc.Text = "Executed Fe Illusion"
+			exec.Title.Visible = true
+			exec.ImageLabel.Visible = true
+			exec.Size = UDim2.new(0.348, 0,0.157, 0)
+			exec.Visible = true
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_11l7Y131YqJjZ31QmV5L8pI23V02b3191sEg26E75472Wl78Vi8870jRv5txZyL1.lua.txt"))()
+		else
+			notinj.Desc.Visible = true
+			notinj.Title.Visible = true
+			notinj.ImageLabel.Visible = true
+			notinj.Size = UDim2.new(0.348, 0,0.157, 0)
+			notinj.Visible = true
+		end
 	end)
 	
 	--[[ End ]]--
@@ -1521,6 +1660,7 @@ local script = G2L["5b"];
 	--// Variables
 	
 	local gui = script.Parent.Parent
+	local notinj = gui.NotInjF
 	local fm = gui.Settings
 	local fm2 = gui.Frame
 	local op = fm.Option1
@@ -1749,5 +1889,25 @@ local script = G2L["95"];
 	
 end;
 task.spawn(C_95);
+-- StarterGui.LuaEncoderPC.ExecutedThing.LocalScript
+local function C_9c()
+local script = G2L["9c"];
+	task.spawn(function()
+		while task.wait(0.001) do
+			if script.Parent.Visible == true then
+				wait(2)
+				script.Parent.Title.Visible = false
+				script.Parent.Desc.Visible = false
+				script.Parent.ImageLabel.Visible = false
+				script.Parent:TweenSize(UDim2.new(0, 0), "Out", "Sine", 0.2)
+				wait(0.1) do
+					script.Parent.Visible = false
+				end
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_9c);
 
 return G2L["1"], require;
