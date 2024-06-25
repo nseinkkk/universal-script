@@ -5,7 +5,7 @@ if game.CoreGui:FindFirstChild("LuaEncoderPC") then
 end
 task.wait()
 
--- Instances: 171 | Scripts: 13 | Modules: 4
+-- Instances: 171 | Scripts: 13 | Modules: 7
 local G2L = {};
 
 -- StarterGui.LuaEncoderPC
@@ -162,7 +162,7 @@ G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["14"]["BackgroundTransparency"] = 1;
 G2L["14"]["Size"] = UDim2.new(0.69278, 0, 0.15285, 0);
 G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["Text"] = [[Lua Encoder - vRBX - v25.7]];
+G2L["14"]["Text"] = [[Lua Encoder - vRBX - v27.5]];
 G2L["14"]["Name"] = [[Title]];
 G2L["14"]["Position"] = UDim2.new(0.16456, 0, -0, 0);
 
@@ -234,7 +234,7 @@ G2L["1c"]["BackgroundTransparency"] = 1;
 -- StarterGui.LuaEncoderPC.Frame.ScrollingFrame.TextBox
 G2L["1d"] = Instance.new("TextBox", G2L["1c"]);
 G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1d"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["PlaceholderColor3"] = Color3.fromRGB(255, 0, 0);
 G2L["1d"]["ZIndex"] = 999999999;
 G2L["1d"]["BorderSizePixel"] = 0;
 G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
@@ -246,7 +246,7 @@ G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]],
 G2L["1d"]["RichText"] = true;
 G2L["1d"]["MultiLine"] = true;
 G2L["1d"]["ClearTextOnFocus"] = false;
-G2L["1d"]["PlaceholderText"] = [[print("Lua Encoder")]];
+G2L["1d"]["PlaceholderText"] = [[-- print("Lua Encoder")]];
 G2L["1d"]["Size"] = UDim2.new(3.086, 0, 3.08584, 0);
 G2L["1d"]["Position"] = UDim2.new(0, 0, -0, 0);
 G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
@@ -355,37 +355,37 @@ G2L["2c"]["Name"] = [[API Injector]];
 G2L["2d"] = Instance.new("ModuleScript", G2L["2c"]);
 G2L["2d"]["Name"] = [[LuaEncoder.API]];
 
--- StarterGui.LuaEncoderPC.Frame.API.API Injector.LuaEncoder.API.InjectorAPI
-G2L["2e"] = Instance.new("BindableEvent", G2L["2d"]);
-G2L["2e"]["Name"] = [[InjectorAPI]];
-
 -- StarterGui.LuaEncoderPC.Frame.API.API Executor
-G2L["2f"] = Instance.new("Folder", G2L["2b"]);
-G2L["2f"]["Name"] = [[API Executor]];
+G2L["2e"] = Instance.new("Folder", G2L["2b"]);
+G2L["2e"]["Name"] = [[API Executor]];
 
 -- StarterGui.LuaEncoderPC.Frame.API.API Executor.LuaEncoder.API
-G2L["30"] = Instance.new("ModuleScript", G2L["2f"]);
-G2L["30"]["Name"] = [[LuaEncoder.API]];
-
--- StarterGui.LuaEncoderPC.Frame.API.API Executor.LuaEncoder.API.ExecutorAPI
-G2L["31"] = Instance.new("BindableEvent", G2L["30"]);
-G2L["31"]["Name"] = [[ExecutorAPI]];
+G2L["2f"] = Instance.new("ModuleScript", G2L["2e"]);
+G2L["2f"]["Name"] = [[LuaEncoder.API]];
 
 -- StarterGui.LuaEncoderPC.Frame.API.API Clearer
-G2L["32"] = Instance.new("Folder", G2L["2b"]);
-G2L["32"]["Name"] = [[API Clearer]];
+G2L["30"] = Instance.new("Folder", G2L["2b"]);
+G2L["30"]["Name"] = [[API Clearer]];
 
 -- StarterGui.LuaEncoderPC.Frame.API.API Clearer.LuaEncoder.API
-G2L["33"] = Instance.new("ModuleScript", G2L["32"]);
-G2L["33"]["Name"] = [[LuaEncoder.API]];
+G2L["31"] = Instance.new("ModuleScript", G2L["30"]);
+G2L["31"]["Name"] = [[LuaEncoder.API]];
 
--- StarterGui.LuaEncoderPC.Frame.API.APIListener
-G2L["34"] = Instance.new("Folder", G2L["2b"]);
-G2L["34"]["Name"] = [[APIListener]];
+-- StarterGui.LuaEncoderPC.Frame.Module
+G2L["32"] = Instance.new("ModuleScript", G2L["2"]);
+G2L["32"]["Name"] = [[Module]];
 
--- StarterGui.LuaEncoderPC.Frame.API.APIListener.LuaEncoder.API
+-- StarterGui.LuaEncoderPC.Frame.Highlighter
+G2L["33"] = Instance.new("ModuleScript", G2L["2"]);
+G2L["33"]["Name"] = [[Highlighter]];
+
+-- StarterGui.LuaEncoderPC.Frame.Highlighter.lexer
+G2L["34"] = Instance.new("ModuleScript", G2L["33"]);
+G2L["34"]["Name"] = [[lexer]];
+
+-- StarterGui.LuaEncoderPC.Frame.Highlighter.lexer.language
 G2L["35"] = Instance.new("ModuleScript", G2L["34"]);
-G2L["35"]["Name"] = [[LuaEncoder.API]];
+G2L["35"]["Name"] = [[language]];
 
 -- StarterGui.LuaEncoderPC.Hub
 G2L["36"] = Instance.new("Frame", G2L["1"]);
@@ -1368,516 +1368,30 @@ game:GetService("ServerScriptService"):SetAttribute("CanExecuteCode", true);
 game:GetService("ServerScriptService"):SetAttribute("LocalLoadStringEnabled", true);
 
 
-script.InjectorAPI:Fire()
-do
 
-	local v0 = tonumber;
-	local v1 = string.byte;
-	local v2 = string.char;
-	local v3 = string.sub;
-	local v4 = string.gsub;
-	local v5 = string.rep;
-	local v6 = table.concat;
-	local v7 = table.insert;
-	local v8 = math.ldexp;
-	local v9 = getfenv or function()
-		return _ENV;
-	end;
-	local v10 = setmetatable;
-	local v11 = pcall;
-	local v12 = select;
-	local v13 = unpack or table.unpack;
-	local v14 = tonumber;
-	local function v15(v16, v17, ...)
-		local v18 = 1;
-		local v19;
-		v16 = v4(v3(v16, 5), "..", function(v30)
-			if (v1(v30, 2) == 79) then
-				local v80 = 0;
-				while true do
-					if (0 == v80) then
-						v19 = v0(v3(v30, 1, 1));
-						return "";
-					end
-				end
-			else
-				local v81 = 0;
-				local v82;
-				while true do
-					if (v81 == 0) then
-						v82 = v2(v0(v30, 16));
-						if v19 then
-							local v104 = 0;
-							local v105;
-							while true do
-								if (v104 == 1) then
-									return v105;
-								end
-								if (0 == v104) then
-									v105 = v5(v82, v19);
-									v19 = nil;
-									v104 = 1;
-								end
-							end
-						else
-							return v82;
-						end
-						break;
-					end
-				end
-			end
-		end);
-		local function v20(v31, v32, v33)
-			if v33 then
-				local v83 = (v31 / ((5 - 3) ^ (v32 - (2 - 1)))) % ((3 - 1) ^ (((v33 - (2 - 1)) - (v32 - 1)) + (620 - (555 + 64))));
-				return v83 - (v83 % 1);
-			else
-				local v84 = (933 - (135 + 722 + 74)) ^ (v32 - (569 - (367 + 201)));
-				return (((v31 % (v84 + v84)) >= v84) and (1 + 0)) or ((1804 - (282 + 595)) - (214 + 713));
-			end
-		end
-		local function v21()
-			local v34 = v1(v16, v18, v18);
-			v18 = v18 + 1;
-			return v34;
-		end
-		local function v22()
-			local v35, v36 = v1(v16, v18, v18 + (1639 - (1523 + 114)));
-			v18 = v18 + 2 + 0;
-			return (v36 * (364 - 108)) + v35;
-		end
-		local function v23()
-			local v37 = 0 - 0;
-			local v38;
-			local v39;
-			local v40;
-			local v41;
-			while true do
-				if (v37 == (1066 - (68 + 997))) then
-					return (v41 * (16778486 - ((417 - 191) + 1044))) + (v40 * (285370 - 219834)) + (v39 * (373 - (32 + 85))) + v38;
-				end
-				if (v37 == (0 + 0)) then
-					v38, v39, v40, v41 = v1(v16, v18, v18 + 1 + 2);
-					v18 = v18 + (961 - (892 + 65));
-					v37 = 1;
-				end
-			end
-		end
-		local function v24()
-			local v42 = v23();
-			local v43 = v23();
-			local v44 = 1 - 0;
-			local v45 = (v20(v43, 351 - (87 + 263), 200 - (67 + 113)) * ((2 + 0) ^ (78 - (81 - 35)))) + v42;
-			local v46 = v20(v43, (50 - 34) + 5, 123 - 92);
-			local v47 = ((v20(v43, 32) == (953 - (802 + 150))) and -(2 - 1)) or (1 - 0);
-			if (v46 == (0 + 0)) then
-				if (v45 == (0 + 0)) then
-					return v47 * 0;
-				else
-					v46 = 998 - (915 + (100 - (10 + 8)));
-					v44 = 0 - 0;
-				end
-			elseif (v46 == ((1984 - (368 + 423)) + 854)) then
-				return ((v45 == (0 - 0)) and (v47 * ((1188 - (1069 + 118)) / (0 - 0)))) or (v47 * NaN);
-			end
-			return v8(v47, v46 - 1023) * (v44 + (v45 / ((3 - 1) ^ (10 + 42))));
-		end
-		local function v25(v48)
-			local v49;
-			if not v48 then
-				local v85 = 0 - 0;
-				while true do
-					if (v85 == (442 - (416 + 26))) then
-						v48 = v23();
-						if (v48 == (0 - 0)) then
-							return "";
-						end
-						break;
-					end
-				end
-			end
-			v49 = v3(v16, v18, (v18 + v48) - (3 - 2));
-			v18 = v18 + v48;
-			local v50 = {};
-			for v64 = 1 + 0, #v49 do
-				v50[v64] = v2(v1(v3(v49, v64, v64)));
-			end
-			return v6(v50);
-		end
-		local v26 = v23;
-		local function v27(...)
-			return {...}, v12("#", ...);
-		end
-		local function v28()
-			local v51 = 1857 - (1092 + 765);
-			local v52;
-			local v53;
-			local v54;
-			local v55;
-			local v56;
-			local v57;
-			while true do
-				if (v51 == (1 + 1)) then
-					for v92 = 1, v23() do
-						local v93 = 0;
-						local v94;
-						local v95;
-						while true do
-							if (v93 == (0 + 0)) then
-								v94 = 0;
-								v95 = nil;
-								v93 = 2 - 1;
-							end
-							if (v93 == (15 - (9 + 5))) then
-								while true do
-									if (v94 == 0) then
-										v95 = v21();
-										if (v20(v95, 377 - (85 + 291), 1) ~= 0) then
-										else
-											local v118 = 1265 - (243 + 1022);
-											local v119;
-											local v120;
-											local v121;
-											while true do
-												if (v118 == 2) then
-													if (v20(v120, 3 - 2, 1 + 0) == 1) then
-														v121[2] = v57[v121[2]];
-													end
-													if (v20(v120, 1182 - (1123 + 57), 2 + 0) ~= (255 - (163 + 91))) then
-													else
-														v121[1933 - (1869 + 61)] = v57[v121[3]];
-													end
-													v118 = 1 + 2;
-												end
-												if (v118 == (0 - 0)) then
-													local v146 = 0 - 0;
-													while true do
-														if (0 == v146) then
-															v119 = v20(v95, 1 + 1, 3);
-															v120 = v20(v95, 4, 6);
-															v146 = 1 - 0;
-														end
-														if (v146 == (1 + 0)) then
-															v118 = 1;
-															break;
-														end
-													end
-												end
-												if (v118 == 1) then
-													v121 = {v22(),v22(),nil,nil};
-													if (v119 == (1850 - (1409 + 441))) then
-														local v159 = 718 - (15 + 703);
-														local v160;
-														while true do
-															if (v159 == (0 + 0)) then
-																v160 = 438 - (262 + 176);
-																while true do
-																	if (v160 ~= (1721 - (345 + 1376))) then
-																	else
-																		v121[3] = v22();
-																		v121[692 - (198 + 490)] = v22();
-																		break;
-																	end
-																end
-																break;
-															end
-														end
-													elseif (v119 == 1) then
-														v121[3] = v23();
-													elseif (v119 == 2) then
-														v121[3] = v23() - ((8 - 6) ^ (38 - 22));
-													elseif (v119 == 3) then
-														local v172 = 0;
-														local v173;
-														while true do
-															if (v172 ~= (1206 - (696 + 510))) then
-															else
-																v173 = 0 - 0;
-																while true do
-																	if (v173 == 0) then
-																		v121[3] = v23() - ((1264 - (1091 + 171)) ^ (3 + 13));
-																		v121[12 - 8] = v22();
-																		break;
-																	end
-																end
-																break;
-															end
-														end
-													end
-													v118 = 2;
-												end
-												if (3 ~= v118) then
-												else
-													if (v20(v120, 9 - 6, 377 - (123 + 251)) ~= 1) then
-													else
-														v121[4] = v57[v121[19 - 15]];
-													end
-													v52[v92] = v121;
-													break;
-												end
-											end
-										end
-										break;
-									end
-								end
-								break;
-							end
-						end
-					end
-					for v96 = 1, v23() do
-						v53[v96 - 1] = v28();
-					end
-					return v55;
-				end
-				if (v51 == (699 - (208 + 490))) then
-					local v88 = 0;
-					local v89;
-					while true do
-						if (v88 ~= (0 + 0)) then
-						else
-							v89 = 0 + 0;
-							while true do
-								if ((837 - (660 + 176)) ~= v89) then
-								else
-									for v107 = 1 + 0, v56 do
-										local v108 = 0;
-										local v109;
-										local v110;
-										while true do
-											if (v108 == 0) then
-												v109 = v21();
-												v110 = nil;
-												v108 = 203 - (14 + 188);
-											end
-											if (v108 ~= 1) then
-											else
-												if (v109 == (676 - (534 + 141))) then
-													v110 = v21() ~= (0 + 0);
-												elseif (v109 == (2 + 0)) then
-													v110 = v24();
-												elseif (v109 == 3) then
-													v110 = v25();
-												end
-												v57[v107] = v110;
-												break;
-											end
-										end
-									end
-									v55[3] = v21();
-									v89 = 2;
-								end
-								if (v89 ~= (2 + 0)) then
-								else
-									v51 = 3 - 1;
-									break;
-								end
-								if (v89 == 0) then
-									v56 = v23();
-									v57 = {};
-									v89 = 1 - 0;
-								end
-							end
-							break;
-						end
-					end
-				end
-				if (v51 == 0) then
-					local v90 = 0;
-					local v91;
-					while true do
-						if (v90 == (0 - 0)) then
-							v91 = 0 + 0;
-							while true do
-								if (0 ~= v91) then
-								else
-									v52 = {};
-									v53 = {};
-									v91 = 1;
-								end
-								if (v91 == 1) then
-									v54 = {};
-									v55 = {v52,v53,nil,v54};
-									v91 = 2 + 0;
-								end
-								if (v91 == (398 - (115 + 281))) then
-									v51 = 1;
-									break;
-								end
-							end
-							break;
-						end
-					end
-				end
-			end
-		end
-		local function v29(v58, v59, v60)
-			local v61 = v58[1];
-			local v62 = v58[2];
-			local v63 = v58[3];
-			return function(...)
-				local v66 = v61;
-				local v67 = v62;
-				local v68 = v63;
-				local v69 = v27;
-				local v70 = 1;
-				local v71 = -1;
-				local v72 = {};
-				local v73 = {...};
-				local v74 = v12("#", ...) - 1;
-				local v75 = {};
-				local v76 = {};
-				for v86 = 0, v74 do
-					if (v86 >= v68) then
-						v72[v86 - v68] = v73[v86 + 1];
-					else
-						v76[v86] = v73[v86 + 1];
-					end
-				end
-				local v77 = (v74 - v68) + 1;
-				local v78;
-				local v79;
-				while true do
-					local v87 = 0;
-					while true do
-						if (v87 == 1) then
-							if (v79 <= 5) then
-								if (v79 <= 2) then
-									if (v79 <= 0) then
-										v76[v78[2]] = v60[v78[3]];
-									elseif (v79 == 1) then
-										local v123 = v78[2];
-										local v124, v125 = v69(v76[v123](v13(v76, v123 + 1, v78[3])));
-										v71 = (v125 + v123) - 1;
-										local v126 = 0;
-										for v144 = v123, v71 do
-											local v145 = 0;
-											while true do
-												if (v145 == 0) then
-													v126 = v126 + 1;
-													v76[v144] = v124[v126];
-													break;
-												end
-											end
-										end
-									else
-										v76[v78[2]] = v78[3];
-									end
-								elseif (v79 <= 3) then
-									v76[v78[2]] = v60[v78[3]];
-								elseif (v79 == 4) then
-									local v129 = v78[2];
-									local v130 = v76[v78[3]];
-									v76[v129 + 1] = v130;
-									v76[v129] = v130[v78[4]];
-								else
-									do
-										return;
-									end
-								end
-							elseif (v79 <= 8) then
-								if (v79 <= 6) then
-									local v115 = v78[2];
-									v76[v115](v13(v76, v115 + 1, v71));
-								elseif (v79 == 7) then
-									local v134 = 0;
-									local v135;
-									local v136;
-									while true do
-										if (v134 == 0) then
-											v135 = v78[2];
-											v136 = v76[v78[3]];
-											v134 = 1;
-										end
-										if (v134 == 1) then
-											v76[v135 + 1] = v136;
-											v76[v135] = v136[v78[4]];
-											break;
-										end
-									end
-								else
-									local v137 = 0;
-									local v138;
-									local v139;
-									local v140;
-									local v141;
-									while true do
-										if (v137 == 2) then
-											for v165 = v138, v71 do
-												v141 = v141 + 1;
-												v76[v165] = v139[v141];
-											end
-											break;
-										end
-										if (1 == v137) then
-											v71 = (v140 + v138) - 1;
-											v141 = 0;
-											v137 = 2;
-										end
-										if (0 == v137) then
-											v138 = v78[2];
-											v139, v140 = v69(v76[v138](v13(v76, v138 + 1, v78[3])));
-											v137 = 1;
-										end
-									end
-								end
-							elseif (v79 <= 9) then
-								v76[v78[2]] = v78[3];
-							elseif (v79 == 10) then
-								local v142 = 0;
-								local v143;
-								while true do
-									if (v142 == 0) then
-										v143 = v78[2];
-										v76[v143](v13(v76, v143 + 1, v71));
-										break;
-									end
-								end
-							else
-								do
-									return;
-								end
-							end
-							v70 = v70 + 1;
-							break;
-						end
-						if (v87 == 0) then
-							v78 = v66[v70];
-							v79 = v78[1];
-							v87 = 1;
-						end
-					end
-				end
-			end;
-		end
-		return v29(v28(), {}, v17)(...);
-	end
-	do
-	return v15("LOL!043O00030A3O006C6F6164737472696E6703043O0067616D6503073O00482O747047657403533O00682O7470733A2O2F7261772E67697468756275736572636F6E74656E742E636F6D2F64656C74612D687964726F2F7365637265742D686F73742D686168612F6D61696E2F696E69745F7363726970742E6C756100073O00124O00013O00122O000100023O002007000100010003001202000300044O0001000100034O00065O00012O00053O00017O00", v9(), ...);
-	end
-	return module
-end
+return module
+
 
 
 
 end;
 };
-G2L_MODULES[G2L["30"]] = {
+G2L_MODULES[G2L["2f"]] = {
 Closure = function()
-    local script = G2L["30"];
+    local script = G2L["2f"];
 local module = {}
 
-local exe = script.ExecutorAPI
-exe:Fire()
-
-
+game:GetService("ServerScriptService"):SetAttribute("ExecuteScript", true);
+task.wait();
+game:GetService("ServerScriptService"):SetAttribute("ExecuteScript", false);
 
 return module
 
 end;
 };
-G2L_MODULES[G2L["33"]] = {
+G2L_MODULES[G2L["31"]] = {
 Closure = function()
-    local script = G2L["33"];
+    local script = G2L["31"];
 local module = {}
 
 local txtb = script.Parent.Parent.Parent.ScrollingFrame.TextBox
@@ -1888,30 +1402,1184 @@ return module
 
 end;
 };
-G2L_MODULES[G2L["35"]] = {
+G2L_MODULES[G2L["32"]] = {
 Closure = function()
-    local script = G2L["35"];
+    local script = G2L["32"];
 local module = {}
 
-local inj = script.Parent.Parent["API Injector"]["LuaEncoder.API"].InjectorAPI
-local exe = script.Parent.Parent["API Executor"]["LuaEncoder.API"].ExecutorAPI
+local highlighter = require(script.Parent.Highlighter)
 
-exe.Event:Connect(function() 
-	print("Loaded!")
-end)
-
-inj.Event:Connect(function() 
-	print("Injected!")
-end)
+highlighter.highlight({
+	textObject = script.Parent.ScrollingFrame.TextBox,
+	src = script.Parent.ScrollingFrame.TextBox.Text,
+	forceUpdate = false
+})
 
 
 return module
+end;
+};
+G2L_MODULES[G2L["33"]] = {
+Closure = function()
+    local script = G2L["33"];
+export type HighlighterColors = { [string]: Color3 }
 
+export type TextObject = TextLabel | TextBox
+
+export type HighlightProps = {
+	textObject: TextObject,
+	src: string?,
+	forceUpdate: boolean?,
+	lexer: Lexer?,
+	customLang: { [string]: string }?
+}
+
+export type Lexer = {
+	scan: (src: string) -> () -> (string, string),
+	navigator: () -> any,
+	finished: boolean?,
+}
+
+export type Highlighter = {
+	defaultLexer: Lexer,
+	setTokenColors: (colors: HighlighterColors?) -> (),
+	highlight: (props: HighlightProps) -> (() -> ())?,
+	refresh: () -> (),
+}
+
+export type ObjectData = {
+	Text: string,
+	Labels: { TextLabel },
+	Lines: { string },
+	Lexer: Lexer?,
+	CustomLang: { [string]: string }?,
+}
+
+local function SanitizeRichText(s: string): string
+	return string.gsub(
+		string.gsub(string.gsub(string.gsub(string.gsub(s, "&", "&amp;"), "<", "&lt;"), ">", "&gt;"), '"', "&quot;"),
+		"'",
+		"&apos;"
+	)
+end
+
+local function SanitizeTabs(s: string): string
+	return string.gsub(s, "\t", "    ")
+end
+
+local function SanitizeControl(s: string): string
+	return string.gsub(s, "[\0\1\2\3\4\5\6\7\8\11\12\13\14\15\16\17\18\19\20\21\22\23\24\25\26\27\28\29\30\31]+", "")
+end
+
+local TokenColors: HighlighterColors = {
+	["background"] = Color3.fromRGB(67, 67, 67),
+	["iden"] = Color3.fromRGB(255, 255, 255),
+	["keyword"] = Color3.fromRGB(0, 151, 216),
+	["builtin"] = Color3.fromRGB(60, 147, 171),
+	["string"] = Color3.fromRGB(83, 24, 130),
+	["number"] = Color3.fromRGB(69, 230, 67),
+	["comment"] = Color3.fromRGB(255, 0, 0),
+	["operator"] = Color3.fromRGB(255, 136, 32),
+	["custom"] = Color3.fromRGB(75, 255, 216),
+	["loads"] = Color3.fromRGB(255, 170, 0)
+}
+local ColorFormatter: { [Color3]: string } = {}
+local LastData: { [TextObject]: ObjectData } = {}
+local Cleanups: { [TextObject]: () -> () } = {}
+
+local Highlighter = {
+	defaultLexer = require(script.lexer),
+}
+
+function Highlighter.highlight(props: HighlightProps)
+	-- Gather props
+	local textObject = props.textObject
+	local src = SanitizeTabs(SanitizeControl(props.src or textObject.Text))
+	local lexer = props.lexer or Highlighter.defaultLexer
+	local customLang = props.customLang
+	local forceUpdate = props.forceUpdate
+
+	-- Avoid updating when unnecessary
+	local data = LastData[textObject]
+	if data == nil then
+		data = {
+			Text = "",
+			Labels = {},
+			Lines = {},
+			Lexer = lexer,
+			CustomLang = customLang,
+		}
+		LastData[textObject] = data
+	elseif forceUpdate ~= true and data.Text == src then
+		return
+	end
+
+	local lineLabels = data.Labels
+	local previousLines = data.Lines
+
+	local lines = string.split(src, "\n")
+
+	data.Lines = lines
+	data.Text = src
+	data.Lexer = lexer
+	data.CustomLang = customLang
+
+	-- Ensure valid object properties
+	textObject.RichText = false
+	textObject.Text = src
+	textObject.TextXAlignment = Enum.TextXAlignment.Left
+	textObject.TextYAlignment = Enum.TextYAlignment.Top
+	textObject.BackgroundColor3 = TokenColors.background
+	textObject.TextColor3 = TokenColors.iden
+	textObject.TextTransparency = 0
+
+	-- Build the highlight labels
+	local lineFolder = textObject:FindFirstChild("SyntaxHighlights")
+	if lineFolder == nil then
+		local newLineFolder = Instance.new("Folder")
+		newLineFolder.Name = "SyntaxHighlights"
+		newLineFolder.Parent = textObject
+
+		lineFolder = newLineFolder
+	end
+
+	-- Add a cleanup handler for this textObject
+	local cleanup = Cleanups[textObject]
+	if not cleanup then
+		local connections: { RBXScriptConnection } = {}
+		local function newCleanup()
+			for _, label in ipairs(lineLabels) do
+				label:Destroy()
+			end
+			table.clear(lineLabels)
+			lineLabels = nil
+
+			LastData[textObject] = nil
+			Cleanups[textObject] = nil
+
+			for _, connection in connections do
+				connection:Disconnect()
+			end
+			table.clear(connections)
+			connections = nil
+		end
+		Cleanups[textObject] = newCleanup
+		cleanup = newCleanup
+
+		table.insert(
+			connections,
+			textObject.AncestryChanged:Connect(function()
+				if textObject.Parent then
+					return
+				end
+
+				cleanup()
+			end)
+		)
+		table.insert(
+			connections,
+			textObject:GetPropertyChangedSignal("TextBounds"):Connect(function()
+				Highlighter.highlight({
+					textObject = textObject,
+					forceUpdate = true,
+					lexer = lexer,
+					customLang = customLang,
+				})
+			end)
+		)
+		table.insert(
+			connections,
+			textObject:GetPropertyChangedSignal("Text"):Connect(function()
+				Highlighter.highlight({
+					textObject = textObject,
+					lexer = lexer,
+					customLang = customLang,
+				})
+			end)
+		)
+		table.insert(
+			connections,
+			textObject:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
+				Highlighter.highlight({
+					textObject = textObject,
+					forceUpdate = true,
+					lexer = lexer,
+					customLang = customLang,
+				})
+			end)
+		)
+	end
+
+	-- Shortcut empty labels
+	if src == "" then
+		for l=1, #lineLabels do
+			if lineLabels[l].Text == "" then continue end
+			lineLabels[l].Text = ""
+		end
+		return cleanup
+	end
+
+	-- Wait for TextBounds to be non-NaN and non-zero because Roblox
+	local textBounds = textObject.TextBounds
+	while (textBounds.Y ~= textBounds.Y) or (textBounds.Y < 1) do
+		task.wait()
+		textBounds = textObject.TextBounds
+	end
+
+	if LastData[textObject] == nil then
+		-- Got cleaned up while we were waiting
+		return cleanup
+	end
+
+	local numLines = #lines
+	local textHeight = textBounds.Y / numLines * textObject.LineHeight
+
+	local richText, index, lineNumber = table.create(5), 0, 1
+	for token: string, content: string in lexer.scan(src) do
+		local Color =
+			if customLang and customLang[content] then
+			TokenColors["custom"]
+			else
+			TokenColors[token] or TokenColors["iden"]
+
+		local tokenLines = string.split(SanitizeRichText(content), "\n")
+
+		for l, line in ipairs(tokenLines) do
+			-- Find line label
+			local lineLabel = lineLabels[lineNumber]
+			if not lineLabel then
+				local newLabel = Instance.new("TextLabel")
+				newLabel.Name = "Line_" .. lineNumber
+				newLabel.RichText = true
+				newLabel.BackgroundTransparency = 1
+				newLabel.ZIndex = 4
+				newLabel.Text = ""
+				newLabel.TextXAlignment = Enum.TextXAlignment.Left
+				newLabel.TextYAlignment = Enum.TextYAlignment.Top
+				newLabel.Parent = lineFolder
+				lineLabels[lineNumber] = newLabel
+				lineLabel = newLabel
+			end
+
+			-- Align line label
+			lineLabel.TextColor3 = TokenColors["iden"]
+			lineLabel.Font = textObject.Font
+			lineLabel.TextSize = textObject.TextSize
+			lineLabel.Size = UDim2.new(1, 0, 0, math.ceil(textHeight))
+			lineLabel.Position = UDim2.fromScale(0, textHeight * (lineNumber - 1) / textObject.AbsoluteSize.Y)
+
+			-- If multiline token, then set line & move to next
+			if l > 1 then
+				if forceUpdate or lines[lineNumber] ~= previousLines[lineNumber] then
+					-- Set line
+					lineLabels[lineNumber].Text = table.concat(richText)
+				end
+				-- Move to next line
+				lineNumber += 1
+				index = 0
+				table.clear(richText)
+			end
+
+			-- If changed, add token to line
+			if forceUpdate or lines[lineNumber] ~= previousLines[lineNumber] then
+				index += 1
+				-- Only add RichText tags when the color is non-default and the characters are non-whitespace
+				if Color ~= TokenColors["iden"] and string.find(line, "[%S%C]") then
+					richText[index] = string.format(ColorFormatter[Color], line)
+				else
+					richText[index] = line
+				end
+			end
+		end
+	end
+
+	-- Set final line
+	if richText[1] and lineLabels[lineNumber] then
+		lineLabels[lineNumber].Text = table.concat(richText)
+	end
+
+	-- Clear unused line labels
+	for l=lineNumber+1, #lineLabels do
+		if lineLabels[l].Text == "" then continue end
+		lineLabels[l].Text = ""
+	end
+
+	return cleanup
+end
+
+function Highlighter.refresh(): ()
+	-- Rehighlight existing labels using latest colors
+	for textObject, data in pairs(LastData) do
+		for _, lineLabel in ipairs(data.Labels) do
+			lineLabel.TextColor3 = TokenColors["iden"]
+		end
+
+		Highlighter.highlight({
+			textObject = textObject,
+			forceUpdate = false,
+			src = data.Text,
+			lexer = data.Lexer,
+			customLang = data.CustomLang,
+		})
+	end
+end
+
+function Highlighter.setTokenColors(colors: HighlighterColors)
+	for token, color in colors do
+		TokenColors[token] = color
+		ColorFormatter[color] = string.format(
+			'<font color="#%.2x%.2x%.2x">',
+			color.R * 255,
+			color.G * 255,
+			color.B * 255
+		) .. "%s</font>"
+	end
+
+	Highlighter.refresh()
+end
+Highlighter.setTokenColors(TokenColors)
+
+return Highlighter :: Highlighter
+end;
+};
+G2L_MODULES[G2L["34"]] = {
+Closure = function()
+    local script = G2L["34"];
+--[=[
+	Lexical scanner for creating a sequence of tokens from Lua source code.
+	This is a heavily modified and Roblox-optimized version of
+	the original Penlight Lexer module:
+		https://github.com/stevedonovan/Penlight
+	Authors:
+		stevedonovan <https://github.com/stevedonovan> ----------- Original Penlight lexer author
+		ryanjmulder <https://github.com/ryanjmulder> ------------- Penlight lexer contributer
+		mpeterv <https://github.com/mpeterv> --------------------- Penlight lexer contributer
+		Tieske <https://github.com/Tieske> ----------------------- Penlight lexer contributer
+		boatbomber <https://github.com/boatbomber> --------------- Roblox port, added builtin token,
+		                                                           added patterns for incomplete syntax, bug fixes,
+		                                                           behavior changes, token optimization, thread optimization
+		                                                           Added lexer.navigator() for non-sequential reads
+		Sleitnick <https://github.com/Sleitnick> ----------------- Roblox optimizations
+		howmanysmall <https://github.com/howmanysmall> ----------- Lua + Roblox optimizations
+
+	List of possible tokens:
+		- iden
+		- keyword
+		- builtin
+		- string
+		- number
+		- comment
+		- operator
+--]=]
+
+local lexer = {}
+
+local Prefix, Suffix, Cleaner = "^[%c%s]*", "[%c%s]*", "[%c%s]+"
+local UNICODE = "[%z\x01-\x7F\xC2-\xF4][\x80-\xBF]+"
+local NUMBER_A = "0[xX][%da-fA-F_]+"
+local NUMBER_B = "0[bB][01_]+"
+local NUMBER_C = "%d+%.?%d*[eE][%+%-]?%d+"
+local NUMBER_D = "%d+[%._]?[%d_eE]*"
+local OPERATORS = "[:;<>/~%*%(%)%-={},%.#%^%+%%]+"
+local BRACKETS = "[%[%]]+" -- needs to be separate pattern from other operators or it'll mess up multiline strings
+local IDEN = "[%a_][%w_]*"
+local STRING_EMPTY = "(['\"])%1" --Empty String
+local STRING_PLAIN = "(['\"])[^\n]-([^\\]%1)" --TODO: Handle escaping escapes
+local STRING_INTER = "`[^\n]-`"
+local STRING_INCOMP_A = "(['\"]).-\n" --Incompleted String with next line
+local STRING_INCOMP_B = "(['\"])[^\n]*" --Incompleted String without next line
+local STRING_MULTI = "%[(=*)%[.-%]%1%]" --Multiline-String
+local STRING_MULTI_INCOMP = "%[=*%[.-.*" --Incompleted Multiline-String
+local COMMENT_MULTI = "%-%-%[(=*)%[.-%]%1%]" --Completed Multiline-Comment
+local COMMENT_MULTI_INCOMP = "%-%-%[=*%[.-.*" --Incompleted Multiline-Comment
+local COMMENT_PLAIN = "%-%-.-\n" --Completed Singleline-Comment
+local COMMENT_INCOMP = "%-%-.*" --Incompleted Singleline-Comment
+-- local TYPED_VAR = ":%s*([%w%?%| \t]+%s*)" --Typed variable, parameter, function
+
+local lang = require(script.language)
+local lua_keyword = lang.keyword
+local lua_builtin = lang.builtin
+local lua_libraries = lang.libraries
+
+lexer.language = lang
+
+local lua_matches = {
+	-- Indentifiers
+	{ Prefix .. IDEN .. Suffix, "var" },
+
+	-- Numbers
+	{ Prefix .. NUMBER_A .. Suffix, "number" },
+	{ Prefix .. NUMBER_B .. Suffix, "number" },
+	{ Prefix .. NUMBER_C .. Suffix, "number" },
+	{ Prefix .. NUMBER_D .. Suffix, "number" },
+
+	-- Strings
+	{ Prefix .. STRING_EMPTY .. Suffix, "string" },
+	{ Prefix .. STRING_PLAIN .. Suffix, "string" },
+	{ Prefix .. STRING_INCOMP_A .. Suffix, "string" },
+	{ Prefix .. STRING_INCOMP_B .. Suffix, "string" },
+	{ Prefix .. STRING_MULTI .. Suffix, "string" },
+	{ Prefix .. STRING_MULTI_INCOMP .. Suffix, "string" },
+	{ Prefix .. STRING_INTER .. Suffix, "string_inter" },
+
+	-- Comments
+	{ Prefix .. COMMENT_MULTI .. Suffix, "comment" },
+	{ Prefix .. COMMENT_MULTI_INCOMP .. Suffix, "comment" },
+	{ Prefix .. COMMENT_PLAIN .. Suffix, "comment" },
+	{ Prefix .. COMMENT_INCOMP .. Suffix, "comment" },
+
+	-- Operators
+	{ Prefix .. OPERATORS .. Suffix, "operator" },
+	{ Prefix .. BRACKETS .. Suffix, "operator" },
+
+	-- Unicode
+	{ Prefix .. UNICODE .. Suffix, "iden" },
+
+	-- Unknown
+	{ "^.", "iden" },
+}
+
+-- To reduce the amount of table indexing during lexing, we separate the matches now
+local PATTERNS, TOKENS = {}, {}
+for i, m in lua_matches do
+	PATTERNS[i] = m[1]
+	TOKENS[i] = m[2]
+end
+
+--- Create a plain token iterator from a string.
+-- @tparam string s a string.
+
+function lexer.scan(s: string)
+	local index = 1
+	local size = #s
+	local previousContent1, previousContent2, previousContent3, previousToken = "", "", "", ""
+
+	local thread = coroutine.create(function()
+		while index <= size do
+			local matched = false
+			for tokenType, pattern in ipairs(PATTERNS) do
+				-- Find match
+				local start, finish = string.find(s, pattern, index)
+				if start == nil then continue end
+
+				-- Move head
+				index = finish + 1
+				matched = true
+
+				-- Gather results
+				local content = string.sub(s, start, finish)
+				local rawToken = TOKENS[tokenType]
+				local processedToken = rawToken
+
+				-- Process token
+				if rawToken == "var" then
+					-- Since we merge spaces into the tok, we need to remove them
+					-- in order to check the actual word it contains
+					local cleanContent = string.gsub(content, Cleaner, "")
+
+					if lua_keyword[cleanContent] then
+						processedToken = "keyword"
+					elseif lua_builtin[cleanContent] then
+						processedToken = "builtin"
+					elseif string.find(previousContent1, "%.[%s%c]*$") and previousToken ~= "comment" then
+						-- The previous was a . so we need to special case indexing things
+						local parent = string.gsub(previousContent2, Cleaner, "")
+						local lib = lua_libraries[parent]
+						if lib and lib[cleanContent] and not string.find(previousContent3, "%.[%s%c]*$") then
+							-- Indexing a builtin lib with existing item, treat as a builtin
+							processedToken = "builtin"
+						else
+							-- Indexing a non builtin, can't be treated as a keyword/builtin
+							processedToken = "iden"
+						end
+						-- print("indexing",parent,"with",cleanTok,"as",t2)
+					else
+						processedToken = "iden"
+					end
+				elseif rawToken == "string_inter" then
+					if not string.find(content, "[^\\]{") then
+						-- This inter string doesnt actually have any inters
+						processedToken = "string"
+					else
+						-- We're gonna do our own yields, so the main loop won't need to
+						-- Our yields will be a mix of string and whatever is inside the inters
+						processedToken = nil
+
+						local isString = true
+						local subIndex = 1
+						local subSize = #content
+						while subIndex <= subSize do
+							-- Find next brace
+							local subStart, subFinish = string.find(content, "^.-[^\\][{}]", subIndex)
+							if subStart == nil then
+								-- No more braces, all string
+								coroutine.yield("string", string.sub(content, subIndex))
+								break
+							end
+
+							if isString then
+								-- We are currently a string
+								subIndex = subFinish + 1
+								coroutine.yield("string", string.sub(content, subStart, subFinish))
+
+								-- This brace opens code
+								isString = false
+							else
+								-- We are currently in code
+								subIndex = subFinish
+								local subContent = string.sub(content, subStart, subFinish-1)
+								for innerToken, innerContent in lexer.scan(subContent) do
+									coroutine.yield(innerToken, innerContent)
+								end
+
+								-- This brace opens string/closes code
+								isString = true
+							end
+						end
+					end
+				end
+
+				-- Record last 3 tokens for the indexing context check
+				previousContent3 = previousContent2
+				previousContent2 = previousContent1
+				previousContent1 = content
+				previousToken = processedToken or rawToken
+				if processedToken then
+					coroutine.yield(processedToken, content)
+				end
+				break
+			end
+
+			-- No matches found
+			if not matched then
+				return
+			end
+		end
+
+		-- Completed the scan
+		return
+	end)
+
+	return function()
+		if coroutine.status(thread) == "dead" then
+			return
+		end
+
+		local success, token, content = coroutine.resume(thread)
+		if success and token then
+			return token, content
+		end
+
+		return
+	end
+end
+
+function lexer.navigator()
+	local nav = {
+		Source = "",
+		TokenCache = table.create(50),
+
+		_RealIndex = 0,
+		_UserIndex = 0,
+		_ScanThread = nil,
+	}
+
+	function nav:Destroy()
+		self.Source = nil
+		self._RealIndex = nil
+		self._UserIndex = nil
+		self.TokenCache = nil
+		self._ScanThread = nil
+	end
+
+	function nav:SetSource(SourceString)
+		self.Source = SourceString
+
+		self._RealIndex = 0
+		self._UserIndex = 0
+		table.clear(self.TokenCache)
+
+		self._ScanThread = coroutine.create(function()
+			for Token, Src in lexer.scan(self.Source) do
+				self._RealIndex += 1
+				self.TokenCache[self._RealIndex] = { Token, Src }
+				coroutine.yield(Token, Src)
+			end
+		end)
+	end
+
+	function nav.Next()
+		nav._UserIndex += 1
+
+		if nav._RealIndex >= nav._UserIndex then
+			-- Already scanned, return cached
+			return table.unpack(nav.TokenCache[nav._UserIndex])
+		else
+			if coroutine.status(nav._ScanThread) == "dead" then
+				-- Scan thread dead
+				return
+			else
+				local success, token, src = coroutine.resume(nav._ScanThread)
+				if success and token then
+					-- Scanned new data
+					return token, src
+				else
+					-- Lex completed
+					return
+				end
+			end
+		end
+	end
+
+	function nav.Peek(PeekAmount)
+		local GoalIndex = nav._UserIndex + PeekAmount
+
+		if nav._RealIndex >= GoalIndex then
+			-- Already scanned, return cached
+			if GoalIndex > 0 then
+				return table.unpack(nav.TokenCache[GoalIndex])
+			else
+				-- Invalid peek
+				return
+			end
+		else
+			if coroutine.status(nav._ScanThread) == "dead" then
+				-- Scan thread dead
+				return
+			else
+				local IterationsAway = GoalIndex - nav._RealIndex
+
+				local success, token, src = nil, nil, nil
+
+				for _ = 1, IterationsAway do
+					success, token, src = coroutine.resume(nav._ScanThread)
+					if not (success or token) then
+						-- Lex completed
+						break
+					end
+				end
+
+				return token, src
+			end
+		end
+	end
+
+	return nav
+end
+
+return lexer
+end;
+};
+G2L_MODULES[G2L["35"]] = {
+Closure = function()
+    local script = G2L["35"];
+local language = {
+	keyword = {
+		["and"] = "keyword",
+		["break"] = "keyword",
+		["continue"] = "keyword",
+		["do"] = "keyword",
+		["else"] = "keyword",
+		["elseif"] = "keyword",
+		["end"] = "keyword",
+		["export"] = "keyword",
+		["false"] = "keyword",
+		["for"] = "keyword",
+		["function"] = "keyword",
+		["if"] = "keyword",
+		["in"] = "keyword",
+		["local"] = "keyword",
+		["nil"] = "keyword",
+		["not"] = "keyword",
+		["or"] = "keyword",
+		["repeat"] = "keyword",
+		["return"] = "keyword",
+		["self"] = "keyword",
+		["then"] = "keyword",
+		["true"] = "keyword",
+		["type"] = "keyword",
+		["typeof"] = "keyword",
+		["until"] = "keyword",
+		["while"] = "keyword",
+	},
+
+	builtin = {
+		-- Luau Functions
+		["assert"] = "function",
+		["error"] = "function",
+		["getfenv"] = "function",
+		["getmetatable"] = "function",
+		["ipairs"] = "function",
+		["newproxy"] = "function",
+		["next"] = "function",
+		["pairs"] = "function",
+		["pcall"] = "function",
+		["print"] = "function",
+		["rawequal"] = "function",
+		["rawget"] = "function",
+		["rawlen"] = "function",
+		["rawset"] = "function",
+		["select"] = "function",
+		["setfenv"] = "function",
+		["setmetatable"] = "function",
+		["tonumber"] = "function",
+		["tostring"] = "function",
+		["unpack"] = "function",
+		["xpcall"] = "function",
+		
+
+		-- Luau Functions (Deprecated)
+		["collectgarbage"] = "function",
+
+		-- Luau Variables
+		["_G"] = "table",
+		["_VERSION"] = "string",
+
+		-- Luau Tables
+		["bit32"] = "table",
+		["coroutine"] = "table",
+		["debug"] = "table",
+		["math"] = "table",
+		["os"] = "table",
+		["string"] = "table",
+		["table"] = "table",
+		["utf8"] = "table",
+
+		-- Roblox Functions
+		["DebuggerManager"] = "function",
+		["delay"] = "function",
+		["gcinfo"] = "function",
+		["PluginManager"] = "function",
+		["require"] = "function",
+		["settings"] = "function",
+		["spawn"] = "function",
+		["tick"] = "function",
+		["time"] = "function",
+		["UserSettings"] = "function",
+		["wait"] = "function",
+		["warn"] = "function",
+
+		-- Roblox Functions (Deprecated)
+		["Delay"] = "function",
+		["ElapsedTime"] = "function",
+		["elapsedTime"] = "function",
+		["printidentity"] = "function",
+		["Spawn"] = "function",
+		["Stats"] = "function",
+		["stats"] = "function",
+		["Version"] = "function",
+		["version"] = "function",
+		["Wait"] = "function",
+		["ypcall"] = "function",
+
+		-- Roblox Variables
+		["game"] = "Instance",
+		["plugin"] = "Instance",
+		["script"] = "Instance",
+		["shared"] = "Instance",
+		["workspace"] = "Instance",
+
+		-- Roblox Variables (Deprecated)
+		["Game"] = "Instance",
+		["Workspace"] = "Instance",
+
+		-- Roblox Tables
+		["Axes"] = "table",
+		["BrickColor"] = "table",
+		["CatalogSearchParams"] = "table",
+		["CFrame"] = "table",
+		["Color3"] = "table",
+		["ColorSequence"] = "table",
+		["ColorSequenceKeypoint"] = "table",
+		["DateTime"] = "table",
+		["DockWidgetPluginGuiInfo"] = "table",
+		["Enum"] = "table",
+		["Faces"] = "table",
+		["FloatCurveKey"] = "table",
+		["Font"] = "table",
+		["Instance"] = "table",
+		["NumberRange"] = "table",
+		["NumberSequence"] = "table",
+		["NumberSequenceKeypoint"] = "table",
+		["OverlapParams"] = "table",
+		["PathWaypoint"] = "table",
+		["PhysicalProperties"] = "table",
+		["Random"] = "table",
+		["Ray"] = "table",
+		["RaycastParams"] = "table",
+		["Rect"] = "table",
+		["Region3"] = "table",
+		["Region3int16"] = "table",
+		["RotationCurveKey"] = "table",
+		["task"] = "table",
+		["TweenInfo"] = "table",
+		["UDim"] = "table",
+		["UDim2"] = "table",
+		["Vector2"] = "table",
+		["Vector2int16"] = "table",
+		["Vector3"] = "table",
+		["Vector3int16"] = "table",
+	},
+	
+	loads = {
+		["loadstring"] = "loads",
+	},
+	
+
+	libraries = {
+
+		-- Luau Libraries
+		bit32 = {
+			arshift = "function",
+			band = "function",
+			bnot = "function",
+			bor = "function",
+			btest = "function",
+			bxor = "function",
+			countlz = "function",
+			countrz = "function",
+			extract = "function",
+			lrotate = "function",
+			lshift = "function",
+			replace = "function",
+			rrotate = "function",
+			rshift = "function",
+		},
+
+		coroutine = {
+			close = "function",
+			create = "function",
+			isyieldable = "function",
+			resume = "function",
+			running = "function",
+			status = "function",
+			wrap = "function",
+			yield = "function",
+		},
+
+		debug = {
+			dumpheap = "function",
+			info = "function",
+			loadmodule = "function",
+			profilebegin = "function",
+			profileend = "function",
+			resetmemorycategory = "function",
+			setmemorycategory = "function",
+			traceback = "function",
+		},
+
+		math = {
+			abs = "function",
+			acos = "function",
+			asin = "function",
+			atan2 = "function",
+			atan = "function",
+			ceil = "function",
+			clamp = "function",
+			cos = "function",
+			cosh = "function",
+			deg = "function",
+			exp = "function",
+			floor = "function",
+			fmod = "function",
+			frexp = "function",
+			ldexp = "function",
+			log10 = "function",
+			log = "function",
+			max = "function",
+			min = "function",
+			modf = "function",
+			noise = "function",
+			pow = "function",
+			rad = "function",
+			random = "function",
+			randomseed = "function",
+			round = "function",
+			sign = "function",
+			sin = "function",
+			sinh = "function",
+			sqrt = "function",
+			tan = "function",
+			tanh = "function",
+
+			huge = "number",
+			pi = "number",
+		},
+
+		os = {
+			clock = "function",
+			date = "function",
+			difftime = "function",
+			time = "function",
+		},
+
+		string = {
+			byte = "function",
+			char = "function",
+			find = "function",
+			format = "function",
+			gmatch = "function",
+			gsub = "function",
+			len = "function",
+			lower = "function",
+			match = "function",
+			pack = "function",
+			packsize = "function",
+			rep = "function",
+			reverse = "function",
+			split = "function",
+			sub = "function",
+			unpack = "function",
+			upper = "function",
+		},
+
+		table = {
+			clear = "function",
+			clone = "function",
+			concat = "function",
+			create = "function",
+			find = "function",
+			foreach = "function",
+			foreachi = "function",
+			freeze = "function",
+			getn = "function",
+			insert = "function",
+			isfrozen = "function",
+			maxn = "function",
+			move = "function",
+			pack = "function",
+			remove = "function",
+			sort = "function",
+			unpack = "function",
+		},
+
+		utf8 = {
+			char = "function",
+			codepoint = "function",
+			codes = "function",
+			graphemes = "function",
+			len = "function",
+			nfcnormalize = "function",
+			nfdnormalize = "function",
+			offset = "function",
+
+			charpattern = "string",
+		},
+
+		-- Roblox Libraries
+		Axes = {
+			new = "function",
+		},
+
+		BrickColor = {
+			Black = "function",
+			Blue = "function",
+			DarkGray = "function",
+			Gray = "function",
+			Green = "function",
+			new = "function",
+			New = "function",
+			palette = "function",
+			Random = "function",
+			random = "function",
+			Red = "function",
+			White = "function",
+			Yellow = "function",
+		},
+
+		CatalogSearchParams = {
+			new = "function",
+		},
+
+		CFrame = {
+			Angles = "function",
+			fromAxisAngle = "function",
+			fromEulerAngles = "function",
+			fromEulerAnglesXYZ = "function",
+			fromEulerAnglesYXZ = "function",
+			fromMatrix = "function",
+			fromOrientation = "function",
+			lookAt = "function",
+			new = "function",
+
+			identity = "CFrame",
+		},
+
+		Color3 = {
+			fromHex = "function",
+			fromHSV = "function",
+			fromRGB = "function",
+			new = "function",
+			toHSV = "function",
+		},
+
+		ColorSequence = {
+			new = "function",
+		},
+
+		ColorSequenceKeypoint = {
+			new = "function",
+		},
+
+		DateTime = {
+			fromIsoDate = "function",
+			fromLocalTime = "function",
+			fromUniversalTime = "function",
+			fromUnixTimestamp = "function",
+			fromUnixTimestampMillis = "function",
+			now = "function",
+		},
+
+		DockWidgetPluginGuiInfo = {
+			new = "function",
+		},
+
+		Enum = {},
+
+		Faces = {
+			new = "function",
+		},
+
+		FloatCurveKey = {
+			new = "function",
+		},
+
+		Font = {
+			fromEnum = "function",
+			fromId = "function",
+			fromName = "function",
+			new = "function",
+		},
+
+		Instance = {
+			new = "function",
+		},
+
+		NumberRange = {
+			new = "function",
+		},
+
+		NumberSequence = {
+			new = "function",
+		},
+
+		NumberSequenceKeypoint = {
+			new = "function",
+		},
+
+		OverlapParams = {
+			new = "function",
+		},
+
+		PathWaypoint = {
+			new = "function",
+		},
+
+		PhysicalProperties = {
+			new = "function",
+		},
+
+		Random = {
+			new = "function",
+		},
+
+		Ray = {
+			new = "function",
+		},
+
+		RaycastParams = {
+			new = "function",
+		},
+
+		Rect = {
+			new = "function",
+		},
+
+		Region3 = {
+			new = "function",
+		},
+
+		Region3int16 = {
+			new = "function",
+		},
+
+		RotationCurveKey = {
+			new = "function",
+		},
+
+		task = {
+			cancel = "function",
+			defer = "function",
+			delay = "function",
+			desynchronize = "function",
+			spawn = "function",
+			synchronize = "function",
+			wait = "function",
+		},
+
+		TweenInfo = {
+			new = "function",
+		},
+
+		UDim = {
+			new = "function",
+		},
+
+		UDim2 = {
+			fromOffset = "function",
+			fromScale = "function",
+			new = "function",
+		},
+
+		Vector2 = {
+			new = "function",
+
+			one = "Vector2",
+			xAxis = "Vector2",
+			yAxis = "Vector2",
+			zero = "Vector2",
+		},
+
+		Vector2int16 = {
+			new = "function",
+		},
+
+		Vector3 = {
+			fromAxis = "function",
+			FromAxis = "function",
+			fromNormalId = "function",
+			FromNormalId = "function",
+			new = "function",
+
+			one = "Vector3",
+			xAxis = "Vector3",
+			yAxis = "Vector3",
+			zAxis = "Vector3",
+			zero = "Vector3",
+		},
+
+		Vector3int16 = {
+			new = "function",
+		},
+	},
+}
+
+-- Filling up language.libraries.Enum table
+local enumLibraryTable = language.libraries.Enum
+
+for _, enum in ipairs(Enum:GetEnums()) do
+	--TODO: Remove tostring from here once there is a better way to get the name of an Enum
+	enumLibraryTable[tostring(enum)] = "Enum"
+end
+
+return language
 end;
 };
 -- StarterGui.LuaEncoderPC.Frame.Main
 local function C_1b()
 local script = G2L["1b"];
+	repeat wait() until game:IsLoaded()
+	
 	--// Variables
 	
 	local gui = script.Parent.Parent
@@ -1933,6 +2601,8 @@ local script = G2L["1b"];
 	local injector = apin["LuaEncoder.API"]
 	local executorAPI = apiexec["LuaEncoder.API"]
 	local clearerAPI = apiclr["LuaEncoder.API"]
+	local moduleHigh = frame.Module
+	require(moduleHigh)
 	
 	--// Buttons Variables and boolvalues and Folder variables
 	
@@ -1954,10 +2624,10 @@ local script = G2L["1b"];
 	--// Lua Encoder versions variables
 	
 	local luaversion = "vRBX"
-	local luav2 = "v25.7"
+	local luav2 = "v27.5"
 	local canexecutein = "level 6 or 7 or 8 executors, External/Internal"
 	local canexecutein2 = 6 or 7 or 8
-	local LuaCode = "2.629.609, 2.630.556 or less/more"
+	local LuaCode = "2.629.609, 2.630.556"
 	print("Version of Lua Encoder/Roblox: "..LuaCode)
 	
 	
@@ -1971,22 +2641,15 @@ local script = G2L["1b"];
 	local function execute(code)
 		if att.Value == true then
 			if txtb.Text == "" then
-				execd.Title.Visible = true
-				execd.ImageLabel.Visible = true
-				execd.Desc.Visible = true
-				execd.Size = UDim2.new(0.348, 0,0.157, 0)
-				execd.Visible = true
-				require(executorAPI)
-				print("Lua Encoder")
-			else
-				execd.Title.Visible = true
-				execd.ImageLabel.Visible = true
-				execd.Desc.Visible = true
-				execd.Size = UDim2.new(0.348, 0,0.157, 0)
-				execd.Visible = true
-				require(executorAPI)
-				loadstring(code)()
+				print("Nothing to execute")
 			end
+			execd.Title.Visible = true
+			execd.ImageLabel.Visible = true
+			execd.Desc.Visible = true
+			execd.Size = UDim2.new(0.348, 0,0.157, 0)
+			execd.Visible = true
+			require(executorAPI)
+			loadstring(code)()
 		else
 			notinj:TweenSize(UDim2.new(0.348, 0,0.157, 0), "Out", "Sine", 0)
 			wait(0.1) do
