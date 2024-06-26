@@ -1,9 +1,7 @@
 -- lua
-
 if game.CoreGui:FindFirstChild("LuaEncoderPC") then
 	game.CoreGui:FindFirstChild("LuaEncoderPC"):Destroy()
 end
-task.wait()
 
 -- Instances: 171 | Scripts: 13 | Modules: 7
 local G2L = {};
@@ -162,7 +160,7 @@ G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["14"]["BackgroundTransparency"] = 1;
 G2L["14"]["Size"] = UDim2.new(0.69278, 0, 0.15285, 0);
 G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["Text"] = [[Lua Encoder - vRBX - v27.5]];
+G2L["14"]["Text"] = [[Lua Encoder - vRBX - v30.2]];
 G2L["14"]["Name"] = [[Title]];
 G2L["14"]["Position"] = UDim2.new(0.16456, 0, -0, 0);
 
@@ -326,8 +324,7 @@ G2L["27"]["ZIndex"] = 999999999;
 G2L["27"]["Size"] = UDim2.new(0.17656, 0, 0.14337, 0);
 G2L["27"]["Name"] = [[Execute2]];
 G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27"]["Text"] = [[Execute ClipBoard]];
-G2L["27"]["Visible"] = false;
+G2L["27"]["Text"] = [[Copy code]];
 G2L["27"]["Position"] = UDim2.new(0.42887, 0, 0.81137, 0);
 
 -- StarterGui.LuaEncoderPC.Frame.Execute2.UIStroke
@@ -2219,11 +2216,10 @@ local language = {
 		["Vector2int16"] = "table",
 		["Vector3"] = "table",
 		["Vector3int16"] = "table",
+		["loadstring"] = "function",
 	},
 	
-	loads = {
-		["loadstring"] = "loads",
-	},
+		
 	
 
 	libraries = {
@@ -2604,7 +2600,7 @@ local script = G2L["1b"];
 	local moduleHigh = frame.Module
 	require(moduleHigh)
 	
-	--// Buttons Variables and boolvalues and Folder variables
+	--// Buttons Variables and boolvalues and Folder variables and some more
 	
 	local txtb = frame.ScrollingFrame.TextBox
 	local exe = frame.Execute
@@ -2620,16 +2616,23 @@ local script = G2L["1b"];
 	local abt = frame.About
 	local set = frame.Settings
 	local exe2 = frame.Execute2
+	local plr = game.Players.LocalPlayer
 	
-	--// Lua Encoder versions variables
+	--// Lua Encoder versions variables and some more
 	
 	local luaversion = "vRBX"
-	local luav2 = "v27.5"
+	local luav2 = "v30.2"
 	local canexecutein = "level 6 or 7 or 8 executors, External/Internal"
 	local canexecutein2 = 6 or 7 or 8
-	local LuaCode = "2.629.609, 2.630.556"
+	local LuaCode = "2.630.556, 2.630.556"
+	local WhatRobloxUses = ".exe or .apk"
+	local LanguageRobloxStudioUses = "Luau/Lua"
+	local LanguageUsedInVisualStudio = "Luau/C#/C++, Windows Application (.NET Framework)"
+	local whatuneedtolearntomakeanmobileexcutor = "CSS,etc. Reverse engineering"
+	local whatuneedtolearntomakeanpcexecutor = "C# or C++"
+	local RobloxWasCodedIn = "C++"
+	local whereitwasmade = "Visual Studio"
 	print("Version of Lua Encoder/Roblox: "..LuaCode)
-	
 	
 	--// Booleans
 	
@@ -2637,6 +2640,17 @@ local script = G2L["1b"];
 	frame.Active = true
 	
 	--// Local Functions
+	
+	local function LuaEncoderAPI_Execute() require(executorAPI) end
+	
+	
+	local function lag()
+		local char = plr.Character
+		local root = char.PrimaryPart
+		root.Anchored = true
+		wait(1)
+		root.Anchored = false
+	end
 	
 	local function execute(code)
 		if att.Value == true then
@@ -2648,7 +2662,7 @@ local script = G2L["1b"];
 			execd.Desc.Visible = true
 			execd.Size = UDim2.new(0.348, 0,0.157, 0)
 			execd.Visible = true
-			require(executorAPI)
+			LuaEncoderAPI_Execute();
 			loadstring(code)()
 		else
 			notinj:TweenSize(UDim2.new(0.348, 0,0.157, 0), "Out", "Sine", 0)
@@ -2661,14 +2675,20 @@ local script = G2L["1b"];
 		end
 	end
 	
+	local function LuaEncoderAPI_Clear() require(clearerAPI) end
+	
 	local function clear(thing)
 		clrdf.Title.Visible = true
 		clrdf.ImageLabel.Visible = true
 		clrdf.Desc.Visible = true
 		clrdf.Size = UDim2.new(0.348, 0,0.157, 0)
 		clrdf.Visible = true
-		require(clearerAPI)
+		LuaEncoderAPI_Clear()
 		thing.Text = ""
+	end
+	
+	local function LuaEncoderAPI_inject()
+		require(injector)
 	end
 	
 	local function attach()
@@ -2676,6 +2696,7 @@ local script = G2L["1b"];
 		if att.Value == true then
 			alrinj.Title.Visible =true
 			alrinj.Desc.Visible = true
+			alrinj.Desc.Text = "Already Injected to roblox/"..game.GameId.."/"..game.PlaceId
 			alrinj.ImageLabel.Visible = true
 			alrinj.Size = UDim2.new(0.348, 0,0.157, 0)
 			alrinj.Visible = true
@@ -2683,8 +2704,8 @@ local script = G2L["1b"];
 			wait(2)
 			title.Text = "Lua Encoder - "..luaversion.." - "..luav2
 		else
-			isinj.Visible = true
 			if att2.Value == true then return end
+			isinj.Visible = true
 			att2.Value = true
 			repeat
 				title.Text = "Lua Encoder - "..luaversion.." - "..luav2.." (Injecting.)"
@@ -2706,10 +2727,11 @@ local script = G2L["1b"];
 					title.Text = "Lua Encoder - "..luaversion.." - "..luav2.." (Whitelist Accepted!)"
 					wait(0.75)
 					title.Text = "Lua Encoder - "..luaversion.." - "..luav2
-					require(injector)
+					LuaEncoderAPI_inject();
+					lag();
 					att.Value = true
 					wait(0.03)
-					injf.Desc.Text = "Has injected to roblox/"..game.Name
+					injf.Desc.Text = "Has injected to roblox/"..game.GameId.."/"..game.PlaceId
 					injf.Visible = true
 				end
 			until repeated == 3
@@ -2717,9 +2739,6 @@ local script = G2L["1b"];
 		end
 	end
 	
-	local function close()
-		gui:Destroy()
-	end
 	
 	local function shub()
 		if hub.Visible == true then
@@ -2737,8 +2756,8 @@ local script = G2L["1b"];
 		end
 	end
 	
-	local function executecode()
-		executeclipboard() 
+	local function LuaEncoderAPI_CopyCode()
+		setclipboard(txtb.Text)
 	end
 	
 	local function openABT()
@@ -2757,27 +2776,31 @@ local script = G2L["1b"];
 		end
 	end
 	
+	local function ApplicationExit()
+		gui:Destroy()
+	end
+	
 	--// Button Functions
 	
 	exe.MouseButton1Click:Connect(function() 
-		task.wait()
-		execute(txtb.Text)
+		task.wait();
+		execute(txtb.Text);
 	end)
 	
 	clr.MouseButton1Click:Connect(function() 
-		clear(txtb)
+		clear(txtb);
 	end)
 	
 	atc.MouseButton1Click:Connect(function() 
-		attach()
+		attach();
 	end)
 	
 	cls.MouseButton1Click:Connect(function() 
-		close()
+		ApplicationExit();
 	end)
 	
 	fire.MouseButton1Click:Connect(function() 
-		shub()
+		shub();
 	end)
 	
 	crd.MouseButton1Click:Connect(function() 
@@ -2785,24 +2808,16 @@ local script = G2L["1b"];
 	end)
 	
 	abt.MouseButton1Click:Connect(function() 
-		openABT()
+		openABT();
 	end)
 	
 	set.MouseButton1Click:Connect(function() 
-		opensett()
+		opensett();
 	end)
 	
 	exe2.MouseButton1Click:Connect(function() 
-		executecode()
+		LuaEncoderAPI_CopyCode();
 	end)
-	
-	
-	-- stuff
-	
-	task.spawn(function()
-		require(api.APIListener["LuaEncoder.API"])
-	end)
-	
 	
 	--[[ End ]]--
 end;
